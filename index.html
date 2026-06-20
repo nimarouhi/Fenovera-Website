@@ -331,97 +331,6 @@
     margin: 16px auto 0; border-radius: 2px;
   }
 
-  /* ════════════════════════════════════
-     PRODUCT OVERVIEW CARDS (landing)
-  ════════════════════════════════════ */
-  #products-overview {
-    padding: 100px 0;
-    background: var(--off);
-  }
-  .product-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-  }
-  .product-card {
-    background: var(--white);
-    border: 1px solid var(--lgray);
-    border-radius: 16px;
-    padding: 36px 30px;
-    position: relative; overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-  }
-  .product-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(to right, var(--teal), var(--teal-b));
-    transform: scaleX(0); transform-origin: left;
-    transition: transform 0.3s ease;
-  }
-  .product-card:hover::before { transform: scaleX(1); }
-  .product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(13,115,119,0.12);
-    border-color: rgba(13,115,119,0.3);
-  }
-  .card-num {
-    font-family: var(--font-head);
-    font-size: 3.5rem; font-weight: 700;
-    color: var(--lgray); line-height: 1;
-    position: absolute; top: 24px; right: 28px;
-  }
-  .card-icon {
-    width: 52px; height: 52px; border-radius: 12px;
-    background: var(--pale);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem; margin-bottom: 20px;
-  }
-  .card-title {
-    font-family: var(--font-head);
-    font-size: 1.25rem; font-weight: 700;
-    color: var(--tdark); margin-bottom: 8px;
-    line-height: 1.3;
-  }
-  .card-sub { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
-  .card-desc { font-size: 0.93rem; color: var(--tgray); line-height: 1.65; margin-bottom: 20px; }
-  .card-specs {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    margin-bottom: 24px;
-  }
-  .spec-chip {
-    background: var(--off);
-    border: 1px solid var(--lgray);
-    border-radius: 6px;
-    padding: 4px 10px;
-    font-size: 0.78rem; font-weight: 600; color: var(--tdark);
-  }
-  .spec-chip strong { color: var(--teal); }
-  .card-link {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-size: 0.85rem; font-weight: 700;
-    color: var(--teal); letter-spacing: 0.03em;
-    transition: gap var(--trans);
-  }
-  .product-card:hover .card-link { gap: 10px; }
-  .card-soon {
-    background: var(--navy);
-    color: rgba(255,255,255,0.4);
-  }
-  .card-soon .card-num { color: rgba(255,255,255,0.06); }
-  .card-soon .card-icon { background: rgba(255,255,255,0.06); }
-  .card-soon .card-title { color: rgba(255,255,255,0.5); }
-  .card-soon .card-desc { color: rgba(255,255,255,0.3); }
-  .soon-badge {
-    display: inline-block;
-    background: rgba(201,168,76,0.15);
-    border: 1px solid rgba(201,168,76,0.3);
-    border-radius: 6px;
-    padding: 4px 12px;
-    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--gold);
-    margin-top: 8px;
-  }
 
   /* ════════════════════════════════════
      PRODUCT DETAIL SECTIONS
@@ -819,81 +728,6 @@
     <div class="hero-btns">
       <a href="#casement" class="btn-primary">Explore Products →</a>
       <a href="#contact" class="btn-outline">Get a Quote</a>
-    </div>
-  </div>
-  <div class="hero-scroll">Scroll</div>
-</section>
-
-<!-- ══════════════════════════════════════
-     PRODUCT OVERVIEW CARDS
-══════════════════════════════════════ -->
-<section id="products-overview">
-  <div class="section-inner">
-    <div class="section-head fade-in">
-      <p class="section-eyebrow">Our Product Collection</p>
-      <h2 class="section-title">Three Distinct Product Lines</h2>
-      <p class="section-sub">Engineered for performance, designed for beauty — factory direct from our production facility.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="product-cards">
-
-      <!-- Card 1: Casement -->
-      <div class="product-card fade-in" onclick="location.href='#casement'; showAlumTab('casement')">
-        <div class="card-num">01</div>
-        <div class="card-icon">🪟</div>
-        <div class="card-sub">Thermal-Break Aluminum</div>
-        <div class="card-title">Premium Casement & Swing Windows</div>
-        <p class="card-desc">Inward/outward casement, tilt-and-turn, awning, fixed, and custom shapes. Versatile performance for modern residential and commercial architecture.</p>
-        <div class="card-specs">
-          <div class="spec-chip"><strong>76mm</strong> Frame Depth</div>
-          <div class="spec-chip"><strong>35.3mm</strong> Thermal Barrier</div>
-          <div class="spec-chip"><strong>≥1.8mm</strong> Profile</div>
-        </div>
-        <span class="card-link">Explore →</span>
-      </div>
-
-      <!-- Card 2: Slimline -->
-      <div class="product-card fade-in" onclick="location.href='#casement'; showAlumTab('slimline')">
-        <div class="card-num">02</div>
-        <div class="card-icon">🔲</div>
-        <div class="card-sub">Slimline Thermal-Break</div>
-        <div class="card-title">Ultra-Slim Thermal-Break Windows</div>
-        <p class="card-desc">Ultra-narrow 48mm sightlines with 85mm frame depth. Maximizes glass area for a contemporary, light-filled aesthetic.</p>
-        <div class="card-specs">
-          <div class="spec-chip"><strong>48mm</strong> Sightline</div>
-          <div class="spec-chip"><strong>85mm</strong> Frame Depth</div>
-          <div class="spec-chip"><strong>2.0mm</strong> Profile</div>
-        </div>
-        <span class="card-link">Explore →</span>
-      </div>
-
-      <!-- Card 3: Lift & Slide -->
-      <div class="product-card fade-in" onclick="location.href='#casement'; showAlumTab('liftslide')">
-        <div class="card-num">03</div>
-        <div class="card-icon">🚪</div>
-        <div class="card-sub">Lift & Slide</div>
-        <div class="card-title">Lift & Slide Patio Doors</div>
-        <p class="card-desc">Large-format panels up to 3.3m tall, supporting sashes up to 440kg. Effortless one-finger operation with slim center profile option.</p>
-        <div class="card-specs">
-          <div class="spec-chip"><strong>152mm</strong> Frame Depth</div>
-          <div class="spec-chip"><strong>3.3m</strong> Max Height</div>
-          <div class="spec-chip"><strong>440kg</strong> Max Sash</div>
-        </div>
-        <span class="card-link">Explore →</span>
-      </div>
-
-    </div>
-
-    <!-- uPVC coming soon card -->
-    <div style="margin-top:24px;">
-      <div class="product-card card-soon fade-in">
-        <div class="card-num">04</div>
-        <div class="card-icon">🔲</div>
-        <div class="card-sub" style="color:rgba(255,255,255,0.2)">uPVC</div>
-        <div class="card-title">uPVC Windows</div>
-        <p class="card-desc">A complete range of premium uPVC window solutions engineered for the North American climate.</p>
-        <div class="soon-badge">Coming Soon</div>
-      </div>
     </div>
   </div>
 </section>
@@ -1323,3 +1157,4 @@
 </script>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
