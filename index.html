@@ -1614,6 +1614,23 @@
   }
 
   /* ── Section routing ── */
+  function revealSection(id) {
+    // Double-RAF: first frame applies display change, second frame has updated layout.
+    // Then we reveal all fade-in elements already in the viewport.
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        var activeEl = document.getElementById(id);
+        if (!activeEl) return;
+        activeEl.querySelectorAll('.fade-in').forEach(function(el) {
+          var rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('visible');
+          }
+        });
+      });
+    });
+  }
+
   function showSection(id, pushState) {
     allSections.forEach(s => {
       const el = document.getElementById(s);
@@ -1623,9 +1640,7 @@
     if (pushState !== false) {
       history.pushState({ section: id, tab: currentTab }, '', sectionToUrl(id, currentTab));
     }
-    setTimeout(() => {
-      document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
-    }, 50);
+    revealSection(id);
   }
 
   /* ── Tabs ── */
@@ -1657,12 +1672,7 @@
     showSection(section, false);
     switchTab(tab || 'casement', false);
     history.replaceState({ section: section, tab: tab || currentTab }, '', location.pathname || '/');
-    // Immediately mark fade-in elements visible in the initial section (avoids
-    // IntersectionObserver layout-timing bug on hard refresh / direct URL load)
-    requestAnimationFrame(function() {
-      const activeEl = document.getElementById(section);
-      if (activeEl) activeEl.querySelectorAll('.fade-in').forEach(function(e) { e.classList.add('visible'); });
-    });
+    // revealSection() called inside showSection() handles the double-RAF reveal
   })();
 
   /* ── Fade-in observer ── */
