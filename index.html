@@ -916,8 +916,6 @@
     .coming-soon-box { padding: 40px 20px; }
   }
 
-  /* Hide all sections except home by default — JS overrides per navigation */
-  section:not(#home) { display: none; }
 
   /* Sticky sub-nav highlight */
   .anchor-link { scroll-margin-top: calc(var(--nav-h) + 20px); }
@@ -1017,7 +1015,7 @@
 <!-- ══════════════════════════════════════
      ALUMINUM WINDOWS — TABBED DETAIL
 ══════════════════════════════════════ -->
-<section id="casement" class="product-section anchor-link">
+<section id="casement" class="product-section anchor-link" style="display:none">
   <div class="section-inner">
     <div class="section-head fade-in">
       <p class="section-eyebrow">Thermal-Break Aluminum Windows & Doors</p>
@@ -1231,7 +1229,7 @@
 <!-- ══════════════════════════════════════
      TECHNOLOGY & GLASS
 ══════════════════════════════════════ -->
-<section id="technology">
+<section id="technology" style="display:none">
   <div class="section-inner">
     <div class="section-head fade-in">
       <p class="section-eyebrow" style="color:var(--teal-b)">Technology & Design</p>
@@ -1349,7 +1347,7 @@
 <!-- ══════════════════════════════════════
      CERTIFICATIONS & WHY US
 ══════════════════════════════════════ -->
-<section id="certifications">
+<section id="certifications" style="display:none">
   <div class="section-inner">
     <div class="section-head fade-in">
       <p class="section-eyebrow" style="color:var(--teal-b)">Quality Assurance</p>
@@ -1359,4 +1357,5 @@
     </div>
 
     <div class="cert-row fade-in">
-      <div class="cert-badge"><div class="cb-name">NFRC</div><div class="cb-sub">Energy Performa
+      <div class="cert-badge"><div class="cb-name">NFRC</div><div class="cb-sub">Energy Performance</div></div>
+      <div class="cert-badge"><div class="
