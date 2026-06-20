@@ -951,27 +951,6 @@
   <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
-  <div class="mobile-menu" id="mobile-menu">
-    <a class="mm-item" onclick="closeMobileMenu(); showSection('home')">Home</a>
-
-    <!-- Products accordion -->
-    <div class="mm-item mm-accordion-toggle" onclick="toggleMobileProducts()">
-      Products <span class="mm-acc-arrow" id="mm-acc-arrow">▸</span>
-    </div>
-    <div class="mm-accordion-body" id="mm-products-body">
-      <div class="mobile-menu-section-label">Thermal-Break Aluminum</div>
-      <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('casement')">Casement & Swing Windows and Patio Doors</a>
-      <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('slimline')">Slimline Windows</a>
-      <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('liftslide')">Lift & Slide Doors</a>
-      <a class="mm-sub" onclick="closeMobileMenu(); showSection('technology')">Technology & Design</a>
-      <div class="mobile-menu-section-label">uPVC</div>
-      <a class="mm-sub" onclick="closeMobileMenu(); showSection('upvc')">uPVC Windows <span style="font-size:0.72rem;color:var(--gold);margin-left:6px;">Soon</span></a>
-    </div>
-
-    <a class="mm-item" onclick="closeMobileMenu(); showSection('contact')">Contact</a>
-    <a class="mm-item" onclick="closeMobileMenu(); showSection('about')">About</a>
-    <a class="mm-item mm-cta" onclick="closeMobileMenu(); showSection('contact')">Get a Quote</a>
-  </div>
   <ul class="nav-links">
     <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
     <li id="products-nav-item">
@@ -1013,6 +992,29 @@
     <li><a href="javascript:void(0)" class="nav-cta" onclick="showSection('contact')">Get a Quote</a></li>
   </ul>
 </nav>
+
+<!-- Mobile menu (outside nav to avoid backdrop-filter containing-block issue) -->
+<div class="mobile-menu" id="mobile-menu">
+  <a class="mm-item" onclick="closeMobileMenu(); showSection('home')">Home</a>
+
+  <!-- Products accordion -->
+  <div class="mm-item mm-accordion-toggle" onclick="toggleMobileProducts()">
+    Products <span class="mm-acc-arrow" id="mm-acc-arrow">▸</span>
+  </div>
+  <div class="mm-accordion-body" id="mm-products-body">
+    <div class="mobile-menu-section-label">Thermal-Break Aluminum</div>
+    <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('casement')">Casement &amp; Swing Windows and Patio Doors</a>
+    <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('slimline')">Slimline Windows</a>
+    <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('liftslide')">Lift &amp; Slide Doors</a>
+    <a class="mm-sub" onclick="closeMobileMenu(); showSection('technology')">Technology &amp; Design</a>
+    <div class="mobile-menu-section-label">uPVC</div>
+    <a class="mm-sub" onclick="closeMobileMenu(); showSection('upvc')">uPVC Windows <span style="font-size:0.72rem;color:var(--gold);margin-left:6px;">Soon</span></a>
+  </div>
+
+  <a class="mm-item" onclick="closeMobileMenu(); showSection('contact')">Contact</a>
+  <a class="mm-item" onclick="closeMobileMenu(); showSection('about')">About</a>
+  <a class="mm-item mm-cta" onclick="closeMobileMenu(); showSection('contact')">Get a Quote</a>
+</div>
 
 <!-- ══════════════════════════════════════
      HERO
@@ -1559,8 +1561,7 @@
   /* ── Fade-in observer ── */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
