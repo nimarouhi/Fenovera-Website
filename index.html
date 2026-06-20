@@ -1654,6 +1654,12 @@
     showSection(section, false);
     switchTab(tab || 'casement', false);
     history.replaceState({ section: section, tab: tab || currentTab }, '', location.pathname || '/');
+    // Immediately mark fade-in elements visible in the initial section (avoids
+    // IntersectionObserver layout-timing bug on hard refresh / direct URL load)
+    requestAnimationFrame(function() {
+      const activeEl = document.getElementById(section);
+      if (activeEl) activeEl.querySelectorAll('.fade-in').forEach(function(e) { e.classList.add('visible'); });
+    });
   })();
 
   /* ── Fade-in observer ── */
