@@ -939,6 +939,35 @@
 
   /* Sticky sub-nav highlight */
   .anchor-link { scroll-margin-top: calc(var(--nav-h) + 20px); }
+
+  /* ── Product photos ── */
+  .product-photo {
+    width: 100%; height: 420px;
+    overflow: hidden; border-radius: 16px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .product-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 30%;
+    display: block;
+  }
+
+  /* ── Hero background photo ── */
+  .hero-photo {
+    position: absolute; inset: 0; z-index: 0;
+    overflow: hidden;
+  }
+  .hero-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 60%;
+    opacity: 0.18;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .product-photo { height: 240px; }
+  }
 </style>
 </head>
 <body>
@@ -1022,6 +1051,7 @@
 <section id="home">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
+  <div class="hero-photo"><img src="img/hero.jpg" alt="Luxury aluminum windows and doors"></div>
   <div class="hero-content">
     <div class="hero-badge">Bay Area's Exclusive Factory-Direct Source</div>
     <h1 class="hero-title">
@@ -1063,6 +1093,10 @@
 
     <!-- ─── TAB 1: Casement ─── -->
     <div class="tab-panel active" id="tab-casement">
+
+      <div class="product-photo fade-in">
+        <img src="img/casement.jpg" alt="Casement and swing aluminum windows">
+      </div>
 
       <div class="product-banner fade-in">
         <div>
@@ -1130,6 +1164,10 @@
     <!-- ─── TAB 2: Slimline ─── -->
     <div class="tab-panel" id="tab-slimline">
 
+      <div class="product-photo fade-in">
+        <img src="img/slimline.jpg" alt="Slimline aluminum windows">
+      </div>
+
       <div class="product-banner fade-in">
         <div>
           <div class="pb-label">Product 02 — Slimline</div>
@@ -1191,6 +1229,10 @@
 
     <!-- ─── TAB 3: Lift & Slide ─── -->
     <div class="tab-panel" id="tab-liftslide">
+
+      <div class="product-photo fade-in">
+        <img src="img/liftslide.jpg" alt="Lift and slide patio doors">
+      </div>
 
       <div class="product-banner fade-in">
         <div>
@@ -1533,7 +1575,6 @@
     el.querySelector('.sub-arrow').style.transform =
       sub.classList.contains('open') ? 'rotate(90deg)' : '';
   }
-
   /* ── Section routing ── */
   const allSections = ['home','casement','technology','certifications','upvc','contact','about'];
   function showSection(id) {
@@ -1561,7 +1602,8 @@
   /* ── Fade-in observer ── */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
