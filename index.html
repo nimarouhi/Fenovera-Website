@@ -1577,12 +1577,49 @@
   }
   /* ── Section routing ── */
   const allSections = ['home','casement','technology','certifications','upvc','contact','about'];
-  function showSection(id) {
+  let currentTab = 'casement';
+
+  /* ── URL helpers ── */
+  function sectionToUrl(sectionId, tabName) {
+    switch(sectionId) {
+      case 'home':       return '/';
+      case 'contact':    return '/contact';
+      case 'about':      return '/about';
+      case 'technology': return '/products/thermal-break/technology';
+      case 'upvc':       return '/products/upvc';
+      case 'casement': {
+        const t = tabName || currentTab;
+        if (t === 'slimline')  return '/products/thermal-break/slimline';
+        if (t === 'liftslide') return '/products/thermal-break/liftslide';
+        return '/products/thermal-break/casement';
+      }
+      default: return '/';
+    }
+  }
+
+  function urlToState(path) {
+    if (!path || path === '/') return { section: 'home', tab: null };
+    if (path.startsWith('/contact'))                          return { section: 'contact',    tab: null };
+    if (path.startsWith('/about'))                            return { section: 'about',      tab: null };
+    if (path.startsWith('/products/thermal-break/technology'))return { section: 'technology', tab: null };
+    if (path.startsWith('/products/upvc'))                    return { section: 'upvc',       tab: null };
+    if (path.startsWith('/products/thermal-break/slimline'))  return { section: 'casement',   tab: 'slimline' };
+    if (path.startsWith('/products/thermal-break/liftslide')) return { section: 'casement',   tab: 'liftslide' };
+    if (path.startsWith('/products/thermal-break'))           return { section: 'casement',   tab: 'casement' };
+    if (path.startsWith('/products'))                         return { section: 'casement',   tab: 'casement' };
+    return { section: 'home', tab: null };
+  }
+
+  /* ── Section routing ── */
+  function showSection(id, pushState) {
     allSections.forEach(s => {
       const el = document.getElementById(s);
       if (el) el.style.display = (s === id) ? '' : 'none';
     });
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (pushState !== false) {
+      history.pushState({ section: id, tab: currentTab }, '', sectionToUrl(id, currentTab));
+    }
     setTimeout(() => {
       document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
     }, 50);
@@ -1590,14 +1627,34 @@
 
   /* ── Tabs ── */
   const tabs = ['casement','slimline','liftslide'];
-  function switchTab(name) {
+  function switchTab(name, pushState) {
+    currentTab = name;
     tabs.forEach(t => {
       document.getElementById('tab-'+t).classList.toggle('active', t===name);
     });
     document.querySelectorAll('.tab-btn').forEach((btn, i) => {
       btn.classList.toggle('active', tabs[i]===name);
     });
+    if (pushState !== false) {
+      history.pushState({ section: 'casement', tab: name }, '', sectionToUrl('casement', name));
+    }
   }
+
+  /* ── Back/Forward navigation ── */
+  window.addEventListener('popstate', function(e) {
+    const state = e.state || urlToState(location.pathname);
+    showSection(state.section, false);
+    if (state.tab) switchTab(state.tab, false);
+    else if (state.section === 'casement') switchTab(currentTab, false);
+  });
+
+  /* ── Init from URL on load ── */
+  (function() {
+    const { section, tab } = urlToState(location.pathname);
+    showSection(section, false);
+    switchTab(tab || 'casement', false);
+    history.replaceState({ section: section, tab: tab || currentTab }, '', location.pathname || '/');
+  })();
 
   /* ── Fade-in observer ── */
   const observer = new IntersectionObserver((entries) => {
