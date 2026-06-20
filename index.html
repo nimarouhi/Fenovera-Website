@@ -1498,7 +1498,7 @@
   function showSection(id) {
     allSections.forEach(s => {
       const el = document.getElementById(s);
-      if (el) el.style.display = (s === id) ? 'block' : 'none';
+      if (el) el.style.display = (s === id) ? '' : 'none';
     });
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setTimeout(() => {
@@ -1525,3 +1525,4 @@
 </script>
 </body>
 </html>
+es.fo
