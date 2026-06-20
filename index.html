@@ -1520,4 +1520,47 @@
     document.getElementById('products-dropdown').classList.remove('open');
     document.getElementById('products-btn').classList.remove('dropdown-open');
   }
-  document.
+  addEventListener('click', function(e) {
+    if (!document.getElementById('products-nav-item').contains(e.target)) closeDropdown();
+  });
+
+  /* ── Sub-dropdown ── */
+  function toggleSubDropdown(el) {
+    const sub = document.getElementById('aluminum-sub');
+    sub.classList.toggle('open');
+    el.querySelector('.sub-arrow').style.transform =
+      sub.classList.contains('open') ? 'rotate(90deg)' : '';
+  }
+
+  /* ── Section routing ── */
+  const allSections = ['home','casement','technology','certifications','upvc','contact','about'];
+  function showSection(id) {
+    allSections.forEach(s => {
+      const el = document.getElementById(s);
+      if (el) el.style.display = (s === id) ? '' : 'none';
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
+    }, 50);
+  }
+
+  /* ── Tabs ── */
+  const tabs = ['casement','slimline','liftslide'];
+  function switchTab(name) {
+    tabs.forEach(t => {
+      document.getElementById('tab-'+t).classList.toggle('active', t===name);
+    });
+    document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+      btn.classList.toggle('active', tabs[i]===name);
+    });
+  }
+
+  /* ── Fade-in observer ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
