@@ -609,6 +609,62 @@
   }
 
   /* ════════════════════════════════════
+     HARDWARE SECTION
+  ════════════════════════════════════ */
+  .hardware-brands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0 32px;
+  }
+  .hw-brand {
+    background: rgba(13,115,119,0.12);
+    border: 1px solid rgba(13,115,119,0.3);
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.04em;
+  }
+  .hw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .hw-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 22px 20px;
+    border-top: 3px solid var(--teal);
+  }
+  .hw-card-title {
+    font-weight: 700;
+    color: var(--white);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  .hw-card-list {
+    list-style: none;
+    padding: 0; margin: 0;
+  }
+  .hw-card-list li {
+    font-size: 0.84rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.65;
+    padding-left: 14px;
+    position: relative;
+  }
+  .hw-card-list li::before {
+    content: '·';
+    position: absolute; left: 0;
+    color: var(--teal-b);
+    font-weight: 700;
+  }
+
+  /* ════════════════════════════════════
      CERTIFICATIONS STRIP
   ════════════════════════════════════ */
   #certifications {
@@ -1057,7 +1113,38 @@
       <div class="section-divider"></div>
     </div>
 
-    <h3 class="features-title fade-in" style="color:var(--gold); margin-bottom:24px">Glass Selection</h3>
+    <!-- HARDWARE -->
+    <h3 class="features-title fade-in" style="color:var(--gold); margin-bottom:8px;">Window & Door Hardware</h3>
+    <p class="fade-in" style="color:rgba(255,255,255,0.45); font-size:0.9rem; margin-bottom:4px;">German Brands Hardware</p>
+    <div class="hardware-brands fade-in">
+      <span class="hw-brand">Siegenia</span>
+      <span class="hw-brand">HOPPE</span>
+      <span class="hw-brand">ROTO</span>
+      <span class="hw-brand">HAUTAU</span>
+      <span class="hw-brand">FSB</span>
+      <span class="hw-brand">Runas</span>
+      <span class="hw-brand">HOPO</span>
+    </div>
+    <div class="hw-grid">
+      <div class="hw-card fade-in">
+        <div class="hw-card-title">Hardware Design & Colors</div>
+        <ul class="hw-card-list">
+          <li>Variety of hardware designs and colors (white, black, silver, bronze, etc.) are available.</li>
+        </ul>
+      </div>
+      <div class="hw-card fade-in">
+        <div class="hw-card-title">Screen Selections</div>
+        <ul class="hw-card-list">
+          <li>Both stainless steel and PET mesh screens are available.</li>
+          <li>Frame color matching to the window.</li>
+          <li>High transparency, retractable, one or two panels mesh.</li>
+          <li>Magnetic handle to lock in place.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- GLASS -->
+    <h3 class="features-title fade-in" style="color:var(--gold); margin-bottom:24px; margin-top:60px;">Glass Selection</h3>
     <p style="color:rgba(255,255,255,0.45); font-size:0.9rem; margin-bottom:28px;" class="fade-in">We recommend specific glass types by scene and performance requirement.</p>
     <div class="glass-grid" style="margin-bottom:60px;">
       <div class="glass-card fade-in">
@@ -1239,72 +1326,4 @@
   </div>
 </footer>
 
-<!-- ══════════════════════════════════════
-     JAVASCRIPT
-══════════════════════════════════════ -->
-<script>
-  /* ── Dropdown ── */
-  let dropOpen = false;
-  function toggleDropdown() {
-    dropOpen = !dropOpen;
-    document.getElementById('products-dropdown').classList.toggle('open', dropOpen);
-    document.getElementById('products-btn').classList.toggle('dropdown-open', dropOpen);
-  }
-  function closeDropdown() {
-    dropOpen = false;
-    document.getElementById('products-dropdown').classList.remove('open');
-    document.getElementById('products-btn').classList.remove('dropdown-open');
-  }
-  document.addEventListener('click', function(e) {
-    if (!document.getElementById('products-nav-item').contains(e.target)) closeDropdown();
-  });
-
-  /* ── Sub-dropdown ── */
-  function toggleSubDropdown(el) {
-    const sub = document.getElementById('aluminum-sub');
-    sub.classList.toggle('open');
-    el.querySelector('.sub-arrow').style.transform =
-      sub.classList.contains('open') ? 'rotate(90deg)' : '';
-  }
-
-  /* ── Section routing ── */
-  const allSections = ['home','casement','technology','certifications','upvc','contact','about'];
-  function showSection(id) {
-    allSections.forEach(s => {
-      const el = document.getElementById(s);
-      if (el) el.style.display = (s === id) ? '' : 'none';
-    });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    // Trigger fade-ins for newly visible section
-    setTimeout(() => {
-      document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
-    }, 50);
-  }
-  // Hide all non-home sections on load
-  allSections.forEach(s => {
-    if (s !== 'home') {
-      const el = document.getElementById(s);
-      if (el) el.style.display = 'none';
-    }
-  });
-
-  /* ── Tabs ── */
-  const tabs = ['casement','slimline','liftslide'];
-  function switchTab(name) {
-    tabs.forEach(t => {
-      document.getElementById('tab-'+t).classList.toggle('active', t===name);
-    });
-    document.querySelectorAll('.tab-btn').forEach((btn, i) => {
-      btn.classList.toggle('active', tabs[i]===name);
-    });
-  }
-
-  /* ── Fade-in observer ── */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
-                                                                                                                                                                           
+<!-- ═══
