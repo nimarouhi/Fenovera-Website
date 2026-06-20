@@ -833,30 +833,50 @@
     margin: 24px 0 8px; padding-bottom: 6px;
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
-  .mobile-menu a {
-    display: block; padding: 13px 0;
+  .mobile-menu a { color: rgba(255,255,255,0.82); }
+  .mobile-menu a:hover, .mobile-menu .mm-item:hover { color: var(--gold); }
+  .mm-item {
+    display: block; padding: 15px 0;
     font-size: 1rem; font-weight: 600; letter-spacing: 0.03em;
-    color: rgba(255,255,255,0.82);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.88);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
     cursor: pointer;
   }
-  .mobile-menu a:hover { color: var(--gold); }
   .mobile-menu a.mm-sub {
+    display: block;
     font-size: 0.9rem; font-weight: 500;
-    color: rgba(255,255,255,0.6);
-    padding-left: 14px;
+    color: rgba(255,255,255,0.62);
+    padding: 11px 0 11px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    cursor: pointer;
   }
   .mobile-menu a.mm-soon {
     opacity: 0.35; pointer-events: none;
   }
-  .mobile-menu a.mm-cta {
-    margin-top: 24px;
-    display: block; text-align: center;
-    background: var(--teal); color: var(--white);
-    border-radius: 8px; padding: 14px;
-    font-size: 0.92rem; font-weight: 700;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    border-bottom: none;
+  .mm-accordion-toggle {
+    display: flex !important; align-items: center; justify-content: space-between;
+  }
+  .mm-acc-arrow {
+    font-size: 0.85rem; color: var(--gold);
+    transition: transform 0.25s;
+    display: inline-block;
+  }
+  .mm-acc-arrow.open { transform: rotate(90deg); }
+  .mm-accordion-body {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.32s cubic-bezier(0.4,0,0.2,1);
+    background: rgba(255,255,255,0.03);
+    border-radius: 6px;
+  }
+  .mm-accordion-body.open { max-height: 500px; }
+  .mm-item.mm-cta {
+    margin-top: 20px !important;
+    text-align: center !important;
+    background: var(--teal) !important; color: var(--white) !important;
+    border-radius: 8px !important; padding: 14px !important;
+    font-size: 0.92rem !important; font-weight: 700 !important;
+    letter-spacing: 0.06em !important; text-transform: uppercase !important;
+    border-bottom: none !important;
   }
 
   /* ════════════════════════════════════
@@ -932,17 +952,25 @@
     <span></span><span></span><span></span>
   </button>
   <div class="mobile-menu" id="mobile-menu">
-    <a onclick="closeMobileMenu(); showSection('home')">Home</a>
-    <div class="mobile-menu-section-label">Aluminum Windows & Doors</div>
-    <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('casement')">Casement & Swing Windows and Patio Doors</a>
-    <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('slimline')">Slimline Windows</a>
-    <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('liftslide')">Lift & Slide Doors</a>
-    <a class="mm-sub" onclick="closeMobileMenu(); showSection('technology')">Technology & Design</a>
-    <div class="mobile-menu-section-label">uPVC</div>
-    <a class="mm-sub" onclick="closeMobileMenu(); showSection('upvc')">uPVC Windows &nbsp;<span style="font-size:0.72rem;color:var(--gold);">Soon</span></a>
-    <a onclick="closeMobileMenu(); showSection('contact')">Contact</a>
-    <a onclick="closeMobileMenu(); showSection('about')">About</a>
-    <a class="mm-cta" onclick="closeMobileMenu(); showSection('contact')">Get a Quote</a>
+    <a class="mm-item" onclick="closeMobileMenu(); showSection('home')">Home</a>
+
+    <!-- Products accordion -->
+    <div class="mm-item mm-accordion-toggle" onclick="toggleMobileProducts()">
+      Products <span class="mm-acc-arrow" id="mm-acc-arrow">▸</span>
+    </div>
+    <div class="mm-accordion-body" id="mm-products-body">
+      <div class="mobile-menu-section-label">Thermal-Break Aluminum</div>
+      <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('casement')">Casement & Swing Windows and Patio Doors</a>
+      <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('slimline')">Slimline Windows</a>
+      <a class="mm-sub" onclick="closeMobileMenu(); showSection('casement'); switchTab('liftslide')">Lift & Slide Doors</a>
+      <a class="mm-sub" onclick="closeMobileMenu(); showSection('technology')">Technology & Design</a>
+      <div class="mobile-menu-section-label">uPVC</div>
+      <a class="mm-sub" onclick="closeMobileMenu(); showSection('upvc')">uPVC Windows <span style="font-size:0.72rem;color:var(--gold);margin-left:6px;">Soon</span></a>
+    </div>
+
+    <a class="mm-item" onclick="closeMobileMenu(); showSection('contact')">Contact</a>
+    <a class="mm-item" onclick="closeMobileMenu(); showSection('about')">About</a>
+    <a class="mm-item mm-cta" onclick="closeMobileMenu(); showSection('contact')">Get a Quote</a>
   </div>
   <ul class="nav-links">
     <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
@@ -1463,10 +1491,21 @@
     btn.classList.toggle('open', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
   }
+  function toggleMobileProducts() {
+    const body = document.getElementById('mm-products-body');
+    const arrow = document.getElementById('mm-acc-arrow');
+    body.classList.toggle('open');
+    arrow.classList.toggle('open');
+  }
   function closeMobileMenu() {
     document.getElementById('mobile-menu').classList.remove('open');
     document.getElementById('hamburger').classList.remove('open');
     document.body.style.overflow = '';
+    // also collapse products accordion
+    const body = document.getElementById('mm-products-body');
+    const arrow = document.getElementById('mm-acc-arrow');
+    if (body) body.classList.remove('open');
+    if (arrow) arrow.classList.remove('open');
   }
 
   /* ── Dropdown ── */
@@ -1481,48 +1520,4 @@
     document.getElementById('products-dropdown').classList.remove('open');
     document.getElementById('products-btn').classList.remove('dropdown-open');
   }
-  document.addEventListener('click', function(e) {
-    if (!document.getElementById('products-nav-item').contains(e.target)) closeDropdown();
-  });
-
-  /* ── Sub-dropdown ── */
-  function toggleSubDropdown(el) {
-    const sub = document.getElementById('aluminum-sub');
-    sub.classList.toggle('open');
-    el.querySelector('.sub-arrow').style.transform =
-      sub.classList.contains('open') ? 'rotate(90deg)' : '';
-  }
-
-  /* ── Section routing ── */
-  const allSections = ['home','casement','technology','certifications','upvc','contact','about'];
-  function showSection(id) {
-    allSections.forEach(s => {
-      const el = document.getElementById(s);
-      if (el) el.style.display = (s === id) ? '' : 'none';
-    });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setTimeout(() => {
-      document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
-    }, 50);
-  }
-
-  /* ── Tabs ── */
-  const tabs = ['casement','slimline','liftslide'];
-  function switchTab(name) {
-    tabs.forEach(t => {
-      document.getElementById('tab-'+t).classList.toggle('active', t===name);
-    });
-    document.querySelectorAll('.tab-btn').forEach((btn, i) => {
-      btn.classList.toggle('active', tabs[i]===name);
-    });
-  }
-
-  /* ── Fade-in observer ── */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
-es.forEach(e => { 
+  document.
