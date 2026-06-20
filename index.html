@@ -946,6 +946,9 @@
     overflow: hidden; border-radius: 16px;
     margin-bottom: 40px;
     position: relative;
+    /* Always visible — never subject to fade-in timing */
+    opacity: 1 !important;
+    transform: none !important;
   }
   .product-photo img {
     width: 100%; height: 100%;
