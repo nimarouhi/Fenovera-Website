@@ -1358,4 +1358,170 @@
 
     <div class="cert-row fade-in">
       <div class="cert-badge"><div class="cb-name">NFRC</div><div class="cb-sub">Energy Performance</div></div>
-      <div class="cert-badge"><div class="
+      <div class="cert-badge"><div class="cb-name">INTERTEK</div><div class="cb-sub">Third-Party Testing</div></div>
+      <div class="cert-badge"><div class="cb-name">SGS</div><div class="cb-sub">Global Quality</div></div>
+      <div class="cert-badge"><div class="cb-name">AAMA</div><div class="cb-sub">LC-PG50 Rating</div></div>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <div class="wc-icon">🏭</div>
+        <div class="wc-title">State-of-the-Art Manufacturing</div>
+        <div class="wc-body">Lean manufacturing processes with rigorous QC testing beyond standard requirements. Extruded aluminum prime billet, automotive-grade EPDM sealing, top European brand hardware.</div>
+      </div>
+      <div class="why-card fade-in">
+        <div class="wc-icon">🎯</div>
+        <div class="wc-title">Custom-Made to Spec</div>
+        <div class="wc-body">Every project is sized to fit. CAD design assistance, elevation drawings, and installation documentation provided at no extra cost.</div>
+      </div>
+      <div class="why-card fade-in">
+        <div class="wc-icon">🤝</div>
+        <div class="wc-title">Dedicated Support</div>
+        <div class="wc-body">Sales, Engineers, CAD technicians, and production personnel support your project from design through delivery. On-time delivery to your schedule.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     uPVC COMING SOON
+══════════════════════════════════════ -->
+<section id="upvc" class="coming-soon-section anchor-link" style="display:none">
+  <div class="section-inner">
+    <div class="section-head fade-in">
+      <p class="section-eyebrow">uPVC Windows</p>
+      <h2 class="section-title">uPVC Window Systems</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="coming-soon-box fade-in">
+      <div class="cs-icon">🔲</div>
+      <div class="cs-title">Coming Soon</div>
+      <p class="cs-sub">Our premium uPVC window line is currently in development. We'll be adding a full range of high-performance uPVC solutions engineered for the North American market.</p>
+      <span class="cs-badge">Coming Soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CONTACT COMING SOON
+══════════════════════════════════════ -->
+<section id="contact" class="anchor-link" style="display:none; padding:100px 0; background:var(--dark);">
+  <div class="section-inner">
+    <div class="section-head fade-in">
+      <p class="section-eyebrow" style="color:var(--teal-b)">Contact Us</p>
+      <h2 class="section-title" style="color:var(--white)">Let's Build Something Beautiful</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="coming-soon-box fade-in" style="background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.08);">
+      <div class="cs-icon">✉️</div>
+      <div class="cs-title" style="color:var(--white)">Coming Soon</div>
+      <p class="cs-sub" style="color:rgba(255,255,255,0.45)">Our contact form is being set up. In the meantime, reach out directly to discuss your project — we work with homeowners, developers, architects, builders, contractors, and designers.</p>
+      <span class="cs-badge">Bay Area's Exclusive Factory-Direct Source</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ABOUT COMING SOON
+══════════════════════════════════════ -->
+<section id="about" class="coming-soon-section anchor-link" style="display:none">
+  <div class="section-inner">
+    <div class="section-head fade-in">
+      <p class="section-eyebrow">About Fenovera</p>
+      <h2 class="section-title">Our Story</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="coming-soon-box fade-in">
+      <div class="cs-icon">🏢</div>
+      <div class="cs-title">Coming Soon</div>
+      <p class="cs-sub">We're working on our full story. Fenovera is the Bay Area's exclusive factory-direct source for European-grade aluminum fenestration systems — more details coming soon.</p>
+      <span class="cs-badge">Coming Soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Fen<span>o</span>vera</div>
+    <div class="footer-certs">NFRC · AAMA · INTERTEK · SGS</div>
+    <div class="footer-copy">© 2026 Fenovera. Bay Area's Exclusive Factory-Direct Source.</div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+  /* ── Mobile menu ── */
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('hamburger');
+    const isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* ── Dropdown ── */
+  let dropOpen = false;
+  function toggleDropdown() {
+    dropOpen = !dropOpen;
+    document.getElementById('products-dropdown').classList.toggle('open', dropOpen);
+    document.getElementById('products-btn').classList.toggle('dropdown-open', dropOpen);
+  }
+  function closeDropdown() {
+    dropOpen = false;
+    document.getElementById('products-dropdown').classList.remove('open');
+    document.getElementById('products-btn').classList.remove('dropdown-open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!document.getElementById('products-nav-item').contains(e.target)) closeDropdown();
+  });
+
+  /* ── Sub-dropdown ── */
+  function toggleSubDropdown(el) {
+    const sub = document.getElementById('aluminum-sub');
+    sub.classList.toggle('open');
+    el.querySelector('.sub-arrow').style.transform =
+      sub.classList.contains('open') ? 'rotate(90deg)' : '';
+  }
+
+  /* ── Section routing ── */
+  const allSections = ['home','casement','technology','certifications','upvc','contact','about'];
+  function showSection(id) {
+    allSections.forEach(s => {
+      const el = document.getElementById(s);
+      if (el) el.style.display = (s === id) ? 'block' : 'none';
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
+    }, 50);
+  }
+
+  /* ── Tabs ── */
+  const tabs = ['casement','slimline','liftslide'];
+  function switchTab(name) {
+    tabs.forEach(t => {
+      document.getElementById('tab-'+t).classList.toggle('active', t===name);
+    });
+    document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+      btn.classList.toggle('active', tabs[i]===name);
+    });
+  }
+
+  /* ── Fade-in observer ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
