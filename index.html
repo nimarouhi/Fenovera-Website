@@ -307,6 +307,38 @@
     cursor: pointer;
   }
   .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  /* Hero value highlights (Free Estimate / Delivery) */
+  .hero-highlights {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    align-items: center; gap: 8px 32px;
+    margin-top: 32px;
+  }
+  .hero-highlight {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 1.1rem; font-weight: 700; letter-spacing: 0.02em;
+    color: var(--white);
+  }
+  .hi-icon {
+    width: 26px; height: 26px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.72rem; flex-shrink: 0; font-weight: 900;
+  }
+  .hi-icon-check { background: var(--teal); color: var(--white); }
+  .hi-icon-clock { background: rgba(201,168,76,0.2); color: var(--gold); font-size: 0.9rem; }
+  .hero-highlight sup {
+    font-size: 0.6rem; color: var(--gold);
+    vertical-align: super; margin-left: 1px;
+  }
+  .hero-sep {
+    color: rgba(255,255,255,0.18); font-size: 1.4rem; font-weight: 300;
+    align-self: center;
+  }
+  .hero-footnote {
+    font-size: 0.72rem; color: rgba(255,255,255,0.3);
+    max-width: 540px; margin: 14px auto 0;
+    line-height: 1.6; text-align: center;
+  }
+
   .hero-scroll {
     position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
     display: flex; flex-direction: column; align-items: center; gap: 6px;
@@ -916,6 +948,10 @@
     .cert-chip { font-size: 0.72rem; padding: 5px 10px; }
     .hero-btns { flex-direction: column; align-items: center; gap: 12px; }
     .btn-primary, .btn-outline { width: 100%; max-width: 300px; text-align: center; }
+    .hero-highlights { gap: 10px 20px; margin-top: 24px; }
+    .hero-highlight { font-size: 1rem; }
+    .hero-sep { display: none; }
+    .hero-footnote { font-size: 0.68rem; }
 
     /* Sections */
     .section-inner { padding: 0 20px; }
@@ -1091,6 +1127,19 @@
       <a href="javascript:void(0)" class="btn-primary" onclick="showSection('casement')">Explore Products →</a>
       <a href="javascript:void(0)" class="btn-outline" onclick="showSection('contact')">Get a Quote</a>
     </div>
+
+    <div class="hero-highlights">
+      <span class="hero-highlight">
+        <span class="hi-icon hi-icon-check">✓</span>
+        Free Estimate
+      </span>
+      <span class="hero-sep">|</span>
+      <span class="hero-highlight">
+        <span class="hi-icon hi-icon-clock">⏱</span>
+        8-Week Estimated Delivery<sup>*</sup>
+      </span>
+    </div>
+    <p class="hero-footnote"><sup>*</sup> Estimated delivery timeframe applies to standard configurations under normal production conditions. Custom dimensions, specialty glazing, or high-volume orders may require additional lead time. This is an estimate, not a guarantee; Fenovera will communicate any scheduling updates proactively and will make every effort to deliver your order at the earliest possible date.</p>
   </div>
 </section>
 
@@ -1126,10 +1175,10 @@
           <h3 class="pb-title">Premium Thermal-Break<br>Aluminum Windows & Patio Doors</h3>
           <p class="pb-tagline">Versatile performance for modern residential and commercial architecture</p>
           <div class="pb-specs">
-            <div class="pb-spec"><div class="pb-spec-val">76mm</div><div class="pb-spec-lbl">Frame Depth</div></div>
-            <div class="pb-spec"><div class="pb-spec-val">35.3mm</div><div class="pb-spec-lbl">Thermal Barrier</div></div>
+            <div class="pb-spec"><div class="pb-spec-val">3"</div><div class="pb-spec-lbl">Frame Depth</div></div>
+            <div class="pb-spec"><div class="pb-spec-val">1 3/8"</div><div class="pb-spec-lbl">Thermal Barrier</div></div>
             <div class="pb-spec"><div class="pb-spec-val">≥1.8</div><div class="pb-spec-lbl">Profile Thickness</div></div>
-            <div class="pb-spec"><div class="pb-spec-val">39mm</div><div class="pb-spec-lbl">Max Glazing</div></div>
+            <div class="pb-spec"><div class="pb-spec-val">1 9/16"</div><div class="pb-spec-lbl">Max Glazing</div></div>
           </div>
         </div>
         <div class="pb-num">01</div>
@@ -1147,7 +1196,7 @@
         </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">⚡</div><div class="fc-title">Thermal Efficiency</div></div>
-          <p class="fc-body">35.3mm thermal break eliminates metal-to-metal conduction, significantly reducing heat loss and condensation risk year-round.</p>
+          <p class="fc-body">1 3/8" thermal break eliminates metal-to-metal conduction, significantly reducing heat loss and condensation risk year-round.</p>
         </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">🔧</div><div class="fc-title">Premium German Hardware</div></div>
@@ -1167,11 +1216,11 @@
         <div class="specs-block-head">Technical Specifications — Casement & Swing Window System</div>
         <table class="specs-table">
           <tr><td>Profile Thickness</td><td>≥ 1.8</td></tr>
-          <tr><td>Frame Depth</td><td>76 mm</td></tr>
-          <tr><td>Thermal Barrier</td><td>35.3 mm</td></tr>
+          <tr><td>Frame Depth</td><td>3"</td></tr>
+          <tr><td>Thermal Barrier</td><td>1 3/8"</td></tr>
           <tr><td>Weather Seal</td><td>Triple gasket system</td></tr>
           <tr><td>Performance Rating</td><td>AAMA Class LC-PG50</td></tr>
-          <tr><td>Max Glazing Thickness</td><td>Up to 39 mm</td></tr>
+          <tr><td>Max Glazing Thickness</td><td>Up to 1 9/16"</td></tr>
           <tr><td>Hardware</td><td>Siegenia / HOPPE / ROTO / HAUTAU / FSB / Runas / HOPO</td></tr>
           <tr><td>Hinge Options</td><td>Exposed or concealed 'Chic'</td></tr>
           <tr><td>Finish</td><td>AkzoNobel powder / Fluorocarbon (above 1,080 sqft)</td></tr>
@@ -1196,9 +1245,9 @@
           <h3 class="pb-title">Slimline<br>Thermal-Break Windows</h3>
           <p class="pb-tagline">Maximize the view. Minimize the frame.</p>
           <div class="pb-specs">
-            <div class="pb-spec"><div class="pb-spec-val">48mm</div><div class="pb-spec-lbl">Fixed Sightline</div></div>
-            <div class="pb-spec"><div class="pb-spec-val">85mm</div><div class="pb-spec-lbl">Frame Depth</div></div>
-            <div class="pb-spec"><div class="pb-spec-val">35.3mm</div><div class="pb-spec-lbl">Thermal Barrier</div></div>
+            <div class="pb-spec"><div class="pb-spec-val">1 7/8"</div><div class="pb-spec-lbl">Fixed Sightline</div></div>
+            <div class="pb-spec"><div class="pb-spec-val">3 3/8"</div><div class="pb-spec-lbl">Frame Depth</div></div>
+            <div class="pb-spec"><div class="pb-spec-val">1 3/8"</div><div class="pb-spec-lbl">Thermal Barrier</div></div>
             <div class="pb-spec"><div class="pb-spec-val">2.0</div><div class="pb-spec-lbl">Profile Thickness</div></div>
           </div>
         </div>
@@ -1209,7 +1258,7 @@
       <div class="features-grid">
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">👁️</div><div class="fc-title">Ultra-Slim Sightlines</div></div>
-          <p class="fc-body">48mm (fixed) and 77.7mm (opening) sightlines. Thinner frames mean significantly more glass area and unobstructed views.</p>
+          <p class="fc-body">1 7/8" (fixed) and 3 1/16" (opening) sightlines. Thinner frames mean significantly more glass area and unobstructed views.</p>
         </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">🌡️</div><div class="fc-title">Thermal Efficiency</div></div>
@@ -1217,7 +1266,7 @@
         </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">🔇</div><div class="fc-title">Noise Reduction</div></div>
-          <p class="fc-body">Tight frame and multi-point seal design minimizes sound transmission. Adaptable to accommodate acoustic glazing up to 39mm thickness.</p>
+          <p class="fc-body">Tight frame and multi-point seal design minimizes sound transmission. Adaptable to accommodate acoustic glazing up to 1 9/16" thickness.</p>
         </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">🛡️</div><div class="fc-title">Security</div></div>
@@ -1237,12 +1286,12 @@
         <div class="specs-block-head">Technical Specifications — Slimline Window System</div>
         <table class="specs-table">
           <tr><td>Profile Thickness</td><td>2.0</td></tr>
-          <tr><td>Frame Depth</td><td>85 mm</td></tr>
-          <tr><td>Thermal Barrier</td><td>35.3 mm</td></tr>
-          <tr><td>Fixed Sightline</td><td>48 mm</td></tr>
-          <tr><td>Opening Sightline</td><td>77.7 mm</td></tr>
+          <tr><td>Frame Depth</td><td>3 3/8"</td></tr>
+          <tr><td>Thermal Barrier</td><td>1 3/8"</td></tr>
+          <tr><td>Fixed Sightline</td><td>1 7/8"</td></tr>
+          <tr><td>Opening Sightline</td><td>3 1/16"</td></tr>
           <tr><td>Center Profile Reduction</td><td>Up to 50% slimmer</td></tr>
-          <tr><td>Max Acoustic Glazing</td><td>Up to 39 mm</td></tr>
+          <tr><td>Max Acoustic Glazing</td><td>Up to 1 9/16"</td></tr>
           <tr><td>Custom Shapes & Sizes</td><td>Available</td></tr>
         </table>
       </div>
@@ -1262,10 +1311,10 @@
           <h3 class="pb-title">Lift & Slide<br>Patio Doors</h3>
           <p class="pb-tagline">A change of open space, designed for living well.</p>
           <div class="pb-specs">
-            <div class="pb-spec"><div class="pb-spec-val">152mm</div><div class="pb-spec-lbl">Frame Depth</div></div>
+            <div class="pb-spec"><div class="pb-spec-val">6"</div><div class="pb-spec-lbl">Frame Depth</div></div>
             <div class="pb-spec"><div class="pb-spec-val">3.3m</div><div class="pb-spec-lbl">Max Height</div></div>
             <div class="pb-spec"><div class="pb-spec-val">440kg</div><div class="pb-spec-lbl">Max Sash</div></div>
-            <div class="pb-spec"><div class="pb-spec-val">24mm</div><div class="pb-spec-lbl">Thermal Barrier</div></div>
+            <div class="pb-spec"><div class="pb-spec-val">15/16"</div><div class="pb-spec-lbl">Thermal Barrier</div></div>
           </div>
         </div>
         <div class="pb-num">03</div>
@@ -1279,11 +1328,11 @@
         </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">⚡</div><div class="fc-title">Energy Efficiency</div></div>
-          <p class="fc-body">24mm thermal barrier combined with multi-point sealing keeps interiors comfortable year-round and reduces HVAC costs.</p>
+          <p class="fc-body">15/16" thermal barrier combined with multi-point sealing keeps interiors comfortable year-round and reduces HVAC costs.</p>
         </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">🪟</div><div class="fc-title">Slim Center Profile</div></div>
-          <p class="fc-body">Choose standard 106mm or the premium 53mm ultra-slim center stile, up to 50% slimmer, for an unobstructed panoramic view.</p>
+          <p class="fc-body">Choose standard 4 3/16" or the premium 2 1/16" ultra-slim center stile, up to 50% slimmer, for an unobstructed panoramic view.</p>
         </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">🔒</div><div class="fc-title">Multi-Point Security</div></div>
@@ -1291,7 +1340,7 @@
         </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">🔇</div><div class="fc-title">Acoustic Performance</div></div>
-          <p class="fc-body">Frame and seal design minimizes noise transmission. Accommodates acoustic glazing up to 42mm thickness.</p>
+          <p class="fc-body">Frame and seal design minimizes noise transmission. Accommodates acoustic glazing up to 1 5/8" thickness.</p>
         </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">📐</div><div class="fc-title">Flexible Configurations</div></div>
@@ -1303,14 +1352,14 @@
         <div class="specs-block-head">Technical Specifications — Lift & Slide Patio Door System</div>
         <table class="specs-table">
           <tr><td>Profile Thickness</td><td>2.2</td></tr>
-          <tr><td>Frame Depth</td><td>152 mm</td></tr>
-          <tr><td>Thermal Barrier</td><td>24 mm</td></tr>
+          <tr><td>Frame Depth</td><td>6"</td></tr>
+          <tr><td>Thermal Barrier</td><td>15/16"</td></tr>
           <tr><td>Max Panel Height</td><td>3.3 m</td></tr>
           <tr><td>Max Sash Weight</td><td>440 kg (970 lb)</td></tr>
-          <tr><td>Center Stile Options</td><td>Standard 106mm / Ultra-slim 53mm</td></tr>
+          <tr><td>Center Stile Options</td><td>Standard 4 3/16" / Ultra-slim 2 1/16"</td></tr>
           <tr><td>Rail Configurations</td><td>Monorail (single track) / Dual-rail</td></tr>
           <tr><td>Threshold Options</td><td>Standard / Ramp (ADA-friendly)</td></tr>
-          <tr><td>Max Acoustic Glazing</td><td>Up to 42 mm</td></tr>
+          <tr><td>Max Acoustic Glazing</td><td>Up to 1 5/8"</td></tr>
           <tr><td>Space Saving</td><td>No swing clearance needed</td></tr>
         </table>
       </div>
