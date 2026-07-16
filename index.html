@@ -1074,9 +1074,28 @@
     border-radius: 12px;
   }
 
+  /* ── Tilt & Turn photos ── */
+  .tt-hero-photo {
+    width: 100%; border-radius: 16px; overflow: hidden;
+    margin-bottom: 40px;
+  }
+  .tt-hero-photo img {
+    width: 100%; height: auto; display: block;
+  }
+  .tt-gallery {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 20px; margin-top: 40px;
+  }
+  .tt-gallery img {
+    width: 100%; height: 280px; object-fit: cover; display: block;
+    border-radius: 12px;
+  }
+
   @media (max-width: 768px) {
     .product-photo { height: 240px; }
     .hung-gallery { grid-template-columns: 1fr; }
+    .tt-gallery { grid-template-columns: 1fr; }
+    .tt-gallery img { height: 220px; }
   }
 </style>
 </head>
@@ -1541,8 +1560,8 @@
 
     <!-- ─── TILT & TURN ─── -->
     <div class="tab-panel" id="upvcwin-tiltturn">
-      <div class="product-photo fade-in">
-        <img src="/img/upvc-tiltturn.jpg" alt="Tilt and turn uPVC window">
+      <div class="tt-hero-photo fade-in">
+        <img src="/img/upvc-tt-hero.jpg" alt="Tilt and turn uPVC windows open in turn mode, interior garden view">
       </div>
       <div class="product-banner fade-in">
         <div>
@@ -1552,14 +1571,13 @@
           <div class="pb-specs">
             <div class="pb-spec"><div class="pb-spec-val">0.199</div><div class="pb-spec-lbl">BTU/(ft²·hr·°F)</div></div>
             <div class="pb-spec"><div class="pb-spec-val">198 lb</div><div class="pb-spec-lbl">Max Load</div></div>
-            
           </div>
         </div>
         <div class="pb-num">W2</div>
       </div>
       <h3 class="features-title fade-in">Key Features</h3>
       <div class="features-grid">
-        <div class="feature-card fc-color fade-in">
+        <div class="feature-card fc-color-cell fade-in">
           <img src="/img/upvc-color-card.jpg" alt="RAL color swatch — customizable frame colors">
           <div>
             <div class="fc-top"><div class="fc-title">Frame Color</div></div>
@@ -1577,6 +1595,14 @@
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">🔩</div><div class="fc-title">Steel-Reinforced Profile</div></div>
           <p class="fc-body">Q235 galvanized steel insert within the multi-chamber uPVC profile adds structural rigidity and supports precise hardware operation over time.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="fc-top"><div class="fc-icon">🔇</div><div class="fc-title">Sound Insulation</div></div>
+          <p class="fc-body">3–5 cavity structure with dual seals delivers excellent sound insulation and a high-performance drainage system, keeping interiors quieter and drier.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="fc-top"><div class="fc-icon">🔧</div><div class="fc-title">Hardware</div></div>
+          <p class="fc-body">Selections available to suit your project requirements.</p>
         </div>
       </div>
       <div class="specs-block fade-in">
@@ -1598,6 +1624,9 @@
           <tr><td>Certifications</td><td>ISO / SGS / NFRC</td></tr>
         </table>
       </div>
+      <div class="tt-gallery fade-in">
+        <img src="/img/upvc-tt-gal1.jpg" alt="Grey tilt and turn uPVC windows in modern kitchen setting">
+        <img src="/img/upvc-tt-gal2.jpg" alt="Tilt and turn window showing closed, tilt, and turn positions">
       </div>
     </div><!-- /upvcwin-tiltturn -->
 
