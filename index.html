@@ -1023,8 +1023,26 @@
     display: block;
   }
 
+  /* ── Hung window natural-size photos ── */
+  .hung-hero-photo {
+    width: 100%; border-radius: 16px; overflow: hidden;
+    margin-bottom: 40px;
+  }
+  .hung-hero-photo img {
+    width: 100%; height: auto; display: block;
+  }
+  .hung-gallery {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 20px; margin-top: 40px;
+  }
+  .hung-gallery img {
+    width: 100%; height: auto; display: block;
+    border-radius: 12px;
+  }
+
   @media (max-width: 768px) {
     .product-photo { height: 240px; }
+    .hung-gallery { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -1419,8 +1437,8 @@
 
     <!-- ─── HUNG ─── -->
     <div class="tab-panel active" id="upvcwin-hung">
-      <div class="product-photo fade-in">
-        <img src="/img/upvc-hung.jpg" alt="Single and double hung uPVC window">
+      <div class="hung-hero-photo fade-in">
+        <img src="/img/upvc-hung-hero.jpg" alt="Home exterior with single and double hung uPVC windows">
       </div>
       <div class="product-banner fade-in">
         <div>
@@ -1462,6 +1480,10 @@
           <tr><td>Screen</td><td>Stainless steel · Aluminum · Fiberglass · Retractable</td></tr>
           <tr><td>Certifications</td><td>ISO / SGS</td></tr>
         </table>
+      </div>
+      <div class="hung-gallery fade-in">
+        <img src="/img/upvc-hung-diagram.jpg" alt="Single and double hung window configuration diagram">
+        <img src="/img/upvc-hung-stone.jpg" alt="uPVC hung windows installed on stone exterior">
       </div>
     </div><!-- /upvcwin-hung -->
 
