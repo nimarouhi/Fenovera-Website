@@ -2211,4 +2211,99 @@
     if (path.startsWith('/products/doors/aluminum'))          return { section: 'aluminum-doors' };
     if (path.startsWith('/products/windows/upvc/tiltturn'))   return { section: 'upvc-windows', upvcWin: 'tiltturn' };
     if (path.startsWith('/products/windows/upvc/casement'))   return { section: 'upvc-windows', upvcWin: 'casement-upvc' };
-    if (path.startsWith('/p
+    if (path.startsWith('/products/windows/upvc/awning'))     return { section: 'upvc-windows', upvcWin: 'awning' };
+    if (path.startsWith('/products/windows/upvc/sliding'))    return { section: 'upvc-windows', upvcWin: 'sliding-win' };
+    if (path.startsWith('/products/windows/upvc'))            return { section: 'upvc-windows', upvcWin: 'hung' };
+    if (path.startsWith('/products/doors/upvc/sliding'))      return { section: 'upvc-doors', upvcDoor: 'sliding-door' };
+    if (path.startsWith('/products/doors/upvc'))              return { section: 'upvc-doors', upvcDoor: 'french' };
+    return { section: 'home' };
+  }
+
+  function showSection(id, pushState) {
+    allSections.forEach(function(s) {
+      const el = document.getElementById(s);
+      if (el) el.style.display = (s === id) ? '' : 'none';
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (pushState !== false) {
+      history.pushState({ section: id }, '', sectionToUrl(id));
+    }
+    var activeEl = document.getElementById(id);
+    if (activeEl) {
+      activeEl.querySelectorAll('.fade-in').forEach(function(el) {
+        el.classList.add('visible');
+      });
+    }
+  }
+
+  const alWinTabs    = ['series76','slimline'];
+  const upvcWinTabs  = ['hung','tiltturn','casement-upvc','awning','sliding-win'];
+  const upvcDoorTabs = ['french','sliding-door'];
+
+  function switchAlWinTab(name, pushState) {
+    currentAlWinTab = name;
+    alWinTabs.forEach(function(t) {
+      var panel = document.getElementById('alwin-'+t);
+      if (panel) panel.classList.toggle('active', t===name);
+    });
+    document.querySelectorAll('#aluminum-windows .tab-btn').forEach(function(btn, i) {
+      btn.classList.toggle('active', alWinTabs[i]===name);
+    });
+    if (pushState !== false) {
+      history.pushState({ section: 'aluminum-windows', alWin: name }, '', sectionToUrl('aluminum-windows', {alWin:name}));
+    }
+  }
+
+  function switchUpvcWinTab(name, pushState) {
+    currentUpvcWinTab = name;
+    upvcWinTabs.forEach(function(t) {
+      var panel = document.getElementById('upvcwin-'+t);
+      if (panel) panel.classList.toggle('active', t===name);
+    });
+    document.querySelectorAll('#upvc-windows .tab-btn').forEach(function(btn, i) {
+      btn.classList.toggle('active', upvcWinTabs[i]===name);
+    });
+    if (pushState !== false) {
+      history.pushState({ section: 'upvc-windows', upvcWin: name }, '', sectionToUrl('upvc-windows', {upvcWin:name}));
+    }
+  }
+
+  function switchUpvcDoorTab(name, pushState) {
+    currentUpvcDoorTab = name;
+    upvcDoorTabs.forEach(function(t) {
+      var panel = document.getElementById('upvcdoor-'+t);
+      if (panel) panel.classList.toggle('active', t===name);
+    });
+    document.querySelectorAll('#upvc-doors .tab-btn').forEach(function(btn, i) {
+      btn.classList.toggle('active', upvcDoorTabs[i]===name);
+    });
+    if (pushState !== false) {
+      history.pushState({ section: 'upvc-doors', upvcDoor: name }, '', sectionToUrl('upvc-doors', {upvcDoor:name}));
+    }
+  }
+
+  window.addEventListener('popstate', function(e) {
+    const state = e.state || urlToState(location.pathname);
+    showSection(state.section, false);
+    if (state.alWin)    switchAlWinTab(state.alWin, false);
+    if (state.upvcWin)  switchUpvcWinTab(state.upvcWin, false);
+    if (state.upvcDoor) switchUpvcDoorTab(state.upvcDoor, false);
+  });
+
+  (function() {
+    const st = urlToState(location.pathname);
+    showSection(st.section, false);
+    if (st.alWin)    switchAlWinTab(st.alWin, false);
+    if (st.upvcWin)  switchUpvcWinTab(st.upvcWin, false);
+    if (st.upvcDoor) switchUpvcDoorTab(st.upvcDoor, false);
+  })();
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+</body>
+</html>
