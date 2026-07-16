@@ -468,6 +468,14 @@
     .fc-color { flex-direction: column; }
     .fc-color img { width: 100px; }
   }
+  .fc-color-cell {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .fc-color-cell img { width: 90px; height: auto; flex-shrink: 0; border-radius: 8px; }
+  @media (max-width: 560px) {
+    .fc-color-cell { flex-direction: column; }
+    .fc-color-cell img { width: 80px; }
+  }
   .feature-card {
     background: var(--white);
     border: 1px solid var(--lgray);
@@ -1481,13 +1489,6 @@
       </div>
       <h3 class="features-title fade-in">Key Features</h3>
       <div class="features-grid">
-        <div class="feature-card fc-color fade-in">
-          <img src="/img/upvc-color-card.jpg" alt="RAL color swatch — customizable frame colors">
-          <div>
-            <div class="fc-top"><div class="fc-title">Frame Color</div></div>
-            <p class="fc-body">Customizable</p>
-          </div>
-        </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">↕️</div><div class="fc-title">Vertical Sash Operation</div></div>
           <p class="fc-body">Single or double hung configuration. One or both sashes slide vertically for intuitive, space-saving ventilation without intruding into interior or exterior space.</p>
@@ -1500,9 +1501,20 @@
           <div class="fc-top"><div class="fc-icon">🔩</div><div class="fc-title">Steel-Reinforced Profile</div></div>
           <p class="fc-body">1.0–2.0 mm U-shaped Q235 steel lining inside the profile cavity enhances overall structural stability and safety of the window.</p>
         </div>
+        <div class="feature-card fc-color-cell fade-in">
+          <img src="/img/upvc-color-card.jpg" alt="RAL color swatch — customizable frame colors">
+          <div>
+            <div class="fc-top"><div class="fc-title">Frame Color</div></div>
+            <p class="fc-body">Customizable</p>
+          </div>
+        </div>
         <div class="feature-card fade-in">
           <div class="fc-top"><div class="fc-icon">🔇</div><div class="fc-title">Sound Insulation</div></div>
           <p class="fc-body">3–5 cavity structure with dual seals delivers excellent sound insulation and a high-performance drainage system, keeping interiors quieter and drier.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="fc-top"><div class="fc-icon">🔧</div><div class="fc-title">Hardware</div></div>
+          <p class="fc-body">Selections available to suit your project requirements.</p>
         </div>
       </div>
       <div class="specs-block fade-in">
