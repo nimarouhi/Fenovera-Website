@@ -1073,6 +1073,10 @@
     width: 100%; height: 280px; object-fit: cover; display: block;
     border-radius: 12px;
   }
+  /* Sliding window gallery — portrait source photos need taller cells */
+  .sliding-gallery img {
+    height: 480px;
+  }
 
   /* ── Tilt & Turn photos ── */
   .tt-hero-photo {
@@ -1827,9 +1831,9 @@
           <tr><td>Certifications</td><td>ISO / SGS / NFRC</td></tr>
         </table>
       </div>
-      <div class="hung-gallery fade-in">
+      <div class="hung-gallery sliding-gallery fade-in">
         <img src="/img/upvc-sliding-gal1.jpg" alt="White uPVC sliding window on brick house exterior">
-        <img src="/img/upvc-sliding-gal2.jpg" alt="Dark-framed uPVC double sliding window on brick exterior">
+        <img src="/img/upvc-sliding-gal2.jpg" alt="Gray uPVC 2-panel sliding window product shot">
       </div>
     </div><!-- /upvcwin-sliding-win -->
 
