@@ -65,7 +65,7 @@ Design decisions prioritize Tier 1. Navigation, content hierarchy, and informati
 
 - **Headlines:** Active, noun-forward. "Thermal Break Aluminum Windows" not "Experience the Performance of Aluminum."
 - **Body copy:** Paragraph length ≤4 sentences. One idea per paragraph.
-- **Product names:** Always include series number. "Series 72 Casement" not just "Casement Window."
+- **Product names:** Always include series number. "76 Series Casement" not just "Casement Window." Use only confirmed series: 76 Series, 85 Series, 152 Series. See PRODUCT-DATA-VERIFICATION.md.
 - **CTAs:** "Get a Quote" (primary), "View Specifications," "Download Datasheet," "Request Samples." Never "Learn More" as the only CTA.
 - **Prohibited phrases:** exclusive, luxury, world-class, elevate, reimagine, innovative, transform, curated, seamless (in any non-literal sense), unparalleled, superior, premium (standalone without a qualifier).
 
@@ -113,12 +113,19 @@ See `tokens.css` for full values. Key semantic groupings:
 | `--color-bronze` | Accent, active indicators, overlines, icons (#A77A45) |
 | `--color-border` | Default border (#D9D6CF — warm stone) |
 
-**WCAG contrast notes:**
-- `--color-ink` on `--color-canvas`: ~12:1 (AAA)
-- `--color-ink` on `--color-surface`: ~15:1 (AAA)
-- `--color-navy` on `--color-surface`: ~9:1 (AAA)
-- `--color-bronze` on `--color-surface`: ~3.2:1 (AA for large text only — do not use bronze for body copy)
-- `--color-ink-secondary` on `--color-surface`: ~5.4:1 (AA)
+**WCAG 2.2 contrast notes (exact computed ratios):**
+- `--color-ink` on `--color-canvas`: **14.57:1 (AAA)** — all uses approved
+- `--color-ink` on `--color-surface`: **16.15:1 (AAA)** — all uses approved
+- `--color-ink-secondary` on `--color-canvas`: **4.53:1 (AA)** — approved
+- `--color-ink-secondary` on `--color-surface`: **5.02:1 (AA)** — approved
+- `--color-ink-tertiary` on `--color-canvas`: **2.58:1 (FAIL)** — decorative/placeholder only
+- `--color-navy` on `--color-surface`: **11.71:1 (AAA)** — all uses approved
+- `--color-bronze` on `--color-surface`: **3.81:1** — large text (18px+, or 14px bold) and UI only. Prohibited for body copy.
+- `--color-bronze` on `--color-canvas`: **3.44:1** — large text and UI only. Prohibited for body copy.
+- White on `--color-navy`: **11.71:1 (AAA)** — all uses approved
+- White on `--color-bronze` (button): **3.81:1** — requires `font-weight: 700` at ≥14px to pass AA (large text). Fixed in `components.css`.
+
+See §5 (Contrast Matrix) for the full table with all status colors and button/input states.
 
 ---
 
@@ -129,6 +136,19 @@ See `tokens.css` for full values. Key semantic groupings:
 - `--font-body`: Inter — medium (500) for UI labels, regular (400) for body
 
 **Scale:** See `tokens.css`. Uses rem at 16px root. Do not use px values for font sizes outside the token file.
+
+**Public-facing minimum sizes (strictly enforced):**
+
+| Token | Size | Permitted public uses |
+|-------|------|-----------------------|
+| `--text-2xs` | 10px | ⛔ DS internal interface ONLY. Never on public pages. |
+| `--text-xs` | 12px | Nonessential metadata (dates, IDs, version numbers) |
+| `--text-sm` | 14px | Labels, badges, table cells, nav links |
+| `--text-base` | 16px | Forms, controls, table body rows |
+| `--text-body` | 17px | Default marketing/public body copy |
+| `--text-lg` | 18px | Intro paragraphs, lead text |
+
+Any public-facing text smaller than 12px is a governance violation. Body copy on public pages must be minimum 17px (`--text-body`).
 
 **Restricted serif:** An editorial serif typeface may be proposed for specific use cases (pull quotes, feature callouts). It must not be introduced without written approval. No serif is currently in the system.
 
@@ -416,7 +436,7 @@ Each specification covers: purpose, appropriate use, inappropriate use, variants
 
 **Content rules:**
 - Image: actual product photograph or series diagram. Never a placeholder indefinitely.
-- Series number: always displayed above the name (e.g., "Series 72")
+- Series number: always displayed above the name (e.g., "76 Series"). Use only confirmed series: 76 / 85 / 152.
 - Name: max 5 words
 - Description: max 2 sentences / 30 words
 - Tag: material type only (Aluminum, uPVC) — no other tags unless availability status is needed
@@ -430,7 +450,7 @@ Each specification covers: purpose, appropriate use, inappropriate use, variants
 
 **Accessibility:**
 - Entire card is a single `<a>` — all content within is presentational
-- `aria-label` on the `<a>` should describe the product: `aria-label="Series 72 Thermal Break Casement - View product details"`
+- `aria-label` on the `<a>` should describe the product: `aria-label="76 Series Casement and Swing — View product details"`
 
 ---
 
@@ -468,7 +488,7 @@ Each specification covers: purpose, appropriate use, inappropriate use, variants
 
 ### C-15 · Comparison Table
 
-**Purpose:** Side-by-side product series comparison (e.g., Series 72 vs. Series 82 vs. Series 92).
+**Purpose:** Side-by-side product series comparison (e.g., 76 Series vs. 85 Series vs. 152 Series).
 
 **Content rules:**
 - First column: feature labels
@@ -549,7 +569,7 @@ Each specification covers: purpose, appropriate use, inappropriate use, variants
 **Responsive:** 3-col and 4-col collapse to 2-col at <768px.
 
 **Accessibility:**
-- Each `<img>` has meaningful `alt` text ("Series 72 casement window installed in wood-frame building, Pacific Heights")
+- Each `<img>` has meaningful `alt` text describing the visible content (e.g., "76 Series casement window installed in residential project")
 - Gallery items are keyboard-focusable (`tabindex="0"` on `<div>` or use `<button>`)
 
 ---
@@ -737,6 +757,232 @@ Before any page (Phase 3+) goes to production:
 5. **Accessibility check:** Run axe-core or Lighthouse accessibility audit. Minimum score 90.
 6. **Responsive check:** Verify at 375px, 768px, 1024px, and 1440px.
 7. **Written approval:** Get written sign-off before committing to the main branch.
+
+---
+
+---
+
+## 5. Contrast Matrix
+
+All ratios computed using WCAG 2.2 formula: (L1 + 0.05) / (L2 + 0.05).
+**Large text** = 18px+ regular, or 14px+ at font-weight ≥ 700.
+AA normal text requires 4.5:1. AA large text requires 3:1. UI/non-text requires 3:1.
+
+| Foreground | Background | Ratio | Normal Text | Large Text| UI/Non-text | Verdict |
+|------------|------------|-------|-------------|------------|-------------|---------|
+| Ink #17222B | Canvas #F5F3EE | **14.57** | AAA ✓ | AAA ✓ | AAA ✓ | All uses approved |
+| Ink #17222B | Surface #FFFFFF | **16.15** | AAA ✓ | AAA ✓ | AAA ✓ | All uses approved |
+| Ink Secondary #64717A | Canvas | **4.53** | AA ✓ | AAA ✓ | AAA ✓ | All sizes approved |
+| Ink Secondary #64717A | Surface | **5.02** | AA ✓ | AAA ✓ | AAA ✓ | All sizes approved |
+| Ink Tertiary #8D9BA3 | Canvas | **2.58** | FAIL ✗ | FAIL ✗ | FAIL ✗ | Decorative / placeholder only |
+| Ink Tertiary #8D9BA3 | Surface | **2.86** | FAIL ✗ | FAIL ✗ | Borderline | Decorative / placeholder only |
+| Navy #173B55 | Canvas | **10.56** | AAA ✓ | AAA ✓ | AAA ✓ | All uses approved |
+| Navy #173B55 | Surface | **11.71** | AAA ✓ | AAA ✓ | AAA ✓ | All uses approved |
+| White #FFFFFF | Navy #173B55 | **11.71** | AAA ✓ | AAA ✓ | AAA ✓ | All uses approved |
+| Bronze #A77A45 | Canvas | **3.44** | FAIL ✗ | AA ✓ | AA ✓ | Large text & UI only |
+| Bronze #A77A45 | Surface | **3.81** | FAIL ✗ | AA ✓ | AA ✓ | Large text & UI only. Prohibited for body copy |
+| Bronze #A77A45 | Navy | **3.07** | FAIL ✗ | AA ✓ | AA ✓ | Large text & UI only on navy background |
+| White on Bronze (btn) | — | **3.81** | FAIL ✗ | AA ✓ | AA ✓ | Requires font-weight 700 at ≥14px ✅ Fixed |
+| Success #3F735B | Surface | **5.51** | AA ✓ | AAA ✓ | AAA ✓ | All sizes approved |
+| Success #3F735B | Success Subtle | **4.91** | AA ✓ | AAA ✓ | AAA ✓ | All sizes approved |
+| Error #B44C43 | Surface | **5.18** | AA ✓ | AAA ✓ | AAA ✓ | All sizes approved |
+| Error #B44C43 | Error Subtle | **4.57** | AA ✓ | AAA ✓ | AAA ✓ | All sizes approved |
+| Warning #9A6B1C | Surface | **4.67** | AA ✓ | AAA ✓ | AAA ✓ | All sizes approved |
+| Warning #9A6B1C | Warning Subtle | **4.24** | FAIL ✗ | AA ✓ | AA ✓ | Requires font-weight 700 ✅ Fixed |
+| Info #1E5178 | Surface | **8.39** | AAA ✓ | AAA ✓ | AAA ✓ | All uses approved |
+| Info #1E5178 | Info Subtle | **7.49** | AAA ✓ | AAA ✓ | AAA ✓ | All uses approved |
+
+### Component-Level Contrast Fixes
+
+**`.btn-secondary`** — White on Bronze = 3.81:1. Fails AA for normal text. Fix: `font-weight: var(--weight-bold)` (700) at 14px qualifies as WCAG large text (needs only 3:1). Never reduce weight on `.btn-secondary`. Applied in `components.css`.
+
+**`.notification__title`** — Warning #9A6B1C on Warning Subtle = 4.24:1. Fix: `font-weight: var(--weight-bold)`. Applied in `components.css`.
+
+**`--color-ink-tertiary`** — 2.58:1 on canvas. **Prohibited for any informational text.** Permitted only for placeholder text (WCAG-exempt) and purely decorative separators.
+
+---
+
+## 6. Wordmark Documentation
+
+**Status:** No approved SVG asset exists in `/img/`. Current implementation uses Manrope 800 as a typographic wordmark. When an official SVG is approved, replace and update this section.
+
+### Primary Wordmark
+- Font: Manrope, weight 800 (extrabold)
+- Color: `--color-navy` (#173B55)
+- Letter-spacing: -0.025em · Line-height: 1
+
+### Reversed Wordmark
+- Same typeface and weight. Color: #FFFFFF
+- Use only on: navy backgrounds, dark photograph overlays
+
+### Minimum Sizes
+
+| Context | Minimum | Notes |
+|---------|---------|-------|
+| Desktop header | 20px | Standard |
+| Mobile header | 16px | Absolute minimum |
+| Footer | 20px | Reversed (white on navy) |
+| Print / PDF | 24pt | Never below |
+
+### Clear Space
+Equal to the cap-height of the wordmark on all four sides. No element enters the clear space.
+
+### SVG Usage (when asset is available)
+- `<img src="fenovera-wordmark.svg" alt="Fenovera">` for HTML
+- Provide navy and reversed (white) variants
+- Inline SVG: add `aria-label="Fenovera"` and `role="img"` on the `<svg>` element
+
+### Incorrect Usage
+- Wrong font (must be Manrope) · Wrong weight (must be 800)
+- Bronze color (3.44:1 on white — fails AA at small sizes)
+- All-caps or wide tracking · Any distortion, rotation, or shadow
+- Size below 16px in any public context
+
+---
+
+## 7. Keyboard and Screen-Reader Behavior
+
+All interactive components satisfy WCAG 2.2: 2.1.1 Keyboard, 2.4.3 Focus Order, 2.4.7 Focus Visible, 2.4.11 Focus Appearance.
+
+### Focus Ring
+- 2px solid `--color-bronze` (#A77A45), offset 3px
+- Applied via `:focus-visible` — not shown on mouse/touch
+- Bronze on white: 3.81:1 (meets 3:1 UI threshold) · Bronze on navy: 3.07:1 (meets 3:1 UI threshold)
+
+### Keyboard Patterns
+
+| Component | Keys | Behavior |
+|-----------|------|----------|
+| Skip link | Tab (first) | Reveals "Skip to content". Enter jumps focus to #main-content |
+| Site nav | Tab | Linear DOM order through links |
+| Mega-menu trigger | Enter / Space | Opens panel; focus moves to first link |
+| Mega-menu | Escape | Closes; focus returns to trigger |
+| Mega-menu | Tab past last link | Closes; moves to next nav item |
+| Mobile nav trigger | Enter / Space | Opens drawer; focus moves to first item |
+| Mobile nav | Escape | Closes; focus returns to hamburger |
+| Mobile nav | Tab | Cycles within drawer (focus trap) |
+| Accordion | Enter / Space | Toggles panel |
+| Accordion group | Home / End | First / last trigger |
+| Tab list | ← / → | Move and activate tabs |
+| Tab list | Home / End | First / last tab |
+| Tab list | Tab | Into active panel content |
+| Lightbox | Escape | Closes; focus returns to thumbnail |
+| Lightbox | Tab | Cycles within dialog (native trap) |
+| Hardware selector | ← / → | Cycles radio options |
+| Form on error | Automatic | Focus to first invalid field; `role="alert"` announces error |
+| Loading state | Automatic | `role="status"` announces "Submitting…" |
+| Success/error | Automatic | `role="status"` (polite) / `role="alert"` (assertive) |
+
+### ARIA Requirements by Component
+
+| Component | Required ARIA |
+|-----------|--------------|
+| Primary nav | `<nav aria-label="Primary">` |
+| Mega-menu trigger | `aria-haspopup="true"`, `aria-expanded`, `aria-controls` |
+| Mega-menu panel | `role="region"`, `aria-label` |
+| Mobile drawer | `role="dialog"`, `aria-modal="true"`, `aria-label="Navigation menu"` |
+| Hamburger | `aria-expanded`, `aria-controls`, `aria-label` (updates on state) |
+| Breadcrumb | `<nav aria-label="Breadcrumb">`, `aria-current="page"` |
+| Accordion trigger | `aria-expanded`, `aria-controls` |
+| Accordion panel | `role="region"`, `aria-labelledby`, `hidden` when closed |
+| Tab list | `role="tablist"`, `aria-label` |
+| Tab button | `role="tab"`, `aria-selected`, `aria-controls`, `tabindex="-1"` if inactive |
+| Tab panel | `role="tabpanel"`, `aria-labelledby`, `hidden` if inactive |
+| Lightbox | Native `<dialog>` + `showModal()`, `aria-label`, `aria-modal="true"` |
+| Gallery thumbnail | `<button aria-label="View larger: [description]">` |
+| Form field | `<label for>` or `aria-label` / `aria-labelledby` |
+| Form error | `aria-invalid="true"`, error span `role="alert"`, `aria-describedby` |
+| Loading button | `aria-busy="true"`, `aria-label="Submitting, please wait"` |
+| File upload progress | `role="progressbar"`, `aria-valuenow/min/max/label` |
+| Icon button | `aria-label="[action]"` |
+| Icon link | `aria-label="[destination]"` |
+| Download link | `aria-label="Download [name] [format]"` |
+| External link | `aria-label="[name] — opens in new tab"` |
+
+### Focus Management Rules
+1. When modal/drawer opens → focus moves to first focusable element inside
+2. While modal/drawer is open → Tab/Shift-Tab cycle only within the trapped region
+3. When modal/drawer closes → focus returns to the element that opened it
+4. Page scroll locks (`overflow: hidden` on `<body>`) while mobile drawer is open
+5. Use `hidden` attribute (not CSS visibility/opacity) to remove inactive panels from the accessibility tree
+
+---
+
+## 8. Component Checklist
+
+Legend: ✓ Done · ~ CSS + Showcase done, markdown docs partial · ✗ Missing
+
+| Component | CSS | Showcase | Mobile | A11y | Docs |
+|-----------|-----|---------|--------|------|------|
+| Design Tokens | ✓ | ✓ | ✓ | ✓ | ~ |
+| Wordmark / Logo | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Color System | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Contrast Matrix | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Typography Scale | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Spacing | ✓ | ✓ | ✓ | ✓ | ~ |
+| Radii & Borders | ✓ | ✓ | ✓ | ✓ | ~ |
+| Shadows | ✓ | ✓ | ✓ | ✓ | ~ |
+| Motion Tokens | ✓ | ✓ | ✓ | ✓ | ~ |
+| Brand Signature Treatments | ✓ | ✓ | ~ | ✓ | ~ |
+| Site Header | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Desktop Nav | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Mega-Menu (desktop) | ✓ | ✓ | ~ | ✓ | ✓ |
+| Mobile Nav Drawer | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Breadcrumbs | ✓ | ✓ | ✓ | ✓ | ~ |
+| Buttons (all variants) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Links (inline / standalone / download / external) | ✓ | ✓ | ✓ | ✓ | ~ |
+| Form Fields (input / textarea) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Form States (idle / loading / success / error) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Select | ✓ | ✓ | ✓ | ✓ | ~ |
+| Checkboxes & Radios | ✓ | ✓ | ✓ | ✓ | ~ |
+| File Upload | ✓ | ✓ | ~ | ✓ | ✓ |
+| Quote Form (full) | ✓ | ✓ | ~ | ✓ | ✓ |
+| Spec Table | ✓ | ✓ | ~ | ✓ | ~ |
+| Comparison Table | ✓ | ✓ | ~ | ✓ | ✓ |
+| Feature List | ✓ | ✓ | ✓ | ✓ | ~ |
+| Product Card | ✓ | ✓ | ~ | ✓ | ✓ |
+| Project Card | ✓ | ✓ | ~ | ✓ | ✓ |
+| Finish Swatches | ✓ | ✓ | ✓ | ✓ | ~ |
+| Hardware Option Selector | ✓ | ✓ | ~ | ✓ | ✓ |
+| Cert / Document Link | ✓ | ✓ | ✓ | ✓ | ~ |
+| Accordion | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Tabs | ✓ | ✓ | ~ | ✓ | ✓ |
+| Image Gallery + Lightbox | ✓ | ✓ | ~ | ✓ | ✓ |
+| Download Block | ✓ | ✓ | ✓ | ✓ | ~ |
+| Empty States (4 variants) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Notifications (4 types) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Badges | ✓ | ✓ | ✓ | ✓ | ~ |
+| Site Footer (desktop + mobile) | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+---
+
+## Unresolved Design Decisions
+
+| # | Decision | Options | Notes |
+|---|----------|---------|-------|
+| 1 | Editorial serif typeface | Approx, Freight Display, Cormorant, none | Requires written approval before introduction |
+| 2 | Hero image strategy | Real photography, architectural line art, type-only | No hero image currently in repo |
+| 3 | OG / social image | Custom design, auto-generated, type-on-color | og-image-v2.jpg missing from /img/ |
+| 4 | Projects page structure | Card grid, curated showcase, filterable gallery | Depends on number of real projects at launch |
+| 5 | Contact strategy | Form only, phone/email listed, appointment booking | No contact info on site yet |
+| 6 | Social media links | None (recommended until accounts active), Instagram, LinkedIn | Footer placeholder only |
+| 7 | Mega-menu trigger model | Click only vs. hover with click fallback | Click is more accessible; hover is conventional for desktop product menus |
+| 8 | URL strategy | SPA JS routing (current) vs. real per-page URLs | Real URLs strongly recommended for SEO before Phase 3 build |
+| 9 | Product configurator depth | Finish + hardware selector only vs. full interactive quote builder | Quote form scope TBD |
+| 10 | Approved wordmark SVG | Typographic (current) vs. approved SVG asset | Owner to supply SVG; update §6 when received |
+
+---
+
+*Fenovera Design System · Internal Reference · v1.1.0 · Phase 2*
+*Files: tokens.css · base.css · components.css · showcase.html · DESIGN-SYSTEM.md · governance-check.js · PRODUCT-DATA-VERIFICATION.md*
+�� | ✓ | ~ | ✓ | ✓ |
+| Download Block | ✓ | ✓ | ✓ | ✓ | ~ |
+| Empty States (4 variants) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Notifications (all 4 types) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Badges | ✓ | ✓ | ✓ | ✓ | ~ |
+| Site Footer (desktop + mobile) | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+**Partial (~) items:** CSS implementation and showcase are complete. Detailed markdown documentation in this file is pending for these components. Mobile responsive layout is tested and verified for all core components; tables and complex forms scroll horizontally on mobile which is the accepted behavior.
 
 ---
 

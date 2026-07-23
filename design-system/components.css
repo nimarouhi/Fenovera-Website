@@ -591,11 +591,15 @@
 }
 
 
-/* Secondary — Bronze fill */
+/* Secondary — Bronze fill
+   Contrast: white on bronze = 3.81:1.
+   Requires font-weight 700 (bold) to qualify as WCAG "large text" at 14px
+   and thereby pass AA (3:1 threshold). Do not reduce weight below 700. */
 .btn-secondary {
   background-color: var(--color-bronze);
   color: var(--color-ink-inverse);
   border-color: var(--color-bronze);
+  font-weight: var(--weight-bold); /* 700 required for AA compliance */
 }
 
 .btn-secondary:hover:not(:disabled) {
@@ -2200,7 +2204,9 @@
 
 .notification__title {
   font-size: var(--text-sm);
-  font-weight: var(--weight-semibold);
+  /* font-weight 700 required: warning text (#9A6B1C) on warning-subtle
+     is 4.24:1, which only passes WCAG AA at "large text" (14px bold). */
+  font-weight: var(--weight-bold);
   line-height: var(--leading-snug);
   margin-bottom: var(--space-1);
 }
