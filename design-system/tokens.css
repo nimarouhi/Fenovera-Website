@@ -1,0 +1,334 @@
+/**
+ * Fenovera Design System — Token File
+ * Version: 1.0.0 · Phase 2
+ * Direction: A+C Hybrid (Technical Authority + Precision Distributor)
+ *
+ * GOVERNANCE
+ * ──────────
+ * • Page components must consume only these tokens. Raw hex values and
+ *   arbitrary spacing are prohibited outside this file.
+ * • Private brand values (--_*) are source-of-truth only. Do not
+ *   reference them in component code — always use semantic tokens.
+ * • Corner radii are capped at 8px. Full-round / pill shapes are not
+ *   part of this design system.
+ * • An editorial serif may be proposed for limited use but must not be
+ *   introduced without explicit written approval.
+ */
+
+:root {
+
+  /* ═══════════════════════════════════════════════════════════════════
+     PRIVATE PALETTE  (source-of-truth hex values)
+     Do not reference these directly in component code.
+     Always use the semantic tokens below.
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --_navy:    #173B55;
+  --_bronze:  #A77A45;
+  --_canvas:  #F5F3EE;
+  --_stone:   #D9D6CF;
+  --_slate:   #64717A;
+  --_ink:     #17222B;
+  --_white:   #FFFFFF;
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     COLOR — SURFACES
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --color-canvas:            #F5F3EE;   /* page background */
+  --color-surface:           #FFFFFF;   /* card, panel, modal */
+  --color-surface-secondary: #FAFAF8;   /* secondary panels, nested cards */
+  --color-surface-overlay:   rgba(23, 34, 43, 0.48); /* backdrop for modals/drawers */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     COLOR — INK (TEXT)
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --color-ink:           #17222B;   /* primary text */
+  --color-ink-secondary: #64717A;   /* supporting text, labels */
+  --color-ink-tertiary:  #8D9BA3;   /* placeholder, metadata, captions */
+  --color-ink-disabled:  #B4BEC4;   /* disabled element text */
+  --color-ink-inverse:   #FFFFFF;   /* text on navy / dark backgrounds */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     COLOR — BORDERS
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --color-border:        #D9D6CF;   /* default border, dividers */
+  --color-border-subtle: #E8E5E0;   /* very light, hairline dividers */
+  --color-border-strong: #B4AFA8;   /* hover-state input borders */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     COLOR — BRAND NAVY  (primary interactive)
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --color-navy:        #173B55;
+  --color-navy-hover:  #1E4D70;
+  --color-navy-active: #122F43;
+  --color-navy-subtle: #EBF1F7;   /* very light navy tint for bg/chip */
+  --color-navy-border: #C1D4E4;   /* light navy border */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     COLOR — BRAND BRONZE  (secondary / accent)
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --color-bronze:        #A77A45;
+  --color-bronze-hover:  #BB8A50;
+  --color-bronze-active: #8F6338;
+  --color-bronze-subtle: #F5EDE2;   /* very light bronze tint */
+  --color-bronze-border: #DBBF96;   /* light bronze border */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     COLOR — STATUS
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --color-success:         #3F735B;
+  --color-success-subtle:  #EBF4EF;
+  --color-success-border:  #A8D1BE;
+
+  --color-error:           #B44C43;
+  --color-error-subtle:    #FBEEEC;
+  --color-error-border:    #E8ABA6;
+
+  --color-warning:         #9A6B1C;
+  --color-warning-subtle:  #FBF3E4;
+  --color-warning-border:  #E0C07A;
+
+  --color-info:            #1E5178;
+  --color-info-subtle:     #EBF3FB;
+  --color-info-border:     #A2C8E8;
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     TYPOGRAPHY — FAMILIES
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --font-heading: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+  /* --font-serif: not in system; requires written approval before use */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     TYPOGRAPHY — SCALE  (rem at 16px root)
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --text-2xs:  0.625rem;   /* 10px — labels, badges */
+  --text-xs:   0.75rem;    /* 12px — captions, metadata */
+  --text-sm:   0.875rem;   /* 14px — secondary UI text, table cells */
+  --text-base: 1rem;       /* 16px — body copy */
+  --text-lg:   1.125rem;   /* 18px — intro paragraphs */
+  --text-xl:   1.25rem;    /* 20px — h5, card titles */
+  --text-2xl:  1.5rem;     /* 24px — h4 */
+  --text-3xl:  1.875rem;   /* 30px — h3 */
+  --text-4xl:  2.25rem;    /* 36px — h2 */
+  --text-5xl:  3rem;       /* 48px — h1 / hero sub */
+  --text-6xl:  3.75rem;    /* 60px — hero display */
+  --text-7xl:  4.5rem;     /* 72px — large hero (use sparingly) */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     TYPOGRAPHY — LINE HEIGHTS
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --leading-none:    1;
+  --leading-tight:   1.2;
+  --leading-snug:    1.375;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose:   1.75;
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     TYPOGRAPHY — WEIGHTS
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-extrabold: 800;   /* Manrope headlines only */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     TYPOGRAPHY — LETTER SPACING
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --tracking-tight:   -0.025em;
+  --tracking-snug:    -0.015em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.03em;
+  --tracking-wider:    0.06em;
+  --tracking-widest:   0.12em;   /* all-caps labels, overlines */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     SPACING  (4px base unit)
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --space-px:  1px;
+  --space-0:   0px;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32:  128px;
+  --space-40:  160px;
+  --space-48:  192px;
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     LAYOUT — CONTAINER WIDTHS
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --container-xs:      480px;
+  --container-sm:      640px;
+  --container-md:      768px;
+  --container-lg:      1024px;
+  --container-xl:      1200px;   /* default page content width */
+  --container-2xl:     1440px;   /* full-bleed section max-width */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     LAYOUT — PAGE GUTTERS (inline padding)
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --gutter:      var(--space-6);    /* 24px — mobile */
+  --gutter-md:   var(--space-8);    /* 32px — tablet ≥768px */
+  --gutter-lg:   var(--space-12);   /* 48px — desktop ≥1024px */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     LAYOUT — GRID
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --grid-cols:   12;
+  --grid-gap:    var(--space-6);    /* 24px default gap */
+  --grid-gap-lg: var(--space-8);    /* 32px at desktop */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     BREAKPOINTS  (use in @media queries — values for reference)
+     xs:  < 480px    mobile portrait
+     sm:  ≥ 480px    mobile landscape
+     md:  ≥ 768px    tablet
+     lg:  ≥ 1024px   desktop
+     xl:  ≥ 1280px   wide desktop
+     2xl: ≥ 1440px   ultra-wide
+  ═══════════════════════════════════════════════════════════════════ */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     BORDERS
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --border-thin:  1px;
+  --border-base:  1.5px;
+  --border-thick: 2px;
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     CORNER RADII  (maximum: 8px — brand guideline)
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --radius-none: 0px;
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  /* pill/full-round shapes are not part of this design system */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     SHADOWS  (ink-tinted, used sparingly)
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --shadow-xs:
+    0 1px 2px rgba(23, 34, 43, 0.05);
+  --shadow-sm:
+    0 1px 3px rgba(23, 34, 43, 0.08),
+    0 1px 2px rgba(23, 34, 43, 0.04);
+  --shadow-md:
+    0 4px 12px rgba(23, 34, 43, 0.10),
+    0 2px 4px  rgba(23, 34, 43, 0.05);
+  --shadow-lg:
+    0 8px 24px rgba(23, 34, 43, 0.12),
+    0 3px 8px  rgba(23, 34, 43, 0.06);
+  --shadow-xl:
+    0 16px 40px rgba(23, 34, 43, 0.14),
+    0 6px 12px  rgba(23, 34, 43, 0.06);
+
+  /* Inset shadow — for depressed / active states */
+  --shadow-inset:
+    inset 0 1px 3px rgba(23, 34, 43, 0.12);
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     MOTION
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --duration-instant:  0ms;
+  --duration-fast:     100ms;
+  --duration-base:     200ms;
+  --duration-slow:     300ms;
+  --duration-slower:   500ms;
+
+  --ease-standard: cubic-bezier(0.4, 0.0, 0.2, 1);   /* enter + exit */
+  --ease-enter:    cubic-bezier(0.0, 0.0, 0.2, 1);   /* elements entering */
+  --ease-exit:     cubic-bezier(0.4, 0.0, 1.0, 1);   /* elements leaving */
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1); /* subtle overshoot */
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     FOCUS INDICATORS  (WCAG 2.4.11 — always visible)
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --focus-ring-width:  2px;
+  --focus-ring-offset: 3px;
+  --focus-ring-color:  var(--color-bronze);
+  --focus-ring-style:  solid;
+
+
+  /* ═══════════════════════════════════════════════════════════════════
+     Z-INDEX LAYERS
+  ═══════════════════════════════════════════════════════════════════ */
+
+  --z-below:        -1;
+  --z-base:          0;
+  --z-raised:       10;
+  --z-dropdown:    100;
+  --z-sticky:      200;
+  --z-overlay:     300;
+  --z-modal:       400;
+  --z-notification:500;
+  --z-tooltip:     600;
+
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+   REDUCED-MOTION PREFERENCE
+   Override all durations to near-zero when user prefers reduced motion.
+═══════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast:   0ms;
+    --duration-base:   0ms;
+    --duration-slow:   0ms;
+    --duration-slower: 0ms;
+  }
+}
