@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Free Quote | Fenovera</title>
+  <meta name="description" content="Request a free quote for aluminum or uPVC windows and doors from Fenovera. Tell us about your project and we will respond with pricing and specifications.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
+
+  <!-- Design System v1.3.1 -->
+  <link rel="stylesheet" href="/design-system/tokens.css">
+  <link rel="stylesheet" href="/design-system/base.css">
+  <link rel="stylesheet" href="/design-system/components.css">
+
+  <style>
+    /* ── Quote page layout ───────────────────────────── */
+    .quote-page-hero {
+      padding: var(--space-16) 0 var(--space-10);
+      border-bottom: var(--border-thin) solid var(--color-border);
+    }
+    .quote-page-body {
+      padding: var(--space-12) 0 var(--space-16);
+    }
+    .quote-page-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    /* ── Side note ───────────────────────────────────── */
+    .quote-note__heading {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-4) 0;
+    }
+    .quote-note__body {
+      color: var(--color-ink-secondary);
+      font-size: var(--text-body);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-6);
+    }
+    .quote-note__item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      margin-bottom: var(--space-4);
+    }
+    .quote-note__bullet {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--color-navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .quote-note__bullet svg { color: white; }
+    .quote-note__item-text {
+      font-size: var(--text-sm);
+      color: var(--color-ink);
+      line-height: var(--leading-relaxed);
+    }
+
+    /* ── Form card ───────────────────────────────────── */
+    .quote-form-card {
+      background: var(--color-canvas);
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+    }
+    .quote-form-card__title {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-6) 0;
+    }
+
+    /* ── Form fields ─────────────────────────────────── */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+    }
+    .form-group { margin-bottom: var(--space-5); }
+    .form-label {
+      display: block;
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      color: var(--color-ink);
+      margin-bottom: var(--space-1-5);
+    }
+    .form-label__required {
+      color: var(--color-bronze-interactive);
+      margin-left: var(--space-1);
+    }
+    .form-label__optional {
+      font-weight: var(--weight-normal);
+      color: var(--color-ink-secondary);
+      font-size: var(--text-xs);
+      margin-left: var(--space-1);
+    }
+    .form-input, .form-select, .form-textarea {
+      display: block;
+      width: 100%;
+      padding: var(--space-3) var(--space-4);
+      font-family: var(--font-body);
+      font-size: var(--text-body);
+      color: var(--color-ink);
+      background: var(--color-surface);
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-sm);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      box-sizing: border-box;
+    }
+    .form-select { appearance: auto; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--color-navy);
+      box-shadow: 0 0 0 3px rgba(26, 42, 64, 0.12);
+    }
+    .form-input[aria-invalid="true"],
+    .form-select[aria-invalid="true"],
+    .form-textarea[aria-invalid="true"] { border-color: #c0392b; }
+    .form-textarea { resize: vertical; min-height: 130px; }
+    .form-error {
+      font-size: var(--text-sm);
+      color: #c0392b;
+      margin-top: var(--space-1-5);
+    }
+
+    /* ── Radio / checkbox group ──────────────────────── */
+    .form-fieldset {
+      border: none;
+      margin: 0 0 var(--space-5) 0;
+      padding: 0;
+    }
+    .form-legend {
+      display: block;
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      color: var(--color-ink);
+      margin-bottom: var(--space-3);
+    }
+    .form-options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2) var(--space-4);
+    }
+    .form-option {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      cursor: pointer;
+    }
+    .form-option input { cursor: pointer; width: 16px; height: 16px; }
+    .form-option__label {
+      font-size: var(--text-sm);
+      color: var(--color-ink);
+    }
+    .form-radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2) var(--space-6);
+    }
+
+    /* ── Honeypot ────────────────────────────────────── */
+    .form-honeypot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    /* ── Success state ───────────────────────────────── */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: var(--space-10) var(--space-6);
+    }
+    .form-success__icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto var(--space-4);
+      color: var(--color-bronze-interactive);
+    }
+    .form-success__title {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-2) 0;
+    }
+    .form-success__body {
+      color: var(--color-ink-secondary);
+      font-size: var(--text-body);
+      margin: 0;
+    }
+
+    /* ── Responsive ──────────────────────────────────── */
+    @media (max-width: 899px) {
+      .quote-page-grid { grid-template-columns: 1fr; }
+      .quote-page-hero { padding: var(--space-10) 0 var(--space-8); }
+      .quote-page-body { padding: var(--space-8) 0 var(--space-12); }
+    }
+    @media (max-width: 639px) {
+      .form-row { grid-template-columns: 1fr; }
+      .form-options-grid { grid-template-columns: 1fr; }
+      .quote-form-card { padding: var(--space-6); }
+    }
+  </style>
+</head>
+<body data-page="quote">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- BUILD:header -->
+  <!-- BUILD:mobile-nav -->
+
+  <main id="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+    <section class="quote-page-hero page-section" aria-labelledby="quote-heading">
+      <div class="container">
+        <p class="section-overline">Pricing &amp; specifications</p>
+        <h1 class="section-title" id="quote-heading">Request a Free Quote</h1>
+        <p class="section-lead">
+          Tell us about your project and we will respond with product recommendations,
+          pricing, and lead times.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── BODY ──────────────────────────────────────────────────────────── -->
+    <section class="quote-page-body page-section" aria-label="Quote request form">
+      <div class="container">
+        <div class="quote-page-grid">
+
+          <!-- Left: what to expect -->
+          <div>
+            <h2 class="quote-note__heading">What to Expect</h2>
+            <p class="quote-note__body">
+              Share your project details and we will review your requirements and respond
+              with options, pricing, and technical information.
+            </p>
+
+            <div class="quote-note__item">
+              <div class="quote-note__bullet" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="quote-note__item-text">Product recommendations based on your project requirements</p>
+            </div>
+
+            <div class="quote-note__item">
+              <div class="quote-note__bullet" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="quote-note__item-text">Pricing and lead time information for your selected systems</p>
+            </div>
+
+            <div class="quote-note__item">
+              <div class="quote-note__bullet" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="quote-note__item-text">Technical specifications and support from our team</p>
+            </div>
+
+            <p class="text-caption mt-6" style="color: var(--color-ink-secondary);">
+              You can also reach us directly at
+              <a href="mailto:info@fenovera.com" style="color: var(--color-bronze-interactive);">info@fenovera.com</a>
+            </p>
+          </div>
+
+          <!-- Right: quote form -->
+          <div class="quote-form-card">
+
+            <!--
+              FORM DELIVERY NOTE
+              No backend is configured. This form shows a client-side success state
+              without transmitting data. Configuring form delivery (email service,
+              CRM, or webhook) is an owner-controlled launch blocker.
+              Also consider adding reCAPTCHA or equivalent spam protection before launch.
+            -->
+
+            <h2 class="quote-form-card__title">Project Details</h2>
+
+            <!-- Success state -->
+            <div class="form-success" id="quote-success" role="status" aria-live="polite" tabindex="-1">
+              <svg class="form-success__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
+                <path d="M14 24l7 7 13-14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3 class="form-success__title">Quote request received</h3>
+              <p class="form-success__body">Thank you. We will review your project details and be in touch.</p>
+            </div>
+
+            <form
+              id="quote-form"
+              method="post"
+              action="#"
+              novalidate
+              aria-label="Quote request form"
+            >
+              <!-- Honeypot -->
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="hp-url">Website URL (leave blank)</label>
+                <input type="text" id="hp-url" name="url" tabindex="-1" autocomplete="off">
+              </div>
+
+              <!-- Contact info -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="quote-name">
+                    Name<span class="form-label__required" aria-hidden="true">*</span>
+                  </label>
+                  <input class="form-input" type="text" id="quote-name" name="name"
+                    autocomplete="name" required aria-required="true"
+                    aria-describedby="quote-name-error">
+                  <p class="form-error" id="quote-name-error" role="alert" hidden></p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="quote-company">
+                    Company<span class="form-label__optional">(optional)</span>
+                  </label>
+                  <input class="form-input" type="text" id="quote-company" name="company"
+                    autocomplete="organization">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="quote-email">
+                    Email<span class="form-label__required" aria-hidden="true">*</span>
+                  </label>
+                  <input class="form-input" type="email" id="quote-email" name="email"
+                    autocomplete="email" required aria-required="true"
+                    aria-describedby="quote-email-error">
+                  <p class="form-error" id="quote-email-error" role="alert" hidden></p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="quote-phone">
+                    Phone<span class="form-label__optional">(optional)</span>
+                  </label>
+                  <input class="form-input" type="tel" id="quote-phone" name="phone"
+                    autocomplete="tel">
+                </div>
+              </div>
+
+              <!-- Project type -->
+              <fieldset class="form-fieldset" aria-describedby="quote-type-error">
+                <legend class="form-legend">
+                  Project Type<span class="form-label__required" aria-hidden="true">*</span>
+                </legend>
+                <div class="form-radio-group" role="group">
+                  <label class="form-option">
+                    <input type="radio" name="project-type" value="residential" required aria-required="true">
+                    <span class="form-option__label">Residential</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="radio" name="project-type" value="commercial">
+                    <span class="form-option__label">Commercial</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="radio" name="project-type" value="other">
+                    <span class="form-option__label">Other</span>
+                  </label>
+                </div>
+                <p class="form-error" id="quote-type-error" role="alert" hidden></p>
+              </fieldset>
+
+              <!-- Products of interest -->
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">
+                  Products of Interest<span class="form-label__optional">(select all that apply)</span>
+                </legend>
+                <div class="form-options-grid">
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="aluminum-windows">
+                    <span class="form-option__label">Aluminum Windows</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="upvc-windows">
+                    <span class="form-option__label">uPVC Windows</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="aluminum-doors">
+                    <span class="form-option__label">Aluminum Doors</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="upvc-doors">
+                    <span class="form-option__label">uPVC Doors</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="not-sure">
+                    <span class="form-option__label">Not sure yet</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Project details -->
+              <div class="form-group">
+                <label class="form-label" for="quote-details">
+                  Project Details<span class="form-label__required" aria-hidden="true">*</span>
+                </label>
+                <textarea class="form-textarea" id="quote-details" name="details"
+                  rows="5"
+                  required aria-required="true"
+                  aria-describedby="quote-details-error"
+                  placeholder="Describe your project: number of openings, approximate sizes, location, any specific requirements…"
+                ></textarea>
+                <p class="form-error" id="quote-details-error" role="alert" hidden></p>
+              </div>
+
+              <!-- Timeline -->
+              <div class="form-group">
+                <label class="form-label" for="quote-timeline">
+                  Timeline<span class="form-label__optional">(optional)</span>
+                </label>
+                <select class="form-select" id="quote-timeline" name="timeline">
+                  <option value="">Select a timeline…</option>
+                  <option value="asap">As soon as possible</option>
+                  <option value="1-3m">1–3 months</option>
+                  <option value="3-6m">3–6 months</option>
+                  <option value="6m+">6+ months</option>
+                  <option value="planning">Planning stage only</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Submit Quote Request
+              </button>
+
+              <p class="text-caption mt-4" style="color: var(--color-ink-secondary);">
+                Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BUILD:footer -->
+
+  <script src="/site/nav.js" defer></script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var form    = document.getElementById('quote-form');
+      var success = document.getElementById('quote-success');
+      if (!form) return;
+
+      // ── Field validation ──────────────────────────────
+      function getError(field) {
+        if (field.validity.valueMissing) return 'This field is required.';
+        if (field.validity.typeMismatch && field.type === 'email') return 'Please enter a valid email address.';
+        return '';
+      }
+
+      function validateField(field) {
+        var errId = field.id + '-error';
+        var errEl = document.getElementById(errId);
+        var msg   = getError(field);
+        if (errEl) {
+          if (msg) {
+            errEl.textContent = msg;
+            errEl.removeAttribute('hidden');
+            field.setAttribute('aria-invalid', 'true');
+          } else {
+            errEl.textContent = '';
+            errEl.setAttribute('hidden', '');
+            field.removeAttribute('aria-invalid');
+          }
+        }
+        return !msg;
+      }
+
+      // Validate radio group (project type)
+      function validateRadioGroup(name) {
+        var radios  = form.querySelectorAll('[name="' + name + '"]');
+        var errEl   = document.getElementById('quote-type-error');
+        var checked = Array.prototype.some.call(radios, function (r) { return r.checked; });
+        if (errEl) {
+          if (!checked) {
+            errEl.textContent = 'Please select a project type.';
+            errEl.removeAttribute('hidden');
+          } else {
+            errEl.textContent = '';
+            errEl.setAttribute('hidden', '');
+          }
+        }
+        return checked;
+      }
+
+      // Live blur validation for text/email/textarea inputs
+      form.querySelectorAll('input[required]:not([type="radio"]), textarea[required]').forEach(function (field) {
+        field.addEventListener('blur', function () { validateField(field); });
+        field.addEventListener('input', function () {
+          if (field.getAttribute('aria-invalid') === 'true') validateField(field);
+        });
+      });
+
+      // ── Submit ────────────────────────────────────────
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Honeypot check
+        var hp = form.querySelector('[name="url"]');
+        if (hp && hp.value) return;
+
+        var valid = true;
+
+        form.querySelectorAll('input[required]:not([type="radio"]), textarea[required]').forEach(function (field) {
+          if (!validateField(field)) valid = false;
+        });
+
+        if (!validateRadioGroup('project-type')) valid = false;
+
+        if (!valid) {
+          var first = form.querySelector('[aria-invalid="true"]');
+          if (!first) first = document.getElementById('quote-type-error');
+          if (first) first.focus();
+          return;
+        }
+
+        // Show success (no data transmitted — backend required for launch)
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.focus();
+      });
+    })();
+  </script>
+
+</body>
+</html>

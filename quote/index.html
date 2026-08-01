@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Free Quote | Fenovera</title>
+  <meta name="description" content="Request a free quote for aluminum or uPVC windows and doors from Fenovera. Tell us about your project and we will respond with pricing and specifications.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
+
+  <!-- Design System v1.3.1 -->
+  <link rel="stylesheet" href="../design-system/tokens.css">
+  <link rel="stylesheet" href="../design-system/base.css">
+  <link rel="stylesheet" href="../design-system/components.css">
+
+  <style>
+    /* ── Quote page layout ───────────────────────────── */
+    .quote-page-hero {
+      padding: var(--space-16) 0 var(--space-10);
+      border-bottom: var(--border-thin) solid var(--color-border);
+    }
+    .quote-page-body {
+      padding: var(--space-12) 0 var(--space-16);
+    }
+    .quote-page-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    /* ── Side note ───────────────────────────────────── */
+    .quote-note__heading {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-4) 0;
+    }
+    .quote-note__body {
+      color: var(--color-ink-secondary);
+      font-size: var(--text-body);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-6);
+    }
+    .quote-note__item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      margin-bottom: var(--space-4);
+    }
+    .quote-note__bullet {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--color-navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .quote-note__bullet svg { color: white; }
+    .quote-note__item-text {
+      font-size: var(--text-sm);
+      color: var(--color-ink);
+      line-height: var(--leading-relaxed);
+    }
+
+    /* ── Form card ───────────────────────────────────── */
+    .quote-form-card {
+      background: var(--color-canvas);
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+    }
+    .quote-form-card__title {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-6) 0;
+    }
+
+    /* ── Form fields ─────────────────────────────────── */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+    }
+    .form-group { margin-bottom: var(--space-5); }
+    .form-label {
+      display: block;
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      color: var(--color-ink);
+      margin-bottom: var(--space-1-5);
+    }
+    .form-label__required {
+      color: var(--color-bronze-interactive);
+      margin-left: var(--space-1);
+    }
+    .form-label__optional {
+      font-weight: var(--weight-normal);
+      color: var(--color-ink-secondary);
+      font-size: var(--text-xs);
+      margin-left: var(--space-1);
+    }
+    .form-input, .form-select, .form-textarea {
+      display: block;
+      width: 100%;
+      padding: var(--space-3) var(--space-4);
+      font-family: var(--font-body);
+      font-size: var(--text-body);
+      color: var(--color-ink);
+      background: var(--color-surface);
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-sm);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      box-sizing: border-box;
+    }
+    .form-select { appearance: auto; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--color-navy);
+      box-shadow: 0 0 0 3px rgba(26, 42, 64, 0.12);
+    }
+    .form-input[aria-invalid="true"],
+    .form-select[aria-invalid="true"],
+    .form-textarea[aria-invalid="true"] { border-color: #c0392b; }
+    .form-textarea { resize: vertical; min-height: 130px; }
+    .form-error {
+      font-size: var(--text-sm);
+      color: #c0392b;
+      margin-top: var(--space-1-5);
+    }
+
+    /* ── Radio / checkbox group ──────────────────────── */
+    .form-fieldset {
+      border: none;
+      margin: 0 0 var(--space-5) 0;
+      padding: 0;
+    }
+    .form-legend {
+      display: block;
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      color: var(--color-ink);
+      margin-bottom: var(--space-3);
+    }
+    .form-options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2) var(--space-4);
+    }
+    .form-option {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      cursor: pointer;
+    }
+    .form-option input { cursor: pointer; width: 16px; height: 16px; }
+    .form-option__label {
+      font-size: var(--text-sm);
+      color: var(--color-ink);
+    }
+    .form-radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2) var(--space-6);
+    }
+
+    /* ── Honeypot ────────────────────────────────────── */
+    .form-honeypot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    /* ── Success state ───────────────────────────────── */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: var(--space-10) var(--space-6);
+    }
+    .form-success__icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto var(--space-4);
+      color: var(--color-bronze-interactive);
+    }
+    .form-success__title {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-2) 0;
+    }
+    .form-success__body {
+      color: var(--color-ink-secondary);
+      font-size: var(--text-body);
+      margin: 0;
+    }
+
+    /* ── Responsive ──────────────────────────────────── */
+    @media (max-width: 899px) {
+      .quote-page-grid { grid-template-columns: 1fr; }
+      .quote-page-hero { padding: var(--space-10) 0 var(--space-8); }
+      .quote-page-body { padding: var(--space-8) 0 var(--space-12); }
+    }
+    @media (max-width: 639px) {
+      .form-row { grid-template-columns: 1fr; }
+      .form-options-grid { grid-template-columns: 1fr; }
+      .quote-form-card { padding: var(--space-6); }
+    }
+  </style>
+
+  <!-- ── SEO: canonical + Open Graph + favicon ──────────────────── -->
+  <link rel="canonical" href="https://fenovera.com/quote/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fenovera">
+  <meta property="og:title" content="Request a Free Quote | Fenovera">
+  <meta property="og:description" content="Request a free quote for aluminum or uPVC windows and doors from Fenovera. Tell us about your project and we will respond with pricing and specifications.">
+  <meta property="og:url" content="https://fenovera.com/quote/">
+  <meta property="og:image" content="https://fenovera.com/img/casement.jpg">
+  <!-- /SEO ──────────────────────────────────────────────────────── -->
+</head>
+<body data-page="quote">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header" id="site-header">
+  <div class="site-header__inner">
+
+    <a href="../" class="site-header__logo" aria-label="Fenovera: go to homepage">
+      <span class="site-header__logo-wordmark">Fen<span class="logo-accent-o">o</span>vera</span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="Main navigation">
+
+      <div class="nav-item" id="nav-products">
+        <button class="nav-link"
+          aria-haspopup="true" aria-expanded="false"
+          aria-controls="mega-menu-products" type="button">
+          Products
+          <svg class="nav-link__chevron" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+            <path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="mega-menu" id="mega-menu-products" role="region" aria-label="Products menu">
+
+          <!-- Column 1: Windows -->
+          <div>
+            <div class="mega-menu__col-label">Windows</div>
+            <div class="mega-menu__group">
+              <a href="../products/windows/aluminum/" class="mega-menu__link">
+                <span class="mega-menu__link-name">Aluminum Windows</span>
+              </a>
+              <a href="../products/windows/upvc/" class="mega-menu__link">
+                <span class="mega-menu__link-name">uPVC Windows</span>
+              </a>
+              <a href="../products/windows/" class="mega-menu__link">
+                <span class="mega-menu__link-name">All Windows</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Doors -->
+          <div>
+            <div class="mega-menu__col-label">Doors</div>
+            <div class="mega-menu__group">
+              <a href="../products/doors/aluminum/" class="mega-menu__link">
+                <span class="mega-menu__link-name">Aluminum Doors</span>
+              </a>
+              <a href="../products/doors/upvc/" class="mega-menu__link">
+                <span class="mega-menu__link-name">uPVC Doors</span>
+              </a>
+              <a href="../products/doors/" class="mega-menu__link">
+                <span class="mega-menu__link-name">All Doors</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mega-menu__footer">
+            <a href="../products/" class="link-standalone">
+              All Products
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="../quote/" class="link-standalone">
+              Request a Free Quote
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+        </div><!-- end mega-menu -->
+      </div><!-- end nav-item -->
+
+      <a href="../projects/" class="nav-link">Projects</a>
+      <a href="../about/" class="nav-link">About</a>
+      <a href="../contact/" class="nav-link">Contact</a>
+
+    </nav>
+
+    <div class="site-header__actions">
+      <a href="../quote/" class="btn btn-primary btn-sm">Request a Free Quote</a>
+      <button class="site-header__hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        type="button"
+        id="hamburger-btn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+  </div><!-- end site-header__inner -->
+</header>
+
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav__backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
+  <div class="mobile-nav__drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+
+    <div class="mobile-nav__header">
+      <span class="site-header__logo-wordmark">Fenovera</span>
+      <button class="mobile-nav__close" aria-label="Close navigation menu" type="button" id="mobile-nav-close">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav__body">
+
+      <div>
+        <button class="mobile-nav__accordion-btn"
+          aria-expanded="false"
+          aria-controls="mobile-products-submenu"
+          type="button">
+          Products
+          <svg class="nav-link__chevron" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+            <path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="mobile-nav__submenu" id="mobile-products-submenu"
+          aria-hidden="true">
+          <div class="mobile-nav__submenu-label">Windows</div>
+          <a href="../products/windows/aluminum/" class="mobile-nav__submenu-link">Aluminum Windows</a>
+          <a href="../products/windows/upvc/" class="mobile-nav__submenu-link">uPVC Windows</a>
+          <a href="../products/windows/" class="mobile-nav__submenu-link">All Windows</a>
+          <div class="mobile-nav__submenu-label">Doors</div>
+          <a href="../products/doors/aluminum/" class="mobile-nav__submenu-link">Aluminum Doors</a>
+          <a href="../products/doors/upvc/" class="mobile-nav__submenu-link">uPVC Doors</a>
+          <a href="../products/doors/" class="mobile-nav__submenu-link">All Doors</a>
+          <a href="../products/" class="mobile-nav__submenu-link">All Products</a>
+        </div>
+      </div>
+
+      <a href="../projects/" class="mobile-nav__link">Projects</a>
+      <a href="../about/" class="mobile-nav__link">About</a>
+      <a href="../contact/" class="mobile-nav__link">Contact</a>
+
+    </div><!-- end mobile-nav__body -->
+
+    <div class="mobile-nav__footer">
+      <a href="../quote/" class="btn btn-primary btn--block">Request a Free Quote</a>
+    </div>
+
+  </div><!-- end mobile-nav__drawer -->
+</div><!-- end mobile-nav -->
+
+
+  <main id="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+    <section class="quote-page-hero page-section" aria-labelledby="quote-heading">
+      <div class="container">
+        <p class="section-overline">Pricing &amp; specifications</p>
+        <h1 class="section-title" id="quote-heading">Request a Free Quote</h1>
+        <p class="section-lead">
+          Tell us about your project and we will respond with product recommendations,
+          pricing, and lead times.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── BODY ──────────────────────────────────────────────────────────── -->
+    <section class="quote-page-body page-section" aria-label="Quote request form">
+      <div class="container">
+        <div class="quote-page-grid">
+
+          <!-- Left: what to expect -->
+          <div>
+            <h2 class="quote-note__heading">What to Expect</h2>
+            <p class="quote-note__body">
+              Share your project details and we will review your requirements and respond
+              with options, pricing, and technical information.
+            </p>
+
+            <div class="quote-note__item">
+              <div class="quote-note__bullet" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="quote-note__item-text">Product recommendations based on your project requirements</p>
+            </div>
+
+            <div class="quote-note__item">
+              <div class="quote-note__bullet" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="quote-note__item-text">Pricing and lead time information for your selected systems</p>
+            </div>
+
+            <div class="quote-note__item">
+              <div class="quote-note__bullet" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="quote-note__item-text">Technical specifications and support from our team</p>
+            </div>
+
+            <p class="text-caption mt-6" style="color: var(--color-ink-secondary);">
+              You can also reach us directly at
+              <a href="mailto:info@fenovera.com" style="color: var(--color-bronze-interactive);">info@fenovera.com</a>
+            </p>
+          </div>
+
+          <!-- Right: quote form -->
+          <div class="quote-form-card">
+
+            <!--
+              FORM DELIVERY NOTE
+              No backend is configured. This form shows a client-side success state
+              without transmitting data. Configuring form delivery (email service,
+              CRM, or webhook) is an owner-controlled launch blocker.
+              Also consider adding reCAPTCHA or equivalent spam protection before launch.
+            -->
+
+            <h2 class="quote-form-card__title">Project Details</h2>
+
+            <!-- Success state -->
+            <div class="form-success" id="quote-success" role="status" aria-live="polite" tabindex="-1">
+              <svg class="form-success__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
+                <path d="M14 24l7 7 13-14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3 class="form-success__title">Quote request received</h3>
+              <p class="form-success__body">Thank you. We will review your project details and be in touch.</p>
+            </div>
+
+            <form
+              id="quote-form"
+              method="post"
+              action="#"
+              novalidate
+              aria-label="Quote request form"
+            >
+              <!-- Honeypot -->
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="hp-url">Website URL (leave blank)</label>
+                <input type="text" id="hp-url" name="url" tabindex="-1" autocomplete="off">
+              </div>
+
+              <!-- Contact info -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="quote-name">
+                    Name<span class="form-label__required" aria-hidden="true">*</span>
+                  </label>
+                  <input class="form-input" type="text" id="quote-name" name="name"
+                    autocomplete="name" required aria-required="true"
+                    aria-describedby="quote-name-error">
+                  <p class="form-error" id="quote-name-error" role="alert" hidden></p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="quote-company">
+                    Company<span class="form-label__optional">(optional)</span>
+                  </label>
+                  <input class="form-input" type="text" id="quote-company" name="company"
+                    autocomplete="organization">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="quote-email">
+                    Email<span class="form-label__required" aria-hidden="true">*</span>
+                  </label>
+                  <input class="form-input" type="email" id="quote-email" name="email"
+                    autocomplete="email" required aria-required="true"
+                    aria-describedby="quote-email-error">
+                  <p class="form-error" id="quote-email-error" role="alert" hidden></p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="quote-phone">
+                    Phone<span class="form-label__optional">(optional)</span>
+                  </label>
+                  <input class="form-input" type="tel" id="quote-phone" name="phone"
+                    autocomplete="tel">
+                </div>
+              </div>
+
+              <!-- Project type -->
+              <fieldset class="form-fieldset" aria-describedby="quote-type-error">
+                <legend class="form-legend">
+                  Project Type<span class="form-label__required" aria-hidden="true">*</span>
+                </legend>
+                <div class="form-radio-group" role="group">
+                  <label class="form-option">
+                    <input type="radio" name="project-type" value="residential" required aria-required="true">
+                    <span class="form-option__label">Residential</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="radio" name="project-type" value="commercial">
+                    <span class="form-option__label">Commercial</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="radio" name="project-type" value="other">
+                    <span class="form-option__label">Other</span>
+                  </label>
+                </div>
+                <p class="form-error" id="quote-type-error" role="alert" hidden></p>
+              </fieldset>
+
+              <!-- Products of interest -->
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">
+                  Products of Interest<span class="form-label__optional">(select all that apply)</span>
+                </legend>
+                <div class="form-options-grid">
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="aluminum-windows">
+                    <span class="form-option__label">Aluminum Windows</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="upvc-windows">
+                    <span class="form-option__label">uPVC Windows</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="aluminum-doors">
+                    <span class="form-option__label">Aluminum Doors</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="upvc-doors">
+                    <span class="form-option__label">uPVC Doors</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="not-sure">
+                    <span class="form-option__label">Not sure yet</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Project details -->
+              <div class="form-group">
+                <label class="form-label" for="quote-details">
+                  Project Details<span class="form-label__required" aria-hidden="true">*</span>
+                </label>
+                <textarea class="form-textarea" id="quote-details" name="details"
+                  rows="5"
+                  required aria-required="true"
+                  aria-describedby="quote-details-error"
+                  placeholder="Describe your project: number of openings, approximate sizes, location, any specific requirements…"
+                ></textarea>
+                <p class="form-error" id="quote-details-error" role="alert" hidden></p>
+              </div>
+
+              <!-- Timeline -->
+              <div class="form-group">
+                <label class="form-label" for="quote-timeline">
+                  Timeline<span class="form-label__optional">(optional)</span>
+                </label>
+                <select class="form-select" id="quote-timeline" name="timeline">
+                  <option value="">Select a timeline…</option>
+                  <option value="asap">As soon as possible</option>
+                  <option value="1-3m">1–3 months</option>
+                  <option value="3-6m">3–6 months</option>
+                  <option value="6m+">6+ months</option>
+                  <option value="planning">Planning stage only</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Submit Quote Request
+              </button>
+
+              <p class="text-caption mt-4" style="color: var(--color-ink-secondary);">
+                Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+<footer class="site-footer">
+  <div class="site-footer__main">
+
+    <div>
+      <div class="site-footer__brand-name">Fenovera</div>
+      <p class="site-footer__brand-desc">Aluminum and uPVC window and door systems. Bay Area distributor.</p>
+    </div>
+
+    <div>
+      <div class="site-footer__col-label">Products</div>
+      <nav class="site-footer__links" aria-label="Products footer navigation">
+        <a href="../products/windows/aluminum/" class="site-footer__link">Aluminum Windows</a>
+        <a href="../products/windows/upvc/" class="site-footer__link">uPVC Windows</a>
+        <a href="../products/doors/aluminum/" class="site-footer__link">Aluminum Doors</a>
+        <a href="../products/doors/upvc/" class="site-footer__link">uPVC Doors</a>
+      </nav>
+    </div>
+
+    <div>
+      <div class="site-footer__col-label">Company</div>
+      <nav class="site-footer__links" aria-label="Company footer navigation">
+        <a href="../about/" class="site-footer__link">About Fenovera</a>
+        <a href="../projects/" class="site-footer__link">Projects</a>
+        <a href="../contact/" class="site-footer__link">Contact</a>
+      </nav>
+    </div>
+
+    <div>
+      <div class="site-footer__col-label">Contact</div>
+      <div class="site-footer__links">
+
+        <div class="site-footer__contact-item">
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" width="16" height="16">
+            <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M2 5.5l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <a href="mailto:info@fenovera.com" class="site-footer__link">info@fenovera.com</a>
+        </div>
+
+        <div class="site-footer__contact-item">
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" width="16" height="16">
+            <path d="M3 3a1.5 1.5 0 011.5-1.5h.5a1 1 0 01.95.684l.804 2.412a1 1 0 01-.23 1.04L5.5 6.5a7 7 0 003.5 3.5l1.364-.703a1 1 0 011.04.23l2.412.804a1 1 0 01.684.95V11.5A1.5 1.5 0 0113 13 10 10 0 013 3z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          </svg>
+          <!-- [PHONE TO VERIFY]: replace href and text before launch -->
+          <a href="tel:+1-000-000-0000" class="site-footer__link">[PHONE TO VERIFY]</a>
+        </div>
+
+      </div><!-- end site-footer__links -->
+    </div>
+
+  </div><!-- end site-footer__main -->
+
+  <div class="site-footer__bottom">
+    <p class="site-footer__copy">&copy; 2026 Fenovera. All rights reserved.</p>
+    <nav class="site-footer__legal-links" aria-label="Legal navigation">
+      <a href="../privacy/" class="site-footer__legal-link">Privacy Policy</a>
+      <a href="../terms/" class="site-footer__legal-link">Terms of Use</a>
+    </nav>
+  </div>
+
+</footer>
+
+
+  <script src="../site/nav.js" defer></script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var form    = document.getElementById('quote-form');
+      var success = document.getElementById('quote-success');
+      if (!form) return;
+
+      // ── Field validation ──────────────────────────────
+      function getError(field) {
+        if (field.validity.valueMissing) return 'This field is required.';
+        if (field.validity.typeMismatch && field.type === 'email') return 'Please enter a valid email address.';
+        return '';
+      }
+
+      function validateField(field) {
+        var errId = field.id + '-error';
+        var errEl = document.getElementById(errId);
+        var msg   = getError(field);
+        if (errEl) {
+          if (msg) {
+            errEl.textContent = msg;
+            errEl.removeAttribute('hidden');
+            field.setAttribute('aria-invalid', 'true');
+          } else {
+            errEl.textContent = '';
+            errEl.setAttribute('hidden', '');
+            field.removeAttribute('aria-invalid');
+          }
+        }
+        return !msg;
+      }
+
+      // Validate radio group (project type)
+      function validateRadioGroup(name) {
+        var radios  = form.querySelectorAll('[name="' + name + '"]');
+        var errEl   = document.getElementById('quote-type-error');
+        var checked = Array.prototype.some.call(radios, function (r) { return r.checked; });
+        if (errEl) {
+          if (!checked) {
+            errEl.textContent = 'Please select a project type.';
+            errEl.removeAttribute('hidden');
+          } else {
+            errEl.textContent = '';
+            errEl.setAttribute('hidden', '');
+          }
+        }
+        return checked;
+      }
+
+      // Live blur validation for text/email/textarea inputs
+      form.querySelectorAll('input[required]:not([type="radio"]), textarea[required]').forEach(function (field) {
+        field.addEventListener('blur', function () { validateField(field); });
+        field.addEventListener('input', function () {
+          if (field.getAttribute('aria-invalid') === 'true') validateField(field);
+        });
+      });
+
+      // ── Submit ────────────────────────────────────────
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Honeypot check
+        var hp = form.querySelector('[name="url"]');
+        if (hp && hp.value) return;
+
+        var valid = true;
+
+        form.querySelectorAll('input[required]:not([type="radio"]), textarea[required]').forEach(function (field) {
+          if (!validateField(field)) valid = false;
+        });
+
+        if (!validateRadioGroup('project-type')) valid = false;
+
+        if (!valid) {
+          var first = form.querySelector('[aria-invalid="true"]');
+          if (!first) first = document.getElementById('quote-type-error');
+          if (first) first.focus();
+          return;
+        }
+
+        // Show success (no data transmitted — backend required for launch)
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.focus();
+      });
+    })();
+  </script>
+
+</body>
+</html>

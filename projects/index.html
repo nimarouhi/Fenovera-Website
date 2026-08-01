@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doors | Fenovera</title>
-  <meta name="description" content="Aluminum and uPVC door systems from Fenovera.">
-  <!-- noindex: draft page: remove once approved for launch -->
+  <title>Projects | Fenovera</title>
+  <meta name="description" content="Fenovera project portfolio. Bay Area aluminum and uPVC window and door installations.">
   <meta name="robots" content="noindex, nofollow">
 
   <!-- Google Fonts -->
@@ -14,36 +13,70 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
 
   <!-- Design System v1.3.1 -->
-  <link rel="stylesheet" href="../../design-system/tokens.css">
-  <link rel="stylesheet" href="../../design-system/base.css">
-  <link rel="stylesheet" href="../../design-system/components.css">
+  <link rel="stylesheet" href="../design-system/tokens.css">
+  <link rel="stylesheet" href="../design-system/base.css">
+  <link rel="stylesheet" href="../design-system/components.css">
+
+  <style>
+    .projects-hero {
+      padding: var(--space-16) 0 var(--space-12);
+      border-bottom: var(--border-thin) solid var(--color-border);
+    }
+    .projects-placeholder {
+      padding: var(--space-16) 0 var(--space-20);
+      text-align: center;
+    }
+    .projects-placeholder__icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto var(--space-6);
+      color: var(--color-border);
+    }
+    .projects-placeholder__title {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-2xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-3) 0;
+    }
+    .projects-placeholder__body {
+      color: var(--color-ink-secondary);
+      font-size: var(--text-body);
+      max-width: 48ch;
+      margin: 0 auto var(--space-8) auto;
+    }
+    @media (max-width: 767px) {
+      .projects-hero { padding: var(--space-10) 0 var(--space-8); }
+      .projects-placeholder { padding: var(--space-10) 0 var(--space-14); }
+    }
+  </style>
 
   <!-- ── SEO: canonical + Open Graph + favicon ──────────────────── -->
-  <link rel="canonical" href="https://fenovera.com/products/doors/">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://fenovera.com/projects/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fenovera">
-  <meta property="og:title" content="Doors | Fenovera">
-  <meta property="og:description" content="Aluminum and uPVC door systems from Fenovera.">
-  <meta property="og:url" content="https://fenovera.com/products/doors/">
+  <meta property="og:title" content="Projects | Fenovera">
+  <meta property="og:description" content="Fenovera project portfolio — Bay Area aluminum and uPVC window and door installations.">
+  <meta property="og:url" content="https://fenovera.com/projects/">
   <meta property="og:image" content="https://fenovera.com/img/casement.jpg">
   <!-- /SEO ──────────────────────────────────────────────────────── -->
 </head>
-<body>
+<body data-page="projects">
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="site-header" id="site-header">
   <div class="site-header__inner">
 
-    <a href="../../" class="site-header__logo" aria-label="Fenovera: go to homepage">
+    <a href="../" class="site-header__logo" aria-label="Fenovera: go to homepage">
       <span class="site-header__logo-wordmark">Fen<span class="logo-accent-o">o</span>vera</span>
     </a>
 
     <nav class="site-header__nav" aria-label="Main navigation">
 
       <div class="nav-item" id="nav-products">
-        <button class="nav-link is-active"
+        <button class="nav-link"
           aria-haspopup="true" aria-expanded="false"
           aria-controls="mega-menu-products" type="button">
           Products
@@ -58,13 +91,13 @@
           <div>
             <div class="mega-menu__col-label">Windows</div>
             <div class="mega-menu__group">
-              <a href="../../products/windows/aluminum/" class="mega-menu__link">
+              <a href="../products/windows/aluminum/" class="mega-menu__link">
                 <span class="mega-menu__link-name">Aluminum Windows</span>
               </a>
-              <a href="../../products/windows/upvc/" class="mega-menu__link">
+              <a href="../products/windows/upvc/" class="mega-menu__link">
                 <span class="mega-menu__link-name">uPVC Windows</span>
               </a>
-              <a href="../../products/windows/" class="mega-menu__link">
+              <a href="../products/windows/" class="mega-menu__link">
                 <span class="mega-menu__link-name">All Windows</span>
               </a>
             </div>
@@ -74,26 +107,26 @@
           <div>
             <div class="mega-menu__col-label">Doors</div>
             <div class="mega-menu__group">
-              <a href="../../products/doors/aluminum/" class="mega-menu__link">
+              <a href="../products/doors/aluminum/" class="mega-menu__link">
                 <span class="mega-menu__link-name">Aluminum Doors</span>
               </a>
-              <a href="../../products/doors/upvc/" class="mega-menu__link">
+              <a href="../products/doors/upvc/" class="mega-menu__link">
                 <span class="mega-menu__link-name">uPVC Doors</span>
               </a>
-              <a href="../../products/doors/" class="mega-menu__link" aria-current="page">
+              <a href="../products/doors/" class="mega-menu__link">
                 <span class="mega-menu__link-name">All Doors</span>
               </a>
             </div>
           </div>
 
           <div class="mega-menu__footer">
-            <a href="../../products/" class="link-standalone">
+            <a href="../products/" class="link-standalone">
               All Products
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-            <a href="../../quote/" class="link-standalone">
+            <a href="../quote/" class="link-standalone">
               Request a Free Quote
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -104,14 +137,14 @@
         </div><!-- end mega-menu -->
       </div><!-- end nav-item -->
 
-      <a href="../../projects/" class="nav-link">Projects</a>
-      <a href="../../about/" class="nav-link">About</a>
-      <a href="../../contact/" class="nav-link">Contact</a>
+      <a href="../projects/" class="nav-link" aria-current="page">Projects</a>
+      <a href="../about/" class="nav-link">About</a>
+      <a href="../contact/" class="nav-link">Contact</a>
 
     </nav>
 
     <div class="site-header__actions">
-      <a href="../../quote/" class="btn btn-primary btn-sm">Request a Free Quote</a>
+      <a href="../quote/" class="btn btn-primary btn-sm">Request a Free Quote</a>
       <button class="site-header__hamburger"
         aria-label="Open navigation menu"
         aria-expanded="false"
@@ -144,7 +177,7 @@
 
       <div>
         <button class="mobile-nav__accordion-btn"
-          aria-expanded="true"
+          aria-expanded="false"
           aria-controls="mobile-products-submenu"
           type="button">
           Products
@@ -153,95 +186,64 @@
           </svg>
         </button>
         <div class="mobile-nav__submenu" id="mobile-products-submenu"
-          aria-hidden="false">
+          aria-hidden="true">
           <div class="mobile-nav__submenu-label">Windows</div>
-          <a href="../../products/windows/aluminum/" class="mobile-nav__submenu-link">Aluminum Windows</a>
-          <a href="../../products/windows/upvc/" class="mobile-nav__submenu-link">uPVC Windows</a>
-          <a href="../../products/windows/" class="mobile-nav__submenu-link">All Windows</a>
+          <a href="../products/windows/aluminum/" class="mobile-nav__submenu-link">Aluminum Windows</a>
+          <a href="../products/windows/upvc/" class="mobile-nav__submenu-link">uPVC Windows</a>
+          <a href="../products/windows/" class="mobile-nav__submenu-link">All Windows</a>
           <div class="mobile-nav__submenu-label">Doors</div>
-          <a href="../../products/doors/aluminum/" class="mobile-nav__submenu-link">Aluminum Doors</a>
-          <a href="../../products/doors/upvc/" class="mobile-nav__submenu-link">uPVC Doors</a>
-          <a href="../../products/doors/" class="mobile-nav__submenu-link" aria-current="page">All Doors</a>
-          <a href="../../products/" class="mobile-nav__submenu-link">All Products</a>
+          <a href="../products/doors/aluminum/" class="mobile-nav__submenu-link">Aluminum Doors</a>
+          <a href="../products/doors/upvc/" class="mobile-nav__submenu-link">uPVC Doors</a>
+          <a href="../products/doors/" class="mobile-nav__submenu-link">All Doors</a>
+          <a href="../products/" class="mobile-nav__submenu-link">All Products</a>
         </div>
       </div>
 
-      <a href="../../projects/" class="mobile-nav__link">Projects</a>
-      <a href="../../about/" class="mobile-nav__link">About</a>
-      <a href="../../contact/" class="mobile-nav__link">Contact</a>
+      <a href="../projects/" class="mobile-nav__link" aria-current="page">Projects</a>
+      <a href="../about/" class="mobile-nav__link">About</a>
+      <a href="../contact/" class="mobile-nav__link">Contact</a>
 
     </div><!-- end mobile-nav__body -->
 
     <div class="mobile-nav__footer">
-      <a href="../../quote/" class="btn btn-primary btn--block">Request a Free Quote</a>
+      <a href="../quote/" class="btn btn-primary btn--block">Request a Free Quote</a>
     </div>
 
   </div><!-- end mobile-nav__drawer -->
 </div><!-- end mobile-nav -->
 
 
-  <div class="dev-notice" role="status" aria-live="polite">
-    <strong>Development draft:</strong> content requires verification before public launch.
-  </div>
-
   <main id="main-content">
 
-    <!-- ── BREADCRUMB ───────────────────────────────────────────────────── -->
-    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+    <section class="projects-hero page-section" aria-labelledby="projects-heading">
       <div class="container">
-        <ol class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
-          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a href="../../products/" itemprop="item"><span itemprop="name">Products</span></a>
-            <meta itemprop="position" content="1" />
-          </li>
-          <li aria-hidden="true">›</li>
-          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <span itemprop="name">Doors</span>
-            <meta itemprop="position" content="2" />
-          </li>
-        </ol>
-      </div>
-    </nav>
-
-    <!-- ── PAGE HEADER ───────────────────────────────────────────────────── -->
-    <section class="product-hero page-section--flush-top" aria-labelledby="type-heading">
-      <div class="container">
-        <h1 class="product-hero__title" id="type-heading">Doors</h1>
-        <p class="product-hero__intro">Aluminum and uPVC door systems from Fenovera.</p>
+        <p class="section-overline">Portfolio</p>
+        <h1 class="section-title" id="projects-heading">Projects</h1>
+        <p class="section-lead">
+          A selection of installations featuring Fenovera aluminum and uPVC window and door systems.
+        </p>
       </div>
     </section>
 
-    <!-- ── MATERIAL CATEGORIES ───────────────────────────────────────────── -->
-    <section class="page-section page-section--canvas" aria-labelledby="materials-heading">
+    <!-- ── PLACEHOLDER ───────────────────────────────────────────────────── -->
+    <!--
+      PROJECT PORTFOLIO: Not yet published.
+      Owner to populate with project photography and descriptions before launch.
+    -->
+    <section class="projects-placeholder page-section" aria-labelledby="projects-placeholder-heading">
       <div class="container">
-        <p class="section-overline">By material</p>
-        <h2 class="section-title" id="materials-heading">Browse by material</h2>
-<div class="material-grid">
-  <a href="../../products/doors/aluminum/" class="material-card">
-    <div class="material-card__label">Aluminum</div>
-    <div class="material-card__link">Browse Aluminum →</div>
-  </a>
-  <a href="../../products/doors/upvc/" class="material-card">
-    <div class="material-card__label">uPVC</div>
-    <div class="material-card__link">Browse uPVC →</div>
-  </a>
-</div>
-      </div>
-    </section>
-
-    <!-- ── QUOTE CTA BANNER ──────────────────────────────────────────────── -->
-    <section class="quote-banner" aria-labelledby="cta-type-heading">
-      <div class="container">
-        <div class="quote-banner__inner">
-          <div>
-            <p class="quote-banner__eyebrow">Get in touch</p>
-            <h2 class="quote-banner__title" id="cta-type-heading">Free estimate for Doors</h2>
-            <p class="quote-banner__body">Tell us about your project and we'll respond with options, pricing, and lead times.</p>
-          </div>
-          <div>
-            <a href="../../quote/" class="btn btn-secondary btn-lg">Free Estimate</a>
-          </div>
-        </div>
+        <svg class="projects-placeholder__icon" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+          <rect x="4" y="8" width="48" height="38" rx="3" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <path d="M4 30l14-12 10 10 8-7 16 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="17" cy="20" r="4" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <h2 class="projects-placeholder__title" id="projects-placeholder-heading">Portfolio in Development</h2>
+        <p class="projects-placeholder__body">
+          Project photography and installation case studies are being compiled.
+          In the meantime, contact us to discuss your project or to request references.
+        </p>
+        <a href="../contact/" class="btn btn-primary">Contact Us</a>
       </div>
     </section>
 
@@ -258,19 +260,19 @@
     <div>
       <div class="site-footer__col-label">Products</div>
       <nav class="site-footer__links" aria-label="Products footer navigation">
-        <a href="../../products/windows/aluminum/" class="site-footer__link">Aluminum Windows</a>
-        <a href="../../products/windows/upvc/" class="site-footer__link">uPVC Windows</a>
-        <a href="../../products/doors/aluminum/" class="site-footer__link">Aluminum Doors</a>
-        <a href="../../products/doors/upvc/" class="site-footer__link">uPVC Doors</a>
+        <a href="../products/windows/aluminum/" class="site-footer__link">Aluminum Windows</a>
+        <a href="../products/windows/upvc/" class="site-footer__link">uPVC Windows</a>
+        <a href="../products/doors/aluminum/" class="site-footer__link">Aluminum Doors</a>
+        <a href="../products/doors/upvc/" class="site-footer__link">uPVC Doors</a>
       </nav>
     </div>
 
     <div>
       <div class="site-footer__col-label">Company</div>
       <nav class="site-footer__links" aria-label="Company footer navigation">
-        <a href="../../about/" class="site-footer__link">About Fenovera</a>
-        <a href="../../projects/" class="site-footer__link">Projects</a>
-        <a href="../../contact/" class="site-footer__link">Contact</a>
+        <a href="../about/" class="site-footer__link">About Fenovera</a>
+        <a href="../projects/" class="site-footer__link" aria-current="page">Projects</a>
+        <a href="../contact/" class="site-footer__link">Contact</a>
       </nav>
     </div>
 
@@ -302,15 +304,15 @@
   <div class="site-footer__bottom">
     <p class="site-footer__copy">&copy; 2026 Fenovera. All rights reserved.</p>
     <nav class="site-footer__legal-links" aria-label="Legal navigation">
-      <a href="../../privacy/" class="site-footer__legal-link">Privacy Policy</a>
-      <a href="../../terms/" class="site-footer__legal-link">Terms of Use</a>
+      <a href="../privacy/" class="site-footer__legal-link">Privacy Policy</a>
+      <a href="../terms/" class="site-footer__legal-link">Terms of Use</a>
     </nav>
   </div>
 
 </footer>
 
 
-  <script src="../../site/nav.js" defer></script>
+  <script src="../site/nav.js" defer></script>
 
 </body>
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Fenovera</title>
+  <meta name="description" content="Fenovera project portfolio. Bay Area aluminum and uPVC window and door installations.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
+
+  <!-- Design System v1.3.1 -->
+  <link rel="stylesheet" href="/design-system/tokens.css">
+  <link rel="stylesheet" href="/design-system/base.css">
+  <link rel="stylesheet" href="/design-system/components.css">
+
+  <style>
+    .projects-hero {
+      padding: var(--space-16) 0 var(--space-12);
+      border-bottom: var(--border-thin) solid var(--color-border);
+    }
+    .projects-placeholder {
+      padding: var(--space-16) 0 var(--space-20);
+      text-align: center;
+    }
+    .projects-placeholder__icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto var(--space-6);
+      color: var(--color-border);
+    }
+    .projects-placeholder__title {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-2xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-3) 0;
+    }
+    .projects-placeholder__body {
+      color: var(--color-ink-secondary);
+      font-size: var(--text-body);
+      max-width: 48ch;
+      margin: 0 auto var(--space-8) auto;
+    }
+    @media (max-width: 767px) {
+      .projects-hero { padding: var(--space-10) 0 var(--space-8); }
+      .projects-placeholder { padding: var(--space-10) 0 var(--space-14); }
+    }
+  </style>
+</head>
+<body data-page="projects">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- BUILD:header -->
+  <!-- BUILD:mobile-nav -->
+
+  <main id="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+    <section class="projects-hero page-section" aria-labelledby="projects-heading">
+      <div class="container">
+        <p class="section-overline">Portfolio</p>
+        <h1 class="section-title" id="projects-heading">Projects</h1>
+        <p class="section-lead">
+          A selection of installations featuring Fenovera aluminum and uPVC window and door systems.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── PLACEHOLDER ───────────────────────────────────────────────────── -->
+    <!--
+      PROJECT PORTFOLIO: Not yet published.
+      Owner to populate with project photography and descriptions before launch.
+    -->
+    <section class="projects-placeholder page-section" aria-labelledby="projects-placeholder-heading">
+      <div class="container">
+        <svg class="projects-placeholder__icon" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+          <rect x="4" y="8" width="48" height="38" rx="3" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <path d="M4 30l14-12 10 10 8-7 16 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="17" cy="20" r="4" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <h2 class="projects-placeholder__title" id="projects-placeholder-heading">Portfolio in Development</h2>
+        <p class="projects-placeholder__body">
+          Project photography and installation case studies are being compiled.
+          In the meantime, contact us to discuss your project or to request references.
+        </p>
+        <a href="/contact/" class="btn btn-primary">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BUILD:footer -->
+
+  <script src="/site/nav.js" defer></script>
+
+</body>
+</html>

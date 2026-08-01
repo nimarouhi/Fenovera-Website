@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Fenovera | Bay Area Windows &amp; Doors</title>
+  <meta name="description" content="Contact Fenovera to discuss product specifications, pricing, and availability for aluminum and uPVC windows and doors in the Bay Area.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
+
+  <!-- Design System v1.3.1 -->
+  <link rel="stylesheet" href="/design-system/tokens.css">
+  <link rel="stylesheet" href="/design-system/base.css">
+  <link rel="stylesheet" href="/design-system/components.css">
+
+  <style>
+    /* ── Contact layout ──────────────────────────────── */
+    .contact-hero {
+      padding: var(--space-16) 0 var(--space-10);
+      border-bottom: var(--border-thin) solid var(--color-border);
+    }
+    .contact-body {
+      padding: var(--space-12) 0 var(--space-16);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    /* ── Contact info ────────────────────────────────── */
+    .contact-info__heading {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-6) 0;
+    }
+    .contact-info__item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      margin-bottom: var(--space-5);
+    }
+    .contact-info__icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--color-bronze-interactive);
+      margin-top: 2px;
+    }
+    .contact-info__label {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      color: var(--color-ink-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: var(--space-1);
+    }
+    .contact-info__value {
+      font-size: var(--text-body);
+      color: var(--color-ink);
+    }
+    .contact-info__value a {
+      color: var(--color-bronze-interactive);
+      text-decoration: none;
+    }
+    .contact-info__value a:hover { text-decoration: underline; }
+
+    /* ── Form card ───────────────────────────────────── */
+    .contact-form-card {
+      background: var(--color-canvas);
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+    }
+    .contact-form-card__title {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-6) 0;
+    }
+
+    /* ── Form fields ─────────────────────────────────── */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+    }
+    .form-group {
+      margin-bottom: var(--space-5);
+    }
+    .form-label {
+      display: block;
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      color: var(--color-ink);
+      margin-bottom: var(--space-1-5);
+    }
+    .form-label__required {
+      color: var(--color-bronze-interactive);
+      margin-left: var(--space-1);
+      aria-hidden: true;
+    }
+    .form-label__optional {
+      font-weight: var(--weight-normal);
+      color: var(--color-ink-secondary);
+      font-size: var(--text-xs);
+      margin-left: var(--space-1);
+    }
+    .form-input,
+    .form-textarea {
+      display: block;
+      width: 100%;
+      padding: var(--space-3) var(--space-4);
+      font-family: var(--font-body);
+      font-size: var(--text-body);
+      color: var(--color-ink);
+      background: var(--color-surface);
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-sm);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      box-sizing: border-box;
+    }
+    .form-input:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--color-navy);
+      box-shadow: 0 0 0 3px rgba(26, 42, 64, 0.12);
+    }
+    .form-input[aria-invalid="true"],
+    .form-textarea[aria-invalid="true"] {
+      border-color: #c0392b;
+    }
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-error {
+      font-size: var(--text-sm);
+      color: #c0392b;
+      margin-top: var(--space-1-5);
+    }
+    /* Honeypot — visually hidden, hidden from screen readers */
+    .form-honeypot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    /* ── Success state ───────────────────────────────── */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: var(--space-10) var(--space-6);
+    }
+    .form-success__icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto var(--space-4);
+      color: var(--color-bronze-interactive);
+    }
+    .form-success__title {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-xl);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-2) 0;
+    }
+    .form-success__body {
+      color: var(--color-ink-secondary);
+      font-size: var(--text-body);
+      margin: 0;
+    }
+
+    /* ── Responsive ──────────────────────────────────── */
+    @media (max-width: 899px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-hero { padding: var(--space-10) 0 var(--space-8); }
+      .contact-body { padding: var(--space-8) 0 var(--space-12); }
+    }
+    @media (max-width: 639px) {
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-card { padding: var(--space-6); }
+    }
+  </style>
+</head>
+<body data-page="contact">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- BUILD:header -->
+  <!-- BUILD:mobile-nav -->
+
+  <main id="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+    <section class="contact-hero page-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <p class="section-overline">Get in touch</p>
+        <h1 class="section-title" id="contact-heading">Contact Fenovera</h1>
+        <p class="section-lead">
+          Reach out to discuss product specifications, pricing, and availability for your project.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CONTACT BODY ──────────────────────────────────────────────────── -->
+    <section class="contact-body page-section" aria-label="Contact details and enquiry form">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Left: contact info -->
+          <div>
+            <h2 class="contact-info__heading">Contact Details</h2>
+
+            <div class="contact-info__item">
+              <svg class="contact-info__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <rect x="2.5" y="4" width="15" height="12" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M2.5 6.5l7.5 5 7.5-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="contact-info__label">Email</div>
+                <div class="contact-info__value">
+                  <a href="mailto:info@fenovera.com">info@fenovera.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <svg class="contact-info__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 4a1.5 1.5 0 011.5-1.5h.5a1 1 0 01.95.684l.97 2.908a1 1 0 01-.23 1.04L6.5 8.5a8 8 0 004.5 4.5l1.368-.69a1 1 0 011.04.23l2.908.97a1 1 0 01.684.95V15A1.5 1.5 0 0115.5 16.5 11.5 11.5 0 014 5V4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div class="contact-info__label">Phone</div>
+                <!-- [PHONE TO VERIFY]: owner to update before launch -->
+                <div class="contact-info__value">[PHONE TO VERIFY]</div>
+              </div>
+            </div>
+
+            <div class="contact-info__item">
+              <svg class="contact-info__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M10 2C7.2 2 5 4.2 5 7c0 3.8 5 11 5 11s5-7.2 5-11c0-2.8-2.2-5-5-5z" stroke="currentColor" stroke-width="1.4"/>
+                <circle cx="10" cy="7" r="1.5" stroke="currentColor" stroke-width="1.4"/>
+              </svg>
+              <div>
+                <div class="contact-info__label">Location</div>
+                <div class="contact-info__value">Bay Area, California</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: enquiry form -->
+          <div class="contact-form-card">
+
+            <!--
+              FORM DELIVERY NOTE
+              No backend is configured. This form shows a client-side success state
+              without transmitting data. Configuring form delivery (email service,
+              CRM, or webhook) is an owner-controlled launch blocker.
+            -->
+
+            <h2 class="contact-form-card__title">Send Us a Message</h2>
+
+            <!-- Success state (shown after submission) -->
+            <div class="form-success" id="contact-success" role="status" aria-live="polite">
+              <svg class="form-success__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
+                <path d="M14 24l7 7 13-14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3 class="form-success__title">Message received</h3>
+              <p class="form-success__body">Thank you for reaching out. We will be in touch.</p>
+            </div>
+
+            <form
+              id="contact-form"
+              method="post"
+              action="#"
+              novalidate
+              aria-label="Contact enquiry form"
+            >
+              <!-- Honeypot field — spam protection (leave blank) -->
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="hp-website">Website (leave blank)</label>
+                <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">
+                    Name<span class="form-label__required" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                    aria-describedby="contact-name-error"
+                  >
+                  <p class="form-error" id="contact-name-error" role="alert" hidden></p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-company">
+                    Company<span class="form-label__optional">(optional)</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="contact-company"
+                    name="company"
+                    autocomplete="organization"
+                  >
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">
+                    Email<span class="form-label__required" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    aria-describedby="contact-email-error"
+                  >
+                  <p class="form-error" id="contact-email-error" role="alert" hidden></p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-phone">
+                    Phone<span class="form-label__optional">(optional)</span>
+                  </label>
+                  <input
+                    class="form-input"
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    autocomplete="tel"
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">
+                  Message<span class="form-label__required" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  class="form-textarea"
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  required
+                  aria-required="true"
+                  aria-describedby="contact-message-error"
+                  placeholder="Tell us about your project or question…"
+                ></textarea>
+                <p class="form-error" id="contact-message-error" role="alert" hidden></p>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+
+              <p class="text-caption mt-4" style="color: var(--color-ink-secondary);">
+                Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BUILD:footer -->
+
+  <script src="/site/nav.js" defer></script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var form    = document.getElementById('contact-form');
+      var success = document.getElementById('contact-success');
+      if (!form) return;
+
+      // ── Field validation ──────────────────────────────
+      function getError(field) {
+        if (field.validity.valueMissing) return 'This field is required.';
+        if (field.validity.typeMismatch && field.type === 'email') return 'Please enter a valid email address.';
+        return '';
+      }
+
+      function validateField(field) {
+        var errEl = document.getElementById(field.id + '-error');
+        var msg   = getError(field);
+        if (errEl) {
+          if (msg) {
+            errEl.textContent = msg;
+            errEl.removeAttribute('hidden');
+            field.setAttribute('aria-invalid', 'true');
+          } else {
+            errEl.textContent = '';
+            errEl.setAttribute('hidden', '');
+            field.removeAttribute('aria-invalid');
+          }
+        }
+        return !msg;
+      }
+
+      // Validate on blur (live feedback after first interaction)
+      form.querySelectorAll('[required]').forEach(function (field) {
+        field.addEventListener('blur', function () {
+          validateField(field);
+        });
+        field.addEventListener('input', function () {
+          if (field.getAttribute('aria-invalid') === 'true') validateField(field);
+        });
+      });
+
+      // ── Submit ────────────────────────────────────────
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Check honeypot
+        var hp = form.querySelector('[name="website"]');
+        if (hp && hp.value) return; // silently discard
+
+        var valid = true;
+        form.querySelectorAll('[required]').forEach(function (field) {
+          if (!validateField(field)) valid = false;
+        });
+
+        if (!valid) {
+          // Move focus to first invalid field
+          var first = form.querySelector('[aria-invalid="true"]');
+          if (first) first.focus();
+          return;
+        }
+
+        // Show success state (no data transmitted — backend required for launch)
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.focus();
+      });
+    })();
+  </script>
+
+</body>
+</html>

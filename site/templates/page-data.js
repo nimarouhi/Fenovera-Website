@@ -109,7 +109,56 @@ categories.forEach(function (cat) {
   });
 });
 
-// 4. Individual product detail pages
+// 4. Static supporting pages
+pages.push({
+  src:         'src/about.html',
+  out:         'about/index.html',
+  pageId:      'about',
+  title:       'About Fenovera | Bay Area Window & Door Distributor',
+  description: 'Fenovera is a Bay Area distributor of aluminum and uPVC window and door systems for residential and commercial projects.',
+});
+
+pages.push({
+  src:         'src/contact.html',
+  out:         'contact/index.html',
+  pageId:      'contact',
+  title:       'Contact Fenovera | Bay Area Windows & Doors',
+  description: 'Contact Fenovera to discuss product specifications, pricing, and availability for aluminum and uPVC windows and doors.',
+});
+
+pages.push({
+  src:         'src/quote.html',
+  out:         'quote/index.html',
+  pageId:      'quote',
+  title:       'Request a Free Quote | Fenovera',
+  description: 'Request a free quote for aluminum or uPVC windows and doors from Fenovera. Tell us about your project and we will respond with pricing and specifications.',
+});
+
+pages.push({
+  src:         'src/projects.html',
+  out:         'projects/index.html',
+  pageId:      'projects',
+  title:       'Projects | Fenovera',
+  description: 'Fenovera project portfolio — Bay Area aluminum and uPVC window and door installations.',
+});
+
+pages.push({
+  src:         'src/privacy.html',
+  out:         'privacy/index.html',
+  pageId:      'privacy',
+  title:       'Privacy Policy | Fenovera',
+  description: 'Privacy Policy for Fenovera — Bay Area aluminum and uPVC window and door distributor.',
+});
+
+pages.push({
+  src:         'src/terms.html',
+  out:         'terms/index.html',
+  pageId:      'terms',
+  title:       'Terms of Use | Fenovera',
+  description: 'Terms of Use for Fenovera — Bay Area aluminum and uPVC window and door distributor.',
+});
+
+// 5. Individual product detail pages
 products.forEach(function (product) {
   var related = getRelated(product, 2);
   pages.push({

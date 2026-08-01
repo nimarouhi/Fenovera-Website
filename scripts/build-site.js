@@ -51,6 +51,11 @@ var SRC_TEMPLATES   = path.join(PROJECT_ROOT, 'src', 'templates');
 var PAGE_DATA_PATH  = path.join(TEMPLATES_DIR, 'page-data.js');
 var DRY_RUN         = process.argv.indexOf('--dry-run') !== -1;
 
+// Canonical site base URL — update to the real domain before launch.
+var SITE_BASE_URL   = 'https://fenovera.com';
+// Default OG social-sharing image — replace with a dedicated branded image before launch.
+var OG_DEFAULT_IMAGE = SITE_BASE_URL + '/img/casement.jpg';
+
 // ── Load page registry ──────────────────────────────────────────────────────
 // page-data.js is loaded fresh (delete from require cache first so re-runs work)
 delete require.cache[require.resolve(PAGE_DATA_PATH)];
@@ -419,6 +424,54 @@ function injectTemplates(html, pageId) {
   });
 }
 
+// ── SEO meta injection ──────────────────────────────────────────────────────
+/**
+ * Derives the canonical URL from the page's output file path.
+ * 'index.html'              → 'https://fenovera.com/'
+ * 'products/index.html'     → 'https://fenovera.com/products/'
+ * 'about/index.html'        → 'https://fenovera.com/about/'
+ */
+function canonicalUrl(outFile) {
+  var clean = outFile.replace(/\\/g, '/');
+  if (clean === 'index.html') return SITE_BASE_URL + '/';
+  var dir = clean.replace(/\/index\.html$/, '');
+  return SITE_BASE_URL + '/' + dir + '/';
+}
+
+/**
+ * Builds the SEO meta block injected before </head> on every page.
+ * Uses root-relative href for favicon (gets rewritten by resolveRootRelativePaths).
+ * Uses absolute URLs for canonical + OG (never rewritten).
+ */
+function buildSeoBlock(page) {
+  var canonical = canonicalUrl(page.out);
+  var title     = escapeHtml(page.title || '');
+  var desc      = escapeHtml(page.description || '');
+  return [
+    '',
+    '  <!-- ── SEO: canonical + Open Graph + favicon ──────────────────── -->',
+    '  <link rel="canonical" href="' + canonical + '">',
+    '  <link rel="icon" href="/favicon.svg" type="image/svg+xml">',
+    '  <meta property="og:type" content="website">',
+    '  <meta property="og:site_name" content="Fenovera">',
+    '  <meta property="og:title" content="' + title + '">',
+    '  <meta property="og:description" content="' + desc + '">',
+    '  <meta property="og:url" content="' + canonical + '">',
+    '  <meta property="og:image" content="' + OG_DEFAULT_IMAGE + '">',
+    '  <!-- /SEO ──────────────────────────────────────────────────────── -->',
+  ].join('\n');
+}
+
+/**
+ * Injects the SEO block immediately before </head>.
+ * Must run BEFORE resolveRootRelativePaths so /favicon.svg gets rewritten.
+ */
+function injectSeoMeta(html, page) {
+  var block = buildSeoBlock(page);
+  // Insert before </head> (handles optional whitespace / case)
+  return html.replace(/<\/head>/i, block + '\n</head>');
+}
+
 // ── Base-path resolver ──────────────────────────────────────────────────────
 /**
  * Computes the relative path from a generated page back to the project root.
@@ -510,7 +563,10 @@ function buildPage(page) {
     console.warn('  WARN   unresolved DATA token in ' + page.out + ': ' + unresolvedData[0]);
   }
 
-  // 7. Rewrite root-relative paths → file://-safe relative paths
+  // 7. Inject SEO meta (canonical, OG, favicon) — must run before path rewriting
+  output = injectSeoMeta(output, page);
+
+  // 8. Rewrite root-relative paths → file://-safe relative paths
   var basePath = computeBasePath(page.out);
   output = resolveRootRelativePaths(output, basePath);
 
@@ -547,6 +603,40 @@ pages.forEach(function (page) {
 if (errors > 0) {
   console.error('\nBuild failed — ' + errors + ' error(s).');
   process.exit(1);
-} else {
-  console.log('\nBuild complete.');
 }
+
+// ── Generate robots.txt ─────────────────────────────────────────────────────
+// All pages carry noindex/nofollow; robots.txt disallows crawling until launch.
+// Owner action: change Disallow to "Disallow:" (allow all) when going live.
+var robotsTxt = [
+  '# Fenovera — robots.txt',
+  '# Site is in pre-launch state. All pages carry noindex, nofollow.',
+  '# Owner action: update Disallow rules and remove noindex meta before launch.',
+  '',
+  'User-agent: *',
+  'Disallow: /',
+  '',
+  'Sitemap: ' + SITE_BASE_URL + '/sitemap.xml',
+].join('\n');
+
+if (!DRY_RUN) {
+  fs.writeFileSync(path.join(PROJECT_ROOT, 'robots.txt'), robotsTxt, 'utf8');
+  console.log('  wrote  robots.txt');
+}
+
+// ── Generate sitemap.xml ────────────────────────────────────────────────────
+var today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+var sitemapUrls = pages.map(function (page) {
+  return '  <url>\n    <loc>' + canonicalUrl(page.out) + '</loc>\n    <lastmod>' + today + '</lastmod>\n  </url>';
+});
+var sitemapXml = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+].concat(sitemapUrls).concat(['</urlset>', '']).join('\n');
+
+if (!DRY_RUN) {
+  fs.writeFileSync(path.join(PROJECT_ROOT, 'sitemap.xml'), sitemapXml, 'utf8');
+  console.log('  wrote  sitemap.xml');
+}
+
+if (!DRY_RUN) console.log('\nBuild complete.');

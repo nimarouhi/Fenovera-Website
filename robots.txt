@@ -1,0 +1,8 @@
+# Fenovera — robots.txt
+# Site is in pre-launch state. All pages carry noindex, nofollow.
+# Owner action: update Disallow rules and remove noindex meta before launch.
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://fenovera.com/sitemap.xml
