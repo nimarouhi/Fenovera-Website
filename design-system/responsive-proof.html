@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fenovera - Responsive Proof - Design System v1.3.1</title>
+  <!--
+    Responsive Proof  v1.3.1
+    PURPOSE:  Manual breakpoint verification using production CSS.
+              Open in browser DevTools at 375 / 768 / 1024 / 1440 px.
+    SCOPE:    Design-system components only. No public-facing pages.
+    CLASSES:  All component class names are the production API defined
+              in components.css. Scaffold-only classes are prefixed rp-.
+              No invented or alternate class names appear in this file.
+  -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="components.css">
+
+  <!-- SCAFFOLD STYLES: proof-page layout only; not production CSS -->
+  <style data-scaffold>
+    .rp-section {
+      padding: var(--space-8) var(--space-6);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .rp-section:last-child { border-bottom: none; }
+    .rp-section__title {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-semibold);
+      color: var(--color-ink-secondary);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wider);
+      margin-bottom: var(--space-4);
+    }
+    .rp-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      align-items: flex-start;
+    }
+    .rp-stack {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .rp-product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-6);
+    }
+    .rp-nav-list {
+      display: flex;
+      align-items: center;
+    }
+    .rp-full-width { width: 100%; }
+    .rp-spec-caption {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      color: var(--color-ink-secondary);
+      margin-bottom: var(--space-4);
+    }
+  </style>
+</head>
+<body>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="#" class="site-header__logo" aria-label="Fenovera home">
+      <span class="site-header__logo-wordmark">FENOVERA</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary">
+      <ul class="rp-nav-list">
+        <li class="nav-item"><a href="#" class="nav-link is-active">Windows</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Doors</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <a href="#" class="btn btn-primary">Get a Quote</a>
+      <button type="button" class="site-header__hamburger"
+              aria-label="Open navigation"
+              aria-expanded="false"
+              aria-controls="mobile-nav-drawer">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"
+             fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="5" x2="17" y2="5"/>
+          <line x1="3" y1="10" x2="17" y2="10"/>
+          <line x1="3" y1="15" x2="17" y2="15"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV DRAWER: JS toggles .is-open on .mobile-nav and aria-hidden on the drawer -->
+<div class="mobile-nav" id="mobile-nav" role="presentation">
+  <div class="mobile-nav__backdrop" aria-hidden="true"></div>
+  <div class="mobile-nav__drawer"
+       id="mobile-nav-drawer"
+       role="dialog"
+       aria-modal="true"
+       aria-label="Navigation"
+       aria-hidden="true">
+    <div class="mobile-nav__header">
+      <span class="site-header__logo-wordmark">FENOVERA</span>
+      <button type="button" class="mobile-nav__close" aria-label="Close navigation">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"
+             fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="4" y1="4" x2="16" y2="16"/>
+          <line x1="16" y1="4" x2="4" y2="16"/>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-nav__body">
+      <button type="button" class="mobile-nav__accordion-btn"
+              aria-expanded="false"
+              aria-controls="mnav-windows">
+        Windows
+        <svg class="nav-link__chevron" width="14" height="14" viewBox="0 0 14 14"
+             aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 5l4 4 4-4"/>
+        </svg>
+      </button>
+      <div class="mobile-nav__submenu" id="mnav-windows" aria-hidden="true">
+        <div class="mobile-nav__submenu-label">Series</div>
+        <a href="#" class="mobile-nav__submenu-link">76 Series &mdash; Casement &amp; Swing</a>
+        <a href="#" class="mobile-nav__submenu-link">85 Series &mdash; Slimline</a>
+      </div>
+      <button type="button" class="mobile-nav__accordion-btn"
+              aria-expanded="false"
+              aria-controls="mnav-doors">
+        Doors
+        <svg class="nav-link__chevron" width="14" height="14" viewBox="0 0 14 14"
+             aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 5l4 4 4-4"/>
+        </svg>
+      </button>
+      <div class="mobile-nav__submenu" id="mnav-doors" aria-hidden="true">
+        <div class="mobile-nav__submenu-label">Type</div>
+        <a href="#" class="mobile-nav__submenu-link">152 Series &mdash; Lift &amp; Slide</a>
+      </div>
+      <a href="#" class="mobile-nav__link">Projects</a>
+      <a href="#" class="mobile-nav__link">About</a>
+    </div>
+    <div class="mobile-nav__footer">
+      <a href="#" class="btn btn-primary rp-full-width">Get a Quote</a>
+    </div>
+  </div>
+</div>
+
+<!-- BUTTONS -->
+<div class="rp-section">
+  <div class="rp-section__title">Buttons</div>
+  <div class="rp-row">
+    <a href="#" class="btn btn-primary">Primary</a>
+    <a href="#" class="btn btn-primary btn-lg">Primary Large</a>
+    <a href="#" class="btn btn-secondary">Secondary</a>
+    <a href="#" class="btn btn-outline">Outline</a>
+    <a href="#" class="btn btn-ghost">Ghost</a>
+    <a href="#" class="btn btn-sm btn-outline">Small</a>
+    <a href="#" class="btn btn-primary" aria-disabled="true" tabindex="-1">Disabled</a>
+  </div>
+</div>
+
+<!-- PRODUCT CARDS -->
+<div class="rp-section">
+  <div class="rp-section__title">Product Cards</div>
+  <div class="rp-product-grid">
+
+    <article class="product-card">
+      <div class="product-card__image">
+        <img src="../img/casement.jpg"
+             alt="76 Series Casement and Swing Windows"
+             loading="lazy">
+      </div>
+      <div class="product-card__body">
+        <div class="product-card__tags">
+          <span class="badge badge-navy">New</span>
+        </div>
+        <div class="product-card__series">76 Series</div>
+        <h3 class="product-card__name">Casement &amp; Swing Windows</h3>
+        <p class="product-card__desc">Precision-engineered aluminium windows for residential and commercial applications.</p>
+      </div>
+      <div class="product-card__footer">
+        <a href="#" class="btn btn-outline btn-sm">Learn More</a>
+        <a href="#" class="btn btn-primary btn-sm">Get Quote</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-card__image">
+        <img src="../img/slimline.jpg"
+             alt="85 Series Slimline Windows"
+             loading="lazy">
+      </div>
+      <div class="product-card__body">
+        <div class="product-card__tags">
+          <span class="badge badge-bronze">Selected</span>
+        </div>
+        <div class="product-card__series">85 Series</div>
+        <h3 class="product-card__name">Slimline Windows</h3>
+        <p class="product-card__desc">Ultra-narrow sight lines for maximum glazed area and unobstructed views.</p>
+      </div>
+      <div class="product-card__footer">
+        <a href="#" class="btn btn-outline btn-sm">Learn More</a>
+        <a href="#" class="btn btn-primary btn-sm">Get Quote</a>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-card__image">
+        <img src="../img/Lift_Slide_Doors_Image_v2.jpg"
+             alt="152 Series Lift and Slide Doors"
+             loading="lazy">
+      </div>
+      <div class="product-card__body">
+        <div class="product-card__tags">
+          <span class="badge badge-neutral">Document</span>
+        </div>
+        <div class="product-card__series">152 Series</div>
+        <h3 class="product-card__name">Lift &amp; Slide Doors</h3>
+        <p class="product-card__desc">Floor-to-ceiling sliding systems for seamless indoor-outdoor transitions.</p>
+      </div>
+      <div class="product-card__footer">
+        <a href="#" class="btn btn-outline btn-sm">Learn More</a>
+        <a href="#" class="btn btn-primary btn-sm">Get Quote</a>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- QUOTE FORM -->
+<div class="rp-section">
+  <div class="rp-section__title">Quote Form</div>
+  <form class="quote-form" novalidate aria-label="Request a quote">
+    <div class="quote-form__header">
+      <h2 class="quote-form__title">Request a Quote</h2>
+      <p class="quote-form__subtitle">Complete the form and our team will contact you within one business day.</p>
+    </div>
+    <div class="quote-form__grid">
+      <div class="form-group">
+        <label class="form-label" for="rp-name">
+          Full Name <span class="form-label__required" aria-hidden="true">*</span>
+        </label>
+        <input id="rp-name" class="input" type="text"
+               autocomplete="name" placeholder="Jane Smith" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="rp-email">
+          Email <span class="form-label__required" aria-hidden="true">*</span>
+        </label>
+        <input id="rp-email" class="input" type="email"
+               autocomplete="email" placeholder="jane@example.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="rp-phone">Phone</label>
+        <input id="rp-phone" class="input" type="tel"
+               autocomplete="tel" placeholder="+1 (555) 000-0000">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="rp-series">
+          Product Series <span class="form-label__required" aria-hidden="true">*</span>
+        </label>
+        <select id="rp-series" class="select" required>
+          <option value="">Select a series...</option>
+          <option value="76">76 Series &mdash; Casement &amp; Swing</option>
+          <option value="85">85 Series &mdash; Slimline</option>
+          <option value="152">152 Series &mdash; Lift &amp; Slide</option>
+        </select>
+      </div>
+      <div class="form-group form-group--full">
+        <label class="form-label" for="rp-message">Project Details</label>
+        <textarea id="rp-message" class="input textarea" rows="4"
+                  placeholder="Describe your project, dimensions, quantities..."></textarea>
+        <span class="form-hint">Include rough opening dimensions and quantity where possible.</span>
+      </div>
+      <div class="form-group form-group--full">
+        <label class="checkbox-label">
+          <input type="checkbox" class="checkbox-input" required>
+          <span class="checkbox-label__text">I agree to the <a href="#">Privacy Policy</a></span>
+        </label>
+      </div>
+    </div>
+    <div class="quote-form__footer">
+      <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
+    </div>
+  </form>
+</div>
+
+<!-- SPECIFICATION TABLE:
+     Uses CSS Grid divs (.spec-table__row / __label / __value),
+     not an HTML table element - matches the production component. -->
+<div class="rp-section">
+  <div class="rp-section__title">Specification Table</div>
+  <p class="rp-spec-caption">76 Series &mdash; Casement &amp; Swing</p>
+  <div class="spec-table" role="table" aria-label="76 Series specifications">
+    <div class="spec-table__row" role="row">
+      <div class="spec-table__label" role="rowheader">Frame Depth</div>
+      <div class="spec-table__value" role="cell">[SPEC TO VERIFY]</div>
+    </div>
+    <div class="spec-table__row" role="row">
+      <div class="spec-table__label" role="rowheader">Glazing Thickness</div>
+      <div class="spec-table__value" role="cell">[SPEC TO VERIFY]</div>
+    </div>
+    <div class="spec-table__row" role="row">
+      <div class="spec-table__label" role="rowheader">Max Panel Width</div>
+      <div class="spec-table__value" role="cell">[SPEC TO VERIFY]</div>
+    </div>
+    <div class="spec-table__row" role="row">
+      <div class="spec-table__label" role="rowheader">Max Panel Height</div>
+      <div class="spec-table__value" role="cell">[SPEC TO VERIFY]</div>
+    </div>
+    <div class="spec-table__row" role="row">
+      <div class="spec-table__label" role="rowheader">Finish Options</div>
+      <div class="spec-table__value" role="cell">[FINISH OPTIONS TO VERIFY]</div>
+    </div>
+    <div class="spec-table__row" role="row">
+      <div class="spec-table__label" role="rowheader">Hardware</div>
+      <div class="spec-table__value" role="cell">[HARDWARE TO VERIFY]</div>
+    </div>
+  </div>
+</div>
+
+<!-- TABS (keyboard: Arrow keys / Home / End navigate between tabs) -->
+<div class="rp-section">
+  <div class="rp-section__title">Tabs</div>
+  <div class="tabs">
+    <div class="tabs__list" role="tablist" aria-label="Product details">
+      <button type="button" role="tab" class="tabs__tab"
+              aria-selected="true"
+              aria-controls="rp-tab-overview"
+              id="rp-tab-btn-overview"
+              tabindex="0">Overview</button>
+      <button type="button" role="tab" class="tabs__tab"
+              aria-selected="false"
+              aria-controls="rp-tab-specs"
+              id="rp-tab-btn-specs"
+              tabindex="-1">Specifications</button>
+      <button type="button" role="tab" class="tabs__tab"
+              aria-selected="false"
+              aria-controls="rp-tab-docs"
+              id="rp-tab-btn-docs"
+              tabindex="-1">Downloads</button>
+    </div>
+    <div class="tabs__panel" role="tabpanel"
+         id="rp-tab-overview"
+         aria-labelledby="rp-tab-btn-overview"
+         aria-hidden="false">
+      <p>The 76 Series aluminium casement and swing window system is designed for residential and commercial projects requiring precision engineering and thermal performance. All specifications to be confirmed prior to public launch.</p>
+    </div>
+    <div class="tabs__panel" role="tabpanel"
+         id="rp-tab-specs"
+         aria-labelledby="rp-tab-btn-specs"
+         aria-hidden="true" hidden>
+      <p>Full specification table available upon request. See the Specification Table section above for field-level placeholders.</p>
+    </div>
+    <div class="tabs__panel" role="tabpanel"
+         id="rp-tab-docs"
+         aria-labelledby="rp-tab-btn-docs"
+         aria-hidden="true" hidden>
+      <div class="download-block">
+        <div class="download-block__icon download-block__icon--pdf">
+          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"
+               fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h8l4 4v8H4z"/>
+            <path d="M12 4v4h4"/>
+          </svg>
+        </div>
+        <div class="download-block__info">
+          <div class="download-block__name">[Datasheet - TO VERIFY]</div>
+          <div class="download-block__meta">PDF - [SIZE TO VERIFY]</div>
+        </div>
+        <div class="download-block__action">
+          <a href="#" class="btn btn-ghost btn-sm">Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NOTIFICATIONS -->
+<div class="rp-section">
+  <div class="rp-section__title">Notifications</div>
+  <div class="rp-stack">
+    <div class="notification notification--success" role="status">
+      <svg class="notification__icon" width="20" height="20" viewBox="0 0 20 20"
+           aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="10" cy="10" r="8"/><!-- circle:ok -->
+        <path d="M7 10l2 2 4-4"/>
+      </svg>
+      <div class="notification__content">
+        <div class="notification__title">Request submitted</div>
+        <p class="notification__body">Your quote request has been received. We will be in touch shortly.</p>
+      </div>
+    </div>
+    <div class="notification notification--warning" role="alert">
+      <svg class="notification__icon" width="20" height="20" viewBox="0 0 20 20"
+           aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M10 3L18 17H2L10 3z"/>
+        <line x1="10" y1="9" x2="10" y2="13"/>
+      </svg>
+      <div class="notification__content">
+        <div class="notification__title">Specifications pending</div>
+        <p class="notification__body">All technical specifications shown are placeholders awaiting client verification.</p>
+      </div>
+    </div>
+    <div class="notification notification--info" role="status">
+      <svg class="notification__icon" width="20" height="20" viewBox="0 0 20 20"
+           aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="10" cy="10" r="8"/><!-- circle:ok -->
+        <line x1="10" y1="9" x2="10" y2="14"/>
+      </svg>
+      <div class="notification__content">
+        <div class="notification__title">Lead times</div>
+        <p class="notification__body">[LEAD TIME TO VERIFY] - contact us for current availability.</p>
+      </div>
+    </div>
+    <div class="notification notification--error" role="alert">
+      <svg class="notification__icon" width="20" height="20" viewBox="0 0 20 20"
+           aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="10" cy="10" r="8"/><!-- circle:ok -->
+        <line x1="7" y1="7" x2="13" y2="13"/>
+        <line x1="13" y1="7" x2="7" y2="13"/>
+      </svg>
+      <div class="notification__content">
+        <div class="notification__title">Submission failed</div>
+        <p class="notification__body">There was a problem submitting your request. Please try again or contact us directly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BADGES -->
+<div class="rp-section">
+  <div class="rp-section__title">Badges</div>
+  <div class="rp-row">
+    <span class="badge badge-navy">Navy</span>
+    <span class="badge badge-bronze">Bronze</span>
+    <span class="badge badge-success">Success</span>
+    <span class="badge badge-error">Error</span>
+    <span class="badge badge-neutral">Neutral</span>
+  </div>
+</div>
+
+<!-- ACCORDION -->
+<div class="rp-section">
+  <div class="rp-section__title">Accordion</div>
+  <div class="accordion">
+    <div class="accordion__item">
+      <button type="button" class="accordion__trigger"
+              aria-expanded="true"
+              aria-controls="rp-acc-1">
+        What series are available?
+        <svg class="accordion__icon" width="18" height="18" viewBox="0 0 18 18"
+             aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 7l4 4 4-4"/>
+        </svg>
+      </button>
+      <div class="accordion__content" id="rp-acc-1" aria-hidden="false">
+        <div class="accordion__body">
+          <p>Currently available: 76 Series (Casement &amp; Swing), 85 Series (Slimline), and 152 Series (Lift &amp; Slide).</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion__item">
+      <button type="button" class="accordion__trigger"
+              aria-expanded="false"
+              aria-controls="rp-acc-2">
+        What finish options are available?
+        <svg class="accordion__icon" width="18" height="18" viewBox="0 0 18 18"
+             aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 7l4 4 4-4"/>
+        </svg>
+      </button>
+      <div class="accordion__content" id="rp-acc-2" aria-hidden="true">
+        <div class="accordion__body">
+          <p>[FINISH OPTIONS TO VERIFY] - RAL colour and anodized finish options to be confirmed with the product team.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion__item">
+      <button type="button" class="accordion__trigger"
+              aria-expanded="false"
+              aria-controls="rp-acc-3">
+        What are the lead times?
+        <svg class="accordion__icon" width="18" height="18" viewBox="0 0 18 18"
+             aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 7l4 4 4-4"/>
+        </svg>
+      </button>
+      <div class="accordion__content" id="rp-acc-3" aria-hidden="true">
+        <div class="accordion__body">
+          <p>[LEAD TIME TO VERIFY] - please contact us for current production and delivery timelines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div>
+      <div class="site-footer__brand-name">FENOVERA</div>
+      <p class="site-footer__brand-desc">Precision aluminium windows &amp; doors.</p>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Products</div>
+      <nav class="site-footer__links" aria-label="Products">
+        <a href="#" class="site-footer__link">76 Series Windows</a>
+        <a href="#" class="site-footer__link">85 Series Slimline</a>
+        <a href="#" class="site-footer__link">152 Series Doors</a>
+      </nav>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Company</div>
+      <nav class="site-footer__links" aria-label="Company">
+        <a href="#" class="site-footer__link">About</a>
+        <a href="#" class="site-footer__link">Projects</a>
+        <a href="#" class="site-footer__link">Contact</a>
+      </nav>
+    </div>
+    <div>
+      <div class="site-footer__col-label">Resources</div>
+      <nav class="site-footer__links" aria-label="Resources">
+        <a href="#" class="site-footer__link">[Downloads - TO VERIFY]</a>
+        <a href="#" class="site-footer__link">Privacy Policy</a>
+      </nav>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p class="site-footer__copy">&copy; 2026 Fenovera. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT: Mobile nav, mobile submenus, accordion, tabs -->
+<script>
+/* Mobile Navigation — modal drawer with focus containment
+ * The drawer has role="dialog" aria-modal="true". When open, focus is
+ * trapped inside: Tab wraps from last to first focusable element and
+ * Shift+Tab wraps from first to last. Escape and backdrop-click close.
+ * Focus is restored to the element that triggered open. */
+(function () {
+  'use strict';
+  var hamburger = document.querySelector('.site-header__hamburger');
+  var mobileNav = document.getElementById('mobile-nav');
+  var drawer    = document.getElementById('mobile-nav-drawer');
+  var closeBtn  = document.querySelector('.mobile-nav__close');
+  var opener    = null;
+
+  var FOCUSABLE = [
+    'a[href]', 'button:not([disabled])', 'input:not([disabled])',
+    'select:not([disabled])', 'textarea:not([disabled])',
+    '[tabindex]:not([tabindex="-1"])'
+  ].join(',');
+
+  function getFocusable() {
+    return Array.prototype.slice.call(drawer.querySelectorAll(FOCUSABLE));
+  }
+
+  function openNav() {
+    mobileNav.classList.add('is-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    opener = document.activeElement;
+    closeBtn.focus();
+  }
+
+  function closeNav() {
+    mobileNav.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (opener) { opener.focus(); opener = null; }
+  }
+
+  hamburger.addEventListener('click', openNav);
+  closeBtn.addEventListener('click', closeNav);
+
+  mobileNav.addEventListener('click', function (e) {
+    if (e.target === mobileNav ||
+        e.target.classList.contains('mobile-nav__backdrop')) {
+      closeNav();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (!mobileNav.classList.contains('is-open')) return;
+
+    if (e.key === 'Escape') { closeNav(); return; }
+
+    /* Focus trap — Tab / Shift+Tab cycle within the drawer */
+    if (e.key === 'Tab') {
+      var focusable = getFocusable();
+      if (!focusable.length) { e.preventDefault(); return; }
+      var first = focusable[0];
+      var last  = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+  });
+}());
+
+/* Mobile Nav Submenus */
+document.querySelectorAll('.mobile-nav__accordion-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    var submenu = document.getElementById(btn.getAttribute('aria-controls'));
+    if (submenu) { submenu.setAttribute('aria-hidden', String(expanded)); }
+  });
+});
+
+/* Accordion */
+document.querySelectorAll('.accordion__trigger').forEach(function (trigger) {
+  trigger.addEventListener('click', function () {
+    var expanded  = trigger.getAttribute('aria-expanded') === 'true';
+    var contentId = trigger.getAttribute('aria-controls');
+    var content   = document.getElementById(contentId);
+    trigger.setAttribute('aria-expanded', String(!expanded));
+    if (content) { content.setAttribute('aria-hidden', String(expanded)); }
+  });
+});
+
+/* Tabs (ARIA roving tabindex pattern) */
+document.querySelectorAll('.tabs').forEach(function (tabsEl) {
+  var tabs   = Array.prototype.slice.call(tabsEl.querySelectorAll('.tabs__tab'));
+  var panels = Array.prototype.slice.call(tabsEl.querySelectorAll('.tabs__panel'));
+
+  function selectTab(tab) {
+    tabs.forEach(function (t) {
+      var active = (t === tab);
+      t.setAttribute('aria-selected', String(active));
+      t.setAttribute('tabindex', active ? '0' : '-1');
+    });
+    panels.forEach(function (p) {
+      var visible = (p.id === tab.getAttribute('aria-controls'));
+      p.setAttribute('aria-hidden', String(!visible));
+      if (visible) { p.removeAttribute('hidden'); }
+      else         { p.setAttribute('hidden', ''); }
+    });
+  }
+
+  tabs.forEach(function (tab, idx) {
+    tab.addEventListener('click', function () { selectTab(tab); });
+    tab.addEventListener('keydown', function (e) {
+      var next;
+      if (e.key === 'ArrowRight') { next = tabs[(idx + 1) % tabs.length]; }
+      if (e.key === 'ArrowLeft')  { next = tabs[(idx - 1 + tabs.length) % tabs.length]; }
+      if (e.key === 'Home')       { next = tabs[0]; }
+      if (e.key === 'End')        { next = tabs[tabs.length - 1]; }
+      if (next) { e.preventDefault(); selectTab(next); next.focus(); }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{DATA:seoTitle}}</title>
+  <meta name="description" content="{{DATA:description}}">
+  <!-- noindex: draft page: remove once data verification is complete and page is approved for launch -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Design System v1.3.1 -->
+  <link rel="stylesheet" href="/design-system/tokens.css">
+  <link rel="stylesheet" href="/design-system/base.css">
+  <link rel="stylesheet" href="/design-system/components.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- BUILD:header -->
+  <!-- BUILD:mobile-nav -->
+
+  <!-- ── DEVELOPMENT NOTICE ───────────────────────────────────────────── -->
+  <div class="dev-notice" role="status" aria-live="polite">
+    <strong>Development draft:</strong> specifications and images require verification before public launch.
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── BREADCRUMB ───────────────────────────────────────────────────── -->
+    <!-- SECTION:product-breadcrumb -->
+
+    <!-- ── PRODUCT HERO ─────────────────────────────────────────────────── -->
+    <section class="product-hero" aria-labelledby="product-hero-heading">
+      <div class="container">
+        <div class="product-hero__inner">
+
+          <!-- Left: copy -->
+          <div>
+            <p class="product-hero__tag">{{DATA:materialLabel}} {{DATA:typeLabel}}</p>
+            <h1 class="product-hero__title" id="product-hero-heading">
+              {{DATA:publicName}}
+            </h1>
+            <p class="product-hero__intro">{{DATA:heroIntro}}</p>
+            <div class="product-hero__actions">
+              <a href="/quote/" class="btn btn-primary">Request a Free Quote</a>
+              <a href="#specifications" class="btn btn-outline">View Specifications</a>
+            </div>
+          </div>
+
+          <!-- Right: image placeholder (replace with verified image before launch) -->
+          <div class="product-hero__image-wrap">
+            <!--
+              PRODUCT IMAGE
+              [IMAGE RIGHTS / PRODUCT PROVENANCE TO VERIFY]
+              Replace this placeholder with verified product photography.
+            -->
+            <div class="product-hero__image-placeholder" aria-label="Product image placeholder">
+              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <path d="M14 24l5-6 4 5 3-3 6 7H8l6-3z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                <circle cx="15" cy="17" r="2" stroke="currentColor" stroke-width="1.2"/>
+              </svg>
+              <span>{{DATA:publicName}} product image</span>
+              <span class="product-hero__image-placeholder-note">
+                Image rights and product provenance to verify before public launch
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── IMAGE GALLERY (conditional: only if galleryImages present) ───── -->
+    <!-- SECTION:gallery -->
+
+    <!-- ── TECHNICAL SPECIFICATIONS ─────────────────────────────────────── -->
+    <section class="page-section page-section--canvas" id="specifications" aria-labelledby="spec-heading">
+      <div class="container">
+        <p class="section-overline">Technical Data</p>
+        <h2 class="section-title" id="spec-heading">Specifications</h2>
+        <p class="section-body section-body--mb-md">
+          Dimensional and performance specifications below require written confirmation from the technical team before publication. Items marked <strong>[SPEC TO VERIFY]</strong> are pending confirmation.
+        </p>
+
+        <!-- SECTION:spec-tables -->
+
+        <p class="spec-table__note mt-6">
+          All dimensional and performance data require verification from technical documentation before customer-facing publication. Contact Fenovera for current specification sheets.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── FINISH OPTIONS (conditional: only if finishes data present) ──── -->
+    <!-- SECTION:finishes -->
+
+    <!-- ── HARDWARE OPTIONS (conditional: only if hardware data present) ── -->
+    <!-- SECTION:hardware -->
+
+    <!-- ── CERTIFICATIONS (conditional: only if certifications present) ─── -->
+    <!-- SECTION:certifications -->
+
+    <!-- ── DOCUMENTS & DOWNLOADS (conditional: only if documents present) ─ -->
+    <!-- SECTION:downloads -->
+
+    <!-- ── RELATED PRODUCTS (conditional: only if related products exist) ─ -->
+    <!-- SECTION:related-products -->
+
+    <hr class="section-divider">
+
+    <!-- ── QUOTE CTA BANNER ──────────────────────────────────────────────── -->
+    <section class="quote-banner" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="quote-banner__inner">
+          <div>
+            <p class="quote-banner__eyebrow">Get in touch</p>
+            <h2 class="quote-banner__title" id="cta-heading">Request a free quote for the {{DATA:publicName}}</h2>
+            <p class="quote-banner__body">Provide your project details and we'll get back to you with pricing, lead times, and technical specifications.</p>
+          </div>
+          <div>
+            <a href="/quote/" class="btn btn-secondary btn-lg">Request a Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BUILD:footer -->
+
+  <script src="/site/nav.js" defer></script>
+
+</body>
+</html>

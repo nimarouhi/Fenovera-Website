@@ -1,0 +1,51 @@
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav__backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
+  <div class="mobile-nav__drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+
+    <div class="mobile-nav__header">
+      <span class="site-header__logo-wordmark">Fenovera</span>
+      <button class="mobile-nav__close" aria-label="Close navigation menu" type="button" id="mobile-nav-close">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav__body">
+
+      <div>
+        <button class="mobile-nav__accordion-btn"
+          aria-expanded="{{#EXPANDED:products,windows,doors,windows-aluminum,windows-upvc,doors-aluminum,doors-upvc,76-series,85-series,windows-aluminum-awning,windows-aluminum-sliding,windows-aluminum-tilt-turn,windows-upvc-hung,windows-upvc-tilt-turn,windows-upvc-casement,windows-upvc-awning,windows-upvc-sliding,152-series,doors-upvc-french,doors-upvc-sliding}}"
+          aria-controls="mobile-products-submenu"
+          type="button">
+          Products
+          <svg class="nav-link__chevron" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+            <path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="mobile-nav__submenu" id="mobile-products-submenu"
+          aria-hidden="{{#HIDDEN:products,windows,doors,windows-aluminum,windows-upvc,doors-aluminum,doors-upvc,76-series,85-series,windows-aluminum-awning,windows-aluminum-sliding,windows-aluminum-tilt-turn,windows-upvc-hung,windows-upvc-tilt-turn,windows-upvc-casement,windows-upvc-awning,windows-upvc-sliding,152-series,doors-upvc-french,doors-upvc-sliding}}">
+          <div class="mobile-nav__submenu-label">Windows</div>
+          <a href="/products/windows/aluminum/" class="mobile-nav__submenu-link"{{#AC:windows-aluminum}}>Aluminum Windows</a>
+          <a href="/products/windows/upvc/" class="mobile-nav__submenu-link"{{#AC:windows-upvc}}>uPVC Windows</a>
+          <a href="/products/windows/" class="mobile-nav__submenu-link"{{#AC:windows}}>All Windows</a>
+          <div class="mobile-nav__submenu-label">Doors</div>
+          <a href="/products/doors/aluminum/" class="mobile-nav__submenu-link"{{#AC:doors-aluminum}}>Aluminum Doors</a>
+          <a href="/products/doors/upvc/" class="mobile-nav__submenu-link"{{#AC:doors-upvc}}>uPVC Doors</a>
+          <a href="/products/doors/" class="mobile-nav__submenu-link"{{#AC:doors}}>All Doors</a>
+          <a href="/products/" class="mobile-nav__submenu-link"{{#AC:products}}>All Products</a>
+        </div>
+      </div>
+
+      <a href="/projects/" class="mobile-nav__link"{{#AC:projects}}>Projects</a>
+      <a href="/about/" class="mobile-nav__link"{{#AC:about}}>About</a>
+      <a href="/contact/" class="mobile-nav__link"{{#AC:contact}}>Contact</a>
+
+    </div><!-- end mobile-nav__body -->
+
+    <div class="mobile-nav__footer">
+      <a href="/quote/" class="btn btn-primary btn--block">Request a Free Quote</a>
+    </div>
+
+  </div><!-- end mobile-nav__drawer -->
+</div><!-- end mobile-nav -->

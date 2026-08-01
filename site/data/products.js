@@ -1,0 +1,737 @@
+/**
+ * * Fenovera: Product Data
+ * Foundation revision 2026-07-27
+ *
+ * Source controls (brief §4):
+ * - No supplier brand names without owner approval.
+ * - No invented series numbers; use descriptive names until approved.
+ * - No NFRC, ENERGY STAR, AAMA, CEC, or Title 24 claims without documentation.
+ * - Image presence does not prove publication rights; all images rightsVerified: false.
+ * - "Bay Area" location is confirmed; service-area scope is not.
+ * - Do not publicly render internal evidence labels or supplier-source annotations.
+ *
+ * Three-status model:
+ *   offeringStatus:     'current' | 'planned' | 'discontinued'
+ *   publicationStatus:  'draft'   | 'published' | 'archived'
+ *   verificationStatus: 'unverified' | 'partial' | 'verified'
+ *   (each spec row also carries its own { label, value, status } where
+ *    status is 'confirmed' | 'placeholder' | 'unverified')
+ *
+ * Optional fields (only present when data exists:
+ *   series, model, collection, naming identifiers, not required)
+ *   heroImage                   , structured image record; null if no image
+ *   galleryImages               , array of images; [] if no gallery (section is omitted)
+ *   finishes, hardware          , null = section omitted; object/array = rendered
+ *   certifications, documents   , null / [] = section omitted
+ */
+'use strict';
+
+module.exports = [
+
+  /* ── WINDOWS / ALUMINUM ─────────────────────────────────────────────── */
+
+  {
+    id:               '76-series',
+    slug:             '76-series',
+    typeSlug:         'windows',
+    materialSlug:     'aluminum',
+    pageId:           '76-series',
+    series:           '76 Series',
+    publicName:       '76 Series',
+    systemType:       'Casement & Swing',
+    materialLabel:    'Aluminum',
+    typeLabel:        'Window',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         '76 Series: Casement & Swing Windows | Fenovera',
+    description:      'The 76 Series is Fenovera\'s aluminum casement and swing window. Contact us for specifications, pricing and availability.',
+    heroIntro:        'Aluminum casement and swing window. Contact us for specifications, pricing, and availability.',
+    /* Image: file present in /img/; rights and product provenance not yet confirmed */
+    heroImage: {
+      src:                        '/img/casement.jpg',
+      alt:                        '76 Series aluminum casement window',
+      role:                       'hero',
+      rightsVerified:             false,
+      productProvenanceVerified:  false,
+      sourceDocument:             null,
+    },
+    galleryImages:  [],   /* no verified gallery images; section omitted */
+    finishes:       null, /* section omitted until data confirmed */
+    hardware:       null,
+    certifications: null,
+    documents:      [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'Series',           value: '76 Series',          status: 'confirmed'   },
+          { label: 'System type',      value: 'Casement & Swing',   status: 'confirmed'   },
+          { label: 'Frame material',   value: 'Aluminum',           status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Alloy',            value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Thermal break',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Opening direction',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Sightline (frame)',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Wind resistance',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'U-value',          value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id:               '85-series',
+    slug:             '85-series',
+    typeSlug:         'windows',
+    materialSlug:     'aluminum',
+    pageId:           '85-series',
+    series:           '85 Series',
+    publicName:       '85 Series',
+    systemType:       'Slimline',
+    materialLabel:    'Aluminum',
+    typeLabel:        'Window',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         '85 Series: Slimline Windows | Fenovera',
+    description:      'The 85 Series is Fenovera\'s aluminum slimline window. Contact us for specifications, pricing and availability.',
+    heroIntro:        'Aluminum slimline window with minimal frame sightlines. Contact us for specifications, pricing, and availability.',
+    heroImage: {
+      src:                        '/img/slimline.jpg',
+      alt:                        '85 Series aluminum slimline window',
+      role:                       'hero',
+      rightsVerified:             false,
+      productProvenanceVerified:  false,
+      sourceDocument:             null,
+    },
+    galleryImages:  [],
+    finishes:       null,
+    hardware:       null,
+    certifications: null,
+    documents:      [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'Series',           value: '85 Series',          status: 'confirmed'   },
+          { label: 'System type',      value: 'Slimline',           status: 'confirmed'   },
+          { label: 'Frame material',   value: 'Aluminum',           status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Alloy',            value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Thermal break',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Sightline (frame)',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Wind resistance',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'U-value',          value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id:               'windows-aluminum-awning',
+    slug:             'awning',
+    typeSlug:         'windows',
+    materialSlug:     'aluminum',
+    pageId:           'windows-aluminum-awning',
+    publicName:       'Awning Window',
+    systemType:       'Awning',
+    materialLabel:    'Aluminum',
+    typeLabel:        'Window',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         'Aluminum Awning Window | Fenovera',
+    description:      'Fenovera aluminum awning window. Contact us for specifications, pricing and availability.',
+    heroIntro:        'Aluminum awning window. Contact us for specifications, pricing, and availability.',
+    heroImage:        null, /* no image available for this product */
+    galleryImages:    [],
+    finishes:         null,
+    hardware:         null,
+    certifications:   null,
+    documents:        [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'System type',      value: 'Awning',             status: 'confirmed'   },
+          { label: 'Frame material',   value: 'Aluminum',           status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Thermal break',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Opening direction',value: 'Top-hinged, outswing [TO VERIFY]', status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Wind resistance',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id:               'windows-aluminum-sliding',
+    slug:             'sliding',
+    typeSlug:         'windows',
+    materialSlug:     'aluminum',
+    pageId:           'windows-aluminum-sliding',
+    publicName:       'Sliding Window',
+    systemType:       'Sliding',
+    materialLabel:    'Aluminum',
+    typeLabel:        'Window',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         'Aluminum Sliding Window | Fenovera',
+    description:      'Fenovera aluminum sliding window. Contact us for specifications, pricing and availability.',
+    heroIntro:        'Aluminum sliding window. Contact us for specifications, pricing, and availability.',
+    heroImage:        null,
+    galleryImages:    [],
+    finishes:         null,
+    hardware:         null,
+    certifications:   null,
+    documents:        [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'System type',      value: 'Sliding',            status: 'confirmed'   },
+          { label: 'Frame material',   value: 'Aluminum',           status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Thermal break',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Track type',       value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Wind resistance',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id:               'windows-aluminum-tilt-turn',
+    slug:             'tilt-turn',
+    typeSlug:         'windows',
+    materialSlug:     'aluminum',
+    pageId:           'windows-aluminum-tilt-turn',
+    publicName:       'Tilt & Turn Window',
+    systemType:       'Tilt & Turn',
+    materialLabel:    'Aluminum',
+    typeLabel:        'Window',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         'Aluminum Tilt & Turn Window | Fenovera',
+    description:      'Fenovera aluminum tilt and turn window. Contact us for specifications, pricing and availability.',
+    heroIntro:        'Aluminum tilt and turn window with dual-mode opening. Contact us for specifications, pricing, and availability.',
+    heroImage:        null,
+    galleryImages:    [],
+    finishes:         null,
+    hardware:         null,
+    certifications:   null,
+    documents:        [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'System type',      value: 'Tilt & Turn',        status: 'confirmed'   },
+          { label: 'Frame material',   value: 'Aluminum',           status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Thermal break',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Opening modes',    value: 'Tilt (ventilation) + Turn (full open) [TO VERIFY]', status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Wind resistance',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  /* ── WINDOWS / uPVC ──────────────────────────────────────────────────── */
+
+  {
+    id:               'windows-upvc-hung',
+    slug:             'hung-window',
+    typeSlug:         'windows',
+    materialSlug:     'upvc',
+    pageId:           'windows-upvc-hung',
+    publicName:       'Hung Window',
+    systemType:       'Single Hung',
+    materialLabel:    'uPVC',
+    typeLabel:        'Window',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         'uPVC Hung Window | Fenovera',
+    description:      'Fenovera uPVC hung window. Contact us for specifications, pricing and availability.',
+    heroIntro:        'uPVC hung window. Contact us for specifications, pricing, and availability.',
+    heroImage: {
+      src:                        '/img/upvc-hung-hero.jpg',
+      alt:                        'uPVC hung window',
+      role:                       'hero',
+      rightsVerified:             false,
+      productProvenanceVerified:  false,
+      sourceDocument:             null,
+    },
+    galleryImages: [
+      { src: '/img/upvc-hung-gal1.jpg', alt: 'uPVC hung window, view 1', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+      { src: '/img/upvc-hung-gal2.jpg', alt: 'uPVC hung window, view 2', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+    ],
+    finishes:         null,
+    hardware:         null,
+    certifications:   null,
+    documents:        [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'System type',      value: 'Single Hung',        status: 'confirmed'   },
+          { label: 'Frame material',   value: 'uPVC',               status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Reinforcement',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id:               'windows-upvc-tilt-turn',
+    slug:             'tilt-turn-window',
+    typeSlug:         'windows',
+    materialSlug:     'upvc',
+    pageId:           'windows-upvc-tilt-turn',
+    publicName:       'Tilt & Turn Window',
+    systemType:       'Tilt & Turn',
+    materialLabel:    'uPVC',
+    typeLabel:        'Window',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         'uPVC Tilt & Turn Window | Fenovera',
+    description:      'Fenovera uPVC tilt and turn window. Contact us for specifications, pricing and availability.',
+    heroIntro:        'uPVC tilt and turn window with dual-mode opening. Contact us for specifications, pricing, and availability.',
+    heroImage: {
+      src:                        '/img/upvc-tt-hero.jpg',
+      alt:                        'uPVC tilt and turn window',
+      role:                       'hero',
+      rightsVerified:             false,
+      productProvenanceVerified:  false,
+      sourceDocument:             null,
+    },
+    galleryImages: [
+      { src: '/img/upvc-tt-gal1.jpg', alt: 'uPVC tilt and turn window, view 1', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+      { src: '/img/upvc-tt-gal2.jpg', alt: 'uPVC tilt and turn window, view 2', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+    ],
+    finishes:         null,
+    hardware:         null,
+    certifications:   null,
+    documents:        [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'System type',      value: 'Tilt & Turn',        status: 'confirmed'   },
+          { label: 'Frame material',   value: 'uPVC',               status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Reinforcement',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Opening modes',    value: 'Tilt + Turn [TO VERIFY]', status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Wind resistance',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id:               'windows-upvc-casement',
+    slug:             'casement-window',
+    typeSlug:         'windows',
+    materialSlug:     'upvc',
+    pageId:           'windows-upvc-casement',
+    publicName:       'Casement Window',
+    systemType:       'Casement',
+    materialLabel:    'uPVC',
+    typeLabel:        'Window',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         'uPVC Casement Window | Fenovera',
+    description:      'Fenovera uPVC casement window. Contact us for specifications, pricing and availability.',
+    heroIntro:        'uPVC casement window. Contact us for specifications, pricing, and availability.',
+    heroImage: {
+      src:                        '/img/upvc-cas-hero.jpg',
+      alt:                        'uPVC casement window',
+      role:                       'hero',
+      rightsVerified:             false,
+      productProvenanceVerified:  false,
+      sourceDocument:             null,
+    },
+    galleryImages: [
+      { src: '/img/upvc-cas-gal1.jpg', alt: 'uPVC casement window, view 1', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+      { src: '/img/upvc-cas-gal2.jpg', alt: 'uPVC casement window, view 2', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+    ],
+    finishes:         null,
+    hardware:         null,
+    certifications:   null,
+    documents:        [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'System type',      value: 'Casement',           status: 'confirmed'   },
+          { label: 'Frame material',   value: 'uPVC',               status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Reinforcement',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id:               'windows-upvc-awning',
+    slug:             'awning-window',
+    typeSlug:         'windows',
+    materialSlug:     'upvc',
+    pageId:           'windows-upvc-awning',
+    publicName:       'Awning Window',
+    systemType:       'Awning',
+    materialLabel:    'uPVC',
+    typeLabel:        'Window',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         'uPVC Awning Window | Fenovera',
+    description:      'Fenovera uPVC awning window. Contact us for specifications, pricing and availability.',
+    heroIntro:        'uPVC awning window. Contact us for specifications, pricing, and availability.',
+    heroImage: {
+      src:                        '/img/upvc-awning-hero.jpg',
+      alt:                        'uPVC awning window',
+      role:                       'hero',
+      rightsVerified:             false,
+      productProvenanceVerified:  false,
+      sourceDocument:             null,
+    },
+    galleryImages: [
+      { src: '/img/upvc-awning-gal1.jpg', alt: 'uPVC awning window, view 1', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+      { src: '/img/upvc-awning-gal2.jpg', alt: 'uPVC awning window, view 2', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+    ],
+    finishes:         null,
+    hardware:         null,
+    certifications:   null,
+    documents:        [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'System type',      value: 'Awning',             status: 'confirmed'   },
+          { label: 'Frame material',   value: 'uPVC',               status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Reinforcement',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id:               'windows-upvc-sliding',
+    slug:             'sliding-window',
+    typeSlug:         'windows',
+    materialSlug:     'upvc',
+    pageId:           'windows-upvc-sliding',
+    publicName:       'Sliding Window',
+    systemType:       'Sliding',
+    materialLabel:    'uPVC',
+    typeLabel:        'Window',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         'uPVC Sliding Window | Fenovera',
+    description:      'Fenovera uPVC sliding window. Contact us for specifications, pricing and availability.',
+    heroIntro:        'uPVC sliding window. Contact us for specifications, pricing, and availability.',
+    heroImage: {
+      src:                        '/img/upvc-sliding-hero.jpg',
+      alt:                        'uPVC sliding window',
+      role:                       'hero',
+      rightsVerified:             false,
+      productProvenanceVerified:  false,
+      sourceDocument:             null,
+    },
+    galleryImages: [
+      { src: '/img/upvc-sliding-gal1.jpg', alt: 'uPVC sliding window, view 1', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+      { src: '/img/upvc-sliding-gal2.jpg', alt: 'uPVC sliding window, view 2', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+    ],
+    finishes:         null,
+    hardware:         null,
+    certifications:   null,
+    documents:        [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'System type',      value: 'Sliding',            status: 'confirmed'   },
+          { label: 'Frame material',   value: 'uPVC',               status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Reinforcement',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Track type',       value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  /* ── DOORS / ALUMINUM ────────────────────────────────────────────────── */
+
+  {
+    id:               '152-series',
+    slug:             '152-series',
+    typeSlug:         'doors',
+    materialSlug:     'aluminum',
+    pageId:           '152-series',
+    series:           '152 Series',
+    publicName:       '152 Series',
+    systemType:       'Lift & Slide',
+    materialLabel:    'Aluminum',
+    typeLabel:        'Door',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         '152 Series: Lift & Slide Doors | Fenovera',
+    description:      'The 152 Series is Fenovera\'s aluminum lift and slide door. Contact us for specifications, pricing and availability.',
+    heroIntro:        'Aluminum lift and slide door. Contact us for specifications, pricing, and availability.',
+    heroImage: {
+      src:                        '/img/Lift_Slide_Doors_Image_v2.jpg',
+      alt:                        '152 Series aluminum lift and slide door',
+      role:                       'hero',
+      rightsVerified:             false,
+      productProvenanceVerified:  false,
+      sourceDocument:             null,
+    },
+    galleryImages:  [],
+    finishes:       null,
+    hardware:       null,
+    certifications: null,
+    documents:      [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'Series',           value: '152 Series',         status: 'confirmed'   },
+          { label: 'System type',      value: 'Lift & Slide',       status: 'confirmed'   },
+          { label: 'Frame material',   value: 'Aluminum',           status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Alloy',            value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Thermal break',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel width',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Sightline (frame)',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max opening width',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Wind resistance',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'U-value',          value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  /* ── DOORS / uPVC ────────────────────────────────────────────────────── */
+
+  {
+    id:               'doors-upvc-french',
+    slug:             'french-door',
+    typeSlug:         'doors',
+    materialSlug:     'upvc',
+    pageId:           'doors-upvc-french',
+    publicName:       'French Door',
+    systemType:       'French',
+    materialLabel:    'uPVC',
+    typeLabel:        'Door',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         'uPVC French Door | Fenovera',
+    description:      'Fenovera uPVC french door. Contact us for specifications, pricing and availability.',
+    heroIntro:        'uPVC french door. Contact us for specifications, pricing, and availability.',
+    heroImage: {
+      src:                        '/img/upvc-french-hero.jpg',
+      alt:                        'uPVC french door',
+      role:                       'hero',
+      rightsVerified:             false,
+      productProvenanceVerified:  false,
+      sourceDocument:             null,
+    },
+    galleryImages: [
+      { src: '/img/upvc-french-gal1.jpg', alt: 'uPVC french door, view 1', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+      { src: '/img/upvc-french-gal2.jpg', alt: 'uPVC french door, view 2', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+    ],
+    finishes:         null,
+    hardware:         null,
+    certifications:   null,
+    documents:        [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'System type',      value: 'French',             status: 'confirmed'   },
+          { label: 'Frame material',   value: 'uPVC',               status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Reinforcement',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Opening direction',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Wind resistance',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id:               'doors-upvc-sliding',
+    slug:             'sliding-door',
+    typeSlug:         'doors',
+    materialSlug:     'upvc',
+    pageId:           'doors-upvc-sliding',
+    publicName:       'Sliding Door',
+    systemType:       'Sliding',
+    materialLabel:    'uPVC',
+    typeLabel:        'Door',
+    offeringStatus:   'current',
+    publicationStatus:'draft',
+    verificationStatus:'partial',
+    seoTitle:         'uPVC Sliding Door | Fenovera',
+    description:      'Fenovera uPVC sliding door. Contact us for specifications, pricing and availability.',
+    heroIntro:        'uPVC sliding door. Contact us for specifications, pricing, and availability.',
+    heroImage: {
+      src:                        '/img/upvc-sdoor-hero.jpg',
+      alt:                        'uPVC sliding door',
+      role:                       'hero',
+      rightsVerified:             false,
+      productProvenanceVerified:  false,
+      sourceDocument:             null,
+    },
+    galleryImages: [
+      { src: '/img/upvc-sdoor-gal1.jpg', alt: 'uPVC sliding door, view 1', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+      { src: '/img/upvc-sdoor-gal2.jpg', alt: 'uPVC sliding door, view 2', role: 'gallery', rightsVerified: false, productProvenanceVerified: false },
+    ],
+    finishes:         null,
+    hardware:         null,
+    certifications:   null,
+    documents:        [],
+    specificationGroups: [
+      {
+        label: 'Frame & System',
+        rows: [
+          { label: 'System type',      value: 'Sliding',            status: 'confirmed'   },
+          { label: 'Frame material',   value: 'uPVC',               status: 'confirmed'   },
+          { label: 'Frame depth',      value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Reinforcement',    value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Track type',       value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max opening width',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+      {
+        label: 'Glazing & Performance',
+        rows: [
+          { label: 'Max IGU thickness',value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Max panel size',   value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Air permeability', value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Water tightness',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+          { label: 'Wind resistance',  value: '[SPEC TO VERIFY]',   status: 'placeholder' },
+        ],
+      },
+    ],
+  },
+
+];

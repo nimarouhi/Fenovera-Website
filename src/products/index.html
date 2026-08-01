@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Products | Fenovera</title>
+  <meta name="description" content="Fenovera window and door systems for aluminum and uPVC windows and doors. Explore our full product catalog.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
+
+  <!-- Design system -->
+  <link rel="stylesheet" href="../design-system/tokens.css">
+  <link rel="stylesheet" href="../design-system/base.css">
+  <link rel="stylesheet" href="../design-system/components.css">
+
+  <style>
+    /* ── Skip link ───────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: var(--space-4);
+      padding: var(--space-2) var(--space-4);
+      background: var(--color-navy);
+      color: var(--color-ink-inverse);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      z-index: 9999;
+    }
+    .skip-link:focus { top: var(--space-2); }
+
+    /* ── Development notice ──────────────────────────────── */
+    .dev-notice {
+      background: var(--color-warning-subtle);
+      border-bottom: var(--border-thin) solid var(--color-warning-border);
+      color: var(--color-warning);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      padding: var(--space-2) var(--space-6);
+      text-align: center;
+    }
+    .dev-notice code {
+      font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+      font-size: var(--text-xs);
+      background: var(--color-warning-border);
+      padding: 0 var(--space-1);
+      border-radius: var(--radius-xs);
+    }
+
+    /* ── Page hero ───────────────────────────────────────── */
+    .products-hero {
+      padding: var(--space-12) 0 var(--space-10);
+    }
+
+    /* ── Category card section ───────────────────────────── */
+    .products-categories {
+      padding: var(--space-10) 0 var(--space-12);
+      border-top: var(--border-thin) solid var(--color-border);
+    }
+
+    /* .category-grid and .category-card are defined in components.css §37 */
+
+    /* ── Contact CTA ─────────────────────────────────────── */
+    .products-cta {
+      padding: var(--space-12) 0 var(--space-16);
+      border-top: var(--border-thin) solid var(--color-border);
+      text-align: center;
+    }
+    .products-cta__title {
+      font-size: var(--text-3xl);
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      color: var(--color-ink);
+      margin: 0 0 var(--space-3) 0;
+      line-height: var(--leading-tight);
+    }
+    .products-cta__text {
+      color: var(--color-ink-secondary);
+      font-size: var(--text-body);
+      margin: 0 auto var(--space-6) auto;
+      text-align: center;
+    }
+
+    /* ── Responsive ──────────────────────────────────────── */
+    /* .category-grid responsive breakpoints are in components.css §37 */
+    @media (max-width: 767px) {
+      .products-hero  { padding: var(--space-8) 0 var(--space-6); }
+      .products-cta   { padding: var(--space-8) 0 var(--space-12); }
+      .products-cta__title { font-size: var(--text-2xl); }
+    }
+  </style>
+</head>
+
+<body data-page="products">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="dev-notice" role="note">
+    <strong>Development build: do not publish.</strong>
+    Product images are placeholders (image rights and product provenance are unverified).
+    Page is marked <code>noindex</code>. Remove this notice and resolve all
+    placeholders before launch.
+  </div>
+
+  <!-- BUILD:header -->
+  <!-- BUILD:mobile-nav -->
+
+  <main id="main">
+
+    <!-- ── Page hero ─────────────────────────────────────── -->
+    <section class="products-hero page-section" aria-labelledby="products-page-heading">
+      <div class="container">
+
+        <h1 class="section-title" id="products-page-heading">
+          Windows, Doors and Building Products
+        </h1>
+        <p class="section-lead">
+          Wide selection of products across aluminum and uPVC systems.
+          Contact us for specifications, pricing, and availability.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ── Category navigation ───────────────────────────── -->
+    <!--
+      Category grid rendered by SECTION:products-overview-grid.
+      Counts and URLs are derived from site/data/categories.js at build time.
+      not hard-coded here. Adding a new type to categories.js will produce
+      its cards automatically without editing this template.
+    -->
+    <section class="products-categories page-section" aria-labelledby="categories-heading">
+      <div class="container">
+        <p class="section-overline">Browse by Category</p>
+        <h2 class="section-title" id="categories-heading">Product Categories</h2>
+        <!-- SECTION:products-overview-grid -->
+      </div>
+    </section>
+
+    <!-- ── Contact CTA ──────────────────────────────────── -->
+    <section class="products-cta page-section" aria-labelledby="cta-section-heading">
+      <div class="container">
+        <h2 class="products-cta__title" id="cta-section-heading">Contact Us</h2>
+        <p class="products-cta__text">
+          Contact us for current pricing, specifications, and availability.
+        </p>
+        <a href="/quote/" class="btn btn-primary">
+          Request a Free Quote
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BUILD:footer -->
+
+  <script src="../site/nav.js"></script>
+</body>
+</html>

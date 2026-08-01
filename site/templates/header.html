@@ -1,0 +1,93 @@
+<header class="site-header" id="site-header">
+  <div class="site-header__inner">
+
+    <a href="/" class="site-header__logo" aria-label="Fenovera: go to homepage">
+      <span class="site-header__logo-wordmark">Fen<span class="logo-accent-o">o</span>vera</span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="Main navigation">
+
+      <div class="nav-item" id="nav-products">
+        <button class="nav-link{{#ACTIVE:products,windows,doors,windows-aluminum,windows-upvc,doors-aluminum,doors-upvc,76-series,85-series,windows-aluminum-awning,windows-aluminum-sliding,windows-aluminum-tilt-turn,windows-upvc-hung,windows-upvc-tilt-turn,windows-upvc-casement,windows-upvc-awning,windows-upvc-sliding,152-series,doors-upvc-french,doors-upvc-sliding}}"
+          aria-haspopup="true" aria-expanded="false"
+          aria-controls="mega-menu-products" type="button">
+          Products
+          <svg class="nav-link__chevron" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+            <path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="mega-menu" id="mega-menu-products" role="region" aria-label="Products menu">
+
+          <!-- Column 1: Windows -->
+          <div>
+            <div class="mega-menu__col-label">Windows</div>
+            <div class="mega-menu__group">
+              <a href="/products/windows/aluminum/" class="mega-menu__link"{{#AC:windows-aluminum}}>
+                <span class="mega-menu__link-name">Aluminum Windows</span>
+              </a>
+              <a href="/products/windows/upvc/" class="mega-menu__link"{{#AC:windows-upvc}}>
+                <span class="mega-menu__link-name">uPVC Windows</span>
+              </a>
+              <a href="/products/windows/" class="mega-menu__link"{{#AC:windows}}>
+                <span class="mega-menu__link-name">All Windows</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Doors -->
+          <div>
+            <div class="mega-menu__col-label">Doors</div>
+            <div class="mega-menu__group">
+              <a href="/products/doors/aluminum/" class="mega-menu__link"{{#AC:doors-aluminum}}>
+                <span class="mega-menu__link-name">Aluminum Doors</span>
+              </a>
+              <a href="/products/doors/upvc/" class="mega-menu__link"{{#AC:doors-upvc}}>
+                <span class="mega-menu__link-name">uPVC Doors</span>
+              </a>
+              <a href="/products/doors/" class="mega-menu__link"{{#AC:doors}}>
+                <span class="mega-menu__link-name">All Doors</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mega-menu__footer">
+            <a href="/products/" class="link-standalone"{{#AC:products}}>
+              All Products
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="/quote/" class="link-standalone">
+              Request a Free Quote
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+        </div><!-- end mega-menu -->
+      </div><!-- end nav-item -->
+
+      <a href="/projects/" class="nav-link"{{#AC:projects}}>Projects</a>
+      <a href="/about/" class="nav-link"{{#AC:about}}>About</a>
+      <a href="/contact/" class="nav-link"{{#AC:contact}}>Contact</a>
+
+    </nav>
+
+    <div class="site-header__actions">
+      <a href="/quote/" class="btn btn-primary btn-sm">Request a Free Quote</a>
+      <button class="site-header__hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        type="button"
+        id="hamburger-btn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+  </div><!-- end site-header__inner -->
+</header>
