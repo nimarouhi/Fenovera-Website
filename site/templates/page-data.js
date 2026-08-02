@@ -115,7 +115,7 @@ pages.push({
   out:         'about/index.html',
   pageId:      'about',
   title:       'About Fenovera | Bay Area Window & Door Distributor',
-  description: 'Fenovera is a Bay Area distributor of aluminum and uPVC window and door systems for residential and commercial projects.',
+  description: 'Fenovera is a Bay Area distributor of window and door systems for residential and commercial projects.',
 });
 
 pages.push({
@@ -123,7 +123,7 @@ pages.push({
   out:         'contact/index.html',
   pageId:      'contact',
   title:       'Contact Fenovera | Bay Area Windows & Doors',
-  description: 'Contact Fenovera to discuss product specifications, pricing, and availability for aluminum and uPVC windows and doors.',
+  description: 'Contact Fenovera to discuss product specifications, pricing, and availability for window and door systems.',
 });
 
 pages.push({
@@ -131,7 +131,7 @@ pages.push({
   out:         'quote/index.html',
   pageId:      'quote',
   title:       'Request a Free Quote | Fenovera',
-  description: 'Request a free quote for aluminum or uPVC windows and doors from Fenovera. Tell us about your project and we will respond with pricing and specifications.',
+  description: 'Request a free quote for windows and doors from Fenovera. Tell us about your project and we will respond with pricing and specifications.',
 });
 
 pages.push({
@@ -139,7 +139,7 @@ pages.push({
   out:         'projects/index.html',
   pageId:      'projects',
   title:       'Projects | Fenovera',
-  description: 'Fenovera project portfolio: Bay Area aluminum and uPVC window and door installations.',
+  description: 'Fenovera project portfolio: Bay Area window and door installations for residential and commercial projects.',
 });
 
 pages.push({
@@ -147,7 +147,7 @@ pages.push({
   out:         'privacy/index.html',
   pageId:      'privacy',
   title:       'Privacy Policy | Fenovera',
-  description: 'Privacy Policy for Fenovera: Bay Area aluminum and uPVC window and door distributor.',
+  description: 'Privacy Policy for Fenovera: how we collect, use, and protect your personal information.',
 });
 
 pages.push({
@@ -155,7 +155,7 @@ pages.push({
   out:         'terms/index.html',
   pageId:      'terms',
   title:       'Terms of Use | Fenovera',
-  description: 'Terms of Use for Fenovera: Bay Area aluminum and uPVC window and door distributor.',
+  description: 'Terms of Use for Fenovera: the rules and conditions governing use of fenovera.com.',
 });
 
 pages.push({
@@ -163,7 +163,7 @@ pages.push({
   out:         'cookies/index.html',
   pageId:      'cookies',
   title:       'Cookie Policy | Fenovera',
-  description: 'Cookie Policy for Fenovera: Bay Area aluminum and uPVC window and door distributor.',
+  description: 'Cookie Policy for Fenovera: how fenovera.com uses cookies and similar tracking technologies.',
 });
 
 // 5. Individual product detail pages
