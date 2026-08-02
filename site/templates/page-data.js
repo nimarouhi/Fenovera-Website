@@ -139,7 +139,7 @@ pages.push({
   out:         'projects/index.html',
   pageId:      'projects',
   title:       'Projects | Fenovera',
-  description: 'Fenovera project portfolio — Bay Area aluminum and uPVC window and door installations.',
+  description: 'Fenovera project portfolio: Bay Area aluminum and uPVC window and door installations.',
 });
 
 pages.push({
@@ -147,7 +147,7 @@ pages.push({
   out:         'privacy/index.html',
   pageId:      'privacy',
   title:       'Privacy Policy | Fenovera',
-  description: 'Privacy Policy for Fenovera — Bay Area aluminum and uPVC window and door distributor.',
+  description: 'Privacy Policy for Fenovera: Bay Area aluminum and uPVC window and door distributor.',
 });
 
 pages.push({
@@ -155,7 +155,7 @@ pages.push({
   out:         'terms/index.html',
   pageId:      'terms',
   title:       'Terms of Use | Fenovera',
-  description: 'Terms of Use for Fenovera — Bay Area aluminum and uPVC window and door distributor.',
+  description: 'Terms of Use for Fenovera: Bay Area aluminum and uPVC window and door distributor.',
 });
 
 pages.push({
@@ -163,7 +163,7 @@ pages.push({
   out:         'cookies/index.html',
   pageId:      'cookies',
   title:       'Cookie Policy | Fenovera',
-  description: 'Cookie Policy for Fenovera — Bay Area aluminum and uPVC window and door distributor.',
+  description: 'Cookie Policy for Fenovera: Bay Area aluminum and uPVC window and door distributor.',
 });
 
 // 5. Individual product detail pages

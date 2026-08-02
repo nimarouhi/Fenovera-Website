@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Fenovera | Bay Area Window &amp; Door Distributor</title>
-  <meta name="description" content="Fenovera is a Bay Area distributor of aluminum and uPVC window and door systems for residential and commercial projects.">
+  <meta name="description" content="Fenovera is a Bay Area distributor of quality window and door systems for residential and commercial projects.">
   <meta name="robots" content="noindex, nofollow">
 
   <!-- Google Fonts -->
@@ -24,28 +24,26 @@
       border-bottom: var(--border-thin) solid var(--color-border);
     }
 
-    .about-intro {
+    /* ── Our Story ─────────────────────────────────────────────────────── */
+    .about-story {
       padding: var(--space-14) 0;
       border-bottom: var(--border-thin) solid var(--color-border);
     }
-    .about-intro__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-12);
-      align-items: start;
+    .about-story__body {
+      max-width: 680px;
     }
-    .about-intro__text p {
+    .about-story__body p {
       color: var(--color-ink-secondary);
       font-size: var(--text-body);
       line-height: var(--leading-relaxed);
       margin-bottom: var(--space-4);
     }
-    .about-intro__text p:last-child { margin-bottom: 0; }
-    .about-intro__lead {
-      font-size: var(--text-lg) !important;
-      color: var(--color-ink) !important;
+    .about-story__body p:last-child { margin-bottom: 0; }
+    .about-story__body p:first-child {
+      font-size: var(--text-lg);
+      color: var(--color-ink);
       font-weight: 500;
-      line-height: var(--leading-snug) !important;
+      line-height: var(--leading-snug);
     }
 
     /* ── What We Carry ─────────────────────────────────────────────────── */
@@ -56,7 +54,7 @@
     }
     .about-products__grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: var(--space-6);
       margin-top: var(--space-10);
     }
@@ -64,43 +62,20 @@
       background: var(--color-surface);
       border: var(--border-thin) solid var(--color-border);
       border-radius: var(--radius-md);
-      padding: var(--space-6) var(--space-7);
-    }
-    .about-product-card__label {
-      font-family: var(--font-heading);
-      font-weight: var(--weight-bold);
-      font-size: var(--text-body);
-      color: var(--color-ink);
-      margin-bottom: var(--space-3);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-size: var(--text-sm);
+      padding: var(--space-7) var(--space-8);
     }
     .about-product-card__title {
       font-family: var(--font-heading);
       font-weight: var(--weight-bold);
-      font-size: var(--text-xl);
+      font-size: var(--text-2xl);
       color: var(--color-ink);
-      margin-bottom: var(--space-3);
+      margin-bottom: var(--space-4);
     }
     .about-product-card__body {
       color: var(--color-ink-secondary);
       font-size: var(--text-body);
       line-height: var(--leading-relaxed);
       margin-bottom: var(--space-5);
-    }
-    .about-product-card__types {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-    }
-    .about-product-card__type {
-      font-size: var(--text-sm);
-      color: var(--color-ink-secondary);
-      background: var(--color-canvas);
-      border: var(--border-thin) solid var(--color-border);
-      border-radius: var(--radius-sm);
-      padding: 3px 10px;
     }
     .about-product-card__link {
       display: inline-flex;
@@ -110,9 +85,13 @@
       font-weight: 500;
       color: var(--color-accent);
       text-decoration: none;
-      margin-top: var(--space-5);
     }
     .about-product-card__link:hover { text-decoration: underline; }
+    .about-products__note {
+      margin-top: var(--space-8);
+      font-size: var(--text-sm);
+      color: var(--color-ink-secondary);
+    }
 
     /* ── How We Work ───────────────────────────────────────────────────── */
     .about-process {
@@ -122,10 +101,9 @@
     .about-process__steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-8);
+      gap: var(--space-10);
       margin-top: var(--space-10);
     }
-    .about-process__step {}
     .about-process__number {
       font-family: var(--font-heading);
       font-weight: var(--weight-extrabold);
@@ -163,7 +141,7 @@
       background: var(--color-surface);
       border: var(--border-thin) solid var(--color-border);
       border-radius: var(--radius-md);
-      padding: var(--space-6);
+      padding: var(--space-6) var(--space-7);
     }
     .about-audience__icon {
       width: 36px;
@@ -184,21 +162,32 @@
       line-height: var(--leading-relaxed);
     }
 
+    /* ── CTA button override: quote-banner is navy, so btn-primary
+       (also navy) is invisible. Give it a white outline instead. ──────── */
+    .quote-banner .btn-primary {
+      background-color: transparent;
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.75);
+    }
+    .quote-banner .btn-primary:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: #ffffff;
+    }
+
     /* ── Responsive ────────────────────────────────────────────────────── */
     @media (max-width: 1023px) {
-      .about-process__steps { grid-template-columns: 1fr 1fr; }
-      .about-audience__grid { grid-template-columns: 1fr 1fr; }
+      .about-process__steps  { grid-template-columns: 1fr 1fr; }
+      .about-audience__grid  { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 767px) {
-      .about-hero { padding: var(--space-10) 0 var(--space-10); }
-      .about-intro { padding: var(--space-10) 0; }
-      .about-intro__grid { grid-template-columns: 1fr; gap: var(--space-8); }
-      .about-products { padding: var(--space-10) 0; }
-      .about-products__grid { grid-template-columns: 1fr; }
-      .about-process { padding: var(--space-10) 0; }
-      .about-process__steps { grid-template-columns: 1fr; gap: var(--space-8); }
-      .about-audience { padding: var(--space-10) 0; }
-      .about-audience__grid { grid-template-columns: 1fr; }
+      .about-hero            { padding: var(--space-10) 0 var(--space-10); }
+      .about-story           { padding: var(--space-10) 0; }
+      .about-products        { padding: var(--space-10) 0; }
+      .about-products__grid  { grid-template-columns: 1fr; }
+      .about-process         { padding: var(--space-10) 0; }
+      .about-process__steps  { grid-template-columns: 1fr; gap: var(--space-8); }
+      .about-audience        { padding: var(--space-10) 0; }
+      .about-audience__grid  { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -217,42 +206,35 @@
         <p class="section-overline">Who we are</p>
         <h1 class="section-title" id="about-heading">About Fenovera</h1>
         <p class="section-lead">
-          A Bay Area distributor of aluminum and uPVC window and door systems — built
-          around product quality and technical knowledge.
+          We source and supply quality window and door systems for residential
+          and commercial projects across the San Francisco Bay Area.
         </p>
       </div>
     </section>
 
-    <!-- ── INTRO ─────────────────────────────────────────────────────────── -->
-    <section class="about-intro page-section" aria-labelledby="intro-heading">
+    <!-- ── OUR STORY ─────────────────────────────────────────────────────── -->
+    <section class="about-story page-section" aria-labelledby="story-heading">
       <div class="container">
-        <div class="about-intro__grid">
-          <div class="about-intro__text">
-            <p class="about-intro__lead">
-              Fenovera was founded to bring high-performance aluminum and uPVC fenestration
-              systems to residential and commercial projects throughout the San Francisco
-              Bay Area.
-            </p>
-          </div>
-          <div class="about-intro__text">
-            <p>
-              The Bay Area building market is demanding. Contractors, architects, and
-              homeowners need window and door systems that perform — systems with the
-              thermal properties, structural strength, and finish durability the climate
-              and design expectations here require.
-            </p>
-            <p>
-              We source and distribute systems that meet those standards. Our focus is
-              narrow by design: aluminum and uPVC only, evaluated and stocked because
-              they are the right choice for the projects our clients build.
-            </p>
-            <p>
-              We work directly with general contractors, specialty glaziers, architects,
-              and homeowners managing their own builds. We provide specifications, pricing,
-              and lead times — and we know the products well enough to answer technical
-              questions without delay.
-            </p>
-          </div>
+        <p class="section-overline">Our story</p>
+        <h2 class="section-title" id="story-heading">Why We Exist</h2>
+        <div class="about-story__body">
+          <p>
+            Sourcing windows and doors for a Bay Area project should be straightforward.
+            In practice, it rarely is. Lead times are vague, specifications are hard to
+            verify, and the people selling the product often cannot answer real technical
+            questions. Fenovera was started to do this better.
+          </p>
+          <p>
+            We keep a focused, carefully evaluated product range. Before anything enters
+            our catalogue, we review its performance specifications, build quality, and
+            track record to make sure it is a system we would confidently recommend.
+            We do not carry products we cannot stand behind.
+          </p>
+          <p>
+            Our clients get clear specifications, honest pricing, and accurate lead times.
+            When a question comes up mid-project, we answer it. That is the straightforward
+            service we set out to provide, and it remains the standard we hold ourselves to.
+          </p>
         </div>
       </div>
     </section>
@@ -262,93 +244,56 @@
       <div class="container">
         <p class="section-overline">Our offering</p>
         <h2 class="section-title" id="products-heading">What We Carry</h2>
-        <p class="section-body" style="max-width:640px">
-          We distribute aluminum and uPVC window and door systems. Each system has been
-          evaluated for performance, specification completeness, and suitability for
-          Bay Area projects.
+        <p class="section-body" style="max-width: 620px">
+          We supply a curated selection of window and door systems suited to the
+          demands of Bay Area residential and commercial construction. Products are
+          selected based on performance, specification completeness, and long-term
+          reliability.
         </p>
 
         <div class="about-products__grid">
 
           <div class="about-product-card">
-            <div class="about-product-card__label">Aluminum</div>
-            <div class="about-product-card__title">Aluminum Windows</div>
+            <div class="about-product-card__title">Windows</div>
             <p class="about-product-card__body">
-              Thermally broken aluminum frames engineered for slim sightlines, structural
-              rigidity, and clean contemporary aesthetics. Available in casement,
-              slimline, awning, sliding, and tilt-turn configurations.
+              We carry a range of window systems spanning multiple materials and
+              opening configurations. Options include casement, awning, sliding,
+              tilt-and-turn, and hung windows in profiles suited to both residential
+              and commercial applications. Each system is selected for its sightline
+              performance, thermal properties, and hardware quality.
             </p>
-            <div class="about-product-card__types">
-              <span class="about-product-card__type">Casement</span>
-              <span class="about-product-card__type">Slimline</span>
-              <span class="about-product-card__type">Awning</span>
-              <span class="about-product-card__type">Sliding</span>
-              <span class="about-product-card__type">Tilt &amp; Turn</span>
-            </div>
-            <a href="/products/windows/aluminum/" class="about-product-card__link">
-              View aluminum windows
-              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="/products/windows/" class="about-product-card__link">
+              View window systems
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </a>
           </div>
 
           <div class="about-product-card">
-            <div class="about-product-card__label">uPVC</div>
-            <div class="about-product-card__title">uPVC Windows</div>
+            <div class="about-product-card__title">Doors</div>
             <p class="about-product-card__body">
-              Multi-chamber uPVC profiles delivering excellent thermal insulation and
-              low maintenance requirements. Available in hung, casement, tilt-turn,
-              awning, and sliding configurations.
+              Our door range covers systems designed for smooth operation, thermal
+              performance, and clean aesthetics. Options include sliding doors,
+              lift-and-slide doors, and French doors in configurations suited to
+              interior-to-exterior transitions and feature openings in residential
+              and commercial builds.
             </p>
-            <div class="about-product-card__types">
-              <span class="about-product-card__type">Single/Double Hung</span>
-              <span class="about-product-card__type">Casement</span>
-              <span class="about-product-card__type">Tilt &amp; Turn</span>
-              <span class="about-product-card__type">Awning</span>
-              <span class="about-product-card__type">Sliding</span>
-            </div>
-            <a href="/products/windows/upvc/" class="about-product-card__link">
-              View uPVC windows
-              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-
-          <div class="about-product-card">
-            <div class="about-product-card__label">Aluminum</div>
-            <div class="about-product-card__title">Aluminum Doors</div>
-            <p class="about-product-card__body">
-              Large-format aluminum door systems designed for seamless indoor-outdoor
-              living. Lift-and-slide and sliding configurations with expansive glazing
-              and precision hardware.
-            </p>
-            <div class="about-product-card__types">
-              <span class="about-product-card__type">Lift &amp; Slide</span>
-              <span class="about-product-card__type">Sliding</span>
-            </div>
-            <a href="/products/doors/aluminum/" class="about-product-card__link">
-              View aluminum doors
-              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-
-          <div class="about-product-card">
-            <div class="about-product-card__label">uPVC</div>
-            <div class="about-product-card__title">uPVC Doors</div>
-            <p class="about-product-card__body">
-              Insulated uPVC door systems combining thermal performance with design
-              flexibility. Available as elegant French doors and smooth-operating
-              sliding configurations.
-            </p>
-            <div class="about-product-card__types">
-              <span class="about-product-card__type">French Doors</span>
-              <span class="about-product-card__type">Sliding Doors</span>
-            </div>
-            <a href="/products/doors/upvc/" class="about-product-card__link">
-              View uPVC doors
-              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="/products/doors/" class="about-product-card__link">
+              View door systems
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </a>
           </div>
 
         </div>
+
+        <p class="about-products__note">
+          Our range continues to expand. If you are looking for a system not currently
+          listed, <a href="/contact/">contact us</a> and we will let you know what we
+          can source.
+        </p>
       </div>
     </section>
 
@@ -357,9 +302,9 @@
       <div class="container">
         <p class="section-overline">How we work</p>
         <h2 class="section-title" id="process-heading">From Enquiry to Delivery</h2>
-        <p class="section-body" style="max-width:580px">
-          We keep the process straightforward. Contact us with your project details
-          and we take it from there.
+        <p class="section-body" style="max-width: 560px">
+          We keep the process simple. Tell us about your project, and we take
+          it from there.
         </p>
 
         <div class="about-process__steps">
@@ -368,9 +313,9 @@
             <div class="about-process__number">01</div>
             <div class="about-process__title">Tell us about your project</div>
             <p class="about-process__body">
-              Send us a message or request a quote online. Share your project type,
-              the products you are interested in, and your timeline. The more detail
-              you can give us, the faster we can respond with a useful answer.
+              Send us a message or request a quote online. Share the products
+              you are interested in, the project type, and your timeline. The
+              more context you can give us, the more useful our response will be.
             </p>
           </div>
 
@@ -378,10 +323,9 @@
             <div class="about-process__number">02</div>
             <div class="about-process__title">We provide specifications and pricing</div>
             <p class="about-process__body">
-              We will respond with current specifications, pricing, and lead time
-              information for the products that fit your project. If we need
-              clarification, we will ask — we would rather ask once than quote
-              the wrong product.
+              We respond with current product specifications, pricing, and lead
+              times for what you need. If we have clarifying questions, we ask
+              them up front rather than quote the wrong product.
             </p>
           </div>
 
@@ -389,9 +333,9 @@
             <div class="about-process__number">03</div>
             <div class="about-process__title">Order and fulfillment</div>
             <p class="about-process__body">
-              Once you are ready to proceed, we confirm the order details and
-              coordinate delivery or pickup. We keep you informed on lead times
-              and status throughout.
+              Once you are ready to proceed, we confirm the order and coordinate
+              delivery or collection. We keep you informed on status and lead
+              times throughout.
             </p>
           </div>
 
@@ -412,12 +356,12 @@
               <path d="M6 30V14L18 5l12 9v16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               <rect x="13" y="20" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.8"/>
             </svg>
-            <div class="about-audience__title">Homeowners &amp; Renovators</div>
+            <div class="about-audience__title">Homeowners and Renovators</div>
             <p class="about-audience__body">
               Managing your own new build or renovation? We work directly with
               homeowners. Bring us your window and door schedule and we will quote
-              the products that fit — with the specifications your contractor or
-              architect needs.
+              the products that fit, with the specifications your contractor or
+              architect needs to move forward.
             </p>
           </div>
 
@@ -426,12 +370,12 @@
               <rect x="4" y="8" width="28" height="20" rx="2" stroke="currentColor" stroke-width="1.8"/>
               <path d="M4 14h28M12 14v14M24 14v14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
-            <div class="about-audience__title">Contractors &amp; Builders</div>
+            <div class="about-audience__title">Contractors and Builders</div>
             <p class="about-audience__body">
               General contractors and specialty glaziers can rely on us for
               accurate specifications, competitive pricing, and realistic lead
               times. We understand jobsite schedules and aim to be a supplier
-              you can depend on.
+              you can count on.
             </p>
           </div>
 
@@ -441,12 +385,12 @@
               <circle cx="18" cy="20" r="3" stroke="currentColor" stroke-width="1.8"/>
               <path d="M4 28h28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
-            <div class="about-audience__title">Architects &amp; Designers</div>
+            <div class="about-audience__title">Architects and Designers</div>
             <p class="about-audience__body">
-              Specifying a project? We can provide detailed product specifications,
-              performance data, and section drawings to support your documentation.
-              Contact us early in the design process and we will help you get the
-              right product on the drawings.
+              Specifying a project? We can provide detailed product specifications
+              and performance data to support your documentation. Contact us early
+              in the design process and we will help you get the right system on
+              the drawings.
             </p>
           </div>
 
@@ -466,7 +410,7 @@
               pricing, and availability.
             </p>
           </div>
-          <div style="display:flex;flex-direction:column;gap:var(--space-3);align-items:flex-start;">
+          <div style="display: flex; flex-direction: column; gap: var(--space-3); align-items: flex-start;">
             <a href="/quote/" class="btn btn-primary btn-lg">Request a Free Quote</a>
             <a href="/contact/" class="btn btn-secondary btn-lg">Contact Us</a>
           </div>
