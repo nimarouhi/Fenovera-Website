@@ -1,122 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy | Fenovera</title>
+  <meta name="description" content="Cookie Policy for Fenovera — how fenovera.com uses cookies and similar technologies.">
   <meta name="robots" content="noindex, nofollow">
-  <title>Products | Fenovera</title>
-  <meta name="description" content="Fenovera window and door systems for aluminum and uPVC windows and doors. Explore our full product catalog.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
 
-  <!-- Design system -->
+  <!-- Design System v1.3.1 -->
   <link rel="stylesheet" href="../design-system/tokens.css">
   <link rel="stylesheet" href="../design-system/base.css">
   <link rel="stylesheet" href="../design-system/components.css">
 
   <style>
-    /* ── Skip link ───────────────────────────────────────── */
-    .skip-link {
-      position: absolute;
-      top: -100%;
-      left: var(--space-4);
-      padding: var(--space-2) var(--space-4);
-      background: var(--color-navy);
-      color: var(--color-ink-inverse);
-      font-size: var(--text-sm);
-      font-weight: var(--weight-semibold);
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      z-index: 9999;
+    .legal-hero {
+      padding: var(--space-16) 0 var(--space-10);
+      border-bottom: var(--border-thin) solid var(--color-border);
     }
-    .skip-link:focus { top: var(--space-2); }
-
-    /* ── Development notice ──────────────────────────────── */
-    .dev-notice {
-      background: var(--color-warning-subtle);
-      border-bottom: var(--border-thin) solid var(--color-warning-border);
-      color: var(--color-warning);
-      font-size: var(--text-sm);
-      font-weight: var(--weight-medium);
-      padding: var(--space-2) var(--space-6);
-      text-align: center;
-    }
-    .dev-notice code {
-      font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
-      font-size: var(--text-xs);
-      background: var(--color-warning-border);
-      padding: 0 var(--space-1);
-      border-radius: var(--radius-xs);
-    }
-
-    /* ── Page hero ───────────────────────────────────────── */
-    .products-hero {
-      padding: var(--space-12) 0 var(--space-10);
-    }
-
-    /* ── Category card section ───────────────────────────── */
-    .products-categories {
-      padding: var(--space-10) 0 var(--space-12);
-      border-top: var(--border-thin) solid var(--color-border);
-    }
-
-    /* .category-grid and .category-card are defined in components.css §37 */
-
-    /* ── Contact CTA ─────────────────────────────────────── */
-    .products-cta {
+    .legal-body {
       padding: var(--space-12) 0 var(--space-16);
-      border-top: var(--border-thin) solid var(--color-border);
-      text-align: center;
     }
-    .products-cta__title {
-      font-size: var(--text-3xl);
+    .legal-doc {
+      max-width: 720px;
+    }
+    .legal-doc h2 {
       font-family: var(--font-heading);
       font-weight: var(--weight-bold);
+      font-size: var(--text-xl);
       color: var(--color-ink);
-      margin: 0 0 var(--space-3) 0;
-      line-height: var(--leading-tight);
+      margin: var(--space-10) 0 var(--space-3) 0;
     }
-    .products-cta__text {
+    .legal-doc h2:first-child { margin-top: 0; }
+    .legal-doc p {
       color: var(--color-ink-secondary);
       font-size: var(--text-body);
-      margin: 0 auto var(--space-6) auto;
-      text-align: center;
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-4);
     }
-
-    /* ── Responsive ──────────────────────────────────────── */
-    /* .category-grid responsive breakpoints are in components.css §37 */
+    .legal-doc ul {
+      margin: 0 0 var(--space-4) var(--space-6);
+      padding: 0;
+    }
+    .legal-doc ul li {
+      color: var(--color-ink-secondary);
+      font-size: var(--text-body);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-2);
+    }
+    .legal-effective {
+      font-size: var(--text-sm);
+      color: var(--color-ink-secondary);
+      margin-bottom: var(--space-8);
+      padding-bottom: var(--space-6);
+      border-bottom: var(--border-thin) solid var(--color-border);
+    }
+    .legal-contact-box {
+      background: var(--color-canvas);
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-5) var(--space-6);
+      margin-top: var(--space-4);
+    }
+    .legal-contact-box p { margin-bottom: var(--space-1); }
+    .notice-box {
+      background: var(--color-canvas);
+      border-left: 3px solid var(--color-accent);
+      padding: var(--space-4) var(--space-5);
+      margin-bottom: var(--space-6);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .notice-box p { margin-bottom: 0; color: var(--color-ink-secondary); }
     @media (max-width: 767px) {
-      .products-hero  { padding: var(--space-8) 0 var(--space-6); }
-      .products-cta   { padding: var(--space-8) 0 var(--space-12); }
-      .products-cta__title { font-size: var(--text-2xl); }
+      .legal-hero { padding: var(--space-10) 0 var(--space-8); }
+      .legal-body { padding: var(--space-8) 0 var(--space-12); }
     }
   </style>
 
   <!-- ── SEO: canonical + Open Graph + favicon ──────────────────── -->
-  <link rel="canonical" href="https://fenovera.com/products/">
+  <link rel="canonical" href="https://fenovera.com/cookies/">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fenovera">
-  <meta property="og:title" content="Products | Fenovera">
-  <meta property="og:description" content="Aluminum and uPVC window and door systems from Fenovera.">
-  <meta property="og:url" content="https://fenovera.com/products/">
+  <meta property="og:title" content="Cookie Policy | Fenovera">
+  <meta property="og:description" content="Cookie Policy for Fenovera — Bay Area aluminum and uPVC window and door distributor.">
+  <meta property="og:url" content="https://fenovera.com/cookies/">
   <meta property="og:image" content="https://fenovera.com/img/casement.jpg">
   <!-- /SEO ──────────────────────────────────────────────────────── -->
 </head>
+<body data-page="cookies">
 
-<body data-page="products">
-
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <div class="dev-notice" role="note">
-    <strong>Development build: do not publish.</strong>
-    Product images are placeholders (image rights and product provenance are unverified).
-    Page is marked <code>noindex</code>. Remove this notice and resolve all
-    placeholders before launch.
-  </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="site-header" id="site-header">
   <div class="site-header__inner">
@@ -128,7 +106,7 @@
     <nav class="site-header__nav" aria-label="Main navigation">
 
       <div class="nav-item" id="nav-products">
-        <button class="nav-link is-active"
+        <button class="nav-link"
           aria-haspopup="true" aria-expanded="false"
           aria-controls="mega-menu-products" type="button">
           Products
@@ -172,7 +150,7 @@
           </div>
 
           <div class="mega-menu__footer">
-            <a href="../products/" class="link-standalone" aria-current="page">
+            <a href="../products/" class="link-standalone">
               All Products
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -229,7 +207,7 @@
 
       <div>
         <button class="mobile-nav__accordion-btn"
-          aria-expanded="true"
+          aria-expanded="false"
           aria-controls="mobile-products-submenu"
           type="button">
           Products
@@ -238,7 +216,7 @@
           </svg>
         </button>
         <div class="mobile-nav__submenu" id="mobile-products-submenu"
-          aria-hidden="false">
+          aria-hidden="true">
           <div class="mobile-nav__submenu-label">Windows</div>
           <a href="../products/windows/aluminum/" class="mobile-nav__submenu-link">Aluminum Windows</a>
           <a href="../products/windows/upvc/" class="mobile-nav__submenu-link">uPVC Windows</a>
@@ -247,7 +225,7 @@
           <a href="../products/doors/aluminum/" class="mobile-nav__submenu-link">Aluminum Doors</a>
           <a href="../products/doors/upvc/" class="mobile-nav__submenu-link">uPVC Doors</a>
           <a href="../products/doors/" class="mobile-nav__submenu-link">All Doors</a>
-          <a href="../products/" class="mobile-nav__submenu-link" aria-current="page">All Products</a>
+          <a href="../products/" class="mobile-nav__submenu-link">All Products</a>
         </div>
       </div>
 
@@ -265,72 +243,92 @@
 </div><!-- end mobile-nav -->
 
 
-  <main id="main">
+  <main id="main-content">
 
-    <!-- ── Page hero ─────────────────────────────────────── -->
-    <section class="products-hero page-section" aria-labelledby="products-page-heading">
+    <section class="legal-hero page-section" aria-labelledby="cookies-heading">
       <div class="container">
-
-        <h1 class="section-title" id="products-page-heading">
-          Windows, Doors and Building Products
-        </h1>
+        <p class="section-overline">Legal</p>
+        <h1 class="section-title" id="cookies-heading">Cookie Policy</h1>
         <p class="section-lead">
-          Wide selection of products across aluminum and uPVC systems.
-          Contact us for specifications, pricing, and availability.
+          How fenovera.com uses cookies and similar technologies.
         </p>
-
       </div>
     </section>
 
-    <!-- ── Category navigation ───────────────────────────── -->
-    <!--
-      Category grid rendered by SECTION:products-overview-grid.
-      Counts and URLs are derived from site/data/categories.js at build time.
-      not hard-coded here. Adding a new type to categories.js will produce
-      its cards automatically without editing this template.
-    -->
-    <section class="products-categories page-section" aria-labelledby="categories-heading">
+    <section class="legal-body page-section">
       <div class="container">
-        <p class="section-overline">Browse by Category</p>
-        <h2 class="section-title" id="categories-heading">Product Categories</h2>
-<div class="category-grid">
-  <a href="../products/windows/aluminum/" class="category-card">
-    <span class="category-card__type">Windows</span>
-    <strong class="category-card__name">Aluminum Windows</strong>
-    <span class="category-card__cta">Browse &#8594;</span>
-  </a>
-  <a href="../products/windows/upvc/" class="category-card">
-    <span class="category-card__type">Windows</span>
-    <strong class="category-card__name">uPVC Windows</strong>
-    <span class="category-card__cta">Browse &#8594;</span>
-  </a>
-  <a href="../products/doors/aluminum/" class="category-card">
-    <span class="category-card__type">Doors</span>
-    <strong class="category-card__name">Aluminum Doors</strong>
-    <span class="category-card__cta">Browse &#8594;</span>
-  </a>
-  <a href="../products/doors/upvc/" class="category-card">
-    <span class="category-card__type">Doors</span>
-    <strong class="category-card__name">uPVC Doors</strong>
-    <span class="category-card__cta">Browse &#8594;</span>
-  </a>
-</div>
-      </div>
-    </section>
+        <div class="legal-doc">
 
-    <!-- ── Contact CTA ──────────────────────────────────── -->
-    <section class="products-cta page-section" aria-labelledby="cta-section-heading">
-      <div class="container">
-        <h2 class="products-cta__title" id="cta-section-heading">Contact Us</h2>
-        <p class="products-cta__text">
-          Contact us for current pricing, specifications, and availability.
-        </p>
-        <a href="../quote/" class="btn btn-primary">
-          Request a Free Quote
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-            <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+          <p class="legal-effective">Effective date: August 1, 2026</p>
+
+          <div class="notice-box">
+            <p>
+              <strong>Short version:</strong> fenovera.com currently uses no tracking,
+              advertising, or analytics cookies. The only cookies this site may set are
+              strictly necessary for basic site operation. We do not use Google Analytics,
+              Meta Pixel, or any third-party advertising or tracking technologies.
+            </p>
+          </div>
+
+          <h2>1. What Are Cookies</h2>
+          <p>
+            Cookies are small text files that a website places on your device when you
+            visit. They are widely used to make websites function, to make them work more
+            efficiently, or to provide information to the website owner.
+          </p>
+
+          <h2>2. How We Use Cookies</h2>
+          <p>
+            At the time this policy was last updated, fenovera.com does not use cookies
+            for tracking, advertising, or analytics purposes. The site may set cookies
+            that are strictly necessary for basic operation (for example, to maintain
+            session state or security). These cookies do not collect personal information
+            and are not used to identify you.
+          </p>
+          <p>
+            We do not use:
+          </p>
+          <ul>
+            <li>Analytics or audience-measurement cookies (e.g., Google Analytics)</li>
+            <li>Advertising or retargeting cookies (e.g., Meta Pixel, Google Ads)</li>
+            <li>Social media tracking pixels</li>
+            <li>Third-party behavioral tracking of any kind</li>
+          </ul>
+
+          <h2>3. Changes to Cookie Use</h2>
+          <p>
+            We may add analytics or other tools to this site in the future. When we do,
+            we will update this Cookie Policy, revise the effective date, and — where
+            required by law — obtain your consent before placing non-essential cookies.
+          </p>
+
+          <h2>4. Managing Cookies</h2>
+          <p>
+            You can control and delete cookies through your browser settings. Most
+            browsers allow you to refuse cookies, delete existing cookies, or be notified
+            when a cookie is sent. Refer to your browser's help documentation for
+            instructions:
+          </p>
+          <ul>
+            <li>Chrome: Settings → Privacy and security → Cookies and other site data</li>
+            <li>Safari: Preferences → Privacy</li>
+            <li>Firefox: Options → Privacy &amp; Security</li>
+            <li>Edge: Settings → Cookies and site permissions</li>
+          </ul>
+          <p>
+            Disabling cookies may affect how some websites function, though
+            fenovera.com is designed to work normally without them.
+          </p>
+
+          <h2>5. Contact Us</h2>
+          <p>If you have questions about our use of cookies, please contact us:</p>
+          <div class="legal-contact-box">
+            <p><strong>Fenovera</strong></p>
+            <p>Bay Area, California</p>
+            <p>Email: <a href="mailto:info@fenovera.com">info@fenovera.com</a></p>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -400,6 +398,7 @@
 </footer>
 
 
-  <script src="../site/nav.js"></script>
+  <script src="../site/nav.js" defer></script>
+
 </body>
 </html>

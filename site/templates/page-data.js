@@ -158,6 +158,14 @@ pages.push({
   description: 'Terms of Use for Fenovera — Bay Area aluminum and uPVC window and door distributor.',
 });
 
+pages.push({
+  src:         'src/cookies.html',
+  out:         'cookies/index.html',
+  pageId:      'cookies',
+  title:       'Cookie Policy | Fenovera',
+  description: 'Cookie Policy for Fenovera — Bay Area aluminum and uPVC window and door distributor.',
+});
+
 // 5. Individual product detail pages
 products.forEach(function (product) {
   var related = getRelated(product, 2);
