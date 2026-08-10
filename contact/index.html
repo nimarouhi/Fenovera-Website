@@ -6,13 +6,7 @@
   <title>Contact Fenovera | Bay Area Windows &amp; Doors</title>
   <meta name="description" content="Contact Fenovera to discuss product specifications, pricing, and availability for window and door systems in the Bay Area.">
   <meta name="robots" content="noindex, nofollow">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
-
-  <!-- Design System v1.3.1 -->
+<!-- Design System v1.3.1 -->
   <link rel="stylesheet" href="../design-system/tokens.css">
   <link rel="stylesheet" href="../design-system/base.css">
   <link rel="stylesheet" href="../design-system/components.css">
@@ -106,10 +100,9 @@
     .form-label__required {
       color: var(--color-bronze-interactive);
       margin-left: var(--space-1);
-      aria-hidden: true;
     }
     .form-label__optional {
-      font-weight: var(--weight-normal);
+      font-weight: var(--weight-regular);
       color: var(--color-ink-secondary);
       font-size: var(--text-xs);
       margin-left: var(--space-1);
@@ -208,6 +201,10 @@
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<body data-page="contact">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
 <header class="site-header" id="site-header">
   <div class="site-header__inner">
 
@@ -239,6 +236,9 @@
               <a href="../products/windows/upvc/" class="mega-menu__link">
                 <span class="mega-menu__link-name">uPVC Windows</span>
               </a>
+              <a href="../products/windows/pvc/" class="mega-menu__link">
+                <span class="mega-menu__link-name">PVC Windows</span>
+              </a>
               <a href="../products/windows/" class="mega-menu__link">
                 <span class="mega-menu__link-name">All Windows</span>
               </a>
@@ -254,6 +254,9 @@
               </a>
               <a href="../products/doors/upvc/" class="mega-menu__link">
                 <span class="mega-menu__link-name">uPVC Doors</span>
+              </a>
+              <a href="../products/doors/pvc/" class="mega-menu__link">
+                <span class="mega-menu__link-name">PVC Doors</span>
               </a>
               <a href="../products/doors/" class="mega-menu__link">
                 <span class="mega-menu__link-name">All Doors</span>
@@ -278,8 +281,6 @@
 
         </div><!-- end mega-menu -->
       </div><!-- end nav-item -->
-
-      <a href="../projects/" class="nav-link">Projects</a>
       <a href="../about/" class="nav-link">About</a>
       <a href="../contact/" class="nav-link" aria-current="page">Contact</a>
 
@@ -332,16 +333,16 @@
           <div class="mobile-nav__submenu-label">Windows</div>
           <a href="../products/windows/aluminum/" class="mobile-nav__submenu-link">Aluminum Windows</a>
           <a href="../products/windows/upvc/" class="mobile-nav__submenu-link">uPVC Windows</a>
+          <a href="../products/windows/pvc/" class="mobile-nav__submenu-link">PVC Windows</a>
           <a href="../products/windows/" class="mobile-nav__submenu-link">All Windows</a>
           <div class="mobile-nav__submenu-label">Doors</div>
           <a href="../products/doors/aluminum/" class="mobile-nav__submenu-link">Aluminum Doors</a>
           <a href="../products/doors/upvc/" class="mobile-nav__submenu-link">uPVC Doors</a>
+          <a href="../products/doors/pvc/" class="mobile-nav__submenu-link">PVC Doors</a>
           <a href="../products/doors/" class="mobile-nav__submenu-link">All Doors</a>
           <a href="../products/" class="mobile-nav__submenu-link">All Products</a>
         </div>
       </div>
-
-      <a href="../projects/" class="mobile-nav__link">Projects</a>
       <a href="../about/" class="mobile-nav__link">About</a>
       <a href="../contact/" class="mobile-nav__link" aria-current="page">Contact</a>
 
@@ -353,7 +354,6 @@
 
   </div><!-- end mobile-nav__drawer -->
 </div><!-- end mobile-nav -->
-
 
   <main id="main-content">
 
@@ -565,8 +565,7 @@
       <div class="site-footer__col-label">Company</div>
       <nav class="site-footer__links" aria-label="Company footer navigation">
         <a href="../about/" class="site-footer__link">About Fenovera</a>
-        <a href="../projects/" class="site-footer__link">Projects</a>
-        <a href="../contact/" class="site-footer__link" aria-current="page">Contact</a>
+        <a href="../contact/" class="site-footer__link">Contact</a>
       </nav>
     </div>
 
@@ -606,6 +605,11 @@
 
 </footer>
 
+
+  <script src="../site/nav.js" defer></script>
+
+</body>
+</html>
 
   <script src="../site/nav.js" defer></script>
 

@@ -21,9 +21,13 @@ var path     = require('path');
 var products = require('../data/products');
 var categories = require('../data/categories');
 
-// ── Build a lookup map: slug → product ──────────────────────────────────────
-var productBySlug = {};
-products.forEach(function (p) { productBySlug[p.slug] = p; });
+// ── Build a lookup map: type/material/slug → product ────────────────────────
+// Composite key prevents collisions when the same slug appears under different
+// type/material paths (e.g. prm-50a is both a window and a door series).
+var productByKey = {};
+products.forEach(function (p) {
+  productByKey[p.typeSlug + '/' + p.materialSlug + '/' + p.slug] = p;
+});
 
 // ── Helper: find related products (same type, same material, different slug) ─
 function getRelated(product, limit) {
@@ -83,11 +87,27 @@ categories.forEach(function (cat) {
 });
 
 // 3. Material category overview pages (windows/aluminum, windows/upvc, etc.)
+var oppositeType      = { windows: 'doors',   doors: 'windows' };
+var oppositeTypeLabel = { windows: 'door',    doors: 'window'  };
+
 categories.forEach(function (cat) {
+  var otherTypeSlug  = oppositeType[cat.typeSlug];
+  var otherTypeLabel = oppositeTypeLabel[cat.typeSlug];
+
   cat.materials.forEach(function (material) {
-    // Build product list for this category
+    // Build product list for this category using composite key.
+    // If the same series slug also exists under the opposite type (same material),
+    // attach a matchingLabel so the grid card can show a cross-type badge.
     var materialProducts = material.productSlugs.map(function (slug) {
-      return productBySlug[slug];
+      var product = productByKey[cat.typeSlug + '/' + material.materialSlug + '/' + slug];
+      if (!product) return null;
+      var hasMatch = !!productByKey[otherTypeSlug + '/' + material.materialSlug + '/' + slug];
+      if (hasMatch) {
+        return Object.assign({}, product, {
+          matchingLabel: 'Matching ' + otherTypeLabel + ' series',
+        });
+      }
+      return product;
     }).filter(Boolean);
 
     pages.push({

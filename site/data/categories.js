@@ -1,16 +1,15 @@
 /**
  * Fenovera — Product Category Tree
- * Foundation revision 2026-07-27
+ * Foundation revision 2026-08-05 (series-based restructure)
  *
  * Defines the type → material → product URL taxonomy.
  * URL format: /products/{type}/{material}/{slug}/
  *
- * Fields added in Foundation revision:
- *   id              — stable identifier for the type or material node
- *   displayOrder    — sort order for rendering
- *   publicationStatus — 'draft' | 'published' | 'archived'
- *   productSlugs    — renamed from seriesSlugs; works for any product type
- *                     (not all products have a series number)
+ * Naming conventions:
+ *   LDW prefix — Ledow series (LD-X76, LD-S8520, LD-152)
+ *   PRM prefix — Prima series, suffix 'a' = aluminum, 'u' = uPVC
+ *   WJ prefix  — Wanjia series
+ *   Slugs are lowercase hyphenated versions of the series name
  *
  * Source controls (brief §4):
  * - Do not show supplier brand names without owner approval.
@@ -28,7 +27,7 @@ module.exports = [
     displayOrder:     1,
     publicationStatus:'draft',
     seoTitle:         'Windows | Fenovera',
-    description:      'Aluminum and uPVC window systems from Fenovera.',
+    description:      'Aluminum, uPVC, and PVC window systems from Fenovera.',
     materials: [
       {
         id:               'windows-aluminum',
@@ -38,8 +37,13 @@ module.exports = [
         displayOrder:     1,
         publicationStatus:'draft',
         seoTitle:         'Aluminum Windows | Fenovera',
-        description:      'Aluminum casement, slimline, awning, sliding, and tilt-turn windows.',
-        productSlugs:     ['76-series', '85-series', 'awning', 'sliding', 'tilt-turn'],
+        description:      'Aluminum window series from Ledow, Prima, and Wanjia. Casement, tilt-turn, awning, sliding, hung, and louver configurations.',
+        productSlugs: [
+          'ldw-x76', 'ldw-s8520',
+          'prm-50a', 'prm-55a', 'prm-65a', 'prm-73a', 'prm-81a', 'prm-83a',
+          'prm-100a', 'prm-108a', 'prm-110a', 'prm-k80a',
+          'wj-80', 'wj-91', 'wj-110',
+        ],
       },
       {
         id:               'windows-upvc',
@@ -49,8 +53,22 @@ module.exports = [
         displayOrder:     2,
         publicationStatus:'draft',
         seoTitle:         'uPVC Windows | Fenovera',
-        description:      'uPVC hung, tilt-turn, casement, awning, and sliding windows.',
-        productSlugs:     ['hung-window', 'tilt-turn-window', 'casement-window', 'awning-window', 'sliding-window'],
+        description:      'uPVC window series from Prima and Wanjia. Tilt-turn, casement, awning, sliding, and hung configurations.',
+        productSlugs: [
+          'prm-58u', 'prm-60u', 'prm-70u', 'prm-72u',
+          'prm-80u', 'prm-88u', 'prm-hung', 'wj-72',
+        ],
+      },
+      {
+        id:               'windows-pvc',
+        materialSlug:     'pvc',
+        materialLabel:    'PVC',
+        pageId:           'windows-pvc',
+        displayOrder:     3,
+        publicationStatus:'draft',
+        seoTitle:         'PVC Windows | Fenovera',
+        description:      'PVC window series from Wanjia. Casement configurations.',
+        productSlugs:     ['wj-60'],
       },
     ],
   },
@@ -62,7 +80,7 @@ module.exports = [
     displayOrder:     2,
     publicationStatus:'draft',
     seoTitle:         'Doors | Fenovera',
-    description:      'Aluminum and uPVC door systems from Fenovera.',
+    description:      'Aluminum, uPVC, and PVC door systems from Fenovera.',
     materials: [
       {
         id:               'doors-aluminum',
@@ -72,8 +90,14 @@ module.exports = [
         displayOrder:     1,
         publicationStatus:'draft',
         seoTitle:         'Aluminum Doors | Fenovera',
-        description:      'Aluminum lift and slide door systems.',
-        productSlugs:     ['152-series'],
+        description:      'Aluminum door series from Ledow, Prima, and Wanjia. Casement, sliding, bi-fold, slim frame, and lift & slide configurations.',
+        productSlugs: [
+          'ldw-x76', 'ldw-g152', 'ldw-g88',
+          'prm-16a', 'prm-50a', 'prm-55a', 'prm-65a',
+          'prm-70a', 'prm-75a', 'prm-81a', 'prm-108a',
+          'prm-121a', 'prm-132a', 'prm-150a', 'prm-202a', 'prm-k80a',
+          'wj-91', 'wj-132', 'wj-88', 'wj-170',
+        ],
       },
       {
         id:               'doors-upvc',
@@ -83,8 +107,19 @@ module.exports = [
         displayOrder:     2,
         publicationStatus:'draft',
         seoTitle:         'uPVC Doors | Fenovera',
-        description:      'uPVC french and sliding door systems.',
-        productSlugs:     ['french-door', 'sliding-door'],
+        description:      'uPVC door series from Prima and Wanjia. Casement and sliding configurations.',
+        productSlugs: ['prm-60u', 'prm-66u', 'prm-88u', 'prm-114u', 'wj-195'],
+      },
+      {
+        id:               'doors-pvc',
+        materialSlug:     'pvc',
+        materialLabel:    'PVC',
+        pageId:           'doors-pvc',
+        displayOrder:     3,
+        publicationStatus:'draft',
+        seoTitle:         'PVC Doors | Fenovera',
+        description:      'PVC door series from Wanjia. Casement configurations.',
+        productSlugs:     ['wj-60'],
       },
     ],
   },

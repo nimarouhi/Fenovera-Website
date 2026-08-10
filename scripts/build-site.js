@@ -140,6 +140,9 @@ function renderSection(name, data) {
 
   switch (name) {
 
+    case 'hero-image':
+      return renderHeroImage(data);
+
     case 'spec-tables':
       return renderSpecTables(data);
 
@@ -162,6 +165,9 @@ function renderSection(name, data) {
     case 'downloads':
       return renderDownloads(data);
 
+    case 'cross-link':
+      return renderCrossLink(data);
+
     case 'related-products':
       return renderRelatedProducts(data);
 
@@ -177,6 +183,25 @@ function renderSection(name, data) {
     default:
       return '<!-- SECTION:' + name + ' — unknown section -->';
   }
+}
+
+function renderHeroImage(data) {
+  var img = data.heroImage;
+  if (!img || !img.src) {
+    return '<div class="product-hero__image-wrap product-hero__image-wrap--empty"></div>';
+  }
+  var styleProps = [];
+  if (img.objectFit) styleProps.push('object-fit: ' + img.objectFit);
+  if (img.objectPosition) styleProps.push('object-position: ' + img.objectPosition);
+  var inlineStyle = styleProps.length ? ' style="' + escapeHtml(styleProps.join('; ')) + '"' : '';
+  return [
+    '<div class="product-hero__image-wrap">',
+    '  <img src="' + escapeHtml(img.src) + '"',
+    '       alt="' + escapeHtml(img.alt || data.publicName) + '"',
+    '       class="product-hero__img"' + inlineStyle,
+    '       loading="eager" decoding="async">',
+    '</div>',
+  ].join('\n');
 }
 
 function renderSpecTables(data) {
@@ -268,7 +293,7 @@ function renderGallery(data) {
     html += '        <button class="gallery-thumb" type="button"\n';
     html += '          aria-label="View gallery image ' + (i+1) + ', ' + escapeHtml(img.alt) + '"\n';
     html += '          data-img-src="' + escapeHtml(img.src) + '">\n';
-    html += '          <span class="text-caption">' + escapeHtml(img.alt) + '<br>[IMAGE TO VERIFY]</span>\n';
+    html += '          <img src="' + escapeHtml(img.src) + '" alt="' + escapeHtml(img.alt) + '"' + (function(i){ var s=[]; if(i.objectFit) s.push('object-fit:'+i.objectFit); if(i.objectPosition) s.push('object-position:'+i.objectPosition); return s.length?' style="'+escapeHtml(s.join(';'))+'"':''; }(img)) + ' loading="lazy" decoding="async">\n';
     html += '        </button>\n';
     html += '      </li>\n';
   });
@@ -284,8 +309,54 @@ function renderGallery(data) {
  */
 function renderFinishes(data) {
   if (!data.finishes) return '';
-  // Placeholder for future implementation when finishes data is confirmed
-  return '';
+  var f = data.finishes;
+  var html = '';
+  html += '<section class="page-section page-section--canvas" aria-labelledby="finishes-heading">\n';
+  html += '  <div class="container">\n';
+  html += '    <p class="section-overline">Options</p>\n';
+  html += '    <h2 class="section-title" id="finishes-heading">Glass &amp; Color Options</h2>\n';
+  html += '    <div class="finishes-grid">\n';
+
+  if (f.glass) {
+    var g = f.glass;
+    html += '      <div class="finishes-panel">\n';
+    html += '        <h3 class="finishes-panel__title">Glass Options</h3>\n';
+    if (g.types && g.types.length) {
+      html += '        <ul class="glass-type-list">\n';
+      g.types.forEach(function(t) {
+        html += '          <li class="glass-type-tag">' + escapeHtml(t) + '</li>\n';
+      });
+      html += '        </ul>\n';
+    }
+    if (g.glazing && g.glazing.length) {
+      html += '        <div class="finishes-panel__row"><span class="finishes-panel__label">Glazing:</span> ' + escapeHtml(g.glazing.join(' / ')) + '</div>\n';
+    }
+    if (g.singleThickness) {
+      html += '        <div class="finishes-panel__row"><span class="finishes-panel__label">Single pane:</span> ' + escapeHtml(g.singleThickness) + '</div>\n';
+    }
+    if (g.doubleUnit) {
+      html += '        <div class="finishes-panel__row"><span class="finishes-panel__label">Double unit:</span> ' + escapeHtml(g.doubleUnit) + '</div>\n';
+    }
+    if (g.note) {
+      html += '        <p class="finish-section__note">' + escapeHtml(g.note) + '</p>\n';
+    }
+    html += '      </div>\n';
+  }
+
+  if (f.color) {
+    html += '      <div class="finishes-panel">\n';
+    html += '        <h3 class="finishes-panel__title">Color</h3>\n';
+    html += '        <div class="finishes-panel__color-label">' + escapeHtml(f.color.label) + '</div>\n';
+    if (f.color.note) {
+      html += '        <p class="finish-section__note">' + escapeHtml(f.color.note) + '</p>\n';
+    }
+    html += '      </div>\n';
+  }
+
+  html += '    </div>\n';
+  html += '  </div>\n';
+  html += '</section>\n';
+  return html;
 }
 
 /**
@@ -303,9 +374,34 @@ function renderHardware(data) {
  * Currently returns empty string for all products (certifications: null).
  */
 function renderCertifications(data) {
-  if (!data.certifications) return '';
-  // Placeholder for future implementation when certifications are confirmed
-  return '';
+  if (!data.certifications || !data.certifications.length) return '';
+  var certs = data.certifications;
+  var html = '';
+  html += '<section class="page-section" aria-labelledby="cert-heading">\n';
+  html += '  <div class="container">\n';
+  html += '    <p class="section-overline">Quality Standards</p>\n';
+  html += '    <h2 class="section-title" id="cert-heading">Certifications<sup><a href="#cert-note" class="cert-footnote-ref" aria-label="Certifications disclaimer">*</a></sup></h2>\n';
+  html += '    <div class="cert-section__grid">\n';
+  certs.forEach(function(cert) {
+    html += '      <div class="cert-link">\n';
+    html += '        <div class="cert-link__icon">\n';
+    html += '          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">\n';
+    html += '            <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="2"/>\n';
+    html += '            <path d="M12 18l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n';
+    html += '          </svg>\n';
+    html += '        </div>\n';
+    html += '        <div class="cert-link__info">\n';
+    html += '          <div class="cert-link__name">' + escapeHtml(cert.name) + '</div>\n';
+    html += '          <div class="cert-link__meta">' + escapeHtml(cert.body) + '</div>\n';
+    html += '          <div class="cert-link__meta">' + escapeHtml(cert.scope) + '</div>\n';
+    html += '        </div>\n';
+    html += '      </div>\n';
+  });
+  html += '    </div>\n';
+  html += '    <p class="spec-table__note mt-6" id="cert-note">* Not all certifications apply to all series. Contact us for more details.</p>\n';
+  html += '  </div>\n';
+  html += '</section>\n';
+  return html;
 }
 
 /**
@@ -323,9 +419,14 @@ function renderRelatedProducts(data) {
   if (!data.related || !data.related.length) return '';
   var html = '<div class="related-grid">\n';
   data.related.forEach(function (rel) {
+    var relImg = rel.heroImage;
     html += '  <a href="/products/' + rel.typeSlug + '/' + rel.materialSlug + '/' + rel.slug + '/" class="product-card">\n';
     html += '    <div class="product-card__image">\n';
-    html += '      <div class="product-card__img-placeholder">[IMAGE TO VERIFY]</div>\n';
+    if (relImg && relImg.src) {
+      html += '      <img src="' + escapeHtml(relImg.src) + '" alt="' + escapeHtml(relImg.alt || rel.publicName) + '" loading="lazy" decoding="async">\n';
+    } else {
+      html += '      <div class="product-card__img-placeholder"></div>\n';
+    }
     html += '    </div>\n';
     html += '    <div class="product-card__body">\n';
     html += '      <div class="product-card__tag">' + escapeHtml(rel.materialLabel) + ' ' + escapeHtml(rel.typeLabel) + '</div>\n';
@@ -338,6 +439,37 @@ function renderRelatedProducts(data) {
   return html;
 }
 
+function renderCrossLink(data) {
+  if (!data.crossLink) return '';
+  var cl = data.crossLink;
+  return [
+    '<section class="cross-link-banner" aria-label="Matching product">',
+    '  <div class="container">',
+    '    <div class="cross-link-banner__inner">',
+    '      <p class="cross-link-banner__text">' + escapeHtml(cl.text) + '</p>',
+    '      <a href="' + escapeHtml(cl.href) + '" class="btn btn-outline btn-sm">',
+    '        ' + escapeHtml(cl.label) + ' →',
+    '      </a>',
+    '    </div>',
+    '  </div>',
+    '</section>',
+  ].join('\n');
+}
+
+function getManufacturerLabel(slug) {
+  if (/^ldw/.test(slug)) return 'Ledow';
+  if (/^prm/.test(slug)) return 'Prima';
+  if (/^wj/.test(slug))  return 'Wanjia';
+  return '';
+}
+
+function renderTypeChips(systemType) {
+  if (!systemType) return '';
+  return systemType.split(' / ').map(function (t) {
+    return '<span class="type-chip">' + escapeHtml(t.trim()) + '</span>';
+  }).join('');
+}
+
 function renderCategoryProductGrid(data) {
   if (!data.products || !data.products.length) {
     return '<p class="text-muted">No products in this category yet. Contact us for availability.</p>';
@@ -345,13 +477,28 @@ function renderCategoryProductGrid(data) {
   var html = '<div class="product-series-grid">\n';
   data.products.forEach(function (product) {
     var url = '/products/' + product.typeSlug + '/' + product.materialSlug + '/' + product.slug + '/';
+    var cardImg = product.heroImage;
+    var mfr = getManufacturerLabel(product.slug);
     html += '  <a href="' + url + '" class="product-series-card">\n';
     html += '    <div class="product-series-card__image">\n';
-    html += '      <div class="product-card__img-placeholder">[IMAGE TO VERIFY]</div>\n';
+    if (cardImg && cardImg.src) {
+      html += '      <img src="' + escapeHtml(cardImg.src) + '" alt="' + escapeHtml(cardImg.alt || product.publicName) + '" loading="lazy" decoding="async">\n';
+    } else {
+      html += '      <div class="product-card__img-placeholder"></div>\n';
+    }
     html += '    </div>\n';
     html += '    <div class="product-series-card__body">\n';
+    if (mfr) {
+      html += '      <div class="product-series-card__mfr">' + escapeHtml(mfr) + '</div>\n';
+    }
     html += '      <div class="product-series-card__name">' + escapeHtml(product.publicName) + '</div>\n';
-    html += '      <div class="product-series-card__type">' + escapeHtml(product.systemType) + '</div>\n';
+    if (/^ldw/.test(product.slug) || product.slug === 'prm-k80a') {
+      html += '      <span class="badge badge-success product-series-card__cert-badge">NFRC</span>\n';
+    }
+    if (product.matchingLabel) {
+      html += '      <span class="badge badge-navy product-series-card__match-badge">' + escapeHtml(product.matchingLabel) + '</span>\n';
+    }
+    html += '      <div class="product-series-card__chips">' + renderTypeChips(product.systemType) + '</div>\n';
     html += '      <div class="product-series-card__link">View details →</div>\n';
     html += '    </div>\n';
     html += '  </a>\n';

@@ -7,45 +7,16 @@
   <title>Fenovera | Aluminum and uPVC Windows &amp; Doors</title>
   <meta name="description" content="Fenovera supplies aluminum and uPVC window and door systems for residential and commercial projects in the Bay Area. Contact us for pricing, specifications, and availability.">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://fenovera.com/">
-  <meta property="og:site_name" content="Fenovera">
-  <meta property="og:title" content="Fenovera | Aluminum and uPVC Windows &amp; Doors">
-  <meta property="og:description" content="Bay Area distributor of aluminum and uPVC window and door systems for residential and commercial projects.">
-
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Fenovera | Aluminum and uPVC Windows &amp; Doors">
   <meta name="twitter:description" content="Bay Area distributor of aluminum and uPVC window and door systems.">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
-
-  <!-- Design system -->
+<!-- Design system -->
   <link rel="stylesheet" href="design-system/tokens.css">
   <link rel="stylesheet" href="design-system/base.css">
   <link rel="stylesheet" href="design-system/components.css">
 
   <style>
-    /* ── Skip link ───────────────────────────────────────── */
-    .skip-link {
-      position: absolute;
-      top: -100%;
-      left: var(--space-4);
-      padding: var(--space-2) var(--space-4);
-      background: var(--color-navy);
-      color: var(--color-ink-inverse);
-      font-size: var(--text-sm);
-      font-weight: var(--weight-semibold);
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      z-index: 9999;
-    }
-    .skip-link:focus { top: var(--space-2); }
-
     /* ── Development notice ──────────────────────────────── */
     .dev-notice {
       background: var(--color-warning-subtle);
@@ -342,11 +313,11 @@
       align-items: flex-start;
       padding-top: 130px;
       padding-bottom: var(--space-16);
-      background-color: #0B1D2E;
+      background-color: var(--color-ink);  /* was: #0B1D2E */
       background-image:
         linear-gradient(rgba(11,29,46,0.82), rgba(11,29,46,0.82)),
         url('img/home/fenovera-home-background.webp');
-      background-size: contain;
+      background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
       border-bottom: none;
@@ -386,7 +357,7 @@
       margin-bottom: var(--space-10);
     }
 
-    /* ── 4. "Get a Free Estimate" — prominent bronze-gold CTA */
+    /* ── 4. "Request a Free Quote" — prominent bronze-gold CTA */
     .btn-estimate {
       display: inline-flex;
       align-items: center;
@@ -478,9 +449,10 @@
 </head>
 <body class="page-home">
 
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <div class="dev-notice" role="note">
+  <!-- TODO: remove this dev-notice div before launch -->
+  <div class="dev-notice" role="status">
     <strong>Development build: do not publish.</strong>
     Product images are placeholders (image rights and product provenance are unverified).
     Page is marked <code>noindex</code>. Remove this notice and resolve all
@@ -490,7 +462,7 @@
 <header class="site-header" id="site-header">
   <div class="site-header__inner">
 
-    <a href="./" class="site-header__logo" aria-label="Fenovera: go to homepage">
+    <a href="./" class="site-header__logo" aria-label="Fenovera: go to homepage" aria-current="page">
       <span class="site-header__logo-wordmark">Fen<span class="logo-accent-o">o</span>vera</span>
     </a>
 
@@ -518,6 +490,9 @@
               <a href="./products/windows/upvc/" class="mega-menu__link">
                 <span class="mega-menu__link-name">uPVC Windows</span>
               </a>
+              <a href="./products/windows/pvc/" class="mega-menu__link">
+                <span class="mega-menu__link-name">PVC Windows</span>
+              </a>
               <a href="./products/windows/" class="mega-menu__link">
                 <span class="mega-menu__link-name">All Windows</span>
               </a>
@@ -533,6 +508,9 @@
               </a>
               <a href="./products/doors/upvc/" class="mega-menu__link">
                 <span class="mega-menu__link-name">uPVC Doors</span>
+              </a>
+              <a href="./products/doors/pvc/" class="mega-menu__link">
+                <span class="mega-menu__link-name">PVC Doors</span>
               </a>
               <a href="./products/doors/" class="mega-menu__link">
                 <span class="mega-menu__link-name">All Doors</span>
@@ -557,8 +535,6 @@
 
         </div><!-- end mega-menu -->
       </div><!-- end nav-item -->
-
-      <a href="./projects/" class="nav-link">Projects</a>
       <a href="./about/" class="nav-link">About</a>
       <a href="./contact/" class="nav-link">Contact</a>
 
@@ -611,16 +587,16 @@
           <div class="mobile-nav__submenu-label">Windows</div>
           <a href="./products/windows/aluminum/" class="mobile-nav__submenu-link">Aluminum Windows</a>
           <a href="./products/windows/upvc/" class="mobile-nav__submenu-link">uPVC Windows</a>
+          <a href="./products/windows/pvc/" class="mobile-nav__submenu-link">PVC Windows</a>
           <a href="./products/windows/" class="mobile-nav__submenu-link">All Windows</a>
           <div class="mobile-nav__submenu-label">Doors</div>
           <a href="./products/doors/aluminum/" class="mobile-nav__submenu-link">Aluminum Doors</a>
           <a href="./products/doors/upvc/" class="mobile-nav__submenu-link">uPVC Doors</a>
+          <a href="./products/doors/pvc/" class="mobile-nav__submenu-link">PVC Doors</a>
           <a href="./products/doors/" class="mobile-nav__submenu-link">All Doors</a>
           <a href="./products/" class="mobile-nav__submenu-link">All Products</a>
         </div>
       </div>
-
-      <a href="./projects/" class="mobile-nav__link">Projects</a>
       <a href="./about/" class="mobile-nav__link">About</a>
       <a href="./contact/" class="mobile-nav__link">Contact</a>
 
@@ -634,7 +610,7 @@
 </div><!-- end mobile-nav -->
 
 
-  <main id="main">
+  <main id="main-content">
 
     <!-- ── Hero ──────────────────────────────────────────── -->
     <section class="home-hero" aria-labelledby="home-hero-heading">
@@ -651,7 +627,7 @@
             </p>
             <div class="home-hero__actions">
               <a href="./quote/" class="btn btn-estimate">
-                Get a Free Estimate
+                Request a Free Quote
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                   <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -778,7 +754,7 @@
         </p>
         <div class="home-hero__actions">
           <a href="./quote/" class="btn btn-secondary">
-            Get a Free Estimate
+            Request a Free Quote
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -789,6 +765,75 @@
     </section>
 
   </main>
+
+<!-- ── Cookie Consent Banner ──────────────────────────────────────────
+     Shown on first visit; dismissed choice persisted in localStorage.
+     To load analytics only after consent:
+       document.addEventListener('fenovera:consent-granted', loadAnalytics);
+  ────────────────────────────────────────────────────────────────── -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="false"
+     aria-labelledby="cookie-banner-title" hidden>
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__text">
+      <p class="cookie-banner__title" id="cookie-banner-title">We use cookies</p>
+      <p class="cookie-banner__body">
+        We use strictly necessary cookies to keep the site running. We may also use
+        analytics and marketing cookies to understand how visitors use our site.
+        <a href="./cookies/" class="cookie-banner__link">Learn more in our Cookie Policy</a>.
+      </p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="btn btn-secondary btn-sm" id="cookie-reject" type="button">
+        Reject Non-Essential
+      </button>
+      <button class="btn btn-primary btn-sm" id="cookie-accept" type="button">
+        Accept All
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var STORAGE_KEY = 'fenoveraCookieConsent';
+  var banner    = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var rejectBtn = document.getElementById('cookie-reject');
+
+  // Expose consent state globally so analytics loaders can check it
+  window.fenovera = window.fenovera || {};
+  window.fenovera.consentGranted = false;
+
+  function dismiss(choice) {
+    try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
+    banner.setAttribute('hidden', '');
+    if (choice === 'accepted') {
+      window.fenovera.consentGranted = true;
+      // Fire event — attach analytics loaders like:
+      //   document.addEventListener('fenovera:consent-granted', loadAnalytics);
+      document.dispatchEvent(new CustomEvent('fenovera:consent-granted'));
+    }
+  }
+
+  // Check existing preference
+  var existing;
+  try { existing = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+
+  if (existing === 'accepted') {
+    window.fenovera.consentGranted = true;
+  } else if (!existing) {
+    // Show after short delay so it doesn't flash on page load
+    setTimeout(function () {
+      banner.removeAttribute('hidden');
+      acceptBtn.focus();
+    }, 800);
+  }
+
+  if (acceptBtn) acceptBtn.addEventListener('click', function () { dismiss('accepted'); });
+  if (rejectBtn) rejectBtn.addEventListener('click', function () { dismiss('rejected'); });
+}());
+</script>
 
 <footer class="site-footer">
   <div class="site-footer__main">
@@ -812,7 +857,6 @@
       <div class="site-footer__col-label">Company</div>
       <nav class="site-footer__links" aria-label="Company footer navigation">
         <a href="./about/" class="site-footer__link">About Fenovera</a>
-        <a href="./projects/" class="site-footer__link">Projects</a>
         <a href="./contact/" class="site-footer__link">Contact</a>
       </nav>
     </div>
@@ -854,6 +898,6 @@
 </footer>
 
 
-  <script src="site/nav.js"></script>
+  <script src="site/nav.js" defer></script>
 </body>
 </html>

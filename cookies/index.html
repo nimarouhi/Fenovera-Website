@@ -6,13 +6,7 @@
   <title>Cookie Policy | Fenovera</title>
   <meta name="description" content="Cookie Policy for Fenovera: how fenovera.com uses cookies and similar technologies.">
   <meta name="robots" content="noindex, nofollow">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
-
-  <!-- Design System v1.3.1 -->
+<!-- Design System v1.3.1 -->
   <link rel="stylesheet" href="../design-system/tokens.css">
   <link rel="stylesheet" href="../design-system/base.css">
   <link rel="stylesheet" href="../design-system/components.css">
@@ -119,6 +113,9 @@
               <a href="../products/windows/upvc/" class="mega-menu__link">
                 <span class="mega-menu__link-name">uPVC Windows</span>
               </a>
+              <a href="../products/windows/pvc/" class="mega-menu__link">
+                <span class="mega-menu__link-name">PVC Windows</span>
+              </a>
               <a href="../products/windows/" class="mega-menu__link">
                 <span class="mega-menu__link-name">All Windows</span>
               </a>
@@ -134,6 +131,9 @@
               </a>
               <a href="../products/doors/upvc/" class="mega-menu__link">
                 <span class="mega-menu__link-name">uPVC Doors</span>
+              </a>
+              <a href="../products/doors/pvc/" class="mega-menu__link">
+                <span class="mega-menu__link-name">PVC Doors</span>
               </a>
               <a href="../products/doors/" class="mega-menu__link">
                 <span class="mega-menu__link-name">All Doors</span>
@@ -158,8 +158,6 @@
 
         </div><!-- end mega-menu -->
       </div><!-- end nav-item -->
-
-      <a href="../projects/" class="nav-link">Projects</a>
       <a href="../about/" class="nav-link">About</a>
       <a href="../contact/" class="nav-link">Contact</a>
 
@@ -212,16 +210,16 @@
           <div class="mobile-nav__submenu-label">Windows</div>
           <a href="../products/windows/aluminum/" class="mobile-nav__submenu-link">Aluminum Windows</a>
           <a href="../products/windows/upvc/" class="mobile-nav__submenu-link">uPVC Windows</a>
+          <a href="../products/windows/pvc/" class="mobile-nav__submenu-link">PVC Windows</a>
           <a href="../products/windows/" class="mobile-nav__submenu-link">All Windows</a>
           <div class="mobile-nav__submenu-label">Doors</div>
           <a href="../products/doors/aluminum/" class="mobile-nav__submenu-link">Aluminum Doors</a>
           <a href="../products/doors/upvc/" class="mobile-nav__submenu-link">uPVC Doors</a>
+          <a href="../products/doors/pvc/" class="mobile-nav__submenu-link">PVC Doors</a>
           <a href="../products/doors/" class="mobile-nav__submenu-link">All Doors</a>
           <a href="../products/" class="mobile-nav__submenu-link">All Products</a>
         </div>
       </div>
-
-      <a href="../projects/" class="mobile-nav__link">Projects</a>
       <a href="../about/" class="mobile-nav__link">About</a>
       <a href="../contact/" class="mobile-nav__link">Contact</a>
 
@@ -422,6 +420,75 @@
 
   </main>
 
+<!-- ── Cookie Consent Banner ──────────────────────────────────────────
+     Shown on first visit; dismissed choice persisted in localStorage.
+     To load analytics only after consent:
+       document.addEventListener('fenovera:consent-granted', loadAnalytics);
+  ────────────────────────────────────────────────────────────────── -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="false"
+     aria-labelledby="cookie-banner-title" hidden>
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__text">
+      <p class="cookie-banner__title" id="cookie-banner-title">We use cookies</p>
+      <p class="cookie-banner__body">
+        We use strictly necessary cookies to keep the site running. We may also use
+        analytics and marketing cookies to understand how visitors use our site.
+        <a href="../cookies/" class="cookie-banner__link">Learn more in our Cookie Policy</a>.
+      </p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="btn btn-secondary btn-sm" id="cookie-reject" type="button">
+        Reject Non-Essential
+      </button>
+      <button class="btn btn-primary btn-sm" id="cookie-accept" type="button">
+        Accept All
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var STORAGE_KEY = 'fenoveraCookieConsent';
+  var banner    = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var rejectBtn = document.getElementById('cookie-reject');
+
+  // Expose consent state globally so analytics loaders can check it
+  window.fenovera = window.fenovera || {};
+  window.fenovera.consentGranted = false;
+
+  function dismiss(choice) {
+    try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
+    banner.setAttribute('hidden', '');
+    if (choice === 'accepted') {
+      window.fenovera.consentGranted = true;
+      // Fire event — attach analytics loaders like:
+      //   document.addEventListener('fenovera:consent-granted', loadAnalytics);
+      document.dispatchEvent(new CustomEvent('fenovera:consent-granted'));
+    }
+  }
+
+  // Check existing preference
+  var existing;
+  try { existing = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+
+  if (existing === 'accepted') {
+    window.fenovera.consentGranted = true;
+  } else if (!existing) {
+    // Show after short delay so it doesn't flash on page load
+    setTimeout(function () {
+      banner.removeAttribute('hidden');
+      acceptBtn.focus();
+    }, 800);
+  }
+
+  if (acceptBtn) acceptBtn.addEventListener('click', function () { dismiss('accepted'); });
+  if (rejectBtn) rejectBtn.addEventListener('click', function () { dismiss('rejected'); });
+}());
+</script>
+
 <footer class="site-footer">
   <div class="site-footer__main">
 
@@ -444,7 +511,6 @@
       <div class="site-footer__col-label">Company</div>
       <nav class="site-footer__links" aria-label="Company footer navigation">
         <a href="../about/" class="site-footer__link">About Fenovera</a>
-        <a href="../projects/" class="site-footer__link">Projects</a>
         <a href="../contact/" class="site-footer__link">Contact</a>
       </nav>
     </div>

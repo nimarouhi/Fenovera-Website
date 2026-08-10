@@ -7,13 +7,7 @@
   <meta name="description" content="{{DATA:description}}">
   <!-- noindex: draft page: remove once data verification is complete and page is approved for launch -->
   <meta name="robots" content="noindex, nofollow">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
-
-  <!-- Design System v1.3.1 -->
+<!-- Design System v1.3.1 -->
   <link rel="stylesheet" href="/design-system/tokens.css">
   <link rel="stylesheet" href="/design-system/base.css">
   <link rel="stylesheet" href="/design-system/components.css">
@@ -46,36 +40,22 @@
             <h1 class="product-hero__title" id="product-hero-heading">
               {{DATA:publicName}}
             </h1>
-            <p class="product-hero__intro">{{DATA:heroIntro}}</p>
+            <p class="product-hero__intro">{{DATA_RAW:heroIntro}}</p>
             <div class="product-hero__actions">
               <a href="/quote/" class="btn btn-primary">Request a Free Quote</a>
               <a href="#specifications" class="btn btn-outline">View Specifications</a>
             </div>
           </div>
 
-          <!-- Right: image placeholder (replace with verified image before launch) -->
-          <div class="product-hero__image-wrap">
-            <!--
-              PRODUCT IMAGE
-              [IMAGE RIGHTS / PRODUCT PROVENANCE TO VERIFY]
-              Replace this placeholder with verified product photography.
-            -->
-            <div class="product-hero__image-placeholder" aria-label="Product image placeholder">
-              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
-                <path d="M14 24l5-6 4 5 3-3 6 7H8l6-3z" stroke="currentColor" stroke-width="1.2" fill="none"/>
-                <circle cx="15" cy="17" r="2" stroke="currentColor" stroke-width="1.2"/>
-              </svg>
-              <span>{{DATA:publicName}} product image</span>
-              <span class="product-hero__image-placeholder-note">
-                Image rights and product provenance to verify before public launch
-              </span>
-            </div>
-          </div>
+          <!-- Right: hero image -->
+          <!-- SECTION:hero-image -->
 
         </div>
       </div>
     </section>
+
+    <!-- ── CROSS-LINK BANNER (conditional: only if crossLink present) ────── -->
+    <!-- SECTION:cross-link -->
 
     <!-- ── IMAGE GALLERY (conditional: only if galleryImages present) ───── -->
     <!-- SECTION:gallery -->
@@ -85,10 +65,6 @@
       <div class="container">
         <p class="section-overline">Technical Data</p>
         <h2 class="section-title" id="spec-heading">Specifications</h2>
-        <p class="section-body section-body--mb-md">
-          Dimensional and performance specifications below require written confirmation from the technical team before publication. Items marked <strong>[SPEC TO VERIFY]</strong> are pending confirmation.
-        </p>
-
         <!-- SECTION:spec-tables -->
 
         <p class="spec-table__note mt-6">
