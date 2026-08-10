@@ -74,7 +74,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-X76 Thermal-Break Aluminum Windows | Fenovera',
     description: 'The Fenovera LD-X76 Series combines thermal-break aluminum with versatile casement, tilt-turn, awning, and fixed configurations. 76 mm frame, 35.3 mm thermal barrier, German hardware. NFRC certified.',
-    heroIntro: 'Thermal-break aluminum window. The LD-X76 Series offers casement, tilt-turn, awning, and fixed configurations with a 76 mm frame depth and 35.3 mm thermal barrier. The <a href="/products/doors/aluminum/ldw-x76/">LD-X76 patio door</a> is available in the same profile. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Thermal-break aluminum window. The LD-X76 Series offers casement, tilt-turn, awning, and fixed configurations with a 76 mm frame depth and 35.3 mm thermal barrier. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/ldw-x76/">LD-X76 patio door</a> is available in the same profile. NFRC certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-x76-window-hero.jpg', alt: 'LD-X76 Series thermal-break aluminum casement window in a residential interior', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'Fenovera X76 Series Thermal-Break Catalog, p.1' },
     galleryImages: [],
     finishes: {
@@ -145,7 +145,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-50 Series Aluminum Window | Fenovera',
     description: 'Fenovera PRM-50 Series aluminum window with 50 mm frame. Available in casement, awning, tilt-turn, and louver configurations. The PRM-50 Series door is also available.',
-    heroIntro: 'Aluminum window series with 50 mm frame. Available in casement, awning, tilt-turn, and louver configurations. The <a href="/products/doors/aluminum/prm-50a/">PRM-50 Series aluminum door</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum window series with 50 mm frame. Available in casement, awning, tilt-turn, and louver configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-50a/">PRM-50 Series aluminum door</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm50a-b-window-hero.jpg', alt: 'PRM-50 Series aluminum tilt-turn window in kitchen with garden view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.7' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -192,7 +192,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-55 Series Aluminum Window | Fenovera',
     description: 'Fenovera PRM-55 Series aluminum window with 55 mm frame, available in casement, awning, and tilt-turn. The PRM-55 Series door is also available.',
-    heroIntro: 'Aluminum window series with 55 mm frame. Available in casement, awning, and tilt-turn configurations. The <a href="/products/doors/aluminum/prm-55a/">PRM-55 Series aluminum door</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum window series with 55 mm frame. Available in casement, awning, and tilt-turn configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-55a/">PRM-55 Series aluminum door</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm55a-window-hero.jpg', alt: 'PRM-55 Series aluminum awning windows on modern house exterior at dusk', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.6' },
     galleryImages: [], finishes: { glass: ALUMINUM_FINISHES.glass, color: { label: 'Powder coating', note: 'Available in a wide range of RAL colors and wood-grain finishes. Contact us for swatches.' } }, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -216,7 +216,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-65 Series Aluminum Window | Fenovera',
     description: 'Fenovera PRM-65 Series aluminum window with 65 mm frame, available in casement, awning, and tilt-turn. The PRM-65 Series door is also available.',
-    heroIntro: 'Aluminum window series with 65 mm frame. Available in casement, awning, and tilt-turn configurations. The <a href="/products/doors/aluminum/prm-65a/">PRM-65 Series aluminum door</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum window series with 65 mm frame. Available in casement, awning, and tilt-turn configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-65a/">PRM-65 Series aluminum door</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm65a-window-hero.jpg', alt: 'PRM-65 Series aluminum tilt-turn window open in modern home office', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.7' },
     galleryImages: [], finishes: { glass: ALUMINUM_FINISHES.glass, color: { label: 'Powder coating', note: 'Available in a wide range of RAL colors and wood-grain finishes. Contact us for swatches.' } }, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -263,7 +263,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-81 Series Thermal-Break Aluminum Window | Fenovera',
     description: 'Fenovera PRM-81 Series aluminum window with 81 mm frame and integrated thermal break. Available in casement, tilt-turn, and awning. The PRM-81 Series casement door is also available.',
-    heroIntro: 'Thermal-break aluminum window with 81 mm frame. The PRM-81 Series includes a thermal break as standard on all profiles. Available in casement, tilt-turn, and awning configurations. The <a href="/products/doors/aluminum/prm-81a/">PRM-81 Series casement door</a> uses the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Thermal-break aluminum window with 81 mm frame. The PRM-81 Series includes a thermal break as standard on all profiles. Available in casement, tilt-turn, and awning configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-81a/">PRM-81 Series casement door</a> uses the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm81a-window-hero.jpg', alt: 'PRM-81 Series thermal-break aluminum casement window on house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.5' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -344,7 +344,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-108 Series Aluminum Window | Fenovera',
     description: 'Fenovera PRM-108 Series aluminum window with 108 mm frame. Available in casement, awning, and tilt-turn. The PRM-108 Series door is also available.',
-    heroIntro: 'Aluminum window series with 108 mm frame. Available in casement, awning, and tilt-turn configurations. The <a href="/products/doors/aluminum/prm-108a/">PRM-108 Series aluminum door</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum window series with 108 mm frame. Available in casement, awning, and tilt-turn configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-108a/">PRM-108 Series aluminum door</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm108a-window-hero.jpg', alt: 'PRM-108 Series aluminum casement window open with city reflection', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.4' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -408,7 +408,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-K80 Series NFRC Aluminum Casement Window | Fenovera',
     description: 'Fenovera PRM-K80 Series aluminum casement window meeting American Standard / NFRC energy performance requirements. The PRM-K80 Series casement door is also available.',
-    heroIntro: 'Aluminum casement window meeting American Standard NFRC energy performance requirements. The <a href="/products/doors/aluminum/prm-k80a/">PRM-K80 Series casement door</a> is available in the same profile. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum casement window meeting American Standard NFRC energy performance requirements. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-k80a/">PRM-K80 Series casement door</a> is available in the same profile. NFRC certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm50a-window-hero.jpg', alt: 'PRM-K80 Series NFRC aluminum casement window in residential interior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.4' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
@@ -430,7 +430,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-91 Series Aluminum Window | Fenovera',
     description: 'Fenovera WJ-91 Series thermal-break aluminum window. Available in casement (max 914 × 1829 mm) and tilt-turn (max 1600 × 2800 mm). Tested to AAMA / CSA / NAFS. The WJ-91 Series casement door shares the same profile.',
-    heroIntro: 'WJ-91 Series aluminum window. Available in casement and tilt-turn configurations. The <a href="/products/doors/aluminum/wj-91/">WJ-91 Series casement door</a> uses the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-91 Series aluminum window. Available in casement and tilt-turn configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/wj-91/">WJ-91 Series casement door</a> uses the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj91-hero.jpg', alt: 'WJ-91 Series aluminum tilt-turn window open in modern living room with lake view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.5–6' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -547,7 +547,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-60 Series uPVC Window | Fenovera',
     description: 'Fenovera PRM-60 Series uPVC window with 60 mm profile, available in casement, tilt-turn, awning, and sliding. The PRM-60 Series casement door is also available.',
-    heroIntro: 'PRM-60 Series uPVC window with 60 mm profile. Available in casement, tilt-turn, awning, and sliding configurations. The <a href="/products/doors/upvc/prm-60u/">PRM-60 Series uPVC casement door</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-60 Series uPVC window with 60 mm profile. Available in casement, tilt-turn, awning, and sliding configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/prm-60u/">PRM-60 Series uPVC casement door</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm60u-window-hero.jpg', alt: 'PRM-60 Series uPVC casement windows on brick house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -641,7 +641,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-88 Series uPVC Sliding Window | Fenovera',
     description: 'Fenovera PRM-88 Series uPVC sliding window with 88 mm profile. The PRM-88 Series sliding door is also available.',
-    heroIntro: 'PRM-88 Series uPVC sliding window. The <a href="/products/doors/upvc/prm-88u/">PRM-88 Series uPVC sliding door</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-88 Series uPVC sliding window. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/prm-88u/">PRM-88 Series uPVC sliding door</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm88u-window-hero.jpg', alt: 'PRM-88 Series uPVC windows and door on brick house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -724,7 +724,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'WJ-60 Series PVC Casement Window | Fenovera',
     description: 'Fenovera WJ-60 Series PVC casement window. The WJ-60 Series PVC casement door is also available.',
-    heroIntro: 'WJ-60 Series PVC casement window. The <a href="/products/doors/pvc/wj-60/">WJ-60 Series PVC casement door</a> is also available. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-60 Series PVC casement window. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/pvc/wj-60/">WJ-60 Series PVC casement door</a> is also available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/pvc-wj60-window-hero.jpg', alt: 'WJ-60 Series PVC casement window with mountain lake view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.27-28' }, galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
@@ -745,7 +745,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-X76 Series Thermal-Break Aluminum Patio Door | Fenovera',
     description: 'The Fenovera LD-X76 Series patio door shares the same 76 mm thermal-break aluminum profile as the LD-X76 window. Available in single swing, French door, and multiple sidelight configurations.',
-    heroIntro: 'Thermal-break aluminum patio door. The LD-X76 Series offers single swing, French door, and sidelight configurations with a 76 mm frame depth and 35.3 mm thermal barrier. The <a href="/products/windows/aluminum/ldw-x76/">LD-X76 window</a> is available in the same profile for a seamless matched look. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Thermal-break aluminum patio door. The LD-X76 Series offers single swing, French door, and sidelight configurations with a 76 mm frame depth and 35.3 mm thermal barrier. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/ldw-x76/">LD-X76 window</a> is available in the same profile for a seamless matched look. NFRC certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-x76-door-hero.jpg', alt: 'LD-X76 Series thermal-break aluminum patio door on a modern home exterior', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'Fenovera X76 Series Thermal-Break Catalog, p.5' },
     galleryImages: [],
     finishes: {
@@ -885,7 +885,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-50 Series Aluminum Casement Door | Fenovera',
     description: 'Fenovera PRM-50 Series aluminum casement door with 50 mm frame. The PRM-50 Series window is also available.',
-    heroIntro: 'Aluminum casement door with 50 mm frame. The <a href="/products/windows/aluminum/prm-50a/">PRM-50 Series window</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum casement door with 50 mm frame. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/prm-50a/">PRM-50 Series window</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm50a-door-hero.jpg', alt: 'PRM-50 Series aluminum casement door open to garden courtyard', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.15' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -908,7 +908,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-55 Series Aluminum Casement Door | Fenovera',
     description: 'Fenovera PRM-55 Series aluminum casement door with 55 mm frame. The PRM-55 Series window is also available.',
-    heroIntro: 'Aluminum casement door with 55 mm frame. The <a href="/products/windows/aluminum/prm-55a/">PRM-55 Series window</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum casement door with 55 mm frame. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/prm-55a/">PRM-55 Series window</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm50a-door-hero.jpg', alt: 'PRM-55 Series aluminum casement door open to garden', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.15' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -931,7 +931,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-65 Series Aluminum Casement Door | Fenovera',
     description: 'Fenovera PRM-65 Series aluminum casement door with 65 mm frame. The PRM-65 Series window is also available.',
-    heroIntro: 'Aluminum casement door with 65 mm frame. The <a href="/products/windows/aluminum/prm-65a/">PRM-65 Series window</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum casement door with 65 mm frame. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/prm-65a/">PRM-65 Series window</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm50a-door-hero.jpg', alt: 'PRM-65 Series aluminum casement door open to garden', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.15' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -1002,7 +1002,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-81 Series Thermal-Break Aluminum Casement Door | Fenovera',
     description: 'Fenovera PRM-81 Series aluminum casement door with 81 mm frame and integrated thermal break. The PRM-81 Series window is also available.',
-    heroIntro: 'Thermal-break aluminum casement door with 81 mm frame. The <a href="/products/windows/aluminum/prm-81a/">PRM-81 Series window</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Thermal-break aluminum casement door with 81 mm frame. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/prm-81a/">PRM-81 Series window</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm81a-door-hero.jpg', alt: 'PRM-81 Series aluminum casement door opening to paved garden courtyard', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.15' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -1025,7 +1025,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-108 Series Aluminum Casement Door | Fenovera',
     description: 'Fenovera PRM-108 Series aluminum casement door with 108 mm frame. The PRM-108 Series window is also available.',
-    heroIntro: 'Aluminum casement door with 108 mm frame. The <a href="/products/windows/aluminum/prm-108a/">PRM-108 Series window</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum casement door with 108 mm frame. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/prm-108a/">PRM-108 Series window</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm50a-door-hero.jpg', alt: 'PRM-108 Series aluminum casement door open to garden', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.15' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -1139,7 +1139,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-K80 Series NFRC Aluminum Casement Door | Fenovera',
     description: 'Fenovera PRM-K80 Series aluminum casement door meeting American Standard / NFRC energy performance requirements. The PRM-K80 Series window is also available.',
-    heroIntro: 'Aluminum casement door meeting American Standard NFRC requirements. The <a href="/products/windows/aluminum/prm-k80a/">PRM-K80 Series window</a> is available in the same profile. NFRC certified. Contact us, pricing, and availability.',
+    heroIntro: 'Aluminum casement door meeting American Standard NFRC requirements. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/prm-k80a/">PRM-K80 Series window</a> is available in the same profile. NFRC certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm-k80a-door-hero.jpg', alt: 'PRM-K80 Series NFRC aluminum casement door in modern white interior with garden view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.15/16' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
@@ -1161,7 +1161,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-91 Series Aluminum Casement Door | Fenovera',
     description: 'Fenovera WJ-91 Series thermal-break aluminum casement door. Max size 1041 × 2800 mm, 200 kg max load. U-value 0.190 BTU/hr·ft²·°F. Tested to AAMA / CSA / NAFS. The WJ-91 Series window shares the same profile.',
-    heroIntro: 'WJ-91 Series aluminum casement door. The <a href="/products/windows/aluminum/wj-91/">WJ-91 Series window</a> uses the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-91 Series aluminum casement door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/wj-91/">WJ-91 Series window</a> uses the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj91-door-hero.jpg', alt: 'WJ-91 Series aluminum casement door with pool and garden view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.9–10' }, galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
@@ -1264,7 +1264,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-60 Series uPVC Casement Door | Fenovera',
     description: 'Fenovera PRM-60 Series uPVC casement door with 60 mm profile. The PRM-60 Series window is also available.',
-    heroIntro: 'PRM-60 Series uPVC casement door. The <a href="/products/windows/upvc/prm-60u/">PRM-60 Series window</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-60 Series uPVC casement door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/prm-60u/">PRM-60 Series window</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm60u-door-hero.jpg', alt: 'PRM-60 Series uPVC casement door with glazing on residential exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -1312,7 +1312,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-88 Series uPVC Sliding Door | Fenovera',
     description: 'Fenovera PRM-88 Series uPVC sliding door with 88 mm profile. The PRM-88 Series sliding window is also available.',
-    heroIntro: 'PRM-88 Series uPVC sliding door. The <a href="/products/windows/upvc/prm-88u/">PRM-88 Series sliding window</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-88 Series uPVC sliding door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/prm-88u/">PRM-88 Series sliding window</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm88u-door-hero.jpg', alt: 'PRM-88 Series uPVC sliding door open to garden patio with pergola', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -1386,7 +1386,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'WJ-60 Series PVC Casement Door | Fenovera',
     description: 'Fenovera WJ-60 Series PVC casement door. The WJ-60 Series PVC window is also available.',
-    heroIntro: 'WJ-60 Series PVC casement door. The <a href="/products/windows/pvc/wj-60/">WJ-60 Series PVC window</a> is also available. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-60 Series PVC casement door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/pvc/wj-60/">WJ-60 Series PVC window</a> is also available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/pvc-wj60-door-hero.jpg', alt: 'WJ-60 Series PVC casement door open to garden', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.29-30' }, galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [

@@ -7,6 +7,13 @@
   <title>Fenovera | Aluminum and uPVC Windows &amp; Doors</title>
   <meta name="description" content="Fenovera supplies aluminum and uPVC window and door systems for residential and commercial projects in the Bay Area. Contact us for pricing, specifications, and availability.">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fenovera.com/">
+  <meta property="og:site_name" content="Fenovera">
+  <meta property="og:title" content="Fenovera | Aluminum and uPVC Windows &amp; Doors">
+  <meta property="og:description" content="Bay Area distributor of aluminum and uPVC window and door systems for residential and commercial projects.">
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Fenovera | Aluminum and uPVC Windows &amp; Doors">
@@ -17,6 +24,22 @@
   <link rel="stylesheet" href="design-system/components.css">
 
   <style>
+    /* ── Skip link ───────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: var(--space-4);
+      padding: var(--space-2) var(--space-4);
+      background: var(--color-navy);
+      color: var(--color-ink-inverse);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-semibold);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      z-index: 9999;
+    }
+    .skip-link:focus { top: var(--space-2); }
+
     /* ── Development notice ──────────────────────────────── */
     .dev-notice {
       background: var(--color-warning-subtle);
@@ -313,11 +336,11 @@
       align-items: flex-start;
       padding-top: 130px;
       padding-bottom: var(--space-16);
-      background-color: var(--color-ink);  /* was: #0B1D2E */
+      background-color: #0B1D2E;
       background-image:
         linear-gradient(rgba(11,29,46,0.82), rgba(11,29,46,0.82)),
         url('img/home/fenovera-home-background.webp');
-      background-size: cover;
+      background-size: contain;
       background-position: center center;
       background-repeat: no-repeat;
       border-bottom: none;
@@ -357,7 +380,7 @@
       margin-bottom: var(--space-10);
     }
 
-    /* ── 4. "Request a Free Quote" — prominent bronze-gold CTA */
+    /* ── 4. "Get a Free Estimate" — prominent bronze-gold CTA */
     .btn-estimate {
       display: inline-flex;
       align-items: center;
@@ -449,10 +472,9 @@
 </head>
 <body class="page-home">
 
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- TODO: remove this dev-notice div before launch -->
-  <div class="dev-notice" role="status">
+  <div class="dev-notice" role="note">
     <strong>Development build: do not publish.</strong>
     Product images are placeholders (image rights and product provenance are unverified).
     Page is marked <code>noindex</code>. Remove this notice and resolve all
@@ -462,7 +484,7 @@
 <header class="site-header" id="site-header">
   <div class="site-header__inner">
 
-    <a href="./" class="site-header__logo" aria-label="Fenovera: go to homepage" aria-current="page">
+    <a href="./" class="site-header__logo" aria-label="Fenovera: go to homepage">
       <span class="site-header__logo-wordmark">Fen<span class="logo-accent-o">o</span>vera</span>
     </a>
 
@@ -535,6 +557,8 @@
 
         </div><!-- end mega-menu -->
       </div><!-- end nav-item -->
+
+      <a href="./projects/" class="nav-link">Projects</a>
       <a href="./about/" class="nav-link">About</a>
       <a href="./contact/" class="nav-link">Contact</a>
 
@@ -597,6 +621,8 @@
           <a href="./products/" class="mobile-nav__submenu-link">All Products</a>
         </div>
       </div>
+
+      <a href="./projects/" class="mobile-nav__link">Projects</a>
       <a href="./about/" class="mobile-nav__link">About</a>
       <a href="./contact/" class="mobile-nav__link">Contact</a>
 
@@ -610,7 +636,7 @@
 </div><!-- end mobile-nav -->
 
 
-  <main id="main-content">
+  <main id="main">
 
     <!-- ── Hero ──────────────────────────────────────────── -->
     <section class="home-hero" aria-labelledby="home-hero-heading">
@@ -627,7 +653,7 @@
             </p>
             <div class="home-hero__actions">
               <a href="./quote/" class="btn btn-estimate">
-                Request a Free Quote
+                Get a Free Estimate
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                   <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -754,7 +780,7 @@
         </p>
         <div class="home-hero__actions">
           <a href="./quote/" class="btn btn-secondary">
-            Request a Free Quote
+            Get a Free Estimate
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -857,6 +883,7 @@
       <div class="site-footer__col-label">Company</div>
       <nav class="site-footer__links" aria-label="Company footer navigation">
         <a href="./about/" class="site-footer__link">About Fenovera</a>
+        <a href="./projects/" class="site-footer__link">Projects</a>
         <a href="./contact/" class="site-footer__link">Contact</a>
       </nav>
     </div>
@@ -898,6 +925,6 @@
 </footer>
 
 
-  <script src="site/nav.js" defer></script>
+  <script src="site/nav.js"></script>
 </body>
 </html>

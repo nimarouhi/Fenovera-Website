@@ -104,7 +104,7 @@ categories.forEach(function (cat) {
       var hasMatch = !!productByKey[otherTypeSlug + '/' + material.materialSlug + '/' + slug];
       if (hasMatch) {
         return Object.assign({}, product, {
-          matchingLabel: 'Matching ' + otherTypeLabel + ' series',
+          matchingLabel: 'Matching ' + otherTypeLabel.charAt(0).toUpperCase() + otherTypeLabel.slice(1) + ' Series Available',
         });
       }
       return product;

@@ -100,9 +100,10 @@
     .form-label__required {
       color: var(--color-bronze-interactive);
       margin-left: var(--space-1);
+      aria-hidden: true;
     }
     .form-label__optional {
-      font-weight: var(--weight-regular);
+      font-weight: var(--weight-normal);
       color: var(--color-ink-secondary);
       font-size: var(--text-xs);
       margin-left: var(--space-1);
@@ -201,10 +202,6 @@
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<body data-page="contact">
-
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
 <header class="site-header" id="site-header">
   <div class="site-header__inner">
 
@@ -281,6 +278,8 @@
 
         </div><!-- end mega-menu -->
       </div><!-- end nav-item -->
+
+      <a href="../projects/" class="nav-link">Projects</a>
       <a href="../about/" class="nav-link">About</a>
       <a href="../contact/" class="nav-link" aria-current="page">Contact</a>
 
@@ -343,6 +342,8 @@
           <a href="../products/" class="mobile-nav__submenu-link">All Products</a>
         </div>
       </div>
+
+      <a href="../projects/" class="mobile-nav__link">Projects</a>
       <a href="../about/" class="mobile-nav__link">About</a>
       <a href="../contact/" class="mobile-nav__link" aria-current="page">Contact</a>
 
@@ -354,6 +355,7 @@
 
   </div><!-- end mobile-nav__drawer -->
 </div><!-- end mobile-nav -->
+
 
   <main id="main-content">
 
@@ -543,6 +545,75 @@
 
   </main>
 
+<!-- ── Cookie Consent Banner ──────────────────────────────────────────
+     Shown on first visit; dismissed choice persisted in localStorage.
+     To load analytics only after consent:
+       document.addEventListener('fenovera:consent-granted', loadAnalytics);
+  ────────────────────────────────────────────────────────────────── -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="false"
+     aria-labelledby="cookie-banner-title" hidden>
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__text">
+      <p class="cookie-banner__title" id="cookie-banner-title">We use cookies</p>
+      <p class="cookie-banner__body">
+        We use strictly necessary cookies to keep the site running. We may also use
+        analytics and marketing cookies to understand how visitors use our site.
+        <a href="../cookies/" class="cookie-banner__link">Learn more in our Cookie Policy</a>.
+      </p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="btn btn-secondary btn-sm" id="cookie-reject" type="button">
+        Reject Non-Essential
+      </button>
+      <button class="btn btn-primary btn-sm" id="cookie-accept" type="button">
+        Accept All
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var STORAGE_KEY = 'fenoveraCookieConsent';
+  var banner    = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var rejectBtn = document.getElementById('cookie-reject');
+
+  // Expose consent state globally so analytics loaders can check it
+  window.fenovera = window.fenovera || {};
+  window.fenovera.consentGranted = false;
+
+  function dismiss(choice) {
+    try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
+    banner.setAttribute('hidden', '');
+    if (choice === 'accepted') {
+      window.fenovera.consentGranted = true;
+      // Fire event — attach analytics loaders like:
+      //   document.addEventListener('fenovera:consent-granted', loadAnalytics);
+      document.dispatchEvent(new CustomEvent('fenovera:consent-granted'));
+    }
+  }
+
+  // Check existing preference
+  var existing;
+  try { existing = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+
+  if (existing === 'accepted') {
+    window.fenovera.consentGranted = true;
+  } else if (!existing) {
+    // Show after short delay so it doesn't flash on page load
+    setTimeout(function () {
+      banner.removeAttribute('hidden');
+      acceptBtn.focus();
+    }, 800);
+  }
+
+  if (acceptBtn) acceptBtn.addEventListener('click', function () { dismiss('accepted'); });
+  if (rejectBtn) rejectBtn.addEventListener('click', function () { dismiss('rejected'); });
+}());
+</script>
+
 <footer class="site-footer">
   <div class="site-footer__main">
 
@@ -565,7 +636,8 @@
       <div class="site-footer__col-label">Company</div>
       <nav class="site-footer__links" aria-label="Company footer navigation">
         <a href="../about/" class="site-footer__link">About Fenovera</a>
-        <a href="../contact/" class="site-footer__link">Contact</a>
+        <a href="../projects/" class="site-footer__link">Projects</a>
+        <a href="../contact/" class="site-footer__link" aria-current="page">Contact</a>
       </nav>
     </div>
 
@@ -605,11 +677,6 @@
 
 </footer>
 
-
-  <script src="../site/nav.js" defer></script>
-
-</body>
-</html>
 
   <script src="../site/nav.js" defer></script>
 
