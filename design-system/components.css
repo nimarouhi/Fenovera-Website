@@ -137,6 +137,10 @@
   .site-header__hamburger { display: flex; }
 }
 
+@media (max-width: 480px) {
+  .site-header__quote-btn { display: none; }
+}
+
 
 /* ─────────────────────────────────────────────────────────────────────
    2. DESKTOP NAVIGATION

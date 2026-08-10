@@ -1,6 +1,6 @@
 # Fenovera — robots.txt
 # Site is in pre-launch state. All pages carry noindex, nofollow.
-# Owner action: update Disallow rules and remove noindex meta before launch.
+# Owner action: run "node scripts/build-site.js --release" to build for production.
 
 User-agent: *
 Disallow: /

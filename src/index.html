@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Fenovera | Aluminum and uPVC Windows &amp; Doors</title>
-  <meta name="description" content="Fenovera supplies aluminum and uPVC window and door systems for residential and commercial projects in the Bay Area. Contact us for pricing, specifications, and availability.">
+  <title>Fenovera | Aluminum, uPVC, and PVC Windows &amp; Doors</title>
+  <meta name="description" content="Fenovera supplies aluminum, uPVC, and PVC window and door systems for residential and commercial projects in the Bay Area. Contact us for pricing, specifications, and availability.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fenovera.com/">
   <meta property="og:site_name" content="Fenovera">
-  <meta property="og:title" content="Fenovera | Aluminum and uPVC Windows &amp; Doors">
-  <meta property="og:description" content="Bay Area distributor of aluminum and uPVC window and door systems for residential and commercial projects.">
+  <meta property="og:title" content="Fenovera | Aluminum, uPVC, and PVC Windows &amp; Doors">
+  <meta property="og:description" content="Bay Area distributor of aluminum, uPVC, and PVC window and door systems for residential and commercial projects.">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Fenovera | Aluminum and uPVC Windows &amp; Doors">
-  <meta name="twitter:description" content="Bay Area distributor of aluminum and uPVC window and door systems.">
+  <meta name="twitter:title" content="Fenovera | Aluminum, uPVC, and PVC Windows &amp; Doors">
+  <meta name="twitter:description" content="Bay Area distributor of aluminum, uPVC, and PVC window and door systems.">
 <!-- Design system -->
   <link rel="stylesheet" href="design-system/tokens.css">
   <link rel="stylesheet" href="design-system/base.css">
@@ -161,7 +161,49 @@
       line-height: var(--leading-relaxed);
     }
 
-    /* ── Material comparison ─────────────────────────────── */
+    /* ── Material comparison — mobile stacked cards ─────── */
+    .home-compare__cards {
+      display: none;
+    }
+    .home-compare__card {
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: var(--space-4);
+    }
+    .home-compare__card-header {
+      padding: var(--space-4) var(--space-5);
+      font-family: var(--font-heading);
+      font-weight: var(--weight-bold);
+      font-size: var(--text-lg);
+      border-bottom: 2px solid currentColor;
+    }
+    .home-compare__card-header--al   { color: var(--color-navy); }
+    .home-compare__card-header--upvc { color: var(--color-bronze-interactive); }
+    .home-compare__card-header--pvc  { color: var(--color-ink-secondary); }
+    .home-compare__card-row {
+      display: flex;
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-5);
+      border-bottom: 1px solid var(--color-border-subtle);
+      font-size: var(--text-sm);
+    }
+    .home-compare__card-row:last-child { border-bottom: none; }
+    .home-compare__card-label {
+      flex: 0 0 38%;
+      font-weight: var(--weight-semibold);
+      color: var(--color-ink);
+    }
+    .home-compare__card-value {
+      flex: 1;
+      color: var(--color-ink-secondary);
+    }
+    @media (max-width: 639px) {
+      .home-compare__table  { display: none; }
+      .home-compare__cards  { display: block; }
+    }
+
+    /* ── Material comparison — table ─────────────────────── */
     .home-compare {
       margin-top: var(--space-10);
       overflow-x: auto;
@@ -340,10 +382,18 @@
       background-image:
         linear-gradient(rgba(11,29,46,0.82), rgba(11,29,46,0.82)),
         url('img/home/fenovera-home-background.webp');
-      background-size: contain;
+      background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
       border-bottom: none;
+    }
+    /* Portrait / narrow screens: anchor the focal point so the building
+       stays centred rather than clipping to the sides. */
+    @media (max-width: 767px) {
+      body.page-home .home-hero {
+        background-size: cover;
+        background-position: center top;
+      }
     }
 
     /* ── 2. Hero layout: centered single column */
@@ -591,6 +641,83 @@
               </tr>
             </tbody>
           </table>
+
+          <!-- Mobile stacked cards (visible only on narrow screens) -->
+          <div class="home-compare__cards" aria-label="Material comparison">
+
+            <div class="home-compare__card">
+              <div class="home-compare__card-header home-compare__card-header--al">Aluminum</div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Frame sightlines</span>
+                <span class="home-compare__card-value">Slim: minimal visual footprint, maximum glass area</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Thermal performance</span>
+                <span class="home-compare__card-value">Good: thermal-break options available across all series</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Maintenance</span>
+                <span class="home-compare__card-value">Low: durable powder-coat finish, does not corrode</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Span capability</span>
+                <span class="home-compare__card-value">Excellent: handles large openings and commercial spans</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Best for</span>
+                <span class="home-compare__card-value">Modern architecture, large glazed areas, commercial projects</span>
+              </div>
+            </div>
+
+            <div class="home-compare__card">
+              <div class="home-compare__card-header home-compare__card-header--upvc">uPVC</div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Frame sightlines</span>
+                <span class="home-compare__card-value">Wider frame profile, clean and uniform appearance</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Thermal performance</span>
+                <span class="home-compare__card-value">Excellent: multi-chamber profiles provide built-in insulation</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Maintenance</span>
+                <span class="home-compare__card-value">Very low; never needs painting or refinishing</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Span capability</span>
+                <span class="home-compare__card-value">Good: well suited to standard residential opening sizes</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Best for</span>
+                <span class="home-compare__card-value">Residential builds where thermal efficiency is the priority</span>
+              </div>
+            </div>
+
+            <div class="home-compare__card">
+              <div class="home-compare__card-header home-compare__card-header--pvc">PVC</div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Frame sightlines</span>
+                <span class="home-compare__card-value">Wider frame; can bow or warp over time</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Thermal performance</span>
+                <span class="home-compare__card-value">Moderate: basic single-chamber construction typical</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Maintenance</span>
+                <span class="home-compare__card-value">Medium: prone to discoloration and surface degradation</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Span capability</span>
+                <span class="home-compare__card-value">Limited: not suited to large or structural spans</span>
+              </div>
+              <div class="home-compare__card-row">
+                <span class="home-compare__card-label">Best for</span>
+                <span class="home-compare__card-value">Budget-constrained projects with standard opening sizes</span>
+              </div>
+            </div>
+
+          </div><!-- end home-compare__cards -->
 
           <p class="home-compare__note">
             Not sure which to choose?

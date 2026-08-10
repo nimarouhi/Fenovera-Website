@@ -166,7 +166,7 @@
     </nav>
 
     <div class="site-header__actions">
-      <a href="../quote/" class="btn btn-primary btn-sm">Request a Free Quote</a>
+      <a href="../quote/" class="btn btn-primary btn-sm site-header__quote-btn">Request a Free Quote</a>
       <button class="site-header__hamburger"
         aria-label="Open navigation menu"
         aria-expanded="false"
@@ -182,7 +182,7 @@
   </div><!-- end site-header__inner -->
 </header>
 
-<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
   <div class="mobile-nav__backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
   <div class="mobile-nav__drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
 
@@ -425,7 +425,6 @@
     // Show after short delay so it doesn't flash on page load
     setTimeout(function () {
       banner.removeAttribute('hidden');
-      acceptBtn.focus();
     }, 800);
   }
 

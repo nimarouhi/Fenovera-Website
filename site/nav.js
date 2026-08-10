@@ -1,5 +1,5 @@
 /* Fenovera — Site Navigation Interactions
- * Version: 1.0  Phase 4
+ * Version: 1.1
  *
  * Handles runtime interactive behaviour for the site navigation. Requires
  * complete static header and footer HTML already present in the document
@@ -11,7 +11,7 @@
  * Initialises:
  *   - Scroll shadow on the site header
  *   - Desktop mega-menu (click to toggle, Escape to close, outside-click to close)
- *   - Mobile nav drawer (open / close, focus trap, Escape to close)
+ *   - Mobile nav drawer (open / close, focus trap, inert when closed, Escape to close)
  *   - Mobile Products accordion (expand / collapse submenu)
  */
 (function () {
@@ -29,14 +29,18 @@
 
     // ── Desktop mega-menu ───────────────────────────────────────────────────
     var navProducts = document.getElementById('nav-products');
+    var desktopMenuOpen = false;
+
     if (navProducts) {
       var trigger = navProducts.querySelector('[aria-haspopup="true"]');
 
       function openMenu() {
+        desktopMenuOpen = true;
         navProducts.classList.add('is-open');
         if (trigger) trigger.setAttribute('aria-expanded', 'true');
       }
       function closeMenu() {
+        desktopMenuOpen = false;
         navProducts.classList.remove('is-open');
         if (trigger) trigger.setAttribute('aria-expanded', 'false');
       }
@@ -49,8 +53,11 @@
       document.addEventListener('click', function (e) {
         if (!navProducts.contains(e.target)) closeMenu();
       });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
+      // Escape only closes the desktop menu when it is open; stop propagation
+      // so the event does NOT also reach any mobile-nav listener.
+      navProducts.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && desktopMenuOpen) {
+          e.stopPropagation();
           closeMenu();
           if (trigger) trigger.focus();
         }
@@ -73,6 +80,7 @@
     function openMobileNav() {
       if (!mobileNav || !hamburger) return;
       lastFocused = document.activeElement;
+      mobileNav.removeAttribute('inert');
       mobileNav.classList.add('is-open');
       mobileNav.setAttribute('aria-hidden', 'false');
       hamburger.setAttribute('aria-expanded', 'true');
@@ -83,6 +91,7 @@
 
     function closeMobileNav() {
       if (!mobileNav || !hamburger) return;
+      mobileNav.setAttribute('inert', '');
       mobileNav.classList.remove('is-open');
       mobileNav.setAttribute('aria-hidden', 'true');
       hamburger.setAttribute('aria-expanded', 'false');
@@ -99,8 +108,16 @@
 
     if (mobileNav) {
       mobileNav.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') { closeMobileNav(); return; }
+        // Escape: only handle when drawer is actually open
+        if (e.key === 'Escape') {
+          if (mobileNav.classList.contains('is-open')) {
+            e.stopPropagation();
+            closeMobileNav();
+          }
+          return;
+        }
         if (e.key !== 'Tab') return;
+        // Focus trap
         var focusable = getFocusable(mobileNav);
         if (!focusable.length) return;
         var first = focusable[0];

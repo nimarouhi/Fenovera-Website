@@ -144,7 +144,7 @@
     </nav>
 
     <div class="site-header__actions">
-      <a href="../quote/" class="btn btn-primary btn-sm">Request a Free Quote</a>
+      <a href="../quote/" class="btn btn-primary btn-sm site-header__quote-btn">Request a Free Quote</a>
       <button class="site-header__hamburger"
         aria-label="Open navigation menu"
         aria-expanded="false"
@@ -160,7 +160,7 @@
   </div><!-- end site-header__inner -->
 </header>
 
-<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
   <div class="mobile-nav__backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
   <div class="mobile-nav__drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
 
@@ -240,10 +240,10 @@
           <path d="M4 30l14-12 10 10 8-7 16 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="17" cy="20" r="4" stroke="currentColor" stroke-width="1.5"/>
         </svg>
-        <h2 class="projects-placeholder__title" id="projects-placeholder-heading">Portfolio in Development</h2>
+        <h2 class="projects-placeholder__title" id="projects-placeholder-heading">Coming Soon</h2>
         <p class="projects-placeholder__body">
           Project photography and installation case studies are being compiled.
-          In the meantime, contact us to discuss your project or to request references.
+          Contact us to discuss your project or to request references.
         </p>
         <a href="../contact/" class="btn btn-primary">Contact Us</a>
       </div>
@@ -311,7 +311,6 @@
     // Show after short delay so it doesn't flash on page load
     setTimeout(function () {
       banner.removeAttribute('hidden');
-      acceptBtn.focus();
     }, 800);
   }
 

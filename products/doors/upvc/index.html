@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>uPVC Doors | Fenovera</title>
-  <meta name="description" content="uPVC door series from Prima and Wanjia. Casement and sliding configurations.">
+  <meta name="description" content="uPVC door series. Casement and sliding configurations.">
   <!-- noindex: draft page: remove once approved for launch -->
   <meta name="robots" content="noindex, nofollow">
 <!-- Design System v1.3.1 -->
@@ -18,7 +18,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fenovera">
   <meta property="og:title" content="uPVC Doors | Fenovera">
-  <meta property="og:description" content="uPVC door series from Prima and Wanjia. Casement and sliding configurations.">
+  <meta property="og:description" content="uPVC door series. Casement and sliding configurations.">
   <meta property="og:url" content="https://fenovera.com/products/doors/upvc/">
   <meta property="og:image" content="https://fenovera.com/img/casement.jpg">
   <!-- /SEO ──────────────────────────────────────────────────────── -->
@@ -111,7 +111,7 @@
     </nav>
 
     <div class="site-header__actions">
-      <a href="../../../quote/" class="btn btn-primary btn-sm">Request a Free Quote</a>
+      <a href="../../../quote/" class="btn btn-primary btn-sm site-header__quote-btn">Request a Free Quote</a>
       <button class="site-header__hamburger"
         aria-label="Open navigation menu"
         aria-expanded="false"
@@ -127,7 +127,7 @@
   </div><!-- end site-header__inner -->
 </header>
 
-<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
   <div class="mobile-nav__backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
   <div class="mobile-nav__drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
 
@@ -214,7 +214,7 @@
     <section class="page-section page-section--flush-top product-hero" aria-labelledby="cat-heading">
       <div class="container">
         <h1 class="section-title" id="cat-heading">uPVC Doors</h1>
-        <p class="section-body">uPVC door series from Prima and Wanjia. Casement and sliding configurations.</p>
+        <p class="section-body">uPVC door series. Casement and sliding configurations.</p>
       </div>
     </section>
 
@@ -229,7 +229,6 @@
       <img src="../../../img/upvc-prm60u-door-hero.jpg" alt="PRM-60 Series uPVC casement door with glazing on residential exterior" loading="lazy" decoding="async">
     </div>
     <div class="product-series-card__body">
-      <div class="product-series-card__mfr">Prima</div>
       <div class="product-series-card__name">PRM-60 Series uPVC Casement Door</div>
       <span class="badge badge-navy product-series-card__match-badge">Matching Window Series Available</span>
       <div class="product-series-card__chips"><span class="type-chip">Casement</span></div>
@@ -241,7 +240,6 @@
       <img src="../../../img/upvc-prm66u-door-hero.jpg" alt="PRM-66 Series uPVC sliding door in dark gray on white brick exterior" loading="lazy" decoding="async">
     </div>
     <div class="product-series-card__body">
-      <div class="product-series-card__mfr">Prima</div>
       <div class="product-series-card__name">PRM-66 Series uPVC Sliding Door</div>
       <div class="product-series-card__chips"><span class="type-chip">Sliding</span></div>
       <div class="product-series-card__link">View details →</div>
@@ -252,7 +250,6 @@
       <img src="../../../img/upvc-prm88u-door-hero.jpg" alt="PRM-88 Series uPVC sliding door open to garden patio with pergola" loading="lazy" decoding="async">
     </div>
     <div class="product-series-card__body">
-      <div class="product-series-card__mfr">Prima</div>
       <div class="product-series-card__name">PRM-88 Series uPVC Sliding Door</div>
       <span class="badge badge-navy product-series-card__match-badge">Matching Window Series Available</span>
       <div class="product-series-card__chips"><span class="type-chip">Sliding</span></div>
@@ -264,7 +261,6 @@
       <img src="../../../img/upvc-prm66u-door-hero.jpg" alt="PRM-114 Series uPVC sliding door in dark gray on white brick exterior" loading="lazy" decoding="async">
     </div>
     <div class="product-series-card__body">
-      <div class="product-series-card__mfr">Prima</div>
       <div class="product-series-card__name">PRM-114 Series uPVC Sliding Door</div>
       <div class="product-series-card__chips"><span class="type-chip">Sliding</span></div>
       <div class="product-series-card__link">View details →</div>
@@ -275,7 +271,6 @@
       <img src="../../../img/upvc-wj195-door-hero.jpg" alt="WJ-195 Series uPVC sliding glass door with mountain and lake view" loading="lazy" decoding="async">
     </div>
     <div class="product-series-card__body">
-      <div class="product-series-card__mfr">Wanjia</div>
       <div class="product-series-card__name">WJ-195 Series uPVC Sliding Door</div>
       <div class="product-series-card__chips"><span class="type-chip">Sliding</span></div>
       <div class="product-series-card__link">View details →</div>
@@ -363,7 +358,6 @@
     // Show after short delay so it doesn't flash on page load
     setTimeout(function () {
       banner.removeAttribute('hidden');
-      acceptBtn.focus();
     }, 800);
   }
 

@@ -7,8 +7,9 @@
  * tokens and product/category data, writes complete static HTML.
  *
  * Usage:
- *   node scripts/build-site.js
- *   node scripts/build-site.js --dry-run     (print resolved HTML to stdout, no writes)
+ *   node scripts/build-site.js                  (dev build: all products, noindex)
+ *   node scripts/build-site.js --dry-run        (print resolved HTML to stdout, no writes)
+ *   node scripts/build-site.js --release        (production: indexable, no dev notice, draft pages excluded from sitemap)
  *
  * Source / output structure:
  *   src/<path>/index.html        — source page; contains BUILD: markers + page-specific content
@@ -50,6 +51,7 @@ var TEMPLATES_DIR   = path.join(PROJECT_ROOT, 'site', 'templates');
 var SRC_TEMPLATES   = path.join(PROJECT_ROOT, 'src', 'templates');
 var PAGE_DATA_PATH  = path.join(TEMPLATES_DIR, 'page-data.js');
 var DRY_RUN         = process.argv.indexOf('--dry-run') !== -1;
+var RELEASE         = process.argv.indexOf('--release') !== -1;
 
 // Canonical site base URL — update to the real domain before launch.
 var SITE_BASE_URL   = 'https://fenovera.com';
@@ -478,7 +480,6 @@ function renderCategoryProductGrid(data) {
   data.products.forEach(function (product) {
     var url = '/products/' + product.typeSlug + '/' + product.materialSlug + '/' + product.slug + '/';
     var cardImg = product.heroImage;
-    var mfr = getManufacturerLabel(product.slug);
     html += '  <a href="' + url + '" class="product-series-card">\n';
     html += '    <div class="product-series-card__image">\n';
     if (cardImg && cardImg.src) {
@@ -488,9 +489,7 @@ function renderCategoryProductGrid(data) {
     }
     html += '    </div>\n';
     html += '    <div class="product-series-card__body">\n';
-    if (mfr) {
-      html += '      <div class="product-series-card__mfr">' + escapeHtml(mfr) + '</div>\n';
-    }
+    // Supplier name (product-series-card__mfr) intentionally suppressed — not for public display.
     html += '      <div class="product-series-card__name">' + escapeHtml(product.publicName) + '</div>\n';
     if (/^ldw/.test(product.slug) || product.slug === 'prm-k80a') {
       html += '      <span class="badge badge-success product-series-card__cert-badge">NFRC</span>\n';
@@ -713,7 +712,18 @@ function buildPage(page) {
   // 7. Inject SEO meta (canonical, OG, favicon) — must run before path rewriting
   output = injectSeoMeta(output, page);
 
-  // 8. Rewrite root-relative paths → file://-safe relative paths
+  // 8. Release-mode post-processing
+  if (RELEASE) {
+    var isPublished = !page.data || page.data.publicationStatus !== 'draft';
+    if (isPublished) {
+      // Strip development notice banner
+      output = output.replace(/[ \t]*<div class="dev-notice"[^>]*>[\s\S]*?<\/div>[ \t]*\n?/m, '');
+      // Make page indexable
+      output = output.replace(/content="noindex,\s*nofollow"/g, 'content="index, follow"');
+    }
+  }
+
+  // 9. Rewrite root-relative paths → file://-safe relative paths
   var basePath = computeBasePath(page.out);
   output = resolveRootRelativePaths(output, basePath);
 
@@ -753,18 +763,25 @@ if (errors > 0) {
 }
 
 // ── Generate robots.txt ─────────────────────────────────────────────────────
-// All pages carry noindex/nofollow; robots.txt disallows crawling until launch.
-// Owner action: change Disallow to "Disallow:" (allow all) when going live.
-var robotsTxt = [
-  '# Fenovera — robots.txt',
-  '# Site is in pre-launch state. All pages carry noindex, nofollow.',
-  '# Owner action: update Disallow rules and remove noindex meta before launch.',
-  '',
-  'User-agent: *',
-  'Disallow: /',
-  '',
-  'Sitemap: ' + SITE_BASE_URL + '/sitemap.xml',
-].join('\n');
+var robotsTxt = RELEASE
+  ? [
+    '# Fenovera — robots.txt',
+    '',
+    'User-agent: *',
+    'Disallow:',
+    '',
+    'Sitemap: ' + SITE_BASE_URL + '/sitemap.xml',
+  ].join('\n')
+  : [
+    '# Fenovera — robots.txt',
+    '# Site is in pre-launch state. All pages carry noindex, nofollow.',
+    '# Owner action: run "node scripts/build-site.js --release" to build for production.',
+    '',
+    'User-agent: *',
+    'Disallow: /',
+    '',
+    'Sitemap: ' + SITE_BASE_URL + '/sitemap.xml',
+  ].join('\n');
 
 if (!DRY_RUN) {
   fs.writeFileSync(path.join(PROJECT_ROOT, 'robots.txt'), robotsTxt, 'utf8');
@@ -772,9 +789,14 @@ if (!DRY_RUN) {
 }
 
 // ── Generate sitemap.xml ────────────────────────────────────────────────────
-var today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
-var sitemapUrls = pages.map(function (page) {
-  return '  <url>\n    <loc>' + canonicalUrl(page.out) + '</loc>\n    <lastmod>' + today + '</lastmod>\n  </url>';
+// In release mode: exclude draft product pages. In dev mode: include all.
+// <lastmod> is intentionally omitted — all pages currently share the build date,
+// which is misleading. Omitting is more honest than a uniform fabricated date.
+var sitemapPages = RELEASE
+  ? pages.filter(function (p) { return !(p.data && p.data.publicationStatus === 'draft'); })
+  : pages;
+var sitemapUrls = sitemapPages.map(function (page) {
+  return '  <url>\n    <loc>' + canonicalUrl(page.out) + '</loc>\n  </url>';
 });
 var sitemapXml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
