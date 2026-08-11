@@ -345,7 +345,7 @@ module.exports = [
     seoTitle: 'PRM-108 Series Aluminum Window | Fenovera',
     description: 'Fenovera PRM-108 Series aluminum window with 108 mm frame. Available in casement, awning, and tilt-turn. The PRM-108 Series door is also available.',
     heroIntro: 'Aluminum window series with 108 mm frame. Available in casement, awning, and tilt-turn configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-108a/">PRM-108 Series aluminum door</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
-    heroImage: { src: '/img/al-prm108a-window-hero.jpg', alt: 'PRM-108 Series aluminum casement window open with city reflection', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.4' },
+    heroImage: { src: '/img/al-prm108a-window-hero.jpg', alt: 'PRM-108 Series aluminum casement window open with city reflection', role: 'hero', objectFit: 'contain', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.4' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
