@@ -56,7 +56,7 @@ module.exports = [
         description:      'uPVC window series. Tilt-turn, casement, awning, sliding, and hung configurations.',
         productSlugs: [
           'prm-58u', 'prm-60u', 'prm-70u', 'prm-72u',
-          'prm-80u', 'prm-88u', 'prm-hung', 'wj-72',
+          'prm-80u', 'prm-88u', 'prm-hung', 'wj-72', 'ld-p80', 'ld-p85',
         ],
       },
       {
@@ -108,7 +108,7 @@ module.exports = [
         publicationStatus:'draft',
         seoTitle:         'uPVC Doors | Fenovera',
         description:      'uPVC door series. Casement and sliding configurations.',
-        productSlugs: ['prm-60u', 'prm-66u', 'prm-88u', 'prm-114u', 'wj-195'],
+        productSlugs: ['prm-60u', 'prm-66u', 'prm-88u', 'prm-114u', 'wj-195', 'ld-p108'],
       },
       {
         id:               'doors-pvc',
