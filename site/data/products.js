@@ -1404,7 +1404,7 @@ module.exports = [
     seoTitle: 'PRM-114 Series uPVC Sliding Door | Fenovera',
     description: 'Fenovera PRM-114 Series uPVC sliding door with 114 mm profile.',
     heroIntro: 'PRM-114 Series uPVC sliding door. NFRC certified. Contact us for specifications, pricing, and availability.',
-    heroImage: { src: '/img/upvc-prm66u-door-hero.jpg', alt: 'PRM-114 Series uPVC sliding door in dark gray on white brick exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
+    heroImage: { src: '/img/upvc-prm114u-door-hero.jpg', alt: 'PRM-114 Series uPVC sliding door in dark gray on white brick exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
