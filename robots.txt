@@ -1,8 +1,6 @@
 # Fenovera — robots.txt
-# Site is in pre-launch state. All pages carry noindex, nofollow.
-# Owner action: run "node scripts/build-site.js --release" to build for production.
 
 User-agent: *
-Disallow: /
+Disallow:
 
 Sitemap: https://fenovera.com/sitemap.xml
