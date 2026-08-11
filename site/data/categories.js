@@ -91,7 +91,7 @@ module.exports = [
         displayOrder:     1,
         publicationStatus:'draft',
         seoTitle:         'Aluminum Doors | Fenovera',
-        description:      'Aluminum door series. Casement, French, sliding, bi-fold, slim frame, and lift &amp; slide configurations.',
+        description:      'Aluminum door series. Casement, French, sliding, bi-fold, slim frame, and lift and slide configurations.',
         productSlugs: [
           'ldw-x76', 'ldw-g152', 'ldw-g88',
           'prm-16a', 'prm-50a', 'prm-55a', 'prm-65a',

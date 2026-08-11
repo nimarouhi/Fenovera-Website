@@ -750,7 +750,7 @@ module.exports = [
   {
     id: 'windows-upvc-ld-p85', slug: 'ld-p85',
     typeSlug: 'windows', materialSlug: 'upvc', pageId: 'windows-upvc-ld-p85',
-    publicName: 'LD-P85 uPVC Window', systemType: 'Casement / Awning / Fixed',
+    publicName: 'LD-P85 Series uPVC Window', systemType: 'Casement / Awning / Fixed',
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-P85 Casement & Fixed uPVC Window | Fenovera',
@@ -808,7 +808,7 @@ module.exports = [
   {
     id: 'doors-aluminum-ldw-x76', slug: 'ldw-x76',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-ldw-x76',
-    publicName: 'LD-X76 Patio Door', systemType: 'Casement / French / Swing',
+    publicName: 'LD-X76 Series Thermal-Break Aluminum Door', systemType: 'Casement / French / Swing',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-X76 Series Thermal-Break Aluminum Patio Door | Fenovera',
@@ -842,7 +842,7 @@ module.exports = [
   {
     id: 'doors-aluminum-ldw-g152', slug: 'ldw-g152',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-ldw-g152',
-    publicName: 'LD-G152 Lift & Slide Door', systemType: 'Lift & Slide',
+    publicName: 'LD-G152 Series Thermal-Break Aluminum Door', systemType: 'Lift & Slide',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-G152 Aluminum Lift & Slide Door | Fenovera',
@@ -881,7 +881,7 @@ module.exports = [
   {
     id: 'doors-aluminum-ldw-g88', slug: 'ldw-g88',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-ldw-g88',
-    publicName: 'LD-G88 Bi-Fold Door', systemType: 'Bi-Fold',
+    publicName: 'LD-G88 Series Thermal-Break Aluminum Door', systemType: 'Bi-Fold',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'LD-G88 Thermal-Break Aluminum Bi-Fold Door | Fenovera',
@@ -915,7 +915,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-16a', slug: 'prm-16a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-16a',
-    publicName: 'PRM-16 Series Slim Frame Door', systemType: 'Slim Sliding / Slim Casement',
+    publicName: 'PRM-16 Series Aluminum Door', systemType: 'Slim Sliding / Slim Casement',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-16 Series Aluminum Slim Frame Door | Fenovera',
@@ -1017,7 +1017,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-70a', slug: 'prm-70a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-70a',
-    publicName: 'PRM-70 Series Aluminum Bi-Fold Door', systemType: 'Bi-Fold (Double Panel)',
+    publicName: 'PRM-70 Series Aluminum Door', systemType: 'Bi-Fold (Double Panel)',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-70 Series Aluminum Bi-Fold Door | Fenovera',
@@ -1041,7 +1041,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-75a', slug: 'prm-75a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-75a',
-    publicName: 'PRM-75 Series Aluminum Bi-Fold Door', systemType: 'Bi-Fold (Single Panel)',
+    publicName: 'PRM-75 Series Aluminum Door', systemType: 'Bi-Fold (Single Panel)',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-75 Series Aluminum Bi-Fold Door | Fenovera',
@@ -1111,7 +1111,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-121a', slug: 'prm-121a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-121a',
-    publicName: 'PRM-121 Series Aluminum Sliding Door', systemType: 'Sliding (Heavy-Duty Narrow Frame)',
+    publicName: 'PRM-121 Series Aluminum Door', systemType: 'Sliding (Heavy-Duty Narrow Frame)',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-121 Series Aluminum Sliding Door | Fenovera',
@@ -1134,7 +1134,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-132a', slug: 'prm-132a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-132a',
-    publicName: 'PRM-132 Series Aluminum Sliding Door', systemType: 'Sliding',
+    publicName: 'PRM-132 Series Aluminum Door', systemType: 'Sliding',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-132 Series Aluminum Sliding Door | Fenovera',
@@ -1157,7 +1157,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-150a', slug: 'prm-150a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-150a',
-    publicName: 'PRM-150 Series Aluminum Sliding Door', systemType: 'Sliding',
+    publicName: 'PRM-150 Series Aluminum Door', systemType: 'Sliding',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-150 Series NFRC Aluminum Sliding Door | Fenovera',
@@ -1179,7 +1179,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-202a', slug: 'prm-202a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-202a',
-    publicName: 'PRM-202 Series Aluminum Sliding Door', systemType: 'Sliding',
+    publicName: 'PRM-202 Series Aluminum Door', systemType: 'Sliding',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-202 Series Aluminum Sliding Door | Fenovera',
@@ -1250,7 +1250,7 @@ module.exports = [
   {
     id: 'doors-aluminum-wj-132', slug: 'wj-132',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-wj-132',
-    publicName: 'WJ-132 Series Aluminum Sliding Door', systemType: 'Sliding (4-Panel / Pocket)',
+    publicName: 'WJ-132 Series Aluminum Door', systemType: 'Sliding (4-Panel / Pocket)',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-132 Series Aluminum Sliding Door | Fenovera',
@@ -1273,7 +1273,7 @@ module.exports = [
   {
     id: 'doors-aluminum-wj-88', slug: 'wj-88',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-wj-88',
-    publicName: 'WJ-88 Series Aluminum Bi-Fold Door', systemType: 'Bi-Fold',
+    publicName: 'WJ-88 Series Aluminum Door', systemType: 'Bi-Fold',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-88 Series Aluminum Folding Door | Fenovera',
@@ -1299,7 +1299,7 @@ module.exports = [
   {
     id: 'doors-aluminum-wj-170', slug: 'wj-170',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-wj-170',
-    publicName: 'WJ-170 Series Aluminum Sliding Door', systemType: 'Sliding',
+    publicName: 'WJ-170 Series Aluminum Door', systemType: 'Sliding',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-170 Series Aluminum Sliding Door | Fenovera',
@@ -1447,7 +1447,7 @@ module.exports = [
   {
     id: 'doors-upvc-ld-p108', slug: 'ld-p108',
     typeSlug: 'doors', materialSlug: 'upvc', pageId: 'doors-upvc-ld-p108',
-    publicName: 'LD-P108 uPVC Door', systemType: 'Sliding',
+    publicName: 'LD-P108 Series uPVC Door', systemType: 'Sliding',
     materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-P108 Sliding Glass uPVC Door | Fenovera',
