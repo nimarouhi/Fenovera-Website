@@ -55,8 +55,9 @@ module.exports = [
         seoTitle:         'uPVC Windows | Fenovera',
         description:      'uPVC window series. Tilt-turn, casement, awning, sliding, and hung configurations.',
         productSlugs: [
+          'ld-p80', 'ld-p85',
           'prm-58u', 'prm-60u', 'prm-70u', 'prm-72u',
-          'prm-80u', 'prm-88u', 'prm-hung', 'wj-72', 'ld-p80', 'ld-p85',
+          'prm-80u', 'prm-88u', 'prm-hung', 'wj-72',
         ],
       },
       {
@@ -90,7 +91,7 @@ module.exports = [
         displayOrder:     1,
         publicationStatus:'draft',
         seoTitle:         'Aluminum Doors | Fenovera',
-        description:      'Aluminum door series. Casement, sliding, bi-fold, slim frame, and lift &amp; slide configurations.',
+        description:      'Aluminum door series. Casement, French, sliding, bi-fold, slim frame, and lift &amp; slide configurations.',
         productSlugs: [
           'ldw-x76', 'ldw-g152', 'ldw-g88',
           'prm-16a', 'prm-50a', 'prm-55a', 'prm-65a',
@@ -108,7 +109,7 @@ module.exports = [
         publicationStatus:'draft',
         seoTitle:         'uPVC Doors | Fenovera',
         description:      'uPVC door series. Casement and sliding configurations.',
-        productSlugs: ['prm-60u', 'prm-66u', 'prm-88u', 'prm-114u', 'wj-195', 'ld-p108'],
+        productSlugs: ['ld-p108', 'prm-60u', 'prm-66u', 'prm-88u', 'prm-114u', 'wj-195'],
       },
       {
         id:               'doors-pvc',

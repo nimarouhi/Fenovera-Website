@@ -69,7 +69,7 @@ module.exports = [
   {
     id: 'windows-aluminum-ldw-x76', slug: 'ldw-x76',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-ldw-x76',
-    publicName: 'LD-X76 Thermal-Break Window', systemType: 'Casement / Tilt-Turn / Awning / Fixed',
+    publicName: 'LD-X76 Series Thermal-Break Aluminum Window', systemType: 'Casement / Tilt-Turn / Awning / Fixed',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-X76 Thermal-Break Aluminum Windows | Fenovera',
@@ -103,7 +103,7 @@ module.exports = [
   {
     id: 'windows-aluminum-ldw-s8520', slug: 'ldw-s8520',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-ldw-s8520',
-    publicName: 'LD-S8520 Slimline Series', systemType: 'Casement / Tilt-Turn / Fixed',
+    publicName: 'LD-S8520 Slimline Series Thermal-Break Aluminum Window', systemType: 'Casement / Tilt-Turn / Fixed',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-S8520 Slimline Thermal-Break Aluminum Windows | Fenovera',
@@ -345,7 +345,7 @@ module.exports = [
     seoTitle: 'PRM-108 Series Aluminum Window | Fenovera',
     description: 'Fenovera PRM-108 Series aluminum window with 108 mm frame. Available in casement, awning, and tilt-turn. The PRM-108 Series door is also available.',
     heroIntro: 'Aluminum window series with 108 mm frame. Available in casement, awning, and tilt-turn configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-108a/">PRM-108 Series aluminum door</a> is available in the same profile. Contact us for specifications, pricing, and availability.',
-    heroImage: { src: '/img/al-prm108a-window-hero.jpg', alt: 'PRM-108 Series aluminum casement window open with city reflection', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.4' },
+    heroImage: { src: '/img/al-prm108a-window-hero.jpg', alt: 'PRM-108 Series aluminum casement window open with city reflection', role: 'hero', objectFit: 'contain', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.4' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
@@ -491,7 +491,7 @@ module.exports = [
   {
     id: 'windows-aluminum-wj-110', slug: 'wj-110',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-wj-110',
-    publicName: 'WJ-110 Slim Frame Series', systemType: 'Slim Frame Sliding',
+    publicName: 'WJ-110 Slim Frame Series Aluminum Window', systemType: 'Slim Frame Sliding',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-110 Slim Frame Aluminum Sliding Window | Fenovera',
@@ -750,7 +750,7 @@ module.exports = [
   {
     id: 'windows-upvc-ld-p85', slug: 'ld-p85',
     typeSlug: 'windows', materialSlug: 'upvc', pageId: 'windows-upvc-ld-p85',
-    publicName: 'LD-P85 Casement & Fixed uPVC Window', systemType: 'Casement / Awning / Fixed',
+    publicName: 'LD-P85 uPVC Window', systemType: 'Casement / Awning / Fixed',
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-P85 Casement & Fixed uPVC Window | Fenovera',
@@ -881,7 +881,7 @@ module.exports = [
   {
     id: 'doors-aluminum-ldw-g88', slug: 'ldw-g88',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-ldw-g88',
-    publicName: 'LD-G88 Bi-Fold Door', systemType: 'Folding',
+    publicName: 'LD-G88 Bi-Fold Door', systemType: 'Bi-Fold',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'LD-G88 Thermal-Break Aluminum Bi-Fold Door | Fenovera',
@@ -1273,7 +1273,7 @@ module.exports = [
   {
     id: 'doors-aluminum-wj-88', slug: 'wj-88',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-wj-88',
-    publicName: 'WJ-88 Series Aluminum Folding Door', systemType: 'Folding',
+    publicName: 'WJ-88 Series Aluminum Bi-Fold Door', systemType: 'Bi-Fold',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-88 Series Aluminum Folding Door | Fenovera',
@@ -1327,7 +1327,7 @@ module.exports = [
   {
     id: 'doors-upvc-prm-60u', slug: 'prm-60u',
     typeSlug: 'doors', materialSlug: 'upvc', pageId: 'doors-upvc-prm-60u',
-    publicName: 'PRM-60 Series uPVC Casement Door', systemType: 'Casement',
+    publicName: 'PRM-60 Series uPVC Door', systemType: 'Casement',
     materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-60 Series uPVC Casement Door | Fenovera',
@@ -1352,7 +1352,7 @@ module.exports = [
   {
     id: 'doors-upvc-prm-66u', slug: 'prm-66u',
     typeSlug: 'doors', materialSlug: 'upvc', pageId: 'doors-upvc-prm-66u',
-    publicName: 'PRM-66 Series uPVC Sliding Door', systemType: 'Sliding',
+    publicName: 'PRM-66 Series uPVC Door', systemType: 'Sliding',
     materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-66 Series uPVC Sliding Door | Fenovera',
@@ -1375,7 +1375,7 @@ module.exports = [
   {
     id: 'doors-upvc-prm-88u', slug: 'prm-88u',
     typeSlug: 'doors', materialSlug: 'upvc', pageId: 'doors-upvc-prm-88u',
-    publicName: 'PRM-88 Series uPVC Sliding Door', systemType: 'Sliding',
+    publicName: 'PRM-88 Series uPVC Door', systemType: 'Sliding',
     materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-88 Series uPVC Sliding Door | Fenovera',
@@ -1398,7 +1398,7 @@ module.exports = [
   {
     id: 'doors-upvc-prm-114u', slug: 'prm-114u',
     typeSlug: 'doors', materialSlug: 'upvc', pageId: 'doors-upvc-prm-114u',
-    publicName: 'PRM-114 Series uPVC Sliding Door', systemType: 'Sliding',
+    publicName: 'PRM-114 Series uPVC Door', systemType: 'Sliding',
     materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-114 Series uPVC Sliding Door | Fenovera',
@@ -1421,7 +1421,7 @@ module.exports = [
   {
     id: 'doors-upvc-wj-195', slug: 'wj-195',
     typeSlug: 'doors', materialSlug: 'upvc', pageId: 'doors-upvc-wj-195',
-    publicName: 'WJ-195 Series uPVC Sliding Door', systemType: 'Sliding',
+    publicName: 'WJ-195 Series uPVC Door', systemType: 'Sliding',
     materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-195 Series uPVC Sliding Door | Fenovera',
@@ -1447,7 +1447,7 @@ module.exports = [
   {
     id: 'doors-upvc-ld-p108', slug: 'ld-p108',
     typeSlug: 'doors', materialSlug: 'upvc', pageId: 'doors-upvc-ld-p108',
-    publicName: 'LD-P108 Sliding Glass uPVC Door', systemType: 'Sliding',
+    publicName: 'LD-P108 uPVC Door', systemType: 'Sliding',
     materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-P108 Sliding Glass uPVC Door | Fenovera',
