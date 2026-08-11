@@ -483,7 +483,14 @@ function renderCategoryProductGrid(data) {
     html += '  <a href="' + url + '" class="product-series-card">\n';
     html += '    <div class="product-series-card__image">\n';
     if (cardImg && cardImg.src) {
-      html += '      <img src="' + escapeHtml(cardImg.src) + '" alt="' + escapeHtml(cardImg.alt || product.publicName) + '" loading="lazy" decoding="async">\n';
+      var cardImgStyle = '';
+      if (cardImg.objectFit || cardImg.objectPosition) {
+        var sp = [];
+        if (cardImg.objectFit)     sp.push('object-fit:'     + cardImg.objectFit);
+        if (cardImg.objectPosition) sp.push('object-position:' + cardImg.objectPosition);
+        cardImgStyle = ' style="' + escapeHtml(sp.join(';')) + '"';
+      }
+      html += '      <img src="' + escapeHtml(cardImg.src) + '" alt="' + escapeHtml(cardImg.alt || product.publicName) + '"' + cardImgStyle + ' loading="lazy" decoding="async">\n';
     } else {
       html += '      <div class="product-card__img-placeholder"></div>\n';
     }
