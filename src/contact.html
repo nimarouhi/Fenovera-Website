@@ -245,17 +245,10 @@
           <!-- Right: enquiry form -->
           <div class="contact-form-card">
 
-            <!--
-              FORM DELIVERY NOTE
-              No backend is configured. This form shows a client-side success state
-              without transmitting data. Configuring form delivery (email service,
-              CRM, or webhook) is an owner-controlled launch blocker.
-            -->
-
             <h2 class="contact-form-card__title">Send Us a Message</h2>
 
             <!-- Success state (shown after submission) -->
-            <div class="form-success" id="contact-success" role="status" aria-live="polite">
+            <div class="form-success" id="contact-success" role="status" aria-live="polite" tabindex="-1">
               <svg class="form-success__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
                 <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
                 <path d="M14 24l7 7 13-14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -267,14 +260,20 @@
             <form
               id="contact-form"
               method="post"
-              action="#"
+              action="https://api.web3forms.com/submit"
               novalidate
               aria-label="Contact enquiry form"
             >
+              <!-- Web3Forms delivery — replace value with your access key from web3forms.com -->
+              <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+              <input type="hidden" name="subject" value="New Contact Enquiry — Fenovera">
+              <input type="hidden" name="from_name" value="Fenovera Website">
+              <input type="hidden" name="redirect" value="false">
+
               <!-- Honeypot field — spam protection (leave blank) -->
               <div class="form-honeypot" aria-hidden="true">
                 <label for="hp-website">Website (leave blank)</label>
-                <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+                <input type="text" id="hp-website" name="botcheck" tabindex="-1" autocomplete="off">
               </div>
 
               <div class="form-row">
@@ -411,7 +410,7 @@
         e.preventDefault();
 
         // Check honeypot
-        var hp = form.querySelector('[name="website"]');
+        var hp = form.querySelector('[name="botcheck"]');
         if (hp && hp.value) return; // silently discard
 
         var valid = true;
@@ -420,16 +419,36 @@
         });
 
         if (!valid) {
-          // Move focus to first invalid field
           var first = form.querySelector('[aria-invalid="true"]');
           if (first) first.focus();
           return;
         }
 
-        // Show success state (no data transmitted — backend required for launch)
-        form.style.display = 'none';
-        success.style.display = 'block';
-        success.focus();
+        // Disable button while submitting
+        var btn = form.querySelector('[type="submit"]');
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+        // Submit to Web3Forms
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.success) {
+            form.style.display = 'none';
+            success.style.display = 'block';
+            success.focus();
+          } else {
+            if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
+            alert('Sorry, there was a problem sending your message. Please email us directly at info@fenovera.com.');
+          }
+        })
+        .catch(function () {
+          if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
+          alert('Sorry, there was a problem sending your message. Please email us directly at info@fenovera.com.');
+        });
       });
     })();
   </script>

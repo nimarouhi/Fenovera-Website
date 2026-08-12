@@ -78,7 +78,7 @@ module.exports = [
     heroImage: { src: '/img/al-x76-window-hero.jpg', alt: 'LD-X76 Series thermal-break aluminum casement window in a residential interior', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'Fenovera X76 Series Thermal-Break Catalog, p.1' },
     galleryImages: [],
     finishes: {
-      glass: { types: ['Tempered glass (3C or SGCC certified)', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass (meets U-value and SHGC requirements)', '4SG triple-pane (thermoplastic spacer, argon-filled, 25-year warranty)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'] },
+      glass: { types: ['Tempered glass (3C or SGCC certified)', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass (meets U-value and SHGC requirements)', '4SG triple-pane (thermoplastic spacer, argon-filled)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'] },
       color: { label: 'Powder coating / Fluorocarbon coating', note: 'Powder coating (AkzoNobel) available for orders of any quantity. Fluorocarbon coating available for orders above 100 m² (~1,080 sqft). Available colors include matt black, brown, grey, starry black, matt white, and birch wood. Custom two-tone (interior and exterior color) finishes available.' },
     },
     hardware: 'German-origin hardware: Siegenia, HOPPE, ROTO, HAUTAU, FSB, Runas, HOPO. Exposed or concealed Chic Hinges (inward casement and tilt-turn). Handle finishes: white, silver, bronze, black.',
@@ -112,7 +112,7 @@ module.exports = [
     heroImage: { src: '/img/al-s8520-slimline-hero.jpg', alt: 'LD-S8520 Slimline Series thermal-break aluminum windows on a modern architectural building facade', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'LEDOW S8520 Slimline Series Catalog 2024, p.1' },
     galleryImages: [],
     finishes: {
-      glass: { types: ['Tempered glass (3C or SGCC certified)', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass (meets U-value and SHGC requirements)', '4SG triple-pane (thermoplastic spacer, argon-filled, 25-year warranty)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'] },
+      glass: { types: ['Tempered glass (3C or SGCC certified)', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass (meets U-value and SHGC requirements)', '4SG triple-pane (thermoplastic spacer, argon-filled)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'] },
       color: { label: 'Powder coating / Fluorocarbon coating', note: 'Powder coating (AkzoNobel) available for orders of any quantity. Fluorocarbon coating available for orders above 100 m² (~1,080 sqft). Available colors include matt black, brown, grey, starry black, matt white, and birch wood. Custom two-tone (interior and exterior color) finishes available.' },
     },
     hardware: 'German-origin hardware: Siegenia, HOPPE, FSB. Exposed or concealed Chic Hinges (inward casement and tilt-turn). Handle finishes: white, silver, bronze, black.',
@@ -817,7 +817,7 @@ module.exports = [
     heroImage: { src: '/img/al-x76-door-hero.jpg', alt: 'LD-X76 Series thermal-break aluminum patio door on a modern home exterior', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'Fenovera X76 Series Thermal-Break Catalog, p.5' },
     galleryImages: [],
     finishes: {
-      glass: { types: ['Tempered glass (3C or SGCC certified)', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass (meets U-value and SHGC requirements)', '4SG triple-pane (thermoplastic spacer, argon-filled, 25-year warranty)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'] },
+      glass: { types: ['Tempered glass (3C or SGCC certified)', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass (meets U-value and SHGC requirements)', '4SG triple-pane (thermoplastic spacer, argon-filled)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'] },
       color: { label: 'Powder coating / Fluorocarbon coating', note: 'Powder coating (AkzoNobel) available for orders of any quantity. Fluorocarbon coating available for orders above 100 m² (~1,080 sqft). Available colors include matt black, brown, grey, starry black, matt white, and birch wood. Custom two-tone (interior and exterior color) finishes available.' },
     },
     hardware: 'German-origin hardware: Siegenia, HOPPE, ROTO, HAUTAU, FSB, Runas, HOPO. Handle finishes: white, silver, bronze, black.',
@@ -851,7 +851,7 @@ module.exports = [
     heroImage: { src: '/img/al-lift-slide-door-hero.jpg', alt: 'LD-G152 Series thermal-break aluminum lift and slide door', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'Fenovera G152 Lift and Slide Series Catalog' },
     galleryImages: [],
     finishes: {
-      glass: { types: ['Tempered glass', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass', '4SG triple-pane (thermoplastic spacer, 25-year warranty)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'], note: 'Glass type matched to application; our team will advise the best option.' },
+      glass: { types: ['Tempered glass', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass', '4SG triple-pane (thermoplastic spacer)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'], note: 'Glass type matched to application; our team will advise the best option.' },
       color: { label: 'Powder coating / Fluorocarbon coating', note: 'Powder coating (AkzoNobel) available for orders of any quantity. Fluorocarbon coating available for orders above 100 m² (~1,080 sqft). Available colors include matt black, brown, grey, starry black, matt white, and birch wood. Custom two-tone (interior and exterior color) finishes available.' },
     },
     hardware: null, certifications: ALUMINUM_CERTIFICATIONS_PREMIUM, documents: [],
@@ -890,7 +890,7 @@ module.exports = [
     heroImage: { src: '/img/al-g88-bifold-hero.jpg', alt: 'LD-G88 Series thermal-break aluminum bi-folding door on lakeside home exterior with person relaxing on patio', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'LEDOW G88 Bi folding series 2024 catalog, p.1 (cover)' },
     galleryImages: [],
     finishes: {
-      glass: { types: ['Tempered glass (3C / SGCC certified)', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass', '4SG triple-pane (thermoplastic spacer, argon-filled, 25-year warranty)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'], note: 'Glass type matched to application; our team will advise the best option.' },
+      glass: { types: ['Tempered glass (3C / SGCC certified)', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass', '4SG triple-pane (thermoplastic spacer, argon-filled)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'], note: 'Glass type matched to application; our team will advise the best option.' },
       color: { label: 'Powder coating / Fluorocarbon coating', note: 'Powder coating (AkzoNobel) available for any quantity. Fluorocarbon coating for orders above 100 m² (~1,080 sqft). Standard colors: matt black, brown, grey, starry black, matt white, birch wood. Custom two-tone (interior/exterior) finishes available.' },
     },
     hardware: { options: ['HOPPE (Germany)', 'Siegenia (Germany)', 'CMECH'], note: 'Handle colors available: white, silver, bronze, black.' },
