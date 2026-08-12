@@ -167,6 +167,9 @@ function renderSection(name, data) {
     case 'downloads':
       return renderDownloads(data);
 
+    case 'key-features':
+      return renderKeyFeatures(data);
+
     case 'cross-link':
       return renderCrossLink(data);
 
@@ -298,6 +301,27 @@ function renderGallery(data) {
     html += '          <img src="' + escapeHtml(img.src) + '" alt="' + escapeHtml(img.alt) + '"' + (function(i){ var s=[]; if(i.objectFit) s.push('object-fit:'+i.objectFit); if(i.objectPosition) s.push('object-position:'+i.objectPosition); return s.length?' style="'+escapeHtml(s.join(';'))+'"':''; }(img)) + ' loading="lazy" decoding="async">\n';
     html += '        </button>\n';
     html += '      </li>\n';
+  });
+  html += '    </ul>\n';
+  html += '  </div>\n';
+  html += '</section>\n';
+  return html;
+}
+
+/**
+ * renderKeyFeatures — renders a Key Features section when data.keyFeatures is present.
+ * Appears between the hero/gallery and the specifications section.
+ */
+function renderKeyFeatures(data) {
+  if (!data.keyFeatures || !data.keyFeatures.length) return '';
+  var html = '';
+  html += '<section class="page-section page-section--canvas key-features" aria-labelledby="key-features-heading">\n';
+  html += '  <div class="container">\n';
+  html += '    <p class="section-overline">Product Highlights</p>\n';
+  html += '    <h2 class="section-title" id="key-features-heading">Key Features</h2>\n';
+  html += '    <ul class="key-features__list" role="list">\n';
+  data.keyFeatures.forEach(function(f) {
+    html += '      <li class="key-features__item">' + escapeHtml(f) + '</li>\n';
   });
   html += '    </ul>\n';
   html += '  </div>\n';

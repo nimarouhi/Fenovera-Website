@@ -76,6 +76,14 @@ module.exports = [
     description: 'Thermal-break aluminum windows in casement, tilt-turn, awning, and fixed. 76 mm frame, 35.3 mm polyamide barrier, German hardware. NFRC energy performance documentation available.',
     heroIntro: 'Thermal-break aluminum window. The LD-X76 Series offers casement, tilt-turn, awning, and fixed configurations with a 76 mm frame depth and 35.3 mm thermal barrier. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/ldw-x76/">LD-X76 patio door</a> is available in the same profile. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-x76-window-hero.jpg', alt: 'LD-X76 Series thermal-break aluminum casement window in a residential interior', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'Fenovera X76 Series Thermal-Break Catalog, p.1' },
+    keyFeatures: [
+      '35.3 mm polyamide thermal barrier for superior energy performance',
+      'Four configurations: casement, tilt-turn, awning, and fixed',
+      'German hardware — Siegenia, ROTO, HOPPE, HAUTAU, and others',
+      'Triple gasket weather seal with integrated welding',
+      'Hidden vertical drainage system',
+      'Custom sizes and non-standard shapes available',
+    ],
     galleryImages: [],
     finishes: {
       glass: { types: ['Tempered glass (3C or SGCC certified)', 'Insulated glass (double or triple, with or without Low-E)', 'Laminated glass', 'Low-E glass (meets U-value and SHGC requirements)', '4SG triple-pane (thermoplastic spacer, argon-filled)', 'Decorative / privacy glass (tinted, frosted, PDLC smart, silk screen)'] },
