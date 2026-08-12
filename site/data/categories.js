@@ -40,8 +40,8 @@ module.exports = [
         description:      'Aluminum window series. Casement, tilt-turn, awning, sliding, hung, and louver configurations.',
         productSlugs: [
           'ldw-x76', 'ldw-s8520',
-          'prm-50a', 'prm-55a', 'prm-65a', 'prm-73a', 'prm-81a', 'prm-83a',
-          'prm-80a', 'prm-100a', 'prm-108a', 'prm-110a',
+          'prm-50a', 'prm-55a', 'prm-65a', 'prm-73a', 'prm-80a', 'prm-81a', 'prm-83a',
+          'prm-100a', 'prm-108a', 'prm-110a',
           'wj-80', 'wj-91', 'wj-110',
         ],
       },
