@@ -6,6 +6,11 @@
  */
 'use strict';
 
+var UPVC_CERTIFICATIONS_BASE = [
+  { name: 'ISO',  body: 'International Organization for Standardization', scope: 'Quality management system' },
+  { name: 'SGS',  body: 'SGS Group',                                      scope: 'Product quality & safety testing' },
+];
+
 var UPVC_CERTIFICATIONS = [
   { name: 'ISO',  body: 'International Organization for Standardization', scope: 'Quality management system' },
   { name: 'SGS',  body: 'SGS Group',                                      scope: 'Product quality & safety testing' },
@@ -513,7 +518,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-91 Series Aluminum Window | Fenovera',
     description: 'Thermal-break aluminum casement and tilt-turn windows tested to AAMA, CSA, and NAFS standards. Casement max 914 × 1829 mm, tilt-turn max 1600 × 2800 mm.',
-    heroIntro: 'WJ-91 Series aluminum window. Available in casement and tilt-turn configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/wj-91/">WJ-91 Series casement door</a> uses the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-91 Series thermal-break aluminum window. Available in casement and tilt-turn configurations. Casement spans up to 914 × 1829 mm (90 kg max); tilt-turn up to 1600 × 2800 mm (150 kg max). Argon-filled double or triple glazing achieves a U-value as low as 0.188 BTU/hr·ft²·°F (tilt-turn). Tested to AAMA, CSA, and NAFS with SLS/ULS 1920 Pa / 2880 Pa and 290 Pa water penetration resistance. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/wj-91/">WJ-91 Series casement door</a> uses the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj91-hero.jpg', alt: 'WJ-91 Series aluminum tilt-turn window open in modern living room with lake view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.5–6' },
     keyFeatures: [
       '91 mm thermal-break frame in casement and tilt-turn configurations',
@@ -560,7 +565,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-80 Series Aluminum Tilt-Turn Window | Fenovera',
     description: 'Thermal-break aluminum tilt-turn windows tested to AAMA, CSA, and NAFS. Max 1219 × 2600 mm, U-value 0.200 BTU/hr·ft²·°F. Contact Fenovera for pricing.',
-    heroIntro: 'WJ-80 Series aluminum tilt-turn window. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-80 Series thermal-break aluminum tilt-turn window. Accommodates sash up to 1219 × 2600 mm and 140 kg. Argon-filled double or triple glazing delivers a U-value of 0.200 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1680 Pa / 2520 Pa and 260 Pa water penetration resistance. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj80-hero.jpg', alt: 'WJ-80 Series thermal-break aluminum tilt-turn window open in a bright modern interior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.15–16' },
     keyFeatures: [
       '80 mm thermal-break aluminum tilt-turn window',
@@ -594,7 +599,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-110 Slim Frame Aluminum Sliding Window | Fenovera',
     description: 'Slim-frame aluminum sliding windows with a 110 mm profile. Max 4000 × 2000 mm. AAMA/CSA/NAFS performance testing in progress. Contact Fenovera for pricing.',
-    heroIntro: 'WJ-110 Slim Frame Series aluminum sliding window. The 110 mm slim profile maximizes glass area and sightlines. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-110 Slim Frame Series aluminum sliding window. The 110 mm slim-profile frame minimizes sightlines while supporting panels up to 4000 × 2000 mm and 100 kg per panel. 5+20A+5 mm glass as standard. AAMA, CSA, and NAFS performance testing in progress. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj110-hero.jpg', alt: 'WJ-110 Slim Frame Series aluminum sliding window in modern living room', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.17–18' },
     keyFeatures: [
       '110 mm slim-profile sliding window for maximum glass area',
@@ -626,16 +631,15 @@ module.exports = [
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-58 Series uPVC Window | Fenovera',
-    description: 'uPVC casement and tilt-turn windows with a 58 mm multi-chamber profile. NFRC energy performance documentation available. Contact Fenovera for pricing.',
-    heroIntro: 'PRM-58 Series uPVC window. Available in casement and tilt-turn configurations. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    description: 'uPVC casement and tilt-turn windows with a 58 mm multi-chamber profile. Contact Fenovera for pricing.',
+    heroIntro: 'PRM-58 Series uPVC window. Available in casement and tilt-turn configurations. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm58u-window-hero.jpg', alt: 'PRM-58 Series uPVC tilt-turn window shown in closed, tilt, and turn positions', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
       '58 mm multi-chamber uPVC profile in casement and tilt-turn',
       'Above 2.5 mm profile wall thickness',
       'Accommodates IGU up to 32 mm',
-      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Profile series',        value: 'PRM-58u (58 mm)',               status: 'confirmed' },
@@ -658,15 +662,14 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-60 Series uPVC Window | Fenovera',
     description: 'uPVC windows with a 60 mm profile in casement, tilt-turn, awning, and sliding configurations. Matching PRM-60 casement door also available. Contact Fenovera.',
-    heroIntro: 'PRM-60 Series uPVC window with 60 mm profile. Available in casement, tilt-turn, awning, and sliding configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/prm-60u/">PRM-60 Series uPVC casement door</a> is also available. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-60 Series uPVC window with 60 mm profile. Available in casement, tilt-turn, awning, and sliding configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/prm-60u/">PRM-60 Series uPVC casement door</a> is also available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm60u-window-hero.jpg', alt: 'PRM-60 Series uPVC casement windows on brick house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
       '60 mm uPVC profile in casement, tilt-turn, awning, and sliding',
       'Above 2.5 mm profile wall thickness',
-      'NFRC energy performance documentation available',
       'Matching PRM-60 uPVC casement door available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Profile series',        value: 'PRM-60u (60 mm)',               status: 'confirmed' },
@@ -688,16 +691,15 @@ module.exports = [
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-70 Series uPVC Window | Fenovera',
-    description: 'uPVC casement and tilt-turn windows with a 70 mm multi-chamber profile. NFRC energy performance documentation available. Contact Fenovera for pricing.',
-    heroIntro: 'PRM-70 Series uPVC window. Available in casement and tilt-turn configurations. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    description: 'uPVC casement and tilt-turn windows with a 70 mm multi-chamber profile. Contact Fenovera for pricing.',
+    heroIntro: 'PRM-70 Series uPVC window. Available in casement and tilt-turn configurations. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm70u-window-hero.jpg', alt: 'PRM-70 Series uPVC casement window on stone house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
       '70 mm multi-chamber uPVC profile in casement and tilt-turn',
       'Above 2.5 mm profile wall thickness',
       'Accommodates IGU up to 32 mm',
-      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Profile series',        value: 'PRM-70u (70 mm)',               status: 'confirmed' },
@@ -717,16 +719,15 @@ module.exports = [
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-72 Series uPVC Window | Fenovera',
-    description: 'uPVC casement and tilt-turn windows with a 72 mm profile, available in a range of colors. NFRC energy performance documentation available. Contact Fenovera.',
-    heroIntro: 'PRM-72 Series uPVC window. Available in casement and tilt-turn configurations. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    description: 'uPVC casement and tilt-turn windows with a 72 mm profile, available in a range of colors. Contact Fenovera.',
+    heroIntro: 'PRM-72 Series uPVC window. Available in casement and tilt-turn configurations. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm72u-window-hero.jpg', alt: 'PRM-72 Series uPVC casement windows in sage green on rendered house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
       '72 mm uPVC profile in casement and tilt-turn',
       'Above 2.5 mm profile wall thickness',
       'Wide range of RAL colors and wood-grain foil finishes',
-      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Profile series',        value: 'PRM-72u (72 mm)',               status: 'confirmed' },
@@ -746,16 +747,15 @@ module.exports = [
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-80 Series uPVC Sliding Window | Fenovera',
-    description: 'uPVC sliding windows with an 80 mm profile. NFRC energy performance documentation available. Contact Fenovera for specifications and pricing.',
-    heroIntro: 'PRM-80 Series uPVC sliding window. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    description: 'uPVC sliding windows with an 80 mm profile. Contact Fenovera for specifications and pricing.',
+    heroIntro: 'PRM-80 Series uPVC sliding window. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm80u-window-hero.jpg', alt: 'PRM-80 Series uPVC windows installed on residential brick house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
       '80 mm uPVC sliding window',
       'Double sliding (1/2 opening) or three-sash sliding (2/3 opening)',
       'Above 2.5 mm profile wall thickness',
-      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Profile series',        value: 'PRM-80u (80 mm)',               status: 'confirmed' },
@@ -776,15 +776,14 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-88 Series uPVC Sliding Window | Fenovera',
     description: 'uPVC sliding windows with an 88 mm profile. Matching PRM-88 sliding door also available. Contact Fenovera for specifications and pricing.',
-    heroIntro: 'PRM-88 Series uPVC sliding window. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/prm-88u/">PRM-88 Series uPVC sliding door</a> is also available. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-88 Series uPVC sliding window. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/prm-88u/">PRM-88 Series uPVC sliding door</a> is also available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm88u-window-hero.jpg', alt: 'PRM-88 Series uPVC windows and door on brick house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
       '88 mm uPVC sliding window',
       'Double, triple, or four-sash sliding configurations',
       'Matching PRM-88 uPVC sliding door also available',
-      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Profile series',        value: 'PRM-88u (88 mm)',               status: 'confirmed' },
@@ -798,17 +797,17 @@ module.exports = [
   },
 
   {
-    id: 'windows-upvc-prm-hung', slug: 'prm-hung',
-    typeSlug: 'windows', materialSlug: 'upvc', pageId: 'windows-upvc-prm-hung',
-    publicName: 'PRM Hung Series uPVC Window', systemType: 'Single Hung / Double Hung',
+    id: 'windows-upvc-prm-82', slug: 'prm-82u',
+    typeSlug: 'windows', materialSlug: 'upvc', pageId: 'windows-upvc-prm-82',
+    publicName: 'PRM-82 Series uPVC Window', systemType: 'Single Hung / Double Hung',
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'PRM Hung Series uPVC Window | Fenovera',
-    description: 'uPVC single and double hung windows. Series designation to be confirmed — contact Fenovera for current specifications, pricing, and availability.',
-    heroIntro: 'PRM Hung Series uPVC hung window. Available as single hung or double hung. Series number to be confirmed. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
-    heroImage: { src: '/img/upvc-prm-hung-window-hero.jpg', alt: 'PRM Hung Series uPVC hung windows on house with green trim exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
+    seoTitle: 'PRM-82 Series uPVC Window | Fenovera',
+    description: 'uPVC single and double hung windows with an 82 mm multi-chamber profile. NFRC energy performance documentation available. Contact Fenovera for pricing.',
+    heroIntro: 'PRM-82 Series uPVC hung window. Available as single hung or double hung configurations with an 82 mm multi-chamber profile. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    heroImage: { src: '/img/upvc-prm-hung-window-hero.jpg', alt: 'PRM-82 Series uPVC hung windows on house with green trim exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
-      'Single hung and double hung uPVC window configurations',
+      'Single hung and double hung configurations with an 82 mm multi-chamber profile',
       'Above 2.5 mm profile wall thickness',
       'Accommodates IGU up to 32 mm',
       'NFRC energy performance documentation available',
@@ -816,7 +815,7 @@ module.exports = [
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Hung', rows: [
-        { label: 'Profile series',        value: 'PRM-Hung (series number to be confirmed)', status: 'placeholder' },
+        { label: 'Profile series',        value: 'PRM-82 (82 mm)',                           status: 'confirmed' },
         { label: 'Frame material',        value: 'uPVC',                          status: 'confirmed' },
         { label: 'Opening type',          value: 'Single hung / Double hung',     status: 'confirmed' },
         { label: 'Profile wall thickness',value: 'Above 2.5 mm',                  status: 'confirmed' },
@@ -833,7 +832,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-72 Series uPVC Window | Fenovera',
     description: 'uPVC casement and tilt-turn windows tested to AAMA, CSA, and NAFS standards. Casement max 813 × 1829 mm, U-value 0.199 BTU/hr·ft²°F. Contact Fenovera.',
-    heroIntro: 'WJ-72 Series uPVC window. Available in casement and tilt-turn configurations. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-72 Series uPVC window. Available in casement and tilt-turn configurations. Casement spans up to 813 × 1829 mm (60 kg max); tilt-turn up to 914 × 1829 mm (90 kg max). Argon-filled double or triple glazing delivers a U-value of 0.199 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1680 Pa / 2520 Pa and 260 Pa water penetration resistance. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-wj72-hero.jpg', alt: 'WJ-72 Series uPVC casement window in modern bedroom with forest view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.21-22' }, keyFeatures: [
       '72 mm uPVC frame in casement and tilt-turn configurations',
       'Tested to AAMA, CSA, and NAFS performance standards',
@@ -1516,7 +1515,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-91 Series Aluminum Casement Door | Fenovera',
     description: 'Thermal-break aluminum casement doors tested to AAMA, CSA, and NAFS. Max 1041 × 2800 mm, 200 kg load, U-value 0.190 BTU/hr·ft²°F. Contact Fenovera for pricing.',
-    heroIntro: 'WJ-91 Series aluminum casement door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/wj-91/">WJ-91 Series window</a> uses the same profile. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-91 Series thermal-break aluminum casement door. Handles panels up to 1041 × 2800 mm and 200 kg. Argon-filled double or triple glazing achieves a U-value of 0.190 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1680 Pa / 2520 Pa and 260 Pa water penetration resistance. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/wj-91/">WJ-91 Series window</a> uses the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj91-door-hero.jpg', alt: 'WJ-91 Series thermal-break aluminum casement door opening to pool and garden', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.9–10' }, keyFeatures: [
       '91 mm thermal-break aluminum casement door',
       'Tested to AAMA, CSA, and NAFS performance standards',
@@ -1549,7 +1548,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-132 Series Aluminum Sliding Door | Fenovera',
     description: 'Slim-profile aluminum sliding doors — 132 mm frame, 4-panel and pocket configurations. Max leaf 2500 × 6096 mm, 500 kg per leaf. Contact Fenovera for pricing.',
-    heroIntro: 'WJ-132 Series aluminum sliding door. Available in 4-panel and pocket door configurations. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-132 Series aluminum sliding door with a 132 mm slim-profile frame. Available in 4-panel horizontal sliding and pocket door configurations. Each leaf spans up to 2500 × 6096 mm and supports 500 kg — suited to oversized residential and commercial openings. 5+27A+5 mm glass as standard. AAMA, CSA, and NAFS performance testing in progress. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj132-door-hero.jpg', alt: 'WJ-132 Slim Frame Series aluminum 4-panel sliding door in a modern living room', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.19–20' }, keyFeatures: [
       '132 mm slim-profile aluminum sliding door',
       '4-panel horizontal sliding and pocket door configurations',
@@ -1579,7 +1578,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-88 Series Aluminum Folding Door | Fenovera',
     description: 'Thermal-break aluminum folding doors tested to AAMA, CSA, and NAFS. Max leaf 1041 × 2800 mm, 150 kg per leaf. Contact Fenovera for pricing.',
-    heroIntro: 'WJ-88 Series thermal-break aluminum folding door. Each leaf opens to a maximum of 1041 × 2800 mm with a 150 kg weight capacity. Tested to AAMA, CSA, and NAFS standards. Contact us for pricing and lead times.',
+    heroIntro: 'WJ-88 Series thermal-break aluminum bi-folding door. Available in 3 to 8 panel configurations, folding inward or outward. Each leaf spans up to 1041 × 2800 mm and supports 150 kg. Argon-filled double or triple glazing achieves a U-value of 0.329 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1140 Pa / 2160 Pa and 220 Pa water penetration resistance. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj88-door-hero.jpg', alt: 'WJ-88 Series aluminum bi-fold door open in modern interior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.13–14' }, keyFeatures: [
       '88 mm thermal-break aluminum folding door',
       'Tested to AAMA, CSA, and NAFS standards',
@@ -1612,7 +1611,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-170 Series Aluminum Sliding Door | Fenovera',
     description: 'Thermal-break aluminum sliding doors tested to AAMA, CSA, and NAFS. Max 3300 × 2800 mm, 600 kg load, U-value 0.229 BTU/hr·ft²°F. Contact Fenovera.',
-    heroIntro: 'WJ-170 Series aluminum sliding door. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-170 Series thermal-break aluminum sliding door. A large-format system supporting panels up to 3300 × 2800 mm and 600 kg per panel. Argon-filled double or triple glazing achieves a U-value of 0.229 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1920 Pa / 2880 Pa and 290 Pa water penetration resistance. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj170-door-hero.jpg', alt: 'WJ-170 Series aluminum sliding glass door opening to garden patio', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.11–12' }, keyFeatures: [
       '170 mm thermal-break aluminum sliding door',
       'Tested to AAMA, CSA, and NAFS standards',
@@ -1647,16 +1646,15 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-60 Series uPVC Casement Door | Fenovera',
     description: 'uPVC casement doors with a 60 mm profile. Matching PRM-60 uPVC window also available. Contact Fenovera for Bay Area pricing and specifications.',
-    heroIntro: 'PRM-60 Series uPVC casement door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/prm-60u/">PRM-60 Series window</a> is also available. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-60 Series uPVC casement door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/prm-60u/">PRM-60 Series window</a> is also available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm60u-door-hero.jpg', alt: 'PRM-60 Series uPVC casement door with glazing on residential exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
       '60 mm uPVC casement door',
       'Above 2.5 mm profile wall thickness',
       'Inward or outward swing; single or double leaf options',
-      'NFRC energy performance documentation available',
       'Matching PRM-60 uPVC window also available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
         { label: 'Profile series',        value: 'PRM-60u (60 mm)',               status: 'confirmed' },
@@ -1679,16 +1677,15 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-66 Series uPVC Sliding Door | Fenovera',
     description: 'uPVC sliding doors with a 66 mm profile. Available in multiple color options. Contact Fenovera for Bay Area specifications, pricing, and availability.',
-    heroIntro: 'PRM-66 Series uPVC sliding door. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-66 Series uPVC sliding door. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm66u-door-hero.jpg', alt: 'PRM-66 Series uPVC sliding door in dark gray on white brick exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
       '66 mm uPVC sliding door',
       '2 or 3 track configurations',
       'Above 2.5 mm profile wall thickness',
       'Wide range of color options available',
-      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Profile series',        value: 'PRM-66u (66 mm)',               status: 'confirmed' },
@@ -1709,15 +1706,14 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-88 Series uPVC Sliding Door | Fenovera',
     description: 'uPVC sliding doors with an 88 mm profile. Matching PRM-88 sliding window also available. Contact Fenovera for Bay Area pricing and specifications.',
-    heroIntro: 'PRM-88 Series uPVC sliding door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/prm-88u/">PRM-88 Series sliding window</a> is also available. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-88 Series uPVC sliding door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/prm-88u/">PRM-88 Series sliding window</a> is also available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm88u-door-hero.jpg', alt: 'PRM-88 Series uPVC sliding door open to garden patio with pergola', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
       '88 mm uPVC sliding door',
       '2 or 3 track configurations',
       'Matching PRM-88 uPVC sliding window also available',
-      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Profile series',        value: 'PRM-88u (88 mm)',               status: 'confirmed' },
@@ -1738,15 +1734,14 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-114 Series uPVC Sliding Door | Fenovera',
     description: 'uPVC sliding doors with a 114 mm profile. Available in multiple color options. Contact Fenovera for Bay Area specifications, pricing, and availability.',
-    heroIntro: 'PRM-114 Series uPVC sliding door. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-114 Series uPVC sliding door. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm114u-door-hero.jpg', alt: 'PRM-114 Series uPVC sliding door in dark gray on white brick exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     keyFeatures: [
       '114 mm uPVC sliding door with 3-track configuration',
       'Above 2.5 mm profile wall thickness',
       'Wide range of color options available',
-      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Profile series',        value: 'PRM-114u (114 mm)',             status: 'confirmed' },
@@ -1767,7 +1762,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-195 Series uPVC Sliding Door | Fenovera',
     description: 'uPVC sliding glass doors tested to AAMA, CSA, and NAFS. Max 2032 × 2438 mm, 400 kg load, U-value 0.223 BTU/hr·ft²°F. Contact Fenovera for pricing.',
-    heroIntro: 'WJ-195 Series uPVC sliding door. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'WJ-195 Series uPVC sliding door. Handles panels up to 2032 × 2438 mm and 400 kg with side pressure locking. Argon-filled double or triple glazing achieves a U-value of 0.223 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1680 Pa / 2520 Pa and 260 Pa water penetration resistance. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-wj195-door-hero.jpg', alt: 'WJ-195 Series uPVC sliding glass door with mountain and lake view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.25-26' }, keyFeatures: [
       '195 mm uPVC sliding door',
       'Tested to AAMA, CSA, and NAFS performance standards',

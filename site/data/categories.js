@@ -57,7 +57,7 @@ module.exports = [
         productSlugs: [
           'ld-p80', 'ld-p85',
           'prm-58u', 'prm-60u', 'prm-70u', 'prm-72u',
-          'prm-80u', 'prm-88u', 'prm-hung', 'wj-72',
+          'prm-80u', 'prm-88u', 'prm-82u', 'wj-72',
         ],
       },
       {
