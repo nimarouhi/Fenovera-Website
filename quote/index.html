@@ -467,10 +467,12 @@
               novalidate
               aria-label="Quote request form"
             >
-              <!-- Web3Forms delivery — replace value with your access key from web3forms.com -->
+              <!-- Web3Forms delivery -->
               <input type="hidden" name="access_key" value="70243137-4105-49ae-84e0-58f91a963684">
               <input type="hidden" name="subject" value="New Quote Request — Fenovera">
               <input type="hidden" name="from_name" value="Fenovera Website">
+              <input type="hidden" name="replyto" value="">
+              <!-- replyto is set dynamically in JS from the email field -->
               <input type="hidden" name="redirect" value="false">
 
               <!-- Honeypot -->
@@ -816,6 +818,11 @@
         // Disable button while submitting
         var btn = form.querySelector('[type="submit"]');
         if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+        // Set replyto so replies go back to the submitter
+        var emailField = form.querySelector('[name="email"]');
+        var replytoField = form.querySelector('[name="replyto"]');
+        if (emailField && replytoField) replytoField.value = emailField.value;
 
         // Submit to Web3Forms
         fetch(form.action, {

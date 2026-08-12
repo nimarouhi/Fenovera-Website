@@ -427,11 +427,13 @@
               novalidate
               aria-label="Contact enquiry form"
             >
-              <!-- Web3Forms delivery — replace value with your access key from web3forms.com -->
+              <!-- Web3Forms delivery -->
               <input type="hidden" name="access_key" value="eb3f916d-1012-4bc8-ad63-d5b367a2eedb">
               <input type="hidden" name="subject" value="New Contact Enquiry — Fenovera">
               <input type="hidden" name="from_name" value="Fenovera Website">
               <input type="hidden" name="redirect" value="false">
+              <input type="hidden" name="replyto" value="">
+              <!-- replyto value is set dynamically in JS from the email field -->
 
               <!-- Honeypot field — spam protection (leave blank) -->
               <div class="form-honeypot" aria-hidden="true">
@@ -707,6 +709,11 @@
         // Disable button while submitting
         var btn = form.querySelector('[type="submit"]');
         if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+        // Set replyto so replies go back to the submitter
+        var emailField = form.querySelector('[name="email"]');
+        var replytoField = form.querySelector('[name="replyto"]');
+        if (emailField && replytoField) replytoField.value = emailField.value;
 
         // Submit to Web3Forms
         fetch(form.action, {
