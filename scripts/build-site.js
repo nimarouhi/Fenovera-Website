@@ -522,7 +522,7 @@ function renderCategoryProductGrid(data) {
     html += '    <div class="product-series-card__body">\n';
     // Supplier name (product-series-card__mfr) intentionally suppressed — not for public display.
     html += '      <div class="product-series-card__name">' + escapeHtml(product.publicName) + '</div>\n';
-    if (/^ldw/.test(product.slug) || product.slug === 'prm-k80a' || product.slug === 'prm-82u') {
+    if (/^ldw/.test(product.slug) || product.slug === 'prm-80a' || product.slug === 'prm-82u' || product.slug === 'prm-150a' || product.slug === 'prm-125a') {
       html += '      <span class="badge badge-success product-series-card__cert-badge">NFRC</span>\n';
     }
     if (product.matchingLabel) {

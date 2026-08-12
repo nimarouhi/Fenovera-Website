@@ -41,7 +41,7 @@ module.exports = [
         productSlugs: [
           'ldw-x76', 'ldw-s8520',
           'prm-50a', 'prm-55a', 'prm-65a', 'prm-73a', 'prm-81a', 'prm-83a',
-          'prm-100a', 'prm-108a', 'prm-110a', 'prm-k80a',
+          'prm-80a', 'prm-100a', 'prm-108a', 'prm-110a',
           'wj-80', 'wj-91', 'wj-110',
         ],
       },
@@ -95,8 +95,8 @@ module.exports = [
         productSlugs: [
           'ldw-x76', 'ldw-g152', 'ldw-g88',
           'prm-16a', 'prm-50a', 'prm-55a', 'prm-65a',
-          'prm-70a', 'prm-75a', 'prm-81a', 'prm-108a',
-          'prm-121a', 'prm-132a', 'prm-150a', 'prm-202a', 'prm-k80a',
+          'prm-70a', 'prm-75a', 'prm-80a', 'prm-81a', 'prm-108a',
+          'prm-121a', 'prm-125a', 'prm-132a', 'prm-150a', 'prm-202a',
           'wj-91', 'wj-132', 'wj-88', 'wj-170',
         ],
       },
