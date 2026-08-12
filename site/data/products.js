@@ -73,8 +73,8 @@ module.exports = [
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-X76 Thermal-Break Aluminum Windows | Fenovera',
-    description: 'The Fenovera LD-X76 Series combines thermal-break aluminum with versatile casement, tilt-turn, awning, and fixed configurations. 76 mm frame, 35.3 mm thermal barrier, German hardware. NFRC certified.',
-    heroIntro: 'Thermal-break aluminum window. The LD-X76 Series offers casement, tilt-turn, awning, and fixed configurations with a 76 mm frame depth and 35.3 mm thermal barrier. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/ldw-x76/">LD-X76 patio door</a> is available in the same profile. NFRC certified. Contact us for specifications, pricing, and availability.',
+    description: 'The Fenovera LD-X76 Series combines thermal-break aluminum with versatile casement, tilt-turn, awning, and fixed configurations. 76 mm frame, 35.3 mm thermal barrier, German hardware. NFRC energy performance documentation available.',
+    heroIntro: 'Thermal-break aluminum window. The LD-X76 Series offers casement, tilt-turn, awning, and fixed configurations with a 76 mm frame depth and 35.3 mm thermal barrier. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/ldw-x76/">LD-X76 patio door</a> is available in the same profile. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-x76-window-hero.jpg', alt: 'LD-X76 Series thermal-break aluminum casement window in a residential interior', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'Fenovera X76 Series Thermal-Break Catalog, p.1' },
     galleryImages: [],
     finishes: {
@@ -108,7 +108,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-S8520 Slimline Thermal-Break Aluminum Windows | Fenovera',
     description: 'The Fenovera LD-S8520 Slimline Series delivers 48 mm fixed sightlines with an 85 mm thermal-break frame and 35.3 mm polyamide barrier. Available in casement, tilt-turn, fixed, and custom shapes. German hardware standard.',
-    heroIntro: 'Thermal-break aluminum window with ultra-slim sightlines. The LD-S8520 Slimline Series achieves a 48 mm fixed sightline with an 85 mm frame depth and 35.3 mm thermal barrier: more glass, less frame. Available in casement, tilt-and-turn, fixed, and custom shapes including arched and triangular. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Thermal-break aluminum window with ultra-slim sightlines. The LD-S8520 Slimline Series achieves a 48 mm fixed sightline with an 85 mm frame depth and 35.3 mm thermal barrier: more glass, less frame. Available in casement, tilt-and-turn, fixed, and custom shapes including arched and triangular. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-s8520-slimline-hero.jpg', alt: 'LD-S8520 Slimline Series thermal-break aluminum windows on a modern architectural building facade', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'LEDOW S8520 Slimline Series Catalog 2024, p.1' },
     galleryImages: [],
     finishes: {
@@ -408,7 +408,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-K80 Series NFRC Aluminum Casement Window | Fenovera',
     description: 'Fenovera PRM-K80 Series aluminum casement window meeting American Standard / NFRC energy performance requirements. The PRM-K80 Series casement door is also available.',
-    heroIntro: 'Aluminum casement window meeting American Standard NFRC energy performance requirements. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-k80a/">PRM-K80 Series casement door</a> is available in the same profile. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum casement window meeting American Standard NFRC energy performance requirements. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-k80a/">PRM-K80 Series casement door</a> is available in the same profile. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm50a-window-hero.jpg', alt: 'PRM-K80 Series NFRC aluminum casement window in residential interior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.4' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
@@ -522,7 +522,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-58 Series uPVC Window | Fenovera',
     description: 'Fenovera PRM-58 Series uPVC window with 58 mm profile, available in casement and tilt-turn.',
-    heroIntro: 'PRM-58 Series uPVC window. Available in casement and tilt-turn configurations. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-58 Series uPVC window. Available in casement and tilt-turn configurations. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm58u-window-hero.jpg', alt: 'PRM-58 Series uPVC tilt-turn window shown in closed, tilt, and turn positions', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -547,7 +547,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-60 Series uPVC Window | Fenovera',
     description: 'Fenovera PRM-60 Series uPVC window with 60 mm profile, available in casement, tilt-turn, awning, and sliding. The PRM-60 Series casement door is also available.',
-    heroIntro: 'PRM-60 Series uPVC window with 60 mm profile. Available in casement, tilt-turn, awning, and sliding configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/prm-60u/">PRM-60 Series uPVC casement door</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-60 Series uPVC window with 60 mm profile. Available in casement, tilt-turn, awning, and sliding configurations. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/prm-60u/">PRM-60 Series uPVC casement door</a> is also available. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm60u-window-hero.jpg', alt: 'PRM-60 Series uPVC casement windows on brick house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -572,7 +572,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-70 Series uPVC Window | Fenovera',
     description: 'Fenovera PRM-70 Series uPVC window with 70 mm profile, available in casement and tilt-turn.',
-    heroIntro: 'PRM-70 Series uPVC window. Available in casement and tilt-turn configurations. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-70 Series uPVC window. Available in casement and tilt-turn configurations. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm70u-window-hero.jpg', alt: 'PRM-70 Series uPVC casement window on stone house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -595,7 +595,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-72 Series uPVC Window | Fenovera',
     description: 'Fenovera PRM-72 Series uPVC window with 72 mm profile, available in casement and tilt-turn.',
-    heroIntro: 'PRM-72 Series uPVC window. Available in casement and tilt-turn configurations. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-72 Series uPVC window. Available in casement and tilt-turn configurations. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm72u-window-hero.jpg', alt: 'PRM-72 Series uPVC casement windows in sage green on rendered house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -618,7 +618,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-80 Series uPVC Sliding Window | Fenovera',
     description: 'Fenovera PRM-80 Series uPVC sliding window with 80 mm profile.',
-    heroIntro: 'PRM-80 Series uPVC sliding window. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-80 Series uPVC sliding window. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm80u-window-hero.jpg', alt: 'PRM-80 Series uPVC windows installed on residential brick house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -641,7 +641,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-88 Series uPVC Sliding Window | Fenovera',
     description: 'Fenovera PRM-88 Series uPVC sliding window with 88 mm profile. The PRM-88 Series sliding door is also available.',
-    heroIntro: 'PRM-88 Series uPVC sliding window. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/prm-88u/">PRM-88 Series uPVC sliding door</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-88 Series uPVC sliding window. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/prm-88u/">PRM-88 Series uPVC sliding door</a> is also available. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm88u-window-hero.jpg', alt: 'PRM-88 Series uPVC windows and door on brick house exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -664,7 +664,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM Hung Series uPVC Window | Fenovera',
     description: 'Fenovera PRM Hung Series uPVC hung window. Series number to be confirmed — contact us for specifications, pricing, and availability.',
-    heroIntro: 'PRM Hung Series uPVC hung window. Available as single hung or double hung. Series number to be confirmed. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM Hung Series uPVC hung window. Available as single hung or double hung. Series number to be confirmed. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm-hung-window-hero.jpg', alt: 'PRM Hung Series uPVC hung windows on house with green trim exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -813,7 +813,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-X76 Series Thermal-Break Aluminum Patio Door | Fenovera',
     description: 'The Fenovera LD-X76 Series patio door shares the same 76 mm thermal-break aluminum profile as the LD-X76 window. Available in single swing, French door, and multiple sidelight configurations.',
-    heroIntro: 'Thermal-break aluminum patio door. The LD-X76 Series offers single swing, French door, and sidelight configurations with a 76 mm frame depth and 35.3 mm thermal barrier. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/ldw-x76/">LD-X76 window</a> is available in the same profile for a seamless matched look. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Thermal-break aluminum patio door. The LD-X76 Series offers single swing, French door, and sidelight configurations with a 76 mm frame depth and 35.3 mm thermal barrier. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/ldw-x76/">LD-X76 window</a> is available in the same profile for a seamless matched look. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-x76-door-hero.jpg', alt: 'LD-X76 Series thermal-break aluminum patio door on a modern home exterior', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'Fenovera X76 Series Thermal-Break Catalog, p.5' },
     galleryImages: [],
     finishes: {
@@ -846,8 +846,8 @@ module.exports = [
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-G152 Aluminum Lift & Slide Door | Fenovera',
-    description: 'The Fenovera LD-G152 Series is a thermal-break aluminum lift-and-slide door with 24 mm thermal barrier, 152 mm frame depth, and panels up to 3.3 m tall. NFRC certified. Available in monorail and 2-rail configurations.',
-    heroIntro: 'Thermal-break aluminum lift-and-slide door. The LD-G152 Series supports panels up to 3.3 m tall and 440 kg, with a 24 mm thermal barrier and choice of monorail or 2-rail configurations. NFRC certified. Contact us for specifications, pricing, and availability.',
+    description: 'The Fenovera LD-G152 Series is a thermal-break aluminum lift-and-slide door with 24 mm thermal barrier, 152 mm frame depth, and panels up to 3.3 m tall. NFRC energy performance documentation available. Available in monorail and 2-rail configurations.',
+    heroIntro: 'Thermal-break aluminum lift-and-slide door. The LD-G152 Series supports panels up to 3.3 m tall and 440 kg, with a 24 mm thermal barrier and choice of monorail or 2-rail configurations. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-lift-slide-door-hero.jpg', alt: 'LD-G152 Series thermal-break aluminum lift and slide door', role: 'hero', rightsVerified: true, productProvenanceVerified: true, sourceDocument: 'Fenovera G152 Lift and Slide Series Catalog' },
     galleryImages: [],
     finishes: {
@@ -885,8 +885,8 @@ module.exports = [
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'LD-G88 Thermal-Break Aluminum Bi-Fold Door | Fenovera',
-    description: 'The Fenovera LD-G88 Series is a thermal-break aluminum bi-folding door with 97 mm frame depth and 24 mm thermal barrier. Supports panels up to 3,500 mm tall and 120 kg per leaf. Available in 3–8 panel configurations. NFRC certified.',
-    heroIntro: 'Thermal-break aluminum bi-folding door. The LD-G88 Series offers 3–8 panel configurations with panels up to 3,500 mm tall and 120 kg per leaf, a 97 mm frame depth, and 24 mm thermal barrier. Panels can fold inward or outward. NFRC certified. Contact us for specifications, pricing, and availability.',
+    description: 'The Fenovera LD-G88 Series is a thermal-break aluminum bi-folding door with 97 mm frame depth and 24 mm thermal barrier. Supports panels up to 3,500 mm tall and 120 kg per leaf. Available in 3–8 panel configurations. NFRC energy performance documentation available.',
+    heroIntro: 'Thermal-break aluminum bi-folding door. The LD-G88 Series offers 3–8 panel configurations with panels up to 3,500 mm tall and 120 kg per leaf, a 97 mm frame depth, and 24 mm thermal barrier. Panels can fold inward or outward. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-g88-bifold-hero.jpg', alt: 'LD-G88 Series thermal-break aluminum bi-folding door on lakeside home exterior with person relaxing on patio', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'LEDOW G88 Bi folding series 2024 catalog, p.1 (cover)' },
     galleryImages: [],
     finishes: {
@@ -1162,7 +1162,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-150 Series NFRC Aluminum Sliding Door | Fenovera',
     description: 'Fenovera PRM-150 Series aluminum sliding door meeting American Standard / NFRC energy performance requirements.',
-    heroIntro: 'Aluminum sliding door meeting American Standard NFRC energy performance requirements. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum sliding door meeting American Standard NFRC energy performance requirements. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm150a-door-hero.jpg', alt: 'PRM-150 Series aluminum sliding door on modern home exterior with pool and garden view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.17/18' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
@@ -1207,7 +1207,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-K80 Series NFRC Aluminum Casement Door | Fenovera',
     description: 'Fenovera PRM-K80 Series aluminum casement door meeting American Standard / NFRC energy performance requirements. The PRM-K80 Series window is also available.',
-    heroIntro: 'Aluminum casement door meeting American Standard NFRC requirements. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/prm-k80a/">PRM-K80 Series window</a> is available in the same profile. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum casement door meeting American Standard NFRC requirements. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/prm-k80a/">PRM-K80 Series window</a> is available in the same profile. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm-k80a-door-hero.jpg', alt: 'PRM-K80 Series NFRC aluminum casement door in modern white interior with garden view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.15/16' },
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
@@ -1332,7 +1332,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-60 Series uPVC Casement Door | Fenovera',
     description: 'Fenovera PRM-60 Series uPVC casement door with 60 mm profile. The PRM-60 Series window is also available.',
-    heroIntro: 'PRM-60 Series uPVC casement door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/prm-60u/">PRM-60 Series window</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-60 Series uPVC casement door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/prm-60u/">PRM-60 Series window</a> is also available. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm60u-door-hero.jpg', alt: 'PRM-60 Series uPVC casement door with glazing on residential exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -1357,7 +1357,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-66 Series uPVC Sliding Door | Fenovera',
     description: 'Fenovera PRM-66 Series uPVC sliding door with 66 mm profile.',
-    heroIntro: 'PRM-66 Series uPVC sliding door. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-66 Series uPVC sliding door. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm66u-door-hero.jpg', alt: 'PRM-66 Series uPVC sliding door in dark gray on white brick exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -1380,7 +1380,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-88 Series uPVC Sliding Door | Fenovera',
     description: 'Fenovera PRM-88 Series uPVC sliding door with 88 mm profile. The PRM-88 Series sliding window is also available.',
-    heroIntro: 'PRM-88 Series uPVC sliding door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/prm-88u/">PRM-88 Series sliding window</a> is also available. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-88 Series uPVC sliding door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/prm-88u/">PRM-88 Series sliding window</a> is also available. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm88u-door-hero.jpg', alt: 'PRM-88 Series uPVC sliding door open to garden patio with pergola', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
@@ -1403,7 +1403,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-114 Series uPVC Sliding Door | Fenovera',
     description: 'Fenovera PRM-114 Series uPVC sliding door with 114 mm profile.',
-    heroIntro: 'PRM-114 Series uPVC sliding door. NFRC certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'PRM-114 Series uPVC sliding door. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-prm114u-door-hero.jpg', alt: 'PRM-114 Series uPVC sliding door in dark gray on white brick exterior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima uPVC catalog (UPVC doors and windows from PRIMA.pdf)' },
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [

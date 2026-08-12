@@ -345,6 +345,24 @@
                 <p class="form-error" id="contact-message-error" role="alert" hidden></p>
               </div>
 
+              <div class="form-group">
+                <label class="form-option" style="align-items: flex-start; cursor: pointer;">
+                  <input
+                    type="checkbox"
+                    id="contact-terms"
+                    name="terms_accepted"
+                    required
+                    aria-required="true"
+                    aria-describedby="contact-terms-error"
+                    style="margin-top: 3px; flex-shrink: 0; cursor: pointer;"
+                  >
+                  <span style="font-size: var(--text-sm); color: var(--color-ink); line-height: var(--leading-relaxed); margin-left: var(--space-2);">
+                    I agree to the <a href="/terms/">Terms of Use</a> and acknowledge the <a href="/privacy/">Privacy Policy</a>.<span class="form-label__required" aria-hidden="true">*</span>
+                  </span>
+                </label>
+                <p class="form-error" id="contact-terms-error" role="alert" hidden></p>
+              </div>
+
               <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
 
               <p class="text-caption mt-4" style="color: var(--color-ink-secondary);">
@@ -373,6 +391,7 @@
 
       // ── Field validation ──────────────────────────────
       function getError(field) {
+        if (field.type === 'checkbox' && field.required && !field.checked) return 'You must agree to continue.';
         if (field.validity.valueMissing) return 'This field is required.';
         if (field.validity.typeMismatch && field.type === 'email') return 'Please enter a valid email address.';
         return '';
@@ -395,11 +414,10 @@
         return !msg;
       }
 
-      // Validate on blur (live feedback after first interaction)
+      // Validate on blur/change (live feedback after first interaction)
       form.querySelectorAll('[required]').forEach(function (field) {
-        field.addEventListener('blur', function () {
-          validateField(field);
-        });
+        var evt = field.type === 'checkbox' ? 'change' : 'blur';
+        field.addEventListener(evt, function () { validateField(field); });
         field.addEventListener('input', function () {
           if (field.getAttribute('aria-invalid') === 'true') validateField(field);
         });

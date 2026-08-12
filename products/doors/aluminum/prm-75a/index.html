@@ -266,7 +266,7 @@
 <div class="spec-section__grid spec-section__grid--single"><div><h3 class="spec-section__label">Bi-fold (single panel)</h3><div class="spec-table" role="table" aria-label="Bi-fold (single panel) specifications"><div class="spec-table__row" role="row"><div class="spec-table__label" role="cell">Item No</div><div class="spec-table__value" role="cell">PRD-75-01</div></div><div class="spec-table__row" role="row"><div class="spec-table__label" role="cell">Frame width</div><div class="spec-table__value" role="cell">75 mm</div></div><div class="spec-table__row" role="row"><div class="spec-table__label" role="cell">Profile thickness</div><div class="spec-table__value" role="cell">1.8 mm</div></div><div class="spec-table__row" role="row"><div class="spec-table__label" role="cell">Glass</div><div class="spec-table__value" role="cell">5+27A+5 mm insulated tempered</div></div><div class="spec-table__row" role="row"><div class="spec-table__label" role="cell">Panel style</div><div class="spec-table__value" role="cell">Single panel</div></div><div class="spec-table__row" role="row"><div class="spec-table__label" role="cell">Surface finish</div><div class="spec-table__value" role="cell">Powder coating / PVDF coating</div></div><div class="spec-table__row" role="row"><div class="spec-table__label" role="cell">Thermal break</div><div class="spec-table__value" role="cell">Available with or without thermal break</div></div></div></div></div>
 
         <p class="spec-table__note mt-6">
-          All dimensional and performance data require verification from technical documentation before customer-facing publication. Contact Fenovera for current specification sheets.
+          All dimensional and performance data are drawn from manufacturer documentation and are subject to change without notice. Specifications, certifications, energy performance ratings, and product availability must be confirmed in writing by Fenovera LLC before being relied upon for design, engineering, permitting, or purchasing decisions. Product certifications listed are manufacturer-reported and have not been independently verified by Fenovera LLC. Contact us for current, confirmed specification sheets.
         </p>
       </div>
     </section>
@@ -395,23 +395,19 @@
      To load analytics only after consent:
        document.addEventListener('fenovera:consent-granted', loadAnalytics);
   ────────────────────────────────────────────────────────────────── -->
-<div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="false"
-     aria-labelledby="cookie-banner-title" hidden>
+<div class="cookie-banner" id="cookie-banner" role="region" aria-labelledby="cookie-banner-title" hidden>
   <div class="cookie-banner__inner">
     <div class="cookie-banner__text">
-      <p class="cookie-banner__title" id="cookie-banner-title">We use cookies</p>
+      <p class="cookie-banner__title" id="cookie-banner-title">Site notice</p>
       <p class="cookie-banner__body">
-        We use strictly necessary cookies to keep the site running. We may also use
-        analytics and marketing cookies to understand how visitors use our site.
-        <a href="../../../../cookies/" class="cookie-banner__link">Learn more in our Cookie Policy</a>.
+        This site does not use analytics or advertising trackers.
+        A browser preference is stored solely to remember that you have seen this notice.
+        <a href="../../../../cookies/" class="cookie-banner__link">Cookie Policy</a>.
       </p>
     </div>
     <div class="cookie-banner__actions">
-      <button class="btn btn-secondary btn-sm" id="cookie-reject" type="button">
-        Reject Non-Essential
-      </button>
-      <button class="btn btn-primary btn-sm" id="cookie-accept" type="button">
-        Accept All
+      <button class="btn btn-primary btn-sm" id="cookie-acknowledge" type="button">
+        Got it
       </button>
     </div>
   </div>
@@ -421,40 +417,20 @@
 (function () {
   'use strict';
   var STORAGE_KEY = 'fenoveraCookieConsent';
-  var banner    = document.getElementById('cookie-banner');
-  var acceptBtn = document.getElementById('cookie-accept');
-  var rejectBtn = document.getElementById('cookie-reject');
+  var banner = document.getElementById('cookie-banner');
+  var btn    = document.getElementById('cookie-acknowledge');
 
-  // Expose consent state globally so analytics loaders can check it
-  window.fenovera = window.fenovera || {};
-  window.fenovera.consentGranted = false;
-
-  function dismiss(choice) {
-    try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
-    banner.setAttribute('hidden', '');
-    if (choice === 'accepted') {
-      window.fenovera.consentGranted = true;
-      // Fire event — attach analytics loaders like:
-      //   document.addEventListener('fenovera:consent-granted', loadAnalytics);
-      document.dispatchEvent(new CustomEvent('fenovera:consent-granted'));
-    }
-  }
-
-  // Check existing preference
   var existing;
   try { existing = localStorage.getItem(STORAGE_KEY); } catch (e) {}
 
-  if (existing === 'accepted') {
-    window.fenovera.consentGranted = true;
-  } else if (!existing) {
-    // Show after short delay so it doesn't flash on page load
-    setTimeout(function () {
-      banner.removeAttribute('hidden');
-    }, 800);
+  if (!existing) {
+    setTimeout(function () { banner.removeAttribute('hidden'); }, 800);
   }
 
-  if (acceptBtn) acceptBtn.addEventListener('click', function () { dismiss('accepted'); });
-  if (rejectBtn) rejectBtn.addEventListener('click', function () { dismiss('rejected'); });
+  if (btn) btn.addEventListener('click', function () {
+    try { localStorage.setItem(STORAGE_KEY, 'acknowledged'); } catch (e) {}
+    banner.setAttribute('hidden', '');
+  });
 }());
 </script>
 

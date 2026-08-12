@@ -430,6 +430,24 @@
                 </select>
               </div>
 
+              <div class="form-group">
+                <label class="form-option" style="align-items: flex-start; cursor: pointer;">
+                  <input
+                    type="checkbox"
+                    id="quote-terms"
+                    name="terms_accepted"
+                    required
+                    aria-required="true"
+                    aria-describedby="quote-terms-error"
+                    style="margin-top: 3px; flex-shrink: 0; cursor: pointer;"
+                  >
+                  <span style="font-size: var(--text-sm); color: var(--color-ink); line-height: var(--leading-relaxed); margin-left: var(--space-2);">
+                    I agree to the <a href="/terms/">Terms of Use</a> and acknowledge the <a href="/privacy/">Privacy Policy</a>.<span class="form-label__required" aria-hidden="true">*</span>
+                  </span>
+                </label>
+                <p class="form-error" id="quote-terms-error" role="alert" hidden></p>
+              </div>
+
               <button type="submit" class="btn btn-primary" style="width: 100%;">
                 Submit Quote Request
               </button>
@@ -460,6 +478,7 @@
 
       // ── Field validation ──────────────────────────────
       function getError(field) {
+        if (field.type === 'checkbox' && field.required && !field.checked) return 'You must agree to continue.';
         if (field.validity.valueMissing) return 'This field is required.';
         if (field.validity.typeMismatch && field.type === 'email') return 'Please enter a valid email address.';
         return '';
@@ -500,9 +519,10 @@
         return checked;
       }
 
-      // Live blur validation for text/email/textarea inputs
+      // Live validation for text/email/textarea/checkbox inputs
       form.querySelectorAll('input[required]:not([type="radio"]), textarea[required]').forEach(function (field) {
-        field.addEventListener('blur', function () { validateField(field); });
+        var evt = field.type === 'checkbox' ? 'change' : 'blur';
+        field.addEventListener(evt, function () { validateField(field); });
         field.addEventListener('input', function () {
           if (field.getAttribute('aria-invalid') === 'true') validateField(field);
         });

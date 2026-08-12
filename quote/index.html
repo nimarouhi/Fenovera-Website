@@ -593,6 +593,24 @@
                 </select>
               </div>
 
+              <div class="form-group">
+                <label class="form-option" style="align-items: flex-start; cursor: pointer;">
+                  <input
+                    type="checkbox"
+                    id="quote-terms"
+                    name="terms_accepted"
+                    required
+                    aria-required="true"
+                    aria-describedby="quote-terms-error"
+                    style="margin-top: 3px; flex-shrink: 0; cursor: pointer;"
+                  >
+                  <span style="font-size: var(--text-sm); color: var(--color-ink); line-height: var(--leading-relaxed); margin-left: var(--space-2);">
+                    I agree to the <a href="../terms/">Terms of Use</a> and acknowledge the <a href="../privacy/">Privacy Policy</a>.<span class="form-label__required" aria-hidden="true">*</span>
+                  </span>
+                </label>
+                <p class="form-error" id="quote-terms-error" role="alert" hidden></p>
+              </div>
+
               <button type="submit" class="btn btn-primary" style="width: 100%;">
                 Submit Quote Request
               </button>
@@ -614,23 +632,19 @@
      To load analytics only after consent:
        document.addEventListener('fenovera:consent-granted', loadAnalytics);
   ────────────────────────────────────────────────────────────────── -->
-<div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="false"
-     aria-labelledby="cookie-banner-title" hidden>
+<div class="cookie-banner" id="cookie-banner" role="region" aria-labelledby="cookie-banner-title" hidden>
   <div class="cookie-banner__inner">
     <div class="cookie-banner__text">
-      <p class="cookie-banner__title" id="cookie-banner-title">We use cookies</p>
+      <p class="cookie-banner__title" id="cookie-banner-title">Site notice</p>
       <p class="cookie-banner__body">
-        We use strictly necessary cookies to keep the site running. We may also use
-        analytics and marketing cookies to understand how visitors use our site.
-        <a href="../cookies/" class="cookie-banner__link">Learn more in our Cookie Policy</a>.
+        This site does not use analytics or advertising trackers.
+        A browser preference is stored solely to remember that you have seen this notice.
+        <a href="../cookies/" class="cookie-banner__link">Cookie Policy</a>.
       </p>
     </div>
     <div class="cookie-banner__actions">
-      <button class="btn btn-secondary btn-sm" id="cookie-reject" type="button">
-        Reject Non-Essential
-      </button>
-      <button class="btn btn-primary btn-sm" id="cookie-accept" type="button">
-        Accept All
+      <button class="btn btn-primary btn-sm" id="cookie-acknowledge" type="button">
+        Got it
       </button>
     </div>
   </div>
@@ -640,40 +654,20 @@
 (function () {
   'use strict';
   var STORAGE_KEY = 'fenoveraCookieConsent';
-  var banner    = document.getElementById('cookie-banner');
-  var acceptBtn = document.getElementById('cookie-accept');
-  var rejectBtn = document.getElementById('cookie-reject');
+  var banner = document.getElementById('cookie-banner');
+  var btn    = document.getElementById('cookie-acknowledge');
 
-  // Expose consent state globally so analytics loaders can check it
-  window.fenovera = window.fenovera || {};
-  window.fenovera.consentGranted = false;
-
-  function dismiss(choice) {
-    try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
-    banner.setAttribute('hidden', '');
-    if (choice === 'accepted') {
-      window.fenovera.consentGranted = true;
-      // Fire event — attach analytics loaders like:
-      //   document.addEventListener('fenovera:consent-granted', loadAnalytics);
-      document.dispatchEvent(new CustomEvent('fenovera:consent-granted'));
-    }
-  }
-
-  // Check existing preference
   var existing;
   try { existing = localStorage.getItem(STORAGE_KEY); } catch (e) {}
 
-  if (existing === 'accepted') {
-    window.fenovera.consentGranted = true;
-  } else if (!existing) {
-    // Show after short delay so it doesn't flash on page load
-    setTimeout(function () {
-      banner.removeAttribute('hidden');
-    }, 800);
+  if (!existing) {
+    setTimeout(function () { banner.removeAttribute('hidden'); }, 800);
   }
 
-  if (acceptBtn) acceptBtn.addEventListener('click', function () { dismiss('accepted'); });
-  if (rejectBtn) rejectBtn.addEventListener('click', function () { dismiss('rejected'); });
+  if (btn) btn.addEventListener('click', function () {
+    try { localStorage.setItem(STORAGE_KEY, 'acknowledged'); } catch (e) {}
+    banner.setAttribute('hidden', '');
+  });
 }());
 </script>
 
@@ -746,6 +740,7 @@
 
       // ── Field validation ──────────────────────────────
       function getError(field) {
+        if (field.type === 'checkbox' && field.required && !field.checked) return 'You must agree to continue.';
         if (field.validity.valueMissing) return 'This field is required.';
         if (field.validity.typeMismatch && field.type === 'email') return 'Please enter a valid email address.';
         return '';
@@ -786,9 +781,10 @@
         return checked;
       }
 
-      // Live blur validation for text/email/textarea inputs
+      // Live validation for text/email/textarea/checkbox inputs
       form.querySelectorAll('input[required]:not([type="radio"]), textarea[required]').forEach(function (field) {
-        field.addEventListener('blur', function () { validateField(field); });
+        var evt = field.type === 'checkbox' ? 'change' : 'blur';
+        field.addEventListener(evt, function () { validateField(field); });
         field.addEventListener('input', function () {
           if (field.getAttribute('aria-invalid') === 'true') validateField(field);
         });
