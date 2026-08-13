@@ -10,25 +10,27 @@
   <link rel="stylesheet" href="/design-system/tokens.css">
   <link rel="stylesheet" href="/design-system/base.css">
   <link rel="stylesheet" href="/design-system/components.css">
-  <!-- Schema.org: Product -->
+  <!-- Schema.org: Product
+       Note: No Offer object — Fenovera does not publish prices or operate a
+       confirmed retail store. Offers will be added when accurate pricing, currency,
+       and availability can be supplied. Image, model, and material are visible on page. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "{{DATA_RAW:publicName}}",
     "description": "{{DATA_RAW:description}}",
+    "image": "https://fenovera.com{{DATA_RAW:heroImageSrc}}",
+    "sku": "{{DATA_RAW:slug}}",
+    "material": "{{DATA_RAW:materialLabel}}",
     "brand": {
       "@type": "Brand",
       "name": "Fenovera"
     },
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStoreOnly",
-      "seller": {
-        "@type": "Organization",
-        "name": "Fenovera LLC",
-        "url": "https://fenovera.com"
-      }
+    "seller": {
+      "@type": "Organization",
+      "name": "Fenovera LLC",
+      "url": "https://fenovera.com"
     }
   }
   </script>

@@ -55,8 +55,9 @@ var RELEASE         = process.argv.indexOf('--release') !== -1;
 
 // Canonical site base URL — update to the real domain before launch.
 var SITE_BASE_URL   = 'https://fenovera.com';
-// Default OG social-sharing image — replace with a dedicated branded image before launch.
-var OG_DEFAULT_IMAGE = SITE_BASE_URL + '/img/casement.jpg';
+// Default OG social-sharing image for pages without a specific image.
+var OG_DEFAULT_IMAGE     = SITE_BASE_URL + '/img/home/fenovera-home-background.webp';
+var OG_DEFAULT_IMAGE_ALT = 'Fenovera — Aluminum, uPVC, and PVC Windows and Doors in the Bay Area';
 
 // ── Load page registry ──────────────────────────────────────────────────────
 // page-data.js is loaded fresh (delete from require cache first so re-runs work)
@@ -616,17 +617,49 @@ function canonicalUrl(outFile) {
 }
 
 /**
+ * Resolves the OG image for a page.
+ * Priority: page.ogImage > page.data.heroImage.src > OG_DEFAULT_IMAGE
+ * Returns an absolute HTTPS URL.
+ */
+function resolveOgImage(page) {
+  if (page.ogImage) {
+    var img = page.ogImage;
+    return img.startsWith('/') ? SITE_BASE_URL + img : img;
+  }
+  if (page.data && page.data.heroImage && page.data.heroImage.src) {
+    var src = page.data.heroImage.src;
+    return src.startsWith('/') ? SITE_BASE_URL + src : src;
+  }
+  return OG_DEFAULT_IMAGE;
+}
+
+/**
+ * Resolves the OG image alt text for a page.
+ */
+function resolveOgImageAlt(page) {
+  if (page.ogImageAlt) return page.ogImageAlt;
+  if (page.data && page.data.heroImage && page.data.heroImage.alt) {
+    return page.data.heroImage.alt;
+  }
+  return OG_DEFAULT_IMAGE_ALT;
+}
+
+/**
  * Builds the SEO meta block injected before </head> on every page.
  * Uses root-relative href for favicon (gets rewritten by resolveRootRelativePaths).
  * Uses absolute URLs for canonical + OG (never rewritten).
+ * Strips any pre-existing OG/Twitter/canonical tags from the source first
+ * to prevent duplication (see injectSeoMeta).
  */
 function buildSeoBlock(page) {
   var canonical = canonicalUrl(page.out);
   var title     = escapeHtml(page.title || '');
   var desc      = escapeHtml(page.description || '');
+  var ogImg     = escapeHtml(resolveOgImage(page));
+  var ogImgAlt  = escapeHtml(resolveOgImageAlt(page));
   return [
     '',
-    '  <!-- ── SEO: canonical + Open Graph + favicon ──────────────────── -->',
+    '  <!-- ── SEO: canonical + Open Graph + Twitter Card + favicon ───── -->',
     '  <link rel="canonical" href="' + canonical + '">',
     '  <link rel="icon" href="/favicon.svg" type="image/svg+xml">',
     '  <meta property="og:type" content="website">',
@@ -634,18 +667,31 @@ function buildSeoBlock(page) {
     '  <meta property="og:title" content="' + title + '">',
     '  <meta property="og:description" content="' + desc + '">',
     '  <meta property="og:url" content="' + canonical + '">',
-    '  <meta property="og:image" content="' + OG_DEFAULT_IMAGE + '">',
+    '  <meta property="og:image" content="' + ogImg + '">',
+    '  <meta property="og:image:alt" content="' + ogImgAlt + '">',
+    '  <meta name="twitter:card" content="summary_large_image">',
+    '  <meta name="twitter:title" content="' + title + '">',
+    '  <meta name="twitter:description" content="' + desc + '">',
+    '  <meta name="twitter:image" content="' + ogImg + '">',
+    '  <meta name="twitter:image:alt" content="' + ogImgAlt + '">',
     '  <!-- /SEO ──────────────────────────────────────────────────────── -->',
   ].join('\n');
 }
 
 /**
  * Injects the SEO block immediately before </head>.
+ * First strips any pre-existing canonical, OG, and Twitter tags from the <head>
+ * so that the build system is the single authoritative source for these fields.
  * Must run BEFORE resolveRootRelativePaths so /favicon.svg gets rewritten.
  */
 function injectSeoMeta(html, page) {
+  // Strip duplicate canonical/OG/Twitter tags that may be authored in source files.
+  // This prevents the double og:title / og:type / og:url problem on the homepage.
+  html = html.replace(/[ \t]*<link\s+rel="canonical"[^>]*>\n?/gi, '');
+  html = html.replace(/[ \t]*<meta\s+property="og:[^"]*"[^>]*>\n?/gi, '');
+  html = html.replace(/[ \t]*<meta\s+name="twitter:[^"]*"[^>]*>\n?/gi, '');
+  // Do NOT strip <meta name="robots"> — release-mode upgrade still needs to match it.
   var block = buildSeoBlock(page);
-  // Insert before </head> (handles optional whitespace / case)
   return html.replace(/<\/head>/i, block + '\n</head>');
 }
 
@@ -745,12 +791,18 @@ function buildPage(page) {
 
   // 8. Release-mode post-processing
   if (RELEASE) {
+    // forceNoindex: true — keep noindex even in release (e.g. Projects placeholder)
     var isPublished = !page.data || page.data.publicationStatus !== 'draft';
-    if (isPublished) {
+    if (isPublished && !page.forceNoindex) {
       // Strip development notice banner
       output = output.replace(/[ \t]*<div class="dev-notice"[^>]*>[\s\S]*?<\/div>[ \t]*\n?/m, '');
-      // Make page indexable
+      // Upgrade noindex/nofollow → index, follow
       output = output.replace(/content="noindex,\s*nofollow"/g, 'content="index, follow"');
+      // Upgrade noindex, follow → index, follow (for pages explicitly set to noindex, follow)
+      output = output.replace(/content="noindex,\s*follow"/g, 'content="index, follow"');
+    } else if (page.forceNoindex) {
+      // Upgrade nofollow → follow so link equity still flows, but page stays noindex
+      output = output.replace(/content="noindex,\s*nofollow"/g, 'content="noindex, follow"');
     }
   }
 
@@ -820,12 +872,22 @@ if (!DRY_RUN) {
 }
 
 // ── Generate sitemap.xml ────────────────────────────────────────────────────
-// In release mode: exclude draft product pages. In dev mode: include all.
-// <lastmod> is intentionally omitted — all pages currently share the build date,
-// which is misleading. Omitting is more honest than a uniform fabricated date.
-var sitemapPages = RELEASE
-  ? pages.filter(function (p) { return !(p.data && p.data.publicationStatus === 'draft'); })
-  : pages;
+// Sitemap inclusion rules (release mode):
+//   EXCLUDE: pages with sitemapExclude: true (Projects placeholder, utility pages)
+//   EXCLUDE: pages with forceNoindex: true (will be served noindex)
+//   INCLUDE: all other pages — product pages have index,follow in their template
+//            regardless of publicationStatus, so they are correctly indexable.
+// <lastmod> is intentionally omitted — pages do not carry per-file mod dates
+// accurate enough to be meaningful. Omitting is more honest than a uniform date.
+
+function isSitemapIncluded(page, isRelease) {
+  if (!isRelease) return true;           // dev mode: include all
+  if (page.sitemapExclude) return false; // explicitly excluded
+  if (page.forceNoindex)   return false; // will be served noindex
+  return true;
+}
+
+var sitemapPages = pages.filter(function (p) { return isSitemapIncluded(p, RELEASE); });
 var sitemapUrls = sitemapPages.map(function (page) {
   return '  <url>\n    <loc>' + canonicalUrl(page.out) + '</loc>\n  </url>';
 });

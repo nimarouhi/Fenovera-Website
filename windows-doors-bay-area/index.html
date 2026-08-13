@@ -3,88 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cookie Policy | Fenovera</title>
-  <meta name="description" content="Cookie Policy for Fenovera: how fenovera.com uses cookies and similar technologies.">
-  <meta name="robots" content="noindex">
-<!-- Design System v1.3.1 -->
+  <title>Windows &amp; Doors in the Bay Area | Fenovera</title>
+  <meta name="description" content="Fenovera supplies aluminum, uPVC, and PVC windows and doors for Bay Area residential and commercial projects. Custom sizing, direct factory sourcing, and preliminary quotes available.">
+  <meta name="robots" content="index, follow">
+<!-- Design System -->
   <link rel="stylesheet" href="../design-system/tokens.css">
   <link rel="stylesheet" href="../design-system/base.css">
   <link rel="stylesheet" href="../design-system/components.css">
 
   <style>
-    .legal-hero {
-      padding: var(--space-16) 0 var(--space-10);
+    .bay-hero {
+      padding: var(--space-16) 0 var(--space-14);
       border-bottom: var(--border-thin) solid var(--color-border);
     }
-    .legal-body {
-      padding: var(--space-12) 0 var(--space-16);
+    .bay-section {
+      padding: var(--space-12) 0;
+      border-bottom: var(--border-thin) solid var(--color-border-subtle);
     }
-    .legal-doc {
-      max-width: 720px;
+    .bay-section:last-of-type { border-bottom: none; }
+    .bay-section__body {
+      max-width: 680px;
     }
-    .legal-doc h2 {
-      font-family: var(--font-heading);
-      font-weight: var(--weight-bold);
-      font-size: var(--text-xl);
-      color: var(--color-ink);
-      margin: var(--space-10) 0 var(--space-3) 0;
-    }
-    .legal-doc h2:first-child { margin-top: 0; }
-    .legal-doc p {
+    .bay-section__body p {
       color: var(--color-ink-secondary);
-      font-size: var(--text-body);
       line-height: var(--leading-relaxed);
       margin-bottom: var(--space-4);
     }
-    .legal-doc ul {
-      margin: 0 0 var(--space-4) var(--space-6);
-      padding: 0;
+    .bay-section__body p:last-child { margin-bottom: 0; }
+    .bay-materials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-8);
     }
-    .legal-doc ul li {
-      color: var(--color-ink-secondary);
-      font-size: var(--text-body);
-      line-height: var(--leading-relaxed);
+    .bay-material-card {
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+    }
+    .bay-material-card__name {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: var(--weight-bold);
+      color: var(--color-navy);
       margin-bottom: var(--space-2);
     }
-    .legal-effective {
+    .bay-material-card__body {
       font-size: var(--text-sm);
       color: var(--color-ink-secondary);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-4);
+    }
+    .bay-cta {
+      background: var(--color-navy);
+      padding: var(--space-14) 0;
+    }
+    .bay-cta__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      font-weight: var(--weight-bold);
+      color: var(--color-ink-inverse);
+      margin-bottom: var(--space-4);
+    }
+    .bay-cta__body {
+      color: rgba(255,255,255,0.78);
+      font-size: var(--text-body);
       margin-bottom: var(--space-8);
-      padding-bottom: var(--space-6);
-      border-bottom: var(--border-thin) solid var(--color-border);
+      max-width: 52ch;
     }
-    .legal-contact-box {
-      background: var(--color-canvas);
-      border: var(--border-thin) solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: var(--space-5) var(--space-6);
-      margin-top: var(--space-4);
+    .bay-cta__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
     }
-    .legal-contact-box p { margin-bottom: var(--space-1); }
-@media (max-width: 767px) {
-      .legal-hero { padding: var(--space-10) 0 var(--space-8); }
-      .legal-body { padding: var(--space-8) 0 var(--space-12); }
+    @media (max-width: 767px) {
+      .bay-materials { grid-template-columns: 1fr; }
+      .bay-hero { padding: var(--space-10) 0 var(--space-10); }
     }
   </style>
 
   <!-- ── SEO: canonical + Open Graph + Twitter Card + favicon ───── -->
-  <link rel="canonical" href="https://fenovera.com/cookies/">
+  <link rel="canonical" href="https://fenovera.com/windows-doors-bay-area/">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fenovera">
-  <meta property="og:title" content="Cookie Policy | Fenovera">
-  <meta property="og:description" content="Cookie Policy for Fenovera: how fenovera.com uses cookies and similar tracking technologies.">
-  <meta property="og:url" content="https://fenovera.com/cookies/">
+  <meta property="og:title" content="Windows &amp; Doors in the Bay Area | Fenovera">
+  <meta property="og:description" content="Fenovera supplies aluminum, uPVC, and PVC windows and doors for Bay Area residential and commercial projects. Custom sizing, direct factory sourcing, and preliminary quotes available.">
+  <meta property="og:url" content="https://fenovera.com/windows-doors-bay-area/">
   <meta property="og:image" content="https://fenovera.com/img/home/fenovera-home-background.webp">
-  <meta property="og:image:alt" content="Fenovera — Aluminum, uPVC, and PVC Windows and Doors in the Bay Area">
+  <meta property="og:image:alt" content="Fenovera Windows and Doors — serving the San Francisco Bay Area">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cookie Policy | Fenovera">
-  <meta name="twitter:description" content="Cookie Policy for Fenovera: how fenovera.com uses cookies and similar tracking technologies.">
+  <meta name="twitter:title" content="Windows &amp; Doors in the Bay Area | Fenovera">
+  <meta name="twitter:description" content="Fenovera supplies aluminum, uPVC, and PVC windows and doors for Bay Area residential and commercial projects. Custom sizing, direct factory sourcing, and preliminary quotes available.">
   <meta name="twitter:image" content="https://fenovera.com/img/home/fenovera-home-background.webp">
-  <meta name="twitter:image:alt" content="Fenovera — Aluminum, uPVC, and PVC Windows and Doors in the Bay Area">
+  <meta name="twitter:image:alt" content="Fenovera Windows and Doors — serving the San Francisco Bay Area">
   <!-- /SEO ──────────────────────────────────────────────────────── -->
 </head>
-<body data-page="cookies">
+<body>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -245,102 +260,127 @@
 
   <main id="main-content">
 
-    <section class="legal-hero page-section" aria-labelledby="cookies-heading">
+    <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+    <section class="bay-hero" aria-labelledby="bay-heading">
       <div class="container">
-        <p class="section-overline">Legal</p>
-        <h1 class="section-title" id="cookies-heading">Cookie Policy</h1>
-        <p class="section-lead">
-          How fenovera.com uses cookies and similar technologies.
+        <p class="section-overline">San Francisco Bay Area</p>
+        <h1 class="section-title" id="bay-heading">Windows &amp; Doors in the Bay Area</h1>
+        <p class="section-lead" style="max-width:56ch">
+          Fenovera supplies aluminum, uPVC, and PVC window and door systems for
+          residential and commercial projects across the San Francisco Bay Area.
+          We source directly from the factory and work with you from specification
+          through delivery.
         </p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-8)">
+          <a href="../quote/" class="btn btn-primary">Get a Free Estimate</a>
+          <a href="../products/" class="btn btn-outline">Explore Products</a>
+        </div>
       </div>
     </section>
 
-    <section class="legal-body page-section">
+    <!-- ── SERVICE AREA ───────────────────────────────────────────────────── -->
+    <section class="bay-section" aria-labelledby="area-heading">
       <div class="container">
-        <div class="legal-doc">
-
-          <p class="legal-effective">Effective date: August 11, 2026 &nbsp;|&nbsp; Last updated: August 11, 2026</p>
-
-          <h2>1. Current State of This Site</h2>
+        <p class="section-overline">Service Area</p>
+        <h2 class="section-title" id="area-heading">Where We Operate</h2>
+        <div class="bay-section__body">
           <p>
-            Fenovera LLC does not currently load Google Analytics, Adobe Analytics,
-            Meta Pixel, Google Ads, LinkedIn Insight Tag, or any other analytics,
-            advertising, or remarketing tracker on fenovera.com. This policy describes
-            the actual current state of the site, not hypothetical future uses.
-          </p>
-
-          <h2>2. What the Site Currently Stores</h2>
-          <p>
-            <strong>Notice-dismissal preference (browser localStorage).</strong> When
-            you dismiss the site notice banner, a preference is saved in your browser
-            using the Web Storage API (localStorage key: <code>fenoveraCookieConsent</code>).
-            This is not an HTTP cookie. It is stored locally in your browser, is never
-            transmitted to our servers, and contains only the value "acknowledged"
-            indicating that you have seen the notice. It has no expiry date set by us
-            and remains until you clear your browser's site data.
+            Fenovera serves residential builders, contractors, architects, and commercial
+            developers throughout the San Francisco Bay Area, including the South Bay,
+            East Bay, Peninsula, and North Bay regions.
           </p>
           <p>
-            This storage is used solely to avoid repeatedly displaying the notice to
-            returning visitors. It does not track you, identify you, or support any
-            analytics or advertising function.
+            We do not operate a walk-in retail location. Customers engage with us directly
+            by phone, email, or our online quote form to discuss project requirements,
+            receive specifications, and arrange delivery.
           </p>
+        </div>
+      </div>
+    </section>
 
-          <h2>3. Form Delivery — Web3Forms</h2>
-          <p>
-            When you submit the contact or quote request forms on this site, your
-            submission is processed by <strong>Web3Forms</strong>, a third-party form
-            delivery service. Web3Forms may process technical information necessary to
-            receive and deliver your submission, including your IP address and browser
-            information, in accordance with its own privacy policy. Web3Forms does not
-            set cookies on fenovera.com on our behalf. For more information, visit the
-            Web3Forms website directly.
-          </p>
+    <!-- ── MATERIALS ──────────────────────────────────────────────────────── -->
+    <section class="bay-section page-section--canvas" aria-labelledby="materials-heading">
+      <div class="container">
+        <p class="section-overline">What We Carry</p>
+        <h2 class="section-title" id="materials-heading">Three Frame Materials</h2>
+        <p class="section-lead">
+          Choose the right material for your project's performance, budget, and aesthetic requirements.
+        </p>
 
-          <h2>4. Hosting and Security</h2>
-          <p>
-            The site is hosted on GitHub Pages (GitHub, Inc.), which may process
-            standard server logs including IP addresses, browser type, and requested
-            pages as part of infrastructure operations. These logs are not used by
-            Fenovera LLC for analytics and are processed by GitHub under its own
-            privacy policy.
-          </p>
-
-          <h2>5. Browser Controls</h2>
-          <p>
-            You can clear the site's localStorage preference at any time through your
-            browser's developer tools or site-data settings. This will cause the notice
-            banner to reappear on your next visit. Standard browser cookie controls
-            do not affect localStorage.
-          </p>
-
-          <h2>6. Future Changes</h2>
-          <p>
-            If Fenovera LLC activates analytics, advertising, or other non-essential
-            tracking in the future, this Cookie Policy will be updated before those
-            technologies are deployed. Where required by applicable law, an appropriate
-            consent mechanism will be implemented before any non-essential tracking is
-            activated. We will not activate such technologies without first updating
-            this policy.
-          </p>
-
-          <h2>7. Changes to This Policy</h2>
-          <p>
-            We may update this Cookie Policy to reflect changes in the technologies
-            used on the site or to comply with legal requirements. When we make material
-            changes, we will revise the effective date at the top of this page and post
-            the updated policy at least 30 days before changes take effect.
-          </p>
-
-          <h2>8. Contact Us</h2>
-          <p>
-            If you have questions about this policy, please contact us:
-          </p>
-          <div class="legal-contact-box">
-            <p><strong>Fenovera LLC</strong></p>
-            <p>Bay Area, California</p>
-            <p>Email: <a href="mailto:info@fenovera.com">info@fenovera.com</a></p>
+        <div class="bay-materials">
+          <div class="bay-material-card">
+            <div class="bay-material-card__name">Aluminum</div>
+            <p class="bay-material-card__body">
+              Slim sightlines, large-span capability, and long service life. Thermal-break options
+              available across all series. Suited to modern architecture and commercial projects.
+            </p>
+            <a href="../products/windows/aluminum/" class="link-standalone" style="font-size:var(--text-sm)">Aluminum Windows →</a><br>
+            <a href="../products/doors/aluminum/" class="link-standalone" style="font-size:var(--text-sm)">Aluminum Doors →</a>
           </div>
 
+          <div class="bay-material-card">
+            <div class="bay-material-card__name">uPVC</div>
+            <p class="bay-material-card__body">
+              Multi-chamber profiles provide excellent thermal insulation without painting or
+              refinishing. Well suited to residential builds where energy efficiency is the priority.
+            </p>
+            <a href="../products/windows/upvc/" class="link-standalone" style="font-size:var(--text-sm)">uPVC Windows →</a><br>
+            <a href="../products/doors/upvc/" class="link-standalone" style="font-size:var(--text-sm)">uPVC Doors →</a>
+          </div>
+
+          <div class="bay-material-card">
+            <div class="bay-material-card__name">PVC</div>
+            <p class="bay-material-card__body">
+              A budget-conscious option for standard residential openings. Available in
+              casement configurations for windows and doors.
+            </p>
+            <a href="../products/windows/pvc/" class="link-standalone" style="font-size:var(--text-sm)">PVC Windows →</a><br>
+            <a href="../products/doors/pvc/" class="link-standalone" style="font-size:var(--text-sm)">PVC Doors →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ───────────────────────────────────────────────────── -->
+    <section class="bay-section" aria-labelledby="process-heading">
+      <div class="container">
+        <p class="section-overline">Process</p>
+        <h2 class="section-title" id="process-heading">From Quote to Delivery</h2>
+        <div class="bay-section__body">
+          <p>
+            <strong>1. Submit a quote request.</strong> Use our online form or email us with your
+            project type, approximate opening dimensions, and any material or configuration preferences.
+          </p>
+          <p>
+            <strong>2. Receive specifications and pricing.</strong> We will identify the series
+            that best matches your requirements and provide detailed technical specifications
+            along with pricing for your review.
+          </p>
+          <p>
+            <strong>3. Confirm your order.</strong> Once specifications are agreed, we handle
+            production coordination and logistics. Custom sizes and non-standard shapes are
+            available on request.
+          </p>
+          <p>
+            <strong>4. Delivery.</strong> Products are delivered to your Bay Area project site.
+            Installation is the responsibility of your contractor; we can provide technical
+            documentation to support the installation team.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ───────────────────────────────────────────────────────────── -->
+    <section class="bay-cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 class="bay-cta__title" id="cta-heading">Ready to discuss your project?</h2>
+        <p class="bay-cta__body">
+          Tell us about your opening sizes, material preferences, and timeline.
+          We will follow up with specifications and a preliminary quote.
+        </p>
+        <div class="bay-cta__actions">
+          <a href="../quote/" class="btn btn-secondary">Request a Free Quote</a>
+          <a href="../contact/" class="btn btn-outline-inverse">Contact Us</a>
         </div>
       </div>
     </section>
