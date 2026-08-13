@@ -200,11 +200,14 @@ function renderHeroImage(data) {
   if (img.objectFit) styleProps.push('object-fit: ' + img.objectFit);
   if (img.objectPosition) styleProps.push('object-position: ' + img.objectPosition);
   var inlineStyle = styleProps.length ? ' style="' + escapeHtml(styleProps.join('; ')) + '"' : '';
+  var heroW = img.width  || 820;
+  var heroH = img.height || 630;
   return [
     '<div class="product-hero__image-wrap">',
     '  <img src="' + escapeHtml(img.src) + '"',
     '       alt="' + escapeHtml(img.alt || data.publicName) + '"',
     '       class="product-hero__img"' + inlineStyle,
+    '       width="' + heroW + '" height="' + heroH + '"',
     '       loading="eager" decoding="async">',
     '</div>',
   ].join('\n');
@@ -266,6 +269,7 @@ function renderProductBreadcrumb(data) {
     '      </li>',
     '      <li aria-hidden="true">›</li>',
     '      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">',
+    '        <link itemprop="item" href="' + SITE_BASE_URL + '/products/' + typeSlug + '/' + materialSlug + '/' + escapeHtml(data.slug) + '/"/>',
     '        <span itemprop="name">' + escapeHtml(publicName) + '</span>',
     '        <meta itemprop="position" content="4" />',
     '      </li>',
