@@ -210,7 +210,7 @@
   top: calc(100% + var(--space-1));
   left: 50%;
   transform: translateX(-50%);
-  width: 740px;
+  width: 640px;
   background-color: var(--color-surface);
   border: var(--border-thin) solid var(--color-border-subtle);
   border-radius: var(--radius-md);
@@ -218,13 +218,30 @@
   padding: var(--space-6);
   z-index: var(--z-dropdown);
   display: none;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-6);
 }
 
-.nav-item.is-open > .mega-menu {
+.nav-item.is-open > .mega-menu,
+.nav-item:hover > .mega-menu,
+.nav-item:focus-within > .mega-menu {
   display: grid;
   animation: menu-enter var(--duration-base) var(--ease-enter) forwards;
+}
+
+/* Bridge gap between trigger and panel so cursor doesn't fall through */
+.nav-item > .mega-menu::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  top: -8px;
+  height: 8px;
+}
+
+/* Rotate chevron on hover */
+.nav-item:hover > button .nav-link__chevron,
+.nav-item:focus-within > button .nav-link__chevron {
+  transform: rotate(180deg);
 }
 
 @keyframes menu-enter {
@@ -290,6 +307,21 @@
   margin-top: var(--space-1);
   font-weight: var(--weight-normal);
   line-height: var(--leading-relaxed);
+}
+
+.mega-menu__type-block {
+  margin-bottom: var(--space-4);
+}
+.mega-menu__type-block:last-child {
+  margin-bottom: 0;
+}
+.mega-menu__type-heading {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--color-ink-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  margin: 0 0 var(--space-1) var(--space-2);
 }
 
 .mega-menu__footer {
@@ -429,13 +461,23 @@
 
 .mobile-nav__submenu[aria-hidden="true"] { display: none; }
 
-.mobile-nav__submenu-label {
+.mobile-nav__submenu-label,
+.mobile-nav__submenu-section {
   font-size: var(--text-xs);
   font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
   color: var(--color-ink-secondary);
   padding: var(--space-3) var(--space-6) var(--space-1);
+}
+
+.mobile-nav__submenu-type {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--color-ink-tertiary);
+  padding: var(--space-2) var(--space-8) var(--space-1);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
 }
 
 .mobile-nav__submenu-link {

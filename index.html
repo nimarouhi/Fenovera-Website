@@ -289,59 +289,6 @@
       color: var(--color-ink-secondary);
     }
 
-    /* ── Products browse section ─────────────────────────── */
-    .home-products__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-6);
-      margin-top: var(--space-8);
-    }
-    .home-browse-card {
-      border: var(--border-thin) solid var(--color-border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-8);
-      text-decoration: none;
-      display: block;
-      background: var(--color-canvas);
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    }
-    .home-browse-card:hover {
-      border-color: var(--color-navy);
-      box-shadow: var(--shadow-md);
-    }
-    .home-browse-card__icon {
-      width: 44px; height: 44px;
-      background: var(--color-navy-subtle);
-      border-radius: var(--radius-sm);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: var(--space-4);
-      color: var(--color-navy);
-    }
-    .home-browse-card__title {
-      font-family: var(--font-heading);
-      font-size: var(--text-xl);
-      font-weight: var(--weight-bold);
-      color: var(--color-navy);
-      margin: 0 0 var(--space-2) 0;
-    }
-    .home-browse-card__desc {
-      font-size: var(--text-sm);
-      color: var(--color-ink-secondary);
-      line-height: var(--leading-relaxed);
-      margin: 0 0 var(--space-4) 0;
-    }
-    .home-browse-card__examples {
-      font-size: var(--text-xs);
-      color: var(--color-ink-secondary);
-      font-style: italic;
-      margin: 0 0 var(--space-4) 0;
-    }
-    .home-browse-card__cta {
-      display: flex; align-items: center; gap: var(--space-1);
-      font-size: var(--text-sm); font-weight: var(--weight-medium);
-      color: var(--color-bronze-interactive);
-    }
-
     /* ── Project CTA (navy) ──────────────────────────────── */
     .home-project-cta {
       background: var(--color-navy);
@@ -374,9 +321,6 @@
         font-size: var(--text-3xl);
       }
       .home-props {
-        grid-template-columns: 1fr;
-      }
-      .home-products__grid {
         grid-template-columns: 1fr;
       }
       body.page-home .home-hero__title { font-size: var(--text-4xl); }
@@ -623,63 +567,71 @@
 
         <div class="mega-menu" id="mega-menu-products" role="region" aria-label="Products menu">
 
-          <!-- Column 1: Windows -->
+          <!-- Column 1: By Material -->
           <div>
-            <div class="mega-menu__col-label">Windows</div>
-            <div class="mega-menu__group">
-              <a href="./products/windows/aluminum/" class="mega-menu__link">
-                <span class="mega-menu__link-name">Aluminum Windows</span>
-              </a>
-              <a href="./products/windows/upvc/" class="mega-menu__link">
-                <span class="mega-menu__link-name">uPVC Windows</span>
-              </a>
-              <a href="./products/windows/pvc/" class="mega-menu__link">
-                <span class="mega-menu__link-name">PVC Windows</span>
-              </a>
-              <a href="./products/windows/" class="mega-menu__link">
-                <span class="mega-menu__link-name">All Windows</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Column 2: Doors -->
-          <div>
-            <div class="mega-menu__col-label">Doors</div>
+            <div class="mega-menu__col-label">By Material</div>
             <div class="mega-menu__group">
               <a href="./products/doors/aluminum/" class="mega-menu__link">
                 <span class="mega-menu__link-name">Aluminum Doors</span>
               </a>
+              <a href="./products/windows/aluminum/" class="mega-menu__link">
+                <span class="mega-menu__link-name">Aluminum Windows</span>
+              </a>
               <a href="./products/doors/upvc/" class="mega-menu__link">
                 <span class="mega-menu__link-name">uPVC Doors</span>
+              </a>
+              <a href="./products/windows/upvc/" class="mega-menu__link">
+                <span class="mega-menu__link-name">uPVC Windows</span>
               </a>
               <a href="./products/doors/pvc/" class="mega-menu__link">
                 <span class="mega-menu__link-name">PVC Doors</span>
               </a>
-              <a href="./products/doors/" class="mega-menu__link">
-                <span class="mega-menu__link-name">All Doors</span>
+              <a href="./products/windows/pvc/" class="mega-menu__link">
+                <span class="mega-menu__link-name">PVC Windows</span>
               </a>
             </div>
           </div>
 
-          <!-- Column 3: Browse by -->
+          <!-- Column 2: By Type -->
           <div>
-            <div class="mega-menu__col-label">Browse by</div>
-            <div class="mega-menu__group">
-              <a href="./products/by-material/" class="mega-menu__link">
-                <span class="mega-menu__link-name">Material</span>
-                <span class="mega-menu__link-desc">Aluminum · uPVC · PVC</span>
+            <div class="mega-menu__col-label">By Type</div>
+            <div class="mega-menu__type-block">
+              <p class="mega-menu__type-heading">Windows</p>
+              <a href="./products/by-type/#casement" class="mega-menu__link">
+                <span class="mega-menu__link-name">Casement</span>
               </a>
-              <a href="./products/by-type/" class="mega-menu__link">
-                <span class="mega-menu__link-name">Opening Type</span>
-                <span class="mega-menu__link-desc">Casement · Sliding · Bi-Fold · more</span>
+              <a href="./products/by-type/#tilt-turn" class="mega-menu__link">
+                <span class="mega-menu__link-name">Tilt-Turn</span>
               </a>
-              <a href="./products/" class="mega-menu__link">
-                <span class="mega-menu__link-name">All Products</span>
+              <a href="./products/by-type/#awning" class="mega-menu__link">
+                <span class="mega-menu__link-name">Awning</span>
+              </a>
+              <a href="./products/by-type/#sliding" class="mega-menu__link">
+                <span class="mega-menu__link-name">Sliding</span>
+              </a>
+              <a href="./products/by-type/#hung" class="mega-menu__link">
+                <span class="mega-menu__link-name">Hung</span>
+              </a>
+            </div>
+            <div class="mega-menu__type-block">
+              <p class="mega-menu__type-heading">Doors</p>
+              <a href="./products/by-type/#swing-french" class="mega-menu__link">
+                <span class="mega-menu__link-name">Swing &amp; French</span>
+              </a>
+              <a href="./products/by-type/#sliding" class="mega-menu__link">
+                <span class="mega-menu__link-name">Sliding</span>
+              </a>
+              <a href="./products/by-type/#bi-fold" class="mega-menu__link">
+                <span class="mega-menu__link-name">Bi-Fold</span>
+              </a>
+              <a href="./products/by-type/#lift-slide" class="mega-menu__link">
+                <span class="mega-menu__link-name">Lift &amp; Slide</span>
               </a>
             </div>
           </div>
 
           <div class="mega-menu__footer">
+            <a href="./products/" class="link-standalone">All Products</a>
             <a href="./quote/" class="link-standalone">
               Request a Free Quote
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -741,20 +693,29 @@
         </button>
         <div class="mobile-nav__submenu" id="mobile-products-submenu"
           aria-hidden="true">
-          <div class="mobile-nav__submenu-label">Windows</div>
-          <a href="./products/windows/aluminum/" class="mobile-nav__submenu-link">Aluminum Windows</a>
-          <a href="./products/windows/upvc/" class="mobile-nav__submenu-link">uPVC Windows</a>
-          <a href="./products/windows/pvc/" class="mobile-nav__submenu-link">PVC Windows</a>
-          <a href="./products/windows/" class="mobile-nav__submenu-link">All Windows</a>
-          <div class="mobile-nav__submenu-label">Doors</div>
+
+          <div class="mobile-nav__submenu-section">By Material</div>
           <a href="./products/doors/aluminum/" class="mobile-nav__submenu-link">Aluminum Doors</a>
+          <a href="./products/windows/aluminum/" class="mobile-nav__submenu-link">Aluminum Windows</a>
           <a href="./products/doors/upvc/" class="mobile-nav__submenu-link">uPVC Doors</a>
+          <a href="./products/windows/upvc/" class="mobile-nav__submenu-link">uPVC Windows</a>
           <a href="./products/doors/pvc/" class="mobile-nav__submenu-link">PVC Doors</a>
-          <a href="./products/doors/" class="mobile-nav__submenu-link">All Doors</a>
+          <a href="./products/windows/pvc/" class="mobile-nav__submenu-link">PVC Windows</a>
+
+          <div class="mobile-nav__submenu-section">By Type</div>
+          <div class="mobile-nav__submenu-type">Windows</div>
+          <a href="./products/by-type/#casement" class="mobile-nav__submenu-link">Casement</a>
+          <a href="./products/by-type/#tilt-turn" class="mobile-nav__submenu-link">Tilt-Turn</a>
+          <a href="./products/by-type/#awning" class="mobile-nav__submenu-link">Awning</a>
+          <a href="./products/by-type/#sliding" class="mobile-nav__submenu-link">Sliding</a>
+          <a href="./products/by-type/#hung" class="mobile-nav__submenu-link">Hung</a>
+          <div class="mobile-nav__submenu-type">Doors</div>
+          <a href="./products/by-type/#swing-french" class="mobile-nav__submenu-link">Swing &amp; French</a>
+          <a href="./products/by-type/#sliding" class="mobile-nav__submenu-link">Sliding</a>
+          <a href="./products/by-type/#bi-fold" class="mobile-nav__submenu-link">Bi-Fold</a>
+          <a href="./products/by-type/#lift-slide" class="mobile-nav__submenu-link">Lift &amp; Slide</a>
+
           <a href="./products/" class="mobile-nav__submenu-link">All Products</a>
-          <div class="mobile-nav__submenu-label">Browse by</div>
-          <a href="./products/by-material/" class="mobile-nav__submenu-link">By Material</a>
-          <a href="./products/by-type/" class="mobile-nav__submenu-link">By Opening Type</a>
         </div>
       </div>
 
@@ -836,65 +797,6 @@
 
         </div>
 
-      </div>
-    </section>
-
-    <!-- ── Products ─────────────────────────────────────── -->
-    <section class="page-section page-section--canvas" aria-labelledby="products-heading">
-      <div class="container">
-        <p class="section-overline">Windows &amp; Doors</p>
-        <h2 class="section-title" id="products-heading">Our Products</h2>
-        <p class="section-lead">
-          Aluminum, uPVC, and PVC window and door systems for residential and
-          commercial projects. Browse by the frame material you need, or by how
-          the window or door opens.
-        </p>
-        <div class="home-products__grid">
-
-          <a href="./products/by-material/" class="home-browse-card">
-            <div class="home-browse-card__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="8" height="8" rx="1"/>
-                <rect x="12" y="2" width="8" height="8" rx="1"/>
-                <rect x="2" y="12" width="8" height="8" rx="1"/>
-                <rect x="12" y="12" width="8" height="8" rx="1"/>
-              </svg>
-            </div>
-            <h3 class="home-browse-card__title">Browse by Material</h3>
-            <p class="home-browse-card__desc">
-              Choose the frame material first — aluminum, uPVC, or PVC — then see
-              which window and door configurations are available in that material.
-            </p>
-            <p class="home-browse-card__examples">Aluminum &nbsp;&middot;&nbsp; uPVC &nbsp;&middot;&nbsp; PVC</p>
-            <span class="home-browse-card__cta">
-              Browse by Material
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-          </a>
-
-          <a href="./products/by-type/" class="home-browse-card">
-            <div class="home-browse-card__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 7h14M4 11h9M4 15h11"/>
-              </svg>
-            </div>
-            <h3 class="home-browse-card__title">Browse by Opening Type</h3>
-            <p class="home-browse-card__desc">
-              Know how you want the window or door to operate? Find all series that
-              support casement, tilt-turn, sliding, bi-fold, lift &amp; slide, and more.
-            </p>
-            <p class="home-browse-card__examples">Casement &nbsp;&middot;&nbsp; Tilt-Turn &nbsp;&middot;&nbsp; Sliding &nbsp;&middot;&nbsp; Bi-Fold &nbsp;&middot;&nbsp; Lift &amp; Slide</p>
-            <span class="home-browse-card__cta">
-              Browse by Opening Type
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-          </a>
-
-        </div>
       </div>
     </section>
 

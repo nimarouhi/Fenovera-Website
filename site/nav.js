@@ -50,6 +50,9 @@
           navProducts.classList.contains('is-open') ? closeMenu() : openMenu();
         });
       }
+      // Sync aria-expanded with CSS hover state
+      navProducts.addEventListener('mouseenter', openMenu);
+      navProducts.addEventListener('mouseleave', closeMenu);
       document.addEventListener('click', function (e) {
         if (!navProducts.contains(e.target)) closeMenu();
       });

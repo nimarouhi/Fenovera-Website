@@ -289,59 +289,6 @@
       color: var(--color-ink-secondary);
     }
 
-    /* ── Products browse section ─────────────────────────── */
-    .home-products__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-6);
-      margin-top: var(--space-8);
-    }
-    .home-browse-card {
-      border: var(--border-thin) solid var(--color-border);
-      border-radius: var(--radius-lg);
-      padding: var(--space-8);
-      text-decoration: none;
-      display: block;
-      background: var(--color-canvas);
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    }
-    .home-browse-card:hover {
-      border-color: var(--color-navy);
-      box-shadow: var(--shadow-md);
-    }
-    .home-browse-card__icon {
-      width: 44px; height: 44px;
-      background: var(--color-navy-subtle);
-      border-radius: var(--radius-sm);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: var(--space-4);
-      color: var(--color-navy);
-    }
-    .home-browse-card__title {
-      font-family: var(--font-heading);
-      font-size: var(--text-xl);
-      font-weight: var(--weight-bold);
-      color: var(--color-navy);
-      margin: 0 0 var(--space-2) 0;
-    }
-    .home-browse-card__desc {
-      font-size: var(--text-sm);
-      color: var(--color-ink-secondary);
-      line-height: var(--leading-relaxed);
-      margin: 0 0 var(--space-4) 0;
-    }
-    .home-browse-card__examples {
-      font-size: var(--text-xs);
-      color: var(--color-ink-secondary);
-      font-style: italic;
-      margin: 0 0 var(--space-4) 0;
-    }
-    .home-browse-card__cta {
-      display: flex; align-items: center; gap: var(--space-1);
-      font-size: var(--text-sm); font-weight: var(--weight-medium);
-      color: var(--color-bronze-interactive);
-    }
-
     /* ── Project CTA (navy) ──────────────────────────────── */
     .home-project-cta {
       background: var(--color-navy);
@@ -374,9 +321,6 @@
         font-size: var(--text-3xl);
       }
       .home-props {
-        grid-template-columns: 1fr;
-      }
-      .home-products__grid {
         grid-template-columns: 1fr;
       }
       body.page-home .home-hero__title { font-size: var(--text-4xl); }
@@ -658,65 +602,6 @@
 
         </div>
 
-      </div>
-    </section>
-
-    <!-- ── Products ─────────────────────────────────────── -->
-    <section class="page-section page-section--canvas" aria-labelledby="products-heading">
-      <div class="container">
-        <p class="section-overline">Windows &amp; Doors</p>
-        <h2 class="section-title" id="products-heading">Our Products</h2>
-        <p class="section-lead">
-          Aluminum, uPVC, and PVC window and door systems for residential and
-          commercial projects. Browse by the frame material you need, or by how
-          the window or door opens.
-        </p>
-        <div class="home-products__grid">
-
-          <a href="/products/by-material/" class="home-browse-card">
-            <div class="home-browse-card__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="8" height="8" rx="1"/>
-                <rect x="12" y="2" width="8" height="8" rx="1"/>
-                <rect x="2" y="12" width="8" height="8" rx="1"/>
-                <rect x="12" y="12" width="8" height="8" rx="1"/>
-              </svg>
-            </div>
-            <h3 class="home-browse-card__title">Browse by Material</h3>
-            <p class="home-browse-card__desc">
-              Choose the frame material first — aluminum, uPVC, or PVC — then see
-              which window and door configurations are available in that material.
-            </p>
-            <p class="home-browse-card__examples">Aluminum &nbsp;&middot;&nbsp; uPVC &nbsp;&middot;&nbsp; PVC</p>
-            <span class="home-browse-card__cta">
-              Browse by Material
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-          </a>
-
-          <a href="/products/by-type/" class="home-browse-card">
-            <div class="home-browse-card__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 7h14M4 11h9M4 15h11"/>
-              </svg>
-            </div>
-            <h3 class="home-browse-card__title">Browse by Opening Type</h3>
-            <p class="home-browse-card__desc">
-              Know how you want the window or door to operate? Find all series that
-              support casement, tilt-turn, sliding, bi-fold, lift &amp; slide, and more.
-            </p>
-            <p class="home-browse-card__examples">Casement &nbsp;&middot;&nbsp; Tilt-Turn &nbsp;&middot;&nbsp; Sliding &nbsp;&middot;&nbsp; Bi-Fold &nbsp;&middot;&nbsp; Lift &amp; Slide</p>
-            <span class="home-browse-card__cta">
-              Browse by Opening Type
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-          </a>
-
-        </div>
       </div>
     </section>
 
