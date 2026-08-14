@@ -1141,7 +1141,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-16a', slug: 'prm-16a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-16a',
-    publicName: 'PRM-16 Series Aluminum Door', systemType: 'Slim Sliding / Slim Casement',
+    publicName: 'PRM-16 Series Aluminum Door', systemType: 'Slim Sliding / Slim Hinged',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-16 Series Aluminum Slim Frame Door | Fenovera',
@@ -1166,7 +1166,7 @@ module.exports = [
         { label: 'Surface finish',    value: 'Powder coating',                    status: 'confirmed' },
         { label: 'Thermal break',     value: 'Not available',                     status: 'confirmed' },
       ]},
-      { label: 'Slim casement', rows: [
+      { label: 'Slim hinged', rows: [
         { label: 'Item No',           value: 'PRS-16-05',                         status: 'confirmed' },
         { label: 'Profile width',     value: '16 mm (slim frame)',                status: 'confirmed' },
         { label: 'Profile thickness', value: '2.0 mm',                            status: 'confirmed' },
@@ -1553,7 +1553,7 @@ module.exports = [
     heroImage: { src: '/img/al-prm-k80a-door-hero.jpg', alt: 'PRM-80 Series NFRC aluminum casement and bi-fold door in modern white interior with garden view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.15/16' },
     keyFeatures: [
       'NFRC energy performance documentation available for casement and bi-fold',
-      'Casement: U-Factor 0.18–0.44, thermal 1.4 W/m²·K, wind +5,040 Pa, water +1,050 Pa',
+      'Hinged & French: U-Factor 0.18–0.44, thermal 1.4 W/m²·K, wind +5,040 Pa, water +1,050 Pa',
       'Bi-fold: U-Factor 0.27–0.56, thermal 1.7 W/m²·K, wind +3,600 Pa, water +720 Pa',
       'Sound insulation Rw up to 37 dB for all configurations',
       'Matching PRM-80 casement window available in the same profile',
