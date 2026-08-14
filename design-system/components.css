@@ -264,6 +264,18 @@
   margin-top: var(--space-6);
 }
 
+a.mega-menu__col-label,
+.mega-menu__col-label--link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.mega-menu__col-label:hover,
+.mega-menu__col-label--link:hover {
+  color: var(--color-bronze-interactive);
+  text-decoration: underline;
+}
+
 .mega-menu__group {
   margin-bottom: var(--space-4);
 }
