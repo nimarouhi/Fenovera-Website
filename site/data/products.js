@@ -982,24 +982,24 @@ module.exports = [
   /* ── WINDOWS / PVC ───────────────────────────────────────────────────────── */
 
   {
-    id: 'windows-pvc-wj-60', slug: 'wj-60',
-    typeSlug: 'windows', materialSlug: 'pvc', pageId: 'windows-pvc-wj-60',
-    publicName: 'WJ-60 Series PVC Window', systemType: 'Casement',
-    materialLabel: 'PVC', typeLabel: 'Window',
+    id: 'windows-upvc-wj-60', slug: 'wj-60',
+    typeSlug: 'windows', materialSlug: 'upvc', pageId: 'windows-upvc-wj-60',
+    publicName: 'WJ-60 Series uPVC Window', systemType: 'Casement',
+    materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'WJ-60 Series PVC Casement Window | Fenovera',
-    description: 'PVC casement windows with galvanized steel reinforcement. Matching WJ-60 PVC casement door also available. Contact Fenovera for specifications and pricing.',
-    heroIntro: 'WJ-60 Series PVC casement window. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/pvc/wj-60/">WJ-60 Series PVC casement door</a> is also available. Contact us for specifications, pricing, and availability.',
-    heroImage: { src: '/img/pvc-wj60-window-hero.jpg', alt: 'WJ-60 Series PVC casement window with mountain lake view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.27-28' }, keyFeatures: [
-      'PVC casement window with galvanized steel reinforcement',
-      'Matching WJ-60 PVC casement door also available',
+    seoTitle: 'WJ-60 Series uPVC Casement Window | Fenovera',
+    description: 'uPVC casement windows with galvanized steel reinforcement. Matching WJ-60 uPVC casement door also available. Contact Fenovera for specifications and pricing.',
+    heroIntro: 'WJ-60 Series uPVC casement window. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/upvc/wj-60/">WJ-60 Series uPVC casement door</a> is also available. Contact us for specifications, pricing, and availability.',
+    heroImage: { src: '/img/pvc-wj60-window-hero.jpg', alt: 'WJ-60 Series uPVC casement window with mountain lake view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.27-28' }, keyFeatures: [
+      'uPVC casement window with galvanized steel reinforcement',
+      'Matching WJ-60 uPVC casement door also available',
       'Custom colors and glazing options available on request',
     ],
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
         { label: 'Series',          value: 'WJ-60',                               status: 'confirmed' },
-        { label: 'Frame material',  value: 'PVC',                                 status: 'confirmed' },
+        { label: 'Frame material',  value: 'uPVC',                                status: 'confirmed' },
         { label: 'Frame width',     value: '60 mm (approx.)',                     status: 'unverified' },
       ]},
     ],
@@ -1907,24 +1907,24 @@ module.exports = [
   /* ── DOORS / PVC ─────────────────────────────────────────────────────────── */
 
   {
-    id: 'doors-pvc-wj-60', slug: 'wj-60',
-    typeSlug: 'doors', materialSlug: 'pvc', pageId: 'doors-pvc-wj-60',
-    publicName: 'WJ-60 Series PVC Casement Door', systemType: 'Casement',
-    materialLabel: 'PVC', typeLabel: 'Door',
+    id: 'doors-upvc-wj-60', slug: 'wj-60',
+    typeSlug: 'doors', materialSlug: 'upvc', pageId: 'doors-upvc-wj-60',
+    publicName: 'WJ-60 Series uPVC Casement Door', systemType: 'Casement',
+    materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'WJ-60 Series PVC Casement Door | Fenovera',
-    description: 'PVC casement doors with galvanized steel reinforcement. Matching WJ-60 PVC casement window also available. Contact Fenovera for specifications and pricing.',
-    heroIntro: 'WJ-60 Series PVC casement door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/pvc/wj-60/">WJ-60 Series PVC window</a> is also available. Contact us for specifications, pricing, and availability.',
-    heroImage: { src: '/img/pvc-wj60-door-hero.jpg', alt: 'WJ-60 Series PVC casement door open to garden', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.29-30' }, keyFeatures: [
-      'PVC casement door with galvanized steel reinforcement',
-      'Matching WJ-60 PVC casement window also available',
+    seoTitle: 'WJ-60 Series uPVC Casement Door | Fenovera',
+    description: 'uPVC casement doors with galvanized steel reinforcement. Matching WJ-60 uPVC casement window also available. Contact Fenovera for specifications and pricing.',
+    heroIntro: 'WJ-60 Series uPVC casement door. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/upvc/wj-60/">WJ-60 Series uPVC window</a> is also available. Contact us for specifications, pricing, and availability.',
+    heroImage: { src: '/img/pvc-wj60-door-hero.jpg', alt: 'WJ-60 Series uPVC casement door open to garden', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.29-30' }, keyFeatures: [
+      'uPVC casement door with galvanized steel reinforcement',
+      'Matching WJ-60 uPVC casement window also available',
       'Custom colors and glazing options available on request',
     ],
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
         { label: 'Series',          value: 'WJ-60',                               status: 'confirmed' },
-        { label: 'Frame material',  value: 'PVC',                                 status: 'confirmed' },
+        { label: 'Frame material',  value: 'uPVC',                                status: 'confirmed' },
         { label: 'Frame width',     value: '60 mm (approx.)',                     status: 'unverified' },
       ]},
     ],

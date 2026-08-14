@@ -503,7 +503,7 @@ function renderTypeChips(systemType) {
 
 function renderCategoryProductGrid(data) {
   if (!data.products || !data.products.length) {
-    return '<p class="text-muted">No products in this category yet. Contact us for availability.</p>';
+    return '<p class="section-body">There are multiple ' + escapeHtml(data.materialLabel || '') + ' options available. <a href="/contact/">Contact us</a> for recommendations based on your plan and project.</p>';
   }
   var html = '<div class="product-series-grid">\n';
   data.products.forEach(function (product) {
