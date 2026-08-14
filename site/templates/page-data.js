@@ -111,7 +111,7 @@ pages.push({
   { slug: 'awning',      title: 'Awning Windows | Fenovera',              desc: 'Browse all Fenovera awning window series in aluminum and uPVC.',              img: OG.winAl  },
   { slug: 'sliding',     title: 'Sliding Windows & Doors | Fenovera',     desc: 'Browse all Fenovera sliding window and door series in aluminum and uPVC.',     img: OG.winAl  },
   { slug: 'hung',        title: 'Hung Windows | Fenovera',                desc: 'Browse all Fenovera hung window series in aluminum and uPVC.',                img: OG.winUpvc },
-  { slug: 'swing-french',title: 'Swing & French Doors | Fenovera',        desc: 'Browse all Fenovera swing and French door series in aluminum and uPVC.',       img: OG.doorAl },
+  { slug: 'hinged-french',title: 'Hinged & French Doors | Fenovera',       desc: 'Browse all Fenovera hinged and French door series in aluminum and uPVC.',      img: OG.doorAl },
   { slug: 'bi-fold',     title: 'Bi-Fold Doors | Fenovera',               desc: 'Browse all Fenovera bi-fold door series in aluminum.',                        img: OG.doorAl },
   { slug: 'lift-slide',  title: 'Lift & Slide Doors | Fenovera',          desc: 'Browse all Fenovera lift and slide door series in aluminum.',                  img: OG.doorAl },
 ].forEach(function(t) {
