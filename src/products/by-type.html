@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products by Type | Fenovera</title>
+  <meta name="description" content="Browse Fenovera windows and doors by opening type: casement, tilt-turn, awning, sliding, hung, swing, bi-fold, and lift &amp; slide. Available in aluminum, uPVC, and PVC.">
+  <link rel="stylesheet" href="/design-system/tokens.css">
+  <link rel="stylesheet" href="/design-system/base.css">
+  <link rel="stylesheet" href="/design-system/components.css">
+  <style>
+    /* ── Hero ── */
+    .bt-hero { padding: var(--space-16) 0 var(--space-10); border-bottom: var(--border-thin) solid var(--color-border); }
+    .bt-jump { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-6); }
+
+    /* ── Type section ── */
+    .bt-section {
+      padding: var(--space-14) 0;
+      border-bottom: var(--border-thin) solid var(--color-border);
+      scroll-margin-top: 80px;
+    }
+    .bt-section:last-of-type { border-bottom: none; }
+
+    .bt-section__label {
+      font-size: var(--text-xs); font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-widest); text-transform: uppercase;
+      color: var(--color-bronze); margin: 0 0 var(--space-2) 0;
+    }
+    .bt-section__title {
+      font-family: var(--font-heading); font-size: var(--text-3xl);
+      font-weight: var(--weight-bold); color: var(--color-ink);
+      margin: 0 0 var(--space-3) 0;
+    }
+    .bt-section__desc {
+      font-size: var(--text-body); color: var(--color-ink-secondary);
+      line-height: var(--leading-relaxed); max-width: 620px;
+      margin: 0 0 var(--space-10) 0;
+    }
+
+    /* ── Category divider ── */
+    .bt-cat-heading {
+      font-size: var(--text-xs); font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-wider); text-transform: uppercase;
+      color: var(--color-ink-secondary);
+      margin: 0 0 var(--space-3) 0;
+      padding-bottom: var(--space-2);
+      border-bottom: var(--border-thin) solid var(--color-border-subtle);
+    }
+    .bt-cat-block { margin-bottom: var(--space-8); }
+    .bt-cat-block:last-child { margin-bottom: 0; }
+
+    /* ── Product cards ── */
+    .bt-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+    }
+    .bt-card {
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-5);
+      background: var(--color-canvas);
+      text-decoration: none;
+      display: block;
+      overflow: hidden;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .bt-card:hover { border-color: var(--color-navy); box-shadow: var(--shadow-md); }
+
+    /* ── Card image — bleeds to card edges ── */
+    .bt-card__img {
+      margin: calc(-1 * var(--space-5)) calc(-1 * var(--space-5)) var(--space-4);
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+      background: var(--color-surface);
+    }
+    .bt-card__img img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform 0.35s ease;
+    }
+    .bt-card:hover .bt-card__img img { transform: scale(1.06); }
+
+    .bt-card__material {
+      font-size: var(--text-xs); font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-wider); text-transform: uppercase;
+      color: var(--color-ink-secondary); margin: 0 0 var(--space-1) 0;
+    }
+    .bt-card__name {
+      font-family: var(--font-heading); font-size: var(--text-body);
+      font-weight: var(--weight-bold); color: var(--color-navy); margin: 0;
+    }
+    .bt-card__sub {
+      font-size: var(--text-sm); color: var(--color-ink-secondary);
+      margin-top: var(--space-1);
+    }
+
+    @media (max-width: 767px) { .bt-cards { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 479px) { .bt-cards { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body data-page="products">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- BUILD:header -->
+  <!-- BUILD:mobile-nav -->
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="bt-hero page-section" aria-labelledby="bt-heading">
+      <div class="container">
+        <p class="section-overline">Browse by opening type</p>
+        <h1 class="section-title" id="bt-heading">Products by Type</h1>
+        <p class="section-lead">
+          Find windows and doors by how they open, available across multiple
+          materials. Each type below shows which material options carry that configuration.
+        </p>
+        <div class="bt-jump">
+          <a href="#casement" class="btn btn-outline btn-sm">Casement</a>
+          <a href="#tilt-turn" class="btn btn-outline btn-sm">Tilt-Turn</a>
+          <a href="#awning" class="btn btn-outline btn-sm">Awning</a>
+          <a href="#sliding" class="btn btn-outline btn-sm">Sliding</a>
+          <a href="#hung" class="btn btn-outline btn-sm">Hung</a>
+          <a href="#swing-french" class="btn btn-outline btn-sm">Swing &amp; French</a>
+          <a href="#bi-fold" class="btn btn-outline btn-sm">Bi-Fold</a>
+          <a href="#lift-slide" class="btn btn-outline btn-sm">Lift &amp; Slide</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CASEMENT ──────────────────────────────────────────────────────── -->
+    <section class="bt-section page-section" id="casement" aria-labelledby="casement-heading">
+      <div class="container">
+        <p class="bt-section__label">Opening type</p>
+        <h2 class="bt-section__title" id="casement-heading">Casement</h2>
+        <p class="bt-section__desc">
+          Side-hinged sash that swings outward on a crank or push mechanism.
+          The most common window type: excellent ventilation, tight seal when closed,
+          available across all three frame materials.
+        </p>
+
+        <div class="bt-cat-block">
+          <p class="bt-cat-heading">Windows</p>
+          <div class="bt-cards">
+            <!-- Card 1 -->
+            <a href="/products/windows/aluminum/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/al-casement-hero.jpg" alt="Aluminum casement window" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">Aluminum</p>
+              <p class="bt-card__name">Aluminum Casement Windows</p>
+              <p class="bt-card__sub">LD-X76, PRM-50, PRM-55, PRM-65, PRM-80, PRM-81, PRM-108, WJ-91, LD-S8520</p>
+            </a>
+            <!-- Card 2 -->
+            <a href="/products/windows/upvc/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/upvc-cas-hero.jpg" alt="uPVC casement window" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">uPVC</p>
+              <p class="bt-card__name">uPVC Casement Windows</p>
+              <p class="bt-card__sub">PRM-58, PRM-60, PRM-70, PRM-72, PRM-82, WJ-60, WJ-72, LD-P85</p>
+            </a>
+            <!-- Card 3 -->
+            <a href="/products/windows/pvc/" class="bt-card">
+              <p class="bt-card__material">PVC</p>
+              <p class="bt-card__name">PVC Casement Windows</p>
+              <p class="bt-card__sub">There are multiple PVC options, contact us for recommendations based on your plan and project.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="bt-cat-block">
+          <p class="bt-cat-heading">Doors</p>
+          <div class="bt-cards">
+            <!-- Card 4 -->
+            <a href="/products/doors/aluminum/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/al-casement-door-hero.jpg" alt="Aluminum casement door" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">Aluminum</p>
+              <p class="bt-card__name">Aluminum Casement Doors</p>
+              <p class="bt-card__sub">LD-X76, PRM-50, PRM-55, PRM-65, PRM-80, PRM-81, PRM-108, WJ-91</p>
+            </a>
+            <!-- Card 5 -->
+            <a href="/products/doors/upvc/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/upvc-prm60u-door-hero.jpg" alt="uPVC casement door" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">uPVC</p>
+              <p class="bt-card__name">uPVC Casement Doors</p>
+              <p class="bt-card__sub">PRM-60, WJ-60</p>
+            </a>
+            <!-- Card 6 -->
+            <a href="/products/doors/pvc/" class="bt-card">
+              <p class="bt-card__material">PVC</p>
+              <p class="bt-card__name">PVC Casement Doors</p>
+              <p class="bt-card__sub">There are multiple PVC options, contact us for recommendations based on your plan and project.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TILT-TURN ─────────────────────────────────────────────────────── -->
+    <section class="bt-section page-section" id="tilt-turn" aria-labelledby="tilt-turn-heading">
+      <div class="container">
+        <p class="bt-section__label">Opening type</p>
+        <h2 class="bt-section__title" id="tilt-turn-heading">Tilt-Turn</h2>
+        <p class="bt-section__desc">
+          A distinct dual-mode mechanism: the sash tilts inward at the top for secure
+          ventilation, or turns fully inward on a side hinge for full opening and cleaning.
+          Popular in high-rise and European-style construction. Available in aluminum and uPVC.
+        </p>
+
+        <div class="bt-cat-block">
+          <p class="bt-cat-heading">Windows</p>
+          <div class="bt-cards">
+            <!-- Card 7 -->
+            <a href="/products/windows/aluminum/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/al-tilt-turn-hero.jpg" alt="Aluminum tilt-turn window" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">Aluminum</p>
+              <p class="bt-card__name">Aluminum Tilt-Turn Windows</p>
+              <p class="bt-card__sub">LD-X76, LD-S8520, PRM-50, PRM-55, PRM-65, PRM-81, PRM-108, WJ-91, WJ-80</p>
+            </a>
+            <!-- Card 8 -->
+            <a href="/products/windows/upvc/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/upvc-tt-hero.jpg" alt="uPVC tilt-turn window" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">uPVC</p>
+              <p class="bt-card__name">uPVC Tilt-Turn Windows</p>
+              <p class="bt-card__sub">PRM-58, PRM-60, PRM-70, PRM-72, WJ-72</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AWNING ────────────────────────────────────────────────────────── -->
+    <section class="bt-section page-section" id="awning" aria-labelledby="awning-heading">
+      <div class="container">
+        <p class="bt-section__label">Opening type</p>
+        <h2 class="bt-section__title" id="awning-heading">Awning</h2>
+        <p class="bt-section__desc">
+          Top-hinged sash that pushes outward at the bottom. Allows ventilation even
+          in light rain and suits narrow horizontal openings above other windows or doors.
+          Available in aluminum and uPVC.
+        </p>
+
+        <div class="bt-cat-block">
+          <p class="bt-cat-heading">Windows</p>
+          <div class="bt-cards">
+            <!-- Card 9 -->
+            <a href="/products/windows/aluminum/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/al-awning-hero.jpg" alt="Aluminum awning window" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">Aluminum</p>
+              <p class="bt-card__name">Aluminum Awning Windows</p>
+              <p class="bt-card__sub">LD-X76, PRM-50, PRM-55, PRM-65, PRM-81, PRM-108</p>
+            </a>
+            <!-- Card 10 -->
+            <a href="/products/windows/upvc/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/upvc-awning-hero.jpg" alt="uPVC awning window" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">uPVC</p>
+              <p class="bt-card__name">uPVC Awning Windows</p>
+              <p class="bt-card__sub">PRM-60, LD-P85</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SLIDING ───────────────────────────────────────────────────────── -->
+    <section class="bt-section page-section" id="sliding" aria-labelledby="sliding-heading">
+      <div class="container">
+        <p class="bt-section__label">Opening type</p>
+        <h2 class="bt-section__title" id="sliding-heading">Sliding</h2>
+        <p class="bt-section__desc">
+          One or more panels glide horizontally on a track. No swing clearance needed,
+          ideal for tight spaces and large openings. Available in all three materials
+          for both windows and doors.
+        </p>
+
+        <div class="bt-cat-block">
+          <p class="bt-cat-heading">Windows</p>
+          <div class="bt-cards">
+            <!-- Card 11 -->
+            <a href="/products/windows/aluminum/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/al-sliding-hero.jpg" alt="Aluminum sliding window" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">Aluminum</p>
+              <p class="bt-card__name">Aluminum Sliding Windows</p>
+              <p class="bt-card__sub">PRM-73, PRM-110, WJ-110 Slim Frame</p>
+            </a>
+            <!-- Card 12 -->
+            <a href="/products/windows/upvc/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/upvc-sliding-hero.jpg" alt="uPVC sliding window" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">uPVC</p>
+              <p class="bt-card__name">uPVC Sliding Windows</p>
+              <p class="bt-card__sub">PRM-60, PRM-80, PRM-88, PRM-82, LD-P80</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="bt-cat-block">
+          <p class="bt-cat-heading">Doors</p>
+          <div class="bt-cards">
+            <!-- Card 13 -->
+            <a href="/products/doors/aluminum/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/al-sliding-door-hero.jpg" alt="Aluminum sliding door" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">Aluminum</p>
+              <p class="bt-card__name">Aluminum Sliding Doors</p>
+              <p class="bt-card__sub">PRM-16, PRM-121, PRM-125, PRM-132, PRM-150, PRM-202, WJ-132, WJ-170</p>
+            </a>
+            <!-- Card 14 -->
+            <a href="/products/doors/upvc/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/upvc-sdoor-hero.jpg" alt="uPVC sliding door" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">uPVC</p>
+              <p class="bt-card__name">uPVC Sliding Doors</p>
+              <p class="bt-card__sub">PRM-66, PRM-88, PRM-114, WJ-195, LD-P108</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HUNG ──────────────────────────────────────────────────────────── -->
+    <section class="bt-section page-section" id="hung" aria-labelledby="hung-heading">
+      <div class="container">
+        <p class="bt-section__label">Opening type</p>
+        <h2 class="bt-section__title" id="hung-heading">Hung</h2>
+        <p class="bt-section__desc">
+          Vertically sliding sashes: single hung (lower sash moves) or double hung
+          (both sashes move). A traditional configuration common in North American
+          residential construction. Available in aluminum and uPVC.
+        </p>
+
+        <div class="bt-cat-block">
+          <p class="bt-cat-heading">Windows</p>
+          <div class="bt-cards">
+            <!-- Card 15 -->
+            <a href="/products/windows/aluminum/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/al-hung-hero.jpg" alt="Aluminum hung window" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">Aluminum</p>
+              <p class="bt-card__name">Aluminum Hung Windows</p>
+              <p class="bt-card__sub">PRM-83 Series (single / double hung)</p>
+            </a>
+            <!-- Card 16 -->
+            <a href="/products/windows/upvc/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/upvc-prm-hung-window-hero.jpg" alt="uPVC hung window" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">uPVC</p>
+              <p class="bt-card__name">uPVC Hung Windows</p>
+              <p class="bt-card__sub">PRM-82 (single/double hung), LD-P80 (single hung)</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SWING & FRENCH ─────────────────────────────────────────────────── -->
+    <section class="bt-section page-section" id="swing-french" aria-labelledby="swing-french-heading">
+      <div class="container">
+        <p class="bt-section__label">Opening type &middot; Doors</p>
+        <h2 class="bt-section__title" id="swing-french-heading">Swing &amp; French</h2>
+        <p class="bt-section__desc">
+          Hinged doors that swing on a vertical axis. <strong>Swing</strong> (single panel)
+          and <strong>French</strong> (double panel, centre-meeting stiles) share the same
+          mechanism and hardware family; the distinction is panel count, not opening type.
+          Available in aluminum and uPVC.
+        </p>
+
+        <div class="bt-cat-block">
+          <p class="bt-cat-heading">Doors</p>
+          <div class="bt-cards">
+            <!-- Card 17 -->
+            <a href="/products/doors/aluminum/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/al-x76-door-hero.jpg" alt="Aluminum swing and French door" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">Aluminum</p>
+              <p class="bt-card__name">Aluminum Swing &amp; French Doors</p>
+              <p class="bt-card__sub">LD-X76, PRM-50, PRM-55, PRM-65, PRM-80, PRM-81, PRM-108, WJ-91</p>
+            </a>
+            <!-- Card 18 -->
+            <a href="/products/doors/upvc/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/upvc-french-hero.jpg" alt="uPVC French door" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">uPVC</p>
+              <p class="bt-card__name">uPVC Swing Doors</p>
+              <p class="bt-card__sub">PRM-60, WJ-60</p>
+            </a>
+            <!-- Card 19 -->
+            <a href="/products/doors/pvc/" class="bt-card">
+              <p class="bt-card__material">PVC</p>
+              <p class="bt-card__name">PVC Swing Doors</p>
+              <p class="bt-card__sub">There are multiple PVC options, contact us for recommendations based on your plan and project.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BI-FOLD ────────────────────────────────────────────────────────── -->
+    <section class="bt-section page-section" id="bi-fold" aria-labelledby="bi-fold-heading">
+      <div class="container">
+        <p class="bt-section__label">Opening type &middot; Doors</p>
+        <h2 class="bt-section__title" id="bi-fold-heading">Bi-Fold</h2>
+        <p class="bt-section__desc">
+          Multiple panels that fold and stack to one or both sides, creating a near-full
+          open wall. Popular for indoor-outdoor connection. Available in aluminum only.
+        </p>
+
+        <div class="bt-cat-block">
+          <p class="bt-cat-heading">Doors</p>
+          <div class="bt-cards">
+            <!-- Card 20 -->
+            <a href="/products/doors/aluminum/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/al-g88-bifold-hero.jpg" alt="Aluminum G88 bi-fold door" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">Aluminum</p>
+              <p class="bt-card__name">Aluminum Bi-Fold Doors</p>
+              <p class="bt-card__sub">LD-G88, PRM-70 (double panel), PRM-75 (single panel), PRM-80, WJ-88</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LIFT & SLIDE ──────────────────────────────────────────────────── -->
+    <section class="bt-section page-section" id="lift-slide" aria-labelledby="lift-slide-heading">
+      <div class="container">
+        <p class="bt-section__label">Opening type &middot; Doors</p>
+        <h2 class="bt-section__title" id="lift-slide-heading">Lift &amp; Slide</h2>
+        <p class="bt-section__desc">
+          The handle lifts the panel off the sill seal onto precision rollers, then it
+          slides effortlessly across a wide opening. Handles large, heavy panels that
+          a standard sliding door cannot: tight seal when closed, smooth operation
+          when open. Available in aluminum only.
+        </p>
+
+        <div class="bt-cat-block">
+          <p class="bt-cat-heading">Doors</p>
+          <div class="bt-cards">
+            <!-- Card 21 -->
+            <a href="/products/doors/aluminum/" class="bt-card">
+              <div class="bt-card__img">
+                <img src="/img/al-lift-slide-door-hero.jpg" alt="Aluminum lift and slide door" width="600" height="400" loading="lazy">
+              </div>
+              <p class="bt-card__material">Aluminum</p>
+              <p class="bt-card__name">Aluminum Lift &amp; Slide Doors</p>
+              <p class="bt-card__sub">LD-G152 Series, up to large spans with thermal-break profile</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BUILD:footer -->
+</body>
+</html>

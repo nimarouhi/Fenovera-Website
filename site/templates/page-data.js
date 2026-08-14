@@ -71,21 +71,37 @@ pages.push({
   ogImageAlt:  'Fenovera — Custom Windows and Doors in the Bay Area',
 });
 
-// 1. Top-level products overview (manually authored src)
-// data.categories passes the full category tree so the SECTION:products-overview-grid
-// renderer can derive counts and URLs without hard-coding them in the template.
+// 1. Top-level products overview
 pages.push({
   src:         'src/products/index.html',
   out:         'products/index.html',
   pageId:      'products',
-  title:       'Aluminum, uPVC & PVC Windows and Doors | Fenovera',
-  description: 'Browse Fenovera\'s full range of aluminum, uPVC, and PVC window and door systems for residential and commercial projects in the Bay Area.',
+  title:       'All Products | Fenovera',
+  description: 'Browse our full range of aluminum, uPVC, and PVC window and door systems. Find what you need by material or by opening type.',
   ogImage:     OG.winAl,
   ogImageAlt:  'Fenovera aluminum, uPVC, and PVC windows and doors',
-  data: {
-    categories:    categories,
-    totalProducts: products.length,
-  },
+});
+
+// 1a. Products by Material
+pages.push({
+  src:         'src/products/by-material.html',
+  out:         'products/by-material/index.html',
+  pageId:      'products',
+  title:       'Products by Material | Fenovera',
+  description: 'Browse Fenovera window and door systems by frame material: aluminum, uPVC, and PVC. Each material has its own thermal, acoustic, and aesthetic characteristics.',
+  ogImage:     OG.winAl,
+  ogImageAlt:  'Fenovera windows and doors by material',
+});
+
+// 1b. Products by Type
+pages.push({
+  src:         'src/products/by-type.html',
+  out:         'products/by-type/index.html',
+  pageId:      'products',
+  title:       'Products by Type | Fenovera',
+  description: 'Browse Fenovera windows and doors by opening type: casement, tilt-turn, awning, sliding, hung, swing, bi-fold, and lift &amp; slide.',
+  ogImage:     OG.winAl,
+  ogImageAlt:  'Fenovera windows and doors by opening type',
 });
 
 // ── OG image per type and material ──────────────────────────────────────────

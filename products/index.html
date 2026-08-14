@@ -3,89 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index, follow">
-  <title>Products | Fenovera</title>
-  <meta name="description" content="Fenovera window and door systems for aluminum, uPVC, and PVC windows and doors. Explore our full product catalog.">
-<!-- Design system -->
+  <title>All Products | Fenovera</title>
+  <meta name="description" content="Browse Fenovera's full range of aluminum, uPVC, and PVC window and door systems. Find products by material or by opening type.">
   <link rel="stylesheet" href="../design-system/tokens.css">
   <link rel="stylesheet" href="../design-system/base.css">
   <link rel="stylesheet" href="../design-system/components.css">
-
   <style>
-    /* ── Skip link ───────────────────────────────────────── */
-    .skip-link {
-      position: absolute;
-      top: -100%;
-      left: var(--space-4);
-      padding: var(--space-2) var(--space-4);
-      background: var(--color-navy);
-      color: var(--color-ink-inverse);
-      font-size: var(--text-sm);
-      font-weight: var(--weight-semibold);
-      border-radius: var(--radius-sm);
+    /* ── Hero ── */
+    .prod-hero { padding: var(--space-16) 0 var(--space-10); border-bottom: var(--border-thin) solid var(--color-border); }
+
+    /* ── Browse mode cards ── */
+    .browse-modes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+      padding: var(--space-12) 0;
+      border-bottom: var(--border-thin) solid var(--color-border);
+    }
+    .browse-card {
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
       text-decoration: none;
-      z-index: 9999;
+      display: block;
+      background: var(--color-canvas);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
     }
-    .skip-link:focus { top: var(--space-2); }
-
-    /* ── Development notice ──────────────────────────────── */
-    .dev-notice {
-      background: var(--color-warning-subtle);
-      border-bottom: var(--border-thin) solid var(--color-warning-border);
-      color: var(--color-warning);
-      font-size: var(--text-sm);
-      font-weight: var(--weight-medium);
-      padding: var(--space-2) var(--space-6);
-      text-align: center;
+    .browse-card:hover { border-color: var(--color-navy); box-shadow: var(--shadow-md); }
+    .browse-card__icon {
+      width: 40px; height: 40px;
+      background: var(--color-navy-subtle);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--space-4);
+      color: var(--color-navy);
     }
-    .dev-notice code {
-      font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
-      font-size: var(--text-xs);
-      background: var(--color-warning-border);
-      padding: 0 var(--space-1);
-      border-radius: var(--radius-xs);
+    .browse-card__title {
+      font-family: var(--font-heading); font-size: var(--text-xl);
+      font-weight: var(--weight-bold); color: var(--color-navy);
+      margin: 0 0 var(--space-2) 0;
     }
-
-    /* ── Page hero ───────────────────────────────────────── */
-    .products-hero {
-      padding: var(--space-12) 0 var(--space-10);
+    .browse-card__desc {
+      font-size: var(--text-sm); color: var(--color-ink-secondary);
+      line-height: var(--leading-relaxed); margin: 0 0 var(--space-4) 0;
     }
-
-    /* ── Category card section ───────────────────────────── */
-    .products-categories {
-      padding: var(--space-10) 0 var(--space-12);
-      border-top: var(--border-thin) solid var(--color-border);
+    .browse-card__examples {
+      font-size: var(--text-xs); color: var(--color-ink-secondary);
+      font-style: italic;
     }
-
-    /* .category-grid and .category-card are defined in components.css §37 */
-
-    /* ── Contact CTA ─────────────────────────────────────── */
-    .products-cta {
-      padding: var(--space-12) 0 var(--space-16);
-      border-top: var(--border-thin) solid var(--color-border);
-      text-align: center;
-    }
-    .products-cta__title {
-      font-size: var(--text-3xl);
-      font-family: var(--font-heading);
-      font-weight: var(--weight-bold);
-      color: var(--color-ink);
-      margin: 0 0 var(--space-3) 0;
-      line-height: var(--leading-tight);
-    }
-    .products-cta__text {
-      color: var(--color-ink-secondary);
-      font-size: var(--text-body);
-      margin: 0 auto var(--space-6) auto;
-      text-align: center;
+    .browse-card__cta {
+      display: flex; align-items: center; gap: var(--space-1);
+      font-size: var(--text-sm); font-weight: var(--weight-medium);
+      color: var(--color-bronze-interactive); margin-top: var(--space-5);
     }
 
-    /* ── Responsive ──────────────────────────────────────── */
-    /* .category-grid responsive breakpoints are in components.css §37 */
+    /* ── All products quick-list ── */
+    .quick-list { padding: var(--space-12) 0; }
+    .quick-list__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+      margin-top: var(--space-8);
+    }
+    .quick-list__item {
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: var(--space-4);
+      background: var(--color-surface);
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.1s ease;
+    }
+    .quick-list__item:hover { border-color: var(--color-navy); }
+    .quick-list__item-label {
+      font-size: var(--text-xs); font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-wider); text-transform: uppercase;
+      color: var(--color-bronze); margin: 0 0 var(--space-1) 0;
+    }
+    .quick-list__item-name {
+      font-size: var(--text-sm); font-weight: var(--weight-semibold);
+      color: var(--color-navy); margin: 0;
+    }
+
     @media (max-width: 767px) {
-      .products-hero  { padding: var(--space-8) 0 var(--space-6); }
-      .products-cta   { padding: var(--space-8) 0 var(--space-12); }
-      .products-cta__title { font-size: var(--text-2xl); }
+      .browse-modes { grid-template-columns: 1fr; }
+      .quick-list__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 479px) {
+      .quick-list__grid { grid-template-columns: 1fr; }
     }
   </style>
 
@@ -94,24 +99,20 @@
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fenovera">
-  <meta property="og:title" content="Aluminum, uPVC &amp; PVC Windows and Doors | Fenovera">
-  <meta property="og:description" content="Browse Fenovera&#39;s full range of aluminum, uPVC, and PVC window and door systems for residential and commercial projects in the Bay Area.">
+  <meta property="og:title" content="All Products | Fenovera">
+  <meta property="og:description" content="Browse our full range of aluminum, uPVC, and PVC window and door systems. Find what you need by material or by opening type.">
   <meta property="og:url" content="https://fenovera.com/products/">
   <meta property="og:image" content="https://fenovera.com/img/al-x76-window-hero.jpg">
   <meta property="og:image:alt" content="Fenovera aluminum, uPVC, and PVC windows and doors">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Aluminum, uPVC &amp; PVC Windows and Doors | Fenovera">
-  <meta name="twitter:description" content="Browse Fenovera&#39;s full range of aluminum, uPVC, and PVC window and door systems for residential and commercial projects in the Bay Area.">
+  <meta name="twitter:title" content="All Products | Fenovera">
+  <meta name="twitter:description" content="Browse our full range of aluminum, uPVC, and PVC window and door systems. Find what you need by material or by opening type.">
   <meta name="twitter:image" content="https://fenovera.com/img/al-x76-window-hero.jpg">
   <meta name="twitter:image:alt" content="Fenovera aluminum, uPVC, and PVC windows and doors">
   <!-- /SEO ──────────────────────────────────────────────────────── -->
 </head>
-
 <body data-page="products">
-
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 <header class="site-header" id="site-header">
   <div class="site-header__inner">
 
@@ -267,82 +268,105 @@
 </div><!-- end mobile-nav -->
 
 
-  <main id="main">
+  <main id="main-content">
 
-    <!-- ── Page hero ─────────────────────────────────────── -->
-    <section class="products-hero page-section" aria-labelledby="products-page-heading">
+    <!-- Hero -->
+    <section class="prod-hero page-section" aria-labelledby="prod-heading">
       <div class="container">
-
-        <h1 class="section-title" id="products-page-heading">
-          Windows, Doors and Building Products
-        </h1>
+        <p class="section-overline">Windows &amp; Doors</p>
+        <h1 class="section-title" id="prod-heading">All Products</h1>
         <p class="section-lead">
-          Wide selection of products across aluminum, uPVC, and PVC systems.
-          Contact us for specifications, pricing, and availability.
+          Browse our full range of window and door systems, available in aluminum, uPVC,
+          and PVC. Find what you need by material or by opening type.
         </p>
-
       </div>
     </section>
 
-    <!-- ── Category navigation ───────────────────────────── -->
-    <!--
-      Category grid rendered by SECTION:products-overview-grid.
-      Counts and URLs are derived from site/data/categories.js at build time.
-      not hard-coded here. Adding a new type to categories.js will produce
-      its cards automatically without editing this template.
-    -->
-    <section class="products-categories page-section" aria-labelledby="categories-heading">
+    <!-- Browse modes -->
+    <section class="page-section" aria-labelledby="browse-heading">
       <div class="container">
-        <p class="section-overline">Browse by Category</p>
-        <h2 class="section-title" id="categories-heading">Product Categories</h2>
-<div class="category-grid">
-  <a href="../products/windows/aluminum/" class="category-card">
-    <span class="category-card__type">Windows</span>
-    <strong class="category-card__name">Aluminum Windows</strong>
-    <span class="category-card__cta">Browse &#8594;</span>
-  </a>
-  <a href="../products/windows/upvc/" class="category-card">
-    <span class="category-card__type">Windows</span>
-    <strong class="category-card__name">uPVC Windows</strong>
-    <span class="category-card__cta">Browse &#8594;</span>
-  </a>
-  <a href="../products/windows/pvc/" class="category-card">
-    <span class="category-card__type">Windows</span>
-    <strong class="category-card__name">PVC Windows</strong>
-    <span class="category-card__cta">Browse &#8594;</span>
-  </a>
-  <a href="../products/doors/aluminum/" class="category-card">
-    <span class="category-card__type">Doors</span>
-    <strong class="category-card__name">Aluminum Doors</strong>
-    <span class="category-card__cta">Browse &#8594;</span>
-  </a>
-  <a href="../products/doors/upvc/" class="category-card">
-    <span class="category-card__type">Doors</span>
-    <strong class="category-card__name">uPVC Doors</strong>
-    <span class="category-card__cta">Browse &#8594;</span>
-  </a>
-  <a href="../products/doors/pvc/" class="category-card">
-    <span class="category-card__type">Doors</span>
-    <strong class="category-card__name">PVC Doors</strong>
-    <span class="category-card__cta">Browse &#8594;</span>
-  </a>
-</div>
+        <p class="section-overline">Two ways to browse</p>
+        <h2 class="section-title" id="browse-heading">Find Your System</h2>
+        <div class="browse-modes">
+
+          <a href="../products/by-material/" class="browse-card">
+            <div class="browse-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <rect x="2" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="11" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="2" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="11" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="browse-card__title">Browse by Material</h3>
+            <p class="browse-card__desc">
+              Choose the frame material first, then see which window and door
+              configurations are available in that material.
+            </p>
+            <p class="browse-card__examples">Aluminum &nbsp;&middot;&nbsp; uPVC &nbsp;&middot;&nbsp; PVC</p>
+            <span class="browse-card__cta">
+              Browse by Material
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+
+          <a href="../products/by-type/" class="browse-card">
+            <div class="browse-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4 6h12M4 10h8M4 14h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="browse-card__title">Browse by Type</h3>
+            <p class="browse-card__desc">
+              Know how you want the window or door to open, then see which
+              materials and series support that configuration.
+            </p>
+            <p class="browse-card__examples">Casement &nbsp;&middot;&nbsp; Tilt-Turn &nbsp;&middot;&nbsp; Sliding &nbsp;&middot;&nbsp; Bi-Fold &nbsp;&middot;&nbsp; Lift &amp; Slide &nbsp;&middot;&nbsp; more</p>
+            <span class="browse-card__cta">
+              Browse by Type
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+
+        </div>
       </div>
     </section>
 
-    <!-- ── Contact CTA ──────────────────────────────────── -->
-    <section class="products-cta page-section" aria-labelledby="cta-section-heading">
+    <!-- Quick direct links to the 6 material categories -->
+    <section class="quick-list page-section" aria-labelledby="direct-heading">
       <div class="container">
-        <h2 class="products-cta__title" id="cta-section-heading">Contact Us</h2>
-        <p class="products-cta__text">
-          Contact us for current pricing, specifications, and availability.
-        </p>
-        <a href="../quote/" class="btn btn-primary">
-          Request a Free Quote
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-            <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+        <p class="section-overline">Direct links</p>
+        <h2 class="section-title" id="direct-heading">All Categories</h2>
+        <div class="quick-list__grid">
+          <a href="../products/windows/aluminum/" class="quick-list__item">
+            <p class="quick-list__item-label">Aluminum &middot; Windows</p>
+            <p class="quick-list__item-name">Aluminum Windows</p>
+          </a>
+          <a href="../products/windows/upvc/" class="quick-list__item">
+            <p class="quick-list__item-label">uPVC &middot; Windows</p>
+            <p class="quick-list__item-name">uPVC Windows</p>
+          </a>
+          <a href="../products/windows/pvc/" class="quick-list__item">
+            <p class="quick-list__item-label">PVC &middot; Windows</p>
+            <p class="quick-list__item-name">PVC Windows</p>
+          </a>
+          <a href="../products/doors/aluminum/" class="quick-list__item">
+            <p class="quick-list__item-label">Aluminum &middot; Doors</p>
+            <p class="quick-list__item-name">Aluminum Doors</p>
+          </a>
+          <a href="../products/doors/upvc/" class="quick-list__item">
+            <p class="quick-list__item-label">uPVC &middot; Doors</p>
+            <p class="quick-list__item-name">uPVC Doors</p>
+          </a>
+          <a href="../products/doors/pvc/" class="quick-list__item">
+            <p class="quick-list__item-label">PVC &middot; Doors</p>
+            <p class="quick-list__item-name">PVC Doors</p>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -450,7 +474,5 @@
 
 </footer>
 
-
-  <script src="../site/nav.js"></script>
 </body>
 </html>

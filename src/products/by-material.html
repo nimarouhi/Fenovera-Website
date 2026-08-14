@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products by Material | Fenovera</title>
+  <meta name="description" content="Browse Fenovera window and door systems by frame material: aluminum, uPVC, and PVC. Each material has its own thermal, acoustic, and aesthetic characteristics.">
+  <link rel="stylesheet" href="/design-system/tokens.css">
+  <link rel="stylesheet" href="/design-system/base.css">
+  <link rel="stylesheet" href="/design-system/components.css">
+  <style>
+    /* ── Page hero ── */
+    .bm-hero { padding: var(--space-16) 0 var(--space-10); border-bottom: var(--border-thin) solid var(--color-border); }
+
+    /* ── Material section ── */
+    .bm-section {
+      padding: var(--space-12) 0;
+      border-bottom: var(--border-thin) solid var(--color-border);
+      scroll-margin-top: 80px;
+    }
+    .bm-section:last-of-type { border-bottom: none; }
+    .bm-section__label {
+      font-size: var(--text-xs); font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-widest); text-transform: uppercase;
+      color: var(--color-bronze); margin: 0 0 var(--space-2) 0;
+    }
+    .bm-section__title {
+      font-family: var(--font-heading); font-size: var(--text-3xl);
+      font-weight: var(--weight-bold); color: var(--color-ink);
+      margin: 0 0 var(--space-4) 0;
+    }
+    .bm-section__desc {
+      font-size: var(--text-body); color: var(--color-ink-secondary);
+      line-height: var(--leading-relaxed); max-width: 640px;
+      margin: 0 0 var(--space-10) 0;
+    }
+    .bm-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+    }
+    .bm-card {
+      border: var(--border-thin) solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-6);
+      background: var(--color-canvas);
+      text-decoration: none;
+      display: block;
+      overflow: hidden;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .bm-card:hover {
+      border-color: var(--color-navy);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ── Card image — bleeds to card edges ── */
+    .bm-card__img {
+      margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-6)) var(--space-5);
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+      background: var(--color-surface);
+    }
+    .bm-card__img img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform 0.35s ease;
+    }
+    .bm-card:hover .bm-card__img img { transform: scale(1.06); }
+
+    .bm-card__type {
+      font-size: var(--text-xs); font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-wider); text-transform: uppercase;
+      color: var(--color-ink-secondary); margin: 0 0 var(--space-2) 0;
+    }
+    .bm-card__name {
+      font-family: var(--font-heading); font-size: var(--text-lg);
+      font-weight: var(--weight-bold); color: var(--color-navy);
+      margin: 0 0 var(--space-2) 0;
+    }
+    .bm-card__count {
+      font-size: var(--text-sm); color: var(--color-ink-secondary);
+    }
+    .bm-card__arrow {
+      display: flex; align-items: center; gap: var(--space-1);
+      font-size: var(--text-sm); font-weight: var(--weight-medium);
+      color: var(--color-bronze-interactive); margin-top: var(--space-4);
+    }
+    @media (max-width: 639px) {
+      .bm-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-page="products">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- BUILD:header -->
+  <!-- BUILD:mobile-nav -->
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="bm-hero page-section" aria-labelledby="bm-heading">
+      <div class="container">
+        <p class="section-overline">Browse by material</p>
+        <h1 class="section-title" id="bm-heading">Products by Material</h1>
+        <p class="section-lead">
+          Choose the frame material that suits your project. Each material has its own
+          thermal, acoustic, and aesthetic characteristics.
+          Select a material to see the available window and door systems.
+        </p>
+        <!-- Quick-jump -->
+        <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-6);">
+          <a href="#aluminum" class="btn btn-outline btn-sm">Aluminum</a>
+          <a href="#upvc" class="btn btn-outline btn-sm">uPVC</a>
+          <a href="#pvc" class="btn btn-outline btn-sm">PVC</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ALUMINUM ─────────────────────────────────────────────────────── -->
+    <section class="bm-section page-section" id="aluminum" aria-labelledby="aluminum-heading">
+      <div class="container">
+        <p class="bm-section__label">Material</p>
+        <h2 class="bm-section__title" id="aluminum-heading">Aluminum</h2>
+        <p class="bm-section__desc">
+          High-strength aluminum systems for residential and commercial projects.
+          Available with thermal-break profiles for energy performance. Slim sightlines,
+          large glazing areas, and a wide range of configurations including casement,
+          tilt-turn, sliding, bi-fold, and lift &amp; slide.
+          15 window series &middot; 21 door series.
+        </p>
+        <div class="bm-cards">
+          <a href="/products/windows/aluminum/" class="bm-card">
+            <div class="bm-card__img">
+              <img src="/img/al-x76-window-hero.jpg" alt="LD-X76 Series thermal-break aluminum window" width="600" height="400" loading="lazy">
+            </div>
+            <p class="bm-card__type">Windows</p>
+            <p class="bm-card__name">Aluminum Windows</p>
+            <p class="bm-card__count">15 series: casement, tilt-turn, sliding, awning, hung, louver, fixed</p>
+            <span class="bm-card__arrow">
+              Browse Aluminum Windows
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+          <a href="/products/doors/aluminum/" class="bm-card">
+            <div class="bm-card__img">
+              <img src="/img/al-x76-door-hero.jpg" alt="LD-X76 Series thermal-break aluminum door" width="600" height="400" loading="lazy">
+            </div>
+            <p class="bm-card__type">Doors</p>
+            <p class="bm-card__name">Aluminum Doors</p>
+            <p class="bm-card__count">21 series: casement, sliding, bi-fold, lift &amp; slide, French</p>
+            <span class="bm-card__arrow">
+              Browse Aluminum Doors
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── uPVC ──────────────────────────────────────────────────────────── -->
+    <section class="bm-section page-section" id="upvc" aria-labelledby="upvc-heading">
+      <div class="container">
+        <p class="bm-section__label">Material</p>
+        <h2 class="bm-section__title" id="upvc-heading">uPVC</h2>
+        <p class="bm-section__desc">
+          Unplasticized PVC multi-chamber profiles with excellent thermal and acoustic
+          insulation. A separate material from standard PVC; different profile systems,
+          hardware, and performance class. Casement, tilt-turn, sliding, awning,
+          and hung configurations.
+          11 window series &middot; 7 door series.
+        </p>
+        <div class="bm-cards">
+          <a href="/products/windows/upvc/" class="bm-card">
+            <div class="bm-card__img">
+              <img src="/img/upvc-cas-hero.jpg" alt="uPVC casement windows on house exterior" width="600" height="400" loading="lazy">
+            </div>
+            <p class="bm-card__type">Windows</p>
+            <p class="bm-card__name">uPVC Windows</p>
+            <p class="bm-card__count">11 series: casement, tilt-turn, sliding, awning, hung</p>
+            <span class="bm-card__arrow">
+              Browse uPVC Windows
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+          <a href="/products/doors/upvc/" class="bm-card">
+            <div class="bm-card__img">
+              <img src="/img/upvc-prm60u-door-hero.jpg" alt="uPVC casement door" width="600" height="400" loading="lazy">
+            </div>
+            <p class="bm-card__type">Doors</p>
+            <p class="bm-card__name">uPVC Doors</p>
+            <p class="bm-card__count">7 series: casement and sliding</p>
+            <span class="bm-card__arrow">
+              Browse uPVC Doors
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PVC ───────────────────────────────────────────────────────────── -->
+    <section class="bm-section page-section" id="pvc" aria-labelledby="pvc-heading">
+      <div class="container">
+        <p class="bm-section__label">Material</p>
+        <h2 class="bm-section__title" id="pvc-heading">PVC</h2>
+        <p class="bm-section__desc">
+          Standard PVC systems. A distinct material from uPVC; different profile
+          construction and hardware, not interchangeable.
+        </p>
+        <div class="bm-cards">
+          <a href="/products/windows/pvc/" class="bm-card">
+            <p class="bm-card__type">Windows</p>
+            <p class="bm-card__name">PVC Windows</p>
+            <p class="bm-card__count">There are multiple PVC options, contact us for recommendations based on your plan and project.</p>
+            <span class="bm-card__arrow">
+              Contact Us
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+          <a href="/products/doors/pvc/" class="bm-card">
+            <p class="bm-card__type">Doors</p>
+            <p class="bm-card__name">PVC Doors</p>
+            <p class="bm-card__count">There are multiple PVC options, contact us for recommendations based on your plan and project.</p>
+            <span class="bm-card__arrow">
+              Contact Us
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BUILD:footer -->
+</body>
+</html>
