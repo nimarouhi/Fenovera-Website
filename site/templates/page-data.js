@@ -93,7 +93,7 @@ pages.push({
   ogImageAlt:  'Fenovera windows and doors by material',
 });
 
-// 1b. Products by Type
+// 1b. Products by Type (overview)
 pages.push({
   src:         'src/products/by-type.html',
   out:         'products/by-type/index.html',
@@ -102,6 +102,28 @@ pages.push({
   description: 'Browse Fenovera windows and doors by opening type: casement, tilt-turn, awning, sliding, hung, swing, bi-fold, and lift &amp; slide.',
   ogImage:     OG.winAl,
   ogImageAlt:  'Fenovera windows and doors by opening type',
+});
+
+// 1b-i. By Type — sub-pages
+[
+  { slug: 'casement',     title: 'Casement Windows | Fenovera',           desc: 'Browse all Fenovera casement window series in aluminum and uPVC.',           img: OG.winUpvc },
+  { slug: 'tilt-turn',   title: 'Tilt-Turn Windows | Fenovera',           desc: 'Browse all Fenovera tilt-turn window series in aluminum and uPVC.',           img: OG.winUpvc },
+  { slug: 'awning',      title: 'Awning Windows | Fenovera',              desc: 'Browse all Fenovera awning window series in aluminum and uPVC.',              img: OG.winAl  },
+  { slug: 'sliding',     title: 'Sliding Windows & Doors | Fenovera',     desc: 'Browse all Fenovera sliding window and door series in aluminum and uPVC.',     img: OG.winAl  },
+  { slug: 'hung',        title: 'Hung Windows | Fenovera',                desc: 'Browse all Fenovera hung window series in aluminum and uPVC.',                img: OG.winUpvc },
+  { slug: 'swing-french',title: 'Swing & French Doors | Fenovera',        desc: 'Browse all Fenovera swing and French door series in aluminum and uPVC.',       img: OG.doorAl },
+  { slug: 'bi-fold',     title: 'Bi-Fold Doors | Fenovera',               desc: 'Browse all Fenovera bi-fold door series in aluminum.',                        img: OG.doorAl },
+  { slug: 'lift-slide',  title: 'Lift & Slide Doors | Fenovera',          desc: 'Browse all Fenovera lift and slide door series in aluminum.',                  img: OG.doorAl },
+].forEach(function(t) {
+  pages.push({
+    src:         'src/products/by-type/' + t.slug + '/index.html',
+    out:         'products/by-type/' + t.slug + '/index.html',
+    pageId:      'products',
+    title:       t.title,
+    description: t.desc,
+    ogImage:     t.img,
+    ogImageAlt:  t.title,
+  });
 });
 
 // ── OG image per type and material ──────────────────────────────────────────
