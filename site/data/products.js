@@ -1010,7 +1010,7 @@ module.exports = [
   {
     id: 'doors-aluminum-ldw-x76', slug: 'ldw-x76',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-ldw-x76',
-    publicName: 'LD-X76 Series Thermal-Break Aluminum Door', systemType: 'Casement / French / Swing',
+    publicName: 'LD-X76 Series Thermal-Break Aluminum Door', systemType: 'Hinged & French',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-X76 Series Thermal-Break Aluminum Patio Door | Fenovera',
@@ -1180,7 +1180,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-50a', slug: 'prm-50a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-50a',
-    publicName: 'PRM-50 Series Aluminum Door', systemType: 'Casement',
+    publicName: 'PRM-50 Series Aluminum Door', systemType: 'Hinged & French',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-50 Series Aluminum Casement Door | Fenovera',
@@ -1196,7 +1196,7 @@ module.exports = [
     ],
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
-      { label: 'Casement', rows: [
+      { label: 'Hinged & French', rows: [
         { label: 'Item No',           value: 'PRD-50-01',                         status: 'confirmed' },
         { label: 'Frame width',       value: '50 mm',                             status: 'confirmed' },
         { label: 'Profile thickness', value: '1.4 / 1.6 mm',                      status: 'confirmed' },
@@ -1210,7 +1210,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-55a', slug: 'prm-55a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-55a',
-    publicName: 'PRM-55 Series Aluminum Door', systemType: 'Casement',
+    publicName: 'PRM-55 Series Aluminum Door', systemType: 'Hinged & French',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-55 Series Aluminum Casement Door | Fenovera',
@@ -1226,7 +1226,7 @@ module.exports = [
     ],
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
-      { label: 'Casement', rows: [
+      { label: 'Hinged & French', rows: [
         { label: 'Item No',           value: 'PRD-55-01',                         status: 'confirmed' },
         { label: 'Frame width',       value: '55 mm',                             status: 'confirmed' },
         { label: 'Profile thickness', value: '1.4 mm',                            status: 'confirmed' },
@@ -1240,7 +1240,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-65a', slug: 'prm-65a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-65a',
-    publicName: 'PRM-65 Series Aluminum Door', systemType: 'Casement',
+    publicName: 'PRM-65 Series Aluminum Door', systemType: 'Hinged & French',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-65 Series Aluminum Casement Door | Fenovera',
@@ -1256,7 +1256,7 @@ module.exports = [
     ],
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
-      { label: 'Casement', rows: [
+      { label: 'Hinged & French', rows: [
         { label: 'Item No',           value: 'PRD-65-01',                         status: 'confirmed' },
         { label: 'Frame width',       value: '65 mm',                             status: 'confirmed' },
         { label: 'Profile thickness', value: '1.8 mm',                            status: 'confirmed' },
@@ -1332,7 +1332,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-81a', slug: 'prm-81a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-81a',
-    publicName: 'PRM-81 Series Aluminum Door', systemType: 'Casement',
+    publicName: 'PRM-81 Series Aluminum Door', systemType: 'Hinged & French',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-81 Series Thermal-Break Aluminum Casement Door | Fenovera',
@@ -1348,7 +1348,7 @@ module.exports = [
     ],
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
-      { label: 'Casement', rows: [
+      { label: 'Hinged & French', rows: [
         { label: 'Item No',           value: 'PRD-81-01',                         status: 'confirmed' },
         { label: 'Frame width',       value: '81 mm',                             status: 'confirmed' },
         { label: 'Profile thickness', value: '2.0 mm',                            status: 'confirmed' },
@@ -1362,7 +1362,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-108a', slug: 'prm-108a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-108a',
-    publicName: 'PRM-108 Series Aluminum Door', systemType: 'Casement',
+    publicName: 'PRM-108 Series Aluminum Door', systemType: 'Hinged & French',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-108 Series Aluminum Casement Door | Fenovera',
@@ -1378,7 +1378,7 @@ module.exports = [
     ],
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS, documents: [],
     specificationGroups: [
-      { label: 'Casement', rows: [
+      { label: 'Hinged & French', rows: [
         { label: 'Item No',           value: 'PRD-108-01',                        status: 'confirmed' },
         { label: 'Frame width',       value: '108 mm',                            status: 'confirmed' },
         { label: 'Profile thickness', value: '1.4 / 1.6 / 2.0 mm',               status: 'confirmed' },
@@ -1544,7 +1544,7 @@ module.exports = [
   {
     id: 'doors-aluminum-prm-80a', slug: 'prm-80a',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-prm-80a',
-    publicName: 'PRM-80 Series Aluminum Door', systemType: 'Casement / Bi-fold',
+    publicName: 'PRM-80 Series Aluminum Door', systemType: 'Hinged & French / Bi-fold',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-80 Series NFRC Aluminum Casement & Bi-fold Door | Fenovera',
@@ -1560,7 +1560,7 @@ module.exports = [
     ],
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
-      { label: 'Casement (NFRC)', rows: [
+      { label: 'Hinged & French (NFRC)', rows: [
         { label: 'Profile thickness',            value: '2.0 mm',                 status: 'confirmed' },
         { label: 'U-Factor (NFRC)',              value: '0.18–0.44',              status: 'confirmed' },
         { label: 'SHGC (NFRC)',                  value: '0.14–0.46',              status: 'confirmed' },
@@ -1588,7 +1588,7 @@ module.exports = [
   {
     id: 'doors-aluminum-wj-91', slug: 'wj-91',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-wj-91',
-    publicName: 'WJ-91 Series Aluminum Door', systemType: 'Casement',
+    publicName: 'WJ-91 Series Aluminum Door', systemType: 'Hinged & French',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-91 Series Aluminum Casement Door | Fenovera',
@@ -1603,7 +1603,7 @@ module.exports = [
     ],
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
     specificationGroups: [
-      { label: 'Casement', rows: [
+      { label: 'Hinged & French', rows: [
         { label: 'Frame width',          value: '91 mm',                                         status: 'confirmed' },
         { label: 'Thermal break',        value: 'Yes',                                           status: 'confirmed' },
         { label: 'Min size',             value: '610 × 1829 mm (24″ × 72″)',                     status: 'confirmed' },
@@ -1719,7 +1719,7 @@ module.exports = [
   {
     id: 'doors-upvc-prm-60u', slug: 'prm-60u',
     typeSlug: 'doors', materialSlug: 'upvc', pageId: 'doors-upvc-prm-60u',
-    publicName: 'PRM-60 Series uPVC Door', systemType: 'Casement',
+    publicName: 'PRM-60 Series uPVC Door', systemType: 'Hinged & French',
     materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-60 Series uPVC Casement Door | Fenovera',
@@ -1734,7 +1734,7 @@ module.exports = [
     ],
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
-      { label: 'Casement', rows: [
+      { label: 'Hinged & French', rows: [
         { label: 'Profile series',        value: 'PRM-60u (60 mm)',               status: 'confirmed' },
         { label: 'Frame material',        value: 'uPVC',                          status: 'confirmed' },
         { label: 'Profile wall thickness',value: 'Above 2.5 mm',                  status: 'confirmed' },
@@ -1909,7 +1909,7 @@ module.exports = [
   {
     id: 'doors-upvc-wj-60', slug: 'wj-60',
     typeSlug: 'doors', materialSlug: 'upvc', pageId: 'doors-upvc-wj-60',
-    publicName: 'WJ-60 Series uPVC Casement Door', systemType: 'Casement',
+    publicName: 'WJ-60 Series uPVC Hinged & French Door', systemType: 'Hinged & French',
     materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'WJ-60 Series uPVC Casement Door | Fenovera',
@@ -1922,7 +1922,7 @@ module.exports = [
     ],
     galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
     specificationGroups: [
-      { label: 'Casement', rows: [
+      { label: 'Hinged & French', rows: [
         { label: 'Series',          value: 'WJ-60',                               status: 'confirmed' },
         { label: 'Frame material',  value: 'uPVC',                                status: 'confirmed' },
         { label: 'Frame width',     value: '60 mm (approx.)',                     status: 'unverified' },
