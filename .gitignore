@@ -16,3 +16,6 @@ Thumbs.db
 *.zip
 *.tar.gz
 *.log
+
+# Local prototypes — never deploy
+prototype/
