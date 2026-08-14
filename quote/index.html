@@ -202,6 +202,18 @@
       margin: 0;
     }
 
+    /* ── Email link ─────────────────────────────────── */
+    .quote-email-link {
+      color: var(--color-bronze-interactive);
+      text-decoration: none;
+      border-radius: 2px;
+    }
+    .quote-email-link:hover { text-decoration: underline; }
+    .quote-email-link:focus-visible {
+      outline: 2px solid var(--color-bronze-interactive);
+      outline-offset: 2px;
+    }
+
     /* ── Responsive ──────────────────────────────────── */
     @media (max-width: 899px) {
       .quote-page-grid { grid-template-columns: 1fr; }
@@ -445,9 +457,18 @@
               <p class="quote-note__item-text">Technical specifications and support from our team</p>
             </div>
 
+            <div class="quote-note__item">
+              <div class="quote-note__bullet" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="quote-note__item-text">Supply and delivery to your Bay Area project site — installation available upon request</p>
+            </div>
+
             <p class="text-caption mt-6" style="color: var(--color-ink-secondary);">
               You can also reach us directly at
-              <a href="mailto:info@fenovera.com" style="color: var(--color-bronze-interactive);">info@fenovera.com</a>
+              <a href="mailto:info@fenovera.com" class="quote-email-link">info@fenovera.com</a>
             </p>
           </div>
 
@@ -519,6 +540,13 @@
                   <p class="form-error" id="quote-email-error" role="alert" hidden></p>
                 </div>
 
+                <div class="form-group">
+                  <label class="form-label" for="quote-city">
+                    Project City / ZIP<span class="form-label__optional">(optional)</span>
+                  </label>
+                  <input class="form-input" type="text" id="quote-city" name="project-city"
+                    autocomplete="postal-code" placeholder="e.g. San Jose, 94103">
+                </div>
               </div>
 
               <!-- Project type -->
@@ -566,11 +594,70 @@
                     <span class="form-option__label">uPVC Doors</span>
                   </label>
                   <label class="form-option">
+                    <input type="checkbox" name="products" value="pvc-windows">
+                    <span class="form-option__label">PVC Windows</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="pvc-doors">
+                    <span class="form-option__label">PVC Doors</span>
+                  </label>
+                  <label class="form-option">
                     <input type="checkbox" name="products" value="not-sure">
                     <span class="form-option__label">Not sure yet</span>
                   </label>
                 </div>
               </fieldset>
+
+              <!-- Construction type -->
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">Project Scope</legend>
+                <div class="form-radio-group" role="group">
+                  <label class="form-option">
+                    <input type="radio" name="construction-type" value="new-construction">
+                    <span class="form-option__label">New construction</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="radio" name="construction-type" value="replacement">
+                    <span class="form-option__label">Replacement</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="radio" name="construction-type" value="both">
+                    <span class="form-option__label">Both</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="radio" name="construction-type" value="unsure">
+                    <span class="form-option__label">Not sure</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Quantity + delivery row -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="quote-quantity">
+                    Approximate Quantity<span class="form-label__optional">(optional)</span>
+                  </label>
+                  <input class="form-input" type="text" id="quote-quantity" name="quantity"
+                    placeholder="e.g. 12 windows, 3 doors">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="quote-delivery">
+                    Target Delivery Date<span class="form-label__optional">(optional)</span>
+                  </label>
+                  <input class="form-input" type="date" id="quote-delivery" name="delivery-date">
+                </div>
+              </div>
+
+              <!-- Help selecting -->
+              <div class="form-group">
+                <label class="form-option" style="align-items: flex-start; cursor: pointer;">
+                  <input type="checkbox" name="help-selecting" value="yes"
+                    style="margin-top: 3px; flex-shrink: 0; cursor: pointer;">
+                  <span style="font-size: var(--text-sm); color: var(--color-ink); line-height: var(--leading-relaxed); margin-left: var(--space-2);">
+                    I need help selecting — please recommend products based on my project
+                  </span>
+                </label>
+              </div>
 
               <!-- Project details -->
               <div class="form-group">
@@ -586,10 +673,10 @@
                 <p class="form-error" id="quote-details-error" role="alert" hidden></p>
               </div>
 
-              <!-- Timeline -->
+              <!-- General timeline if no specific date -->
               <div class="form-group">
                 <label class="form-label" for="quote-timeline">
-                  Timeline<span class="form-label__optional">(optional)</span>
+                  General Timeline<span class="form-label__optional">(if no specific date)</span>
                 </label>
                 <select class="form-select" id="quote-timeline" name="timeline">
                   <option value="">Select a timeline…</option>
@@ -620,7 +707,7 @@
               </div>
 
               <button type="submit" class="btn btn-primary" style="width: 100%;">
-                Submit Quote Request
+                Request a Free Quote
               </button>
 
               <p class="text-caption mt-4" style="color: var(--color-ink-secondary);">
@@ -845,12 +932,12 @@
             success.style.display = 'block';
             success.focus();
           } else {
-            if (btn) { btn.disabled = false; btn.textContent = 'Submit Quote Request'; }
+            if (btn) { btn.disabled = false; btn.textContent = 'Request a Free Quote'; }
             alert('Sorry, there was a problem sending your request. Please email us directly at info@fenovera.com.');
           }
         })
         .catch(function () {
-          if (btn) { btn.disabled = false; btn.textContent = 'Submit Quote Request'; }
+          if (btn) { btn.disabled = false; btn.textContent = 'Request a Free Quote'; }
           alert('Sorry, there was a problem sending your request. Please email us directly at info@fenovera.com.');
         });
       });

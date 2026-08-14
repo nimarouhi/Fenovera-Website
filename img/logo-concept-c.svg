@@ -1,0 +1,24 @@
+<svg viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fenovera logo concept C — arched aperture mark">
+  <title>Fenovera — Concept C</title>
+
+  <!-- Mark: arched window / door aperture -->
+  <g transform="translate(20, 14)">
+    <!-- outer arch shape -->
+    <path d="M8,56 L8,32 Q8,8 36,8 Q64,8 64,32 L64,56 Z" fill="none" stroke="#1B2B4B" stroke-width="3" stroke-linejoin="round"/>
+    <!-- teal inner arch fill -->
+    <path d="M14,56 L14,34 Q14,14 36,14 Q58,14 58,34 L58,56 Z" fill="#0D7377" opacity="0.1"/>
+    <!-- sill line -->
+    <line x1="2" y1="56" x2="70" y2="56" stroke="#1B2B4B" stroke-width="3" stroke-linecap="round"/>
+    <!-- inner arch outline -->
+    <path d="M14,56 L14,34 Q14,14 36,14 Q58,14 58,34 L58,56" fill="none" stroke="#0D7377" stroke-width="1.2" opacity="0.5"/>
+  </g>
+
+  <!-- Wordmark — italic serif -->
+  <text x="110" y="50" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#1B2B4B" letter-spacing="3" font-style="italic">Fenovera</text>
+
+  <!-- Teal rule -->
+  <line x1="110" y1="60" x2="306" y2="60" stroke="#0D7377" stroke-width="1.2"/>
+
+  <!-- Tagline -->
+  <text x="110" y="75" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#6B7280" letter-spacing="3.5">WINDOWS &amp; DOORS</text>
+</svg>

@@ -63,8 +63,13 @@
     .contact-info__value a {
       color: var(--color-bronze-interactive);
       text-decoration: none;
+      border-radius: 2px;
     }
     .contact-info__value a:hover { text-decoration: underline; }
+    .contact-info__value a:focus-visible {
+      outline: 2px solid var(--color-bronze-interactive);
+      outline-offset: 2px;
+    }
 
     /* ── Form card ───────────────────────────────────── */
     .contact-form-card {
