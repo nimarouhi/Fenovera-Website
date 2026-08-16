@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cookie Policy | Fenovera</title>
-  <meta name="description" content="Cookie Policy for Fenovera: how fenovera.com uses cookies and similar technologies.">
+  <meta name="description" content="Cookie Policy for Fenovera: how fenovera.com uses cookies and similar technologies, and how to manage your preferences.">
   <meta name="robots" content="noindex">
 <!-- Design System v1.3.1 -->
   <link rel="stylesheet" href="/design-system/tokens.css">
@@ -61,6 +61,36 @@
       margin-top: var(--space-4);
     }
     .legal-contact-box p { margin-bottom: var(--space-1); }
+    /* Cookie table */
+    .cookie-table-wrap {
+      overflow-x: auto;
+      margin-bottom: var(--space-4);
+    }
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+      color: var(--color-ink-secondary);
+    }
+    .cookie-table th {
+      font-family: var(--font-heading);
+      font-weight: var(--weight-semibold);
+      color: var(--color-ink);
+      text-align: left;
+      padding: var(--space-2) var(--space-3);
+      border-bottom: 2px solid var(--color-border);
+      white-space: nowrap;
+    }
+    .cookie-table td {
+      padding: var(--space-2) var(--space-3);
+      border-bottom: var(--border-thin) solid var(--color-border-subtle);
+      vertical-align: top;
+      line-height: var(--leading-relaxed);
+    }
+    .cookie-table tr:last-child td { border-bottom: none; }
+    .cookie-table code {
+      font-size: 0.8em;
+    }
 @media (max-width: 767px) {
       .legal-hero { padding: var(--space-10) 0 var(--space-8); }
       .legal-body { padding: var(--space-8) 0 var(--space-12); }
@@ -81,7 +111,7 @@
         <p class="section-overline">Legal</p>
         <h1 class="section-title" id="cookies-heading">Cookie Policy</h1>
         <p class="section-lead">
-          How fenovera.com uses cookies and similar technologies.
+          How fenovera.com uses cookies and similar technologies, and how to manage your preferences.
         </p>
       </div>
     </section>
@@ -90,33 +120,126 @@
       <div class="container">
         <div class="legal-doc">
 
-          <p class="legal-effective">Effective date: August 11, 2026 &nbsp;|&nbsp; Last updated: August 15, 2026</p>
+          <p class="legal-effective">Effective date: August 11, 2026 &nbsp;|&nbsp; Last updated: August 16, 2026</p>
 
           <h2>1. Overview</h2>
           <p>
-            This Cookie Policy explains what cookies and similar technologies are used
-            on fenovera.com, including those used by third-party services we have
-            connected to this site. We operate this site for business visitors in the
-            Bay Area and beyond; some of those visitors may be located in jurisdictions
-            with specific privacy rights, including the California Consumer Privacy Act
-            (CCPA), the EU General Data Protection Regulation (GDPR), and the UK GDPR.
-            This policy is written to satisfy disclosure requirements under those laws.
+            This Cookie Policy explains what cookies and similar technologies are used on
+            fenovera.com, including those used by third-party services we have connected
+            to this site. We operate this site for business visitors in the Bay Area and
+            beyond; some visitors may be in jurisdictions with specific privacy rights,
+            including the California Consumer Privacy Act (CCPA), the EU General Data
+            Protection Regulation (GDPR), and the UK GDPR. This policy is written to
+            satisfy disclosure requirements under those laws.
           </p>
 
           <h2>2. What We Store in Your Browser</h2>
           <p>
-            <strong>Notice-dismissal preference (browser localStorage).</strong> When
-            you dismiss the site notice banner, a preference is saved in your browser
-            using the Web Storage API (localStorage key: <code>fenoveraCookieConsent</code>).
-            This is not an HTTP cookie. It is stored locally in your browser, is never
-            transmitted to our servers, and contains only the value "acknowledged"
-            indicating that you have seen the notice. It persists until you clear your
-            browser's site data. This is used solely to avoid repeatedly displaying the
-            notice; it does not track you, identify you, or support any analytics or
-            advertising function.
+            The table below lists every cookie and browser storage item currently placed
+            by fenovera.com. No HTTP cookies are set by our site.
+          </p>
+          <div class="cookie-table-wrap">
+            <table class="cookie-table">
+              <thead>
+                <tr>
+                  <th>Name / Key</th>
+                  <th>Provider</th>
+                  <th>Type</th>
+                  <th>Purpose</th>
+                  <th>Category</th>
+                  <th>Duration</th>
+                  <th>Loaded before consent?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>fenoveraCookieConsent</code></td>
+                  <td>Fenovera (first-party)</td>
+                  <td>localStorage</td>
+                  <td>Stores your cookie preference choice (accept/reject/custom) so the consent banner is not shown again. Contains: policy version, timestamp, and per-category consent status.</td>
+                  <td>Strictly Necessary</td>
+                  <td>Until you clear site data</td>
+                  <td>Yes — required to suppress repeated banner display</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <strong>No HTTP cookies are set.</strong> The single item above is stored in
+            your browser's Web Storage (localStorage), not as an HTTP cookie. It is never
+            transmitted to our servers, and it contains only your consent record. It does
+            not track you, identify you, or support any analytics or advertising function.
           </p>
 
-          <h2>3. Search Engine Webmaster Tools</h2>
+          <h2>3. Cookie Categories</h2>
+          <p>
+            We group cookies and storage items into the following categories. Only
+            <em>Strictly Necessary</em> items are currently active on fenovera.com.
+          </p>
+          <p>
+            <strong>Strictly Necessary.</strong> These are essential for the website to
+            function. They cannot be disabled via the Cookie Preferences panel. Currently:
+            the <code>fenoveraCookieConsent</code> localStorage item described above.
+          </p>
+          <p>
+            <strong>Analytics.</strong> Not currently in use. If activated in a future
+            update, analytics tools would measure how visitors use the site (pages
+            visited, session duration, traffic sources) so we can improve our content and
+            user experience. Analytics scripts will not be loaded before your consent.
+          </p>
+          <p>
+            <strong>Advertising &amp; Marketing.</strong> Not currently in use. If
+            activated, advertising tools would enable targeted advertising and
+            remarketing. They will not be loaded before your explicit consent.
+          </p>
+
+          <h2>4. Your Consent Choices</h2>
+          <p>
+            On your first visit, a banner appears at the bottom of the page presenting
+            three choices:
+          </p>
+          <ul>
+            <li><strong>Accept All</strong> — accepts Strictly Necessary, Analytics, and Advertising categories. (Currently equivalent to Reject Non-Essential since no optional categories are active.)</li>
+            <li><strong>Reject Non-Essential</strong> — accepts only Strictly Necessary items. No optional scripts are loaded.</li>
+            <li><strong>Manage Preferences</strong> — opens a panel where you can enable or disable each optional category individually, then save your choice.</li>
+          </ul>
+          <p>
+            <strong>Changing your preferences.</strong> You can review or change your
+            consent at any time by clicking <strong>Cookie Preferences</strong> in the
+            footer of any page. The panel shows your current settings and lets you update
+            them. Changes take effect immediately.
+          </p>
+          <p>
+            <strong>Withdrawing consent.</strong> If you previously accepted optional
+            categories, you can withdraw consent at any time through the Cookie
+            Preferences panel by disabling those categories and saving. Any first-party
+            localStorage entries associated with the withdrawn categories will be cleared.
+            Third-party cookies set by those services must be cleared via your browser's
+            cookie controls or the third party's own opt-out mechanism.
+          </p>
+          <p>
+            <strong>Clearing all data manually.</strong> You can delete the
+            <code>fenoveraCookieConsent</code> localStorage entry at any time through
+            your browser's developer tools (Application → Local Storage → fenovera.com)
+            or by clearing all site data for fenovera.com in your browser's privacy
+            settings. This will cause the consent banner to reappear on your next visit.
+          </p>
+
+          <h2>5. Global Privacy Control (GPC)</h2>
+          <p>
+            If your browser sends a Global Privacy Control (GPC) signal
+            (<code>navigator.globalPrivacyControl = true</code>), we automatically
+            treat it as a request to opt out of any cross-context behavioral advertising
+            and the sharing of personal information as defined by the CCPA. Our consent
+            system detects GPC on your first visit and records a preference of
+            analytics: off and marketing: off, honoring your signal without requiring you
+            to click the banner. Because fenovera.com does not currently engage in the
+            sale or sharing of personal information, a GPC signal does not change our
+            present data practices. If we activate such activities in the future, GPC
+            signals will be honored as required by applicable law.
+          </p>
+
+          <h2>6. Search Engine Webmaster Tools</h2>
           <p>
             We have registered fenovera.com with the following search engine webmaster
             programs to monitor how the site appears in search results and to receive
@@ -125,78 +248,71 @@
             or tracking scripts on your browser through our site pages.
           </p>
           <p>
-            <strong>Google Search Console (Google LLC).</strong> We have verified
-            ownership of fenovera.com with Google Search Console. Google's automated
-            crawlers (Googlebot) visit the site periodically to index its content.
-            Google may log technical request data (IP address, user agent, requested URL)
-            as part of normal crawling operations. This data is processed by Google under
-            its own Privacy Policy and is not linked to individual human visitors by
-            Fenovera LLC. We see only aggregated, anonymized search performance metrics
-            in our Search Console dashboard. Google's Privacy Policy:
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.
+            <strong>Google Search Console (Google LLC).</strong> We verified ownership
+            via a DNS record. Google's automated crawlers (Googlebot) visit the site
+            periodically to index its content. Google may log technical request data
+            (IP address, user agent, requested URL) as part of normal crawling.
+            This data is processed by Google under its own Privacy Policy and is not
+            linked to individual human visitors by Fenovera LLC. We see only aggregated,
+            anonymized search performance metrics.
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
           </p>
           <p>
             <strong>Microsoft Bing Webmaster Tools (Microsoft Corporation).</strong>
-            We have verified ownership of fenovera.com with Microsoft Bing Webmaster
-            Tools. Microsoft's automated crawlers (Bingbot) visit the site periodically
-            to index its content. Microsoft may log technical request data as part of
-            normal crawling operations, governed by Microsoft's own Privacy Statement.
-            We see only aggregated search performance metrics in our Bing Webmaster
-            dashboard. Microsoft's Privacy Statement:
-            <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">privacy.microsoft.com/privacystatement</a>.
+            We verified ownership via a DNS record. Microsoft's automated crawlers
+            (Bingbot) visit the site periodically to index its content. Microsoft may
+            log technical request data as part of normal crawling. We see only aggregated
+            search performance metrics in our Bing Webmaster dashboard.
+            <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft Privacy Statement</a>.
           </p>
           <p>
-            <strong>Important note on search engine crawlers:</strong> Automated search
-            engine crawlers are software programs, not human visitors. Traffic from
-            crawlers is excluded from any interpretation of "users" in this policy.
+            Automated search engine crawlers are software programs, not human visitors.
             Crawler activity does not result in any cookies being stored in the browsers
             of human visitors to fenovera.com.
           </p>
 
-          <h2>4. Meta Business Tools (Meta Platforms, Inc.)</h2>
+          <h2>7. Meta Business Tools (Meta Platforms, Inc.)</h2>
           <p>
-            We have registered fenovera.com with Meta Business Suite for the purpose of
-            domain verification, which allows us to associate our business presence with
-            this website. Domain verification itself consists of a passive HTML tag or
-            DNS record that confirms site ownership to Meta; it does <strong>not</strong>
-            install the Meta Pixel tracking script, does not set advertising cookies,
-            and does not transmit information about individual visitors to Meta.
+            We have registered fenovera.com with Meta Business Suite for domain
+            verification, which associates our business presence with this website.
+            Domain verification consists of a DNS record that confirms site ownership
+            to Meta; it does <strong>not</strong> install the Meta Pixel tracking script,
+            does not set advertising cookies, and does not transmit information about
+            individual visitors to Meta.
           </p>
           <p>
             <strong>We do not currently load the Meta Pixel on fenovera.com.</strong>
             No remarketing, advertising, or behavioral data is sent to Meta from this
             site. If we activate the Meta Pixel or any Meta advertising SDK in the
             future, we will update this policy before deployment and, where required by
-            applicable law, obtain your consent before loading that script. Meta's
-            Privacy Policy:
-            <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener noreferrer">facebook.com/policy.php</a>.
+            applicable law, obtain your consent before loading that script.
+            <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener noreferrer">Meta Privacy Policy</a>.
           </p>
 
-          <h2>5. Form Delivery — Web3Forms</h2>
+          <h2>8. Form Delivery — Web3Forms</h2>
           <p>
-            When you submit the contact or quote request forms on this site, your
-            submission is processed by <strong>Web3Forms</strong>, a third-party form
-            delivery service. Web3Forms processes technical information necessary to
-            receive and route your submission, which may include your IP address and
-            browser information, in accordance with its own privacy policy. Web3Forms
-            does not set cookies on fenovera.com on our behalf. Your submitted data
-            (name, email, and message) is used solely to respond to your inquiry.
+            When you submit the contact or quote request forms, your submission is
+            processed by <strong>Web3Forms</strong>, a third-party form delivery service.
+            Web3Forms processes technical information necessary to receive and route your
+            submission, which may include your IP address and browser information, under
+            its own privacy policy. Web3Forms does not set cookies on fenovera.com on
+            our behalf. Your submitted data is used solely to respond to your inquiry.
           </p>
 
-          <h2>6. Hosting — GitHub Pages</h2>
+          <h2>9. Hosting — GitHub Pages</h2>
           <p>
             This site is hosted on GitHub Pages (GitHub, Inc., a subsidiary of Microsoft
             Corporation). GitHub may process standard server access logs — including IP
             addresses, browser type, and requested URLs — as part of infrastructure
             operations and security. These logs are retained and processed by GitHub
             under its own Privacy Statement and are not used by Fenovera LLC for
-            analytics purposes. GitHub's Privacy Statement:
-            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">docs.github.com</a>.
+            analytics purposes.
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.
           </p>
 
-          <h2>7. Cookies We Do Not Use</h2>
+          <h2>10. Technologies We Do Not Use</h2>
           <p>
-            At the time of this policy's effective date, fenovera.com does <strong>not</strong>
+            At the effective date of this policy, fenovera.com does <strong>not</strong>
             use the following technologies, which are commonly found on commercial websites:
           </p>
           <ul>
@@ -204,44 +320,47 @@
             <li>Meta Pixel or Meta Conversions API</li>
             <li>Google Ads remarketing tags</li>
             <li>LinkedIn Insight Tag</li>
-            <li>Microsoft Clarity or Microsoft Advertising tags</li>
-            <li>Any other behavioral analytics, session-recording, or ad-targeting trackers</li>
+            <li>Microsoft Clarity or Microsoft Advertising (UET) tags</li>
+            <li>Any behavioral analytics, session-recording, heatmap, or ad-targeting trackers</li>
+            <li>Any HTTP cookies (first-party or third-party)</li>
           </ul>
 
-          <h2>8. Your Controls</h2>
+          <h2>11. Your Browser Controls</h2>
           <p>
-            You can clear the site's localStorage preference at any time through your
-            browser's developer tools or site-data settings. This will cause the notice
-            banner to reappear on your next visit. Standard browser cookie controls
-            do not affect localStorage, but clearing all site data will remove it.
-          </p>
-          <p>
-            To opt out of Google's data collection across the web, visit
+            Standard browser cookie controls do not affect localStorage, but all major
+            browsers allow you to clear site data (including localStorage) for specific
+            sites in their privacy or developer settings. To opt out of Google's data
+            collection across the web, visit
             <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">adssettings.google.com</a>.
             To opt out of Microsoft's cross-site tracking, visit
             <a href="https://account.microsoft.com/privacy" target="_blank" rel="noopener noreferrer">account.microsoft.com/privacy</a>.
           </p>
 
-          <h2>9. California Residents (CCPA)</h2>
+          <h2>12. California Residents (CCPA / CPRA)</h2>
           <p>
             Fenovera LLC does not sell personal information and does not share personal
-            information with third parties for cross-context behavioral advertising.
-            The webmaster tools described in this policy do not involve a sale or share
-            of personal information as defined by the CCPA. If you have questions about
-            your California privacy rights, please contact us at the address below.
+            information with third parties for cross-context behavioral advertising, as
+            those terms are defined by the California Consumer Privacy Act (CCPA) as
+            amended by the California Privacy Rights Act (CPRA). The webmaster tools
+            described in this policy do not constitute a sale or share of personal
+            information. California residents have the right to know what personal
+            information is collected, to request deletion, and to opt out of the sale
+            or sharing of personal information (no opt-out is currently necessary as
+            we do not engage in these activities). If you have questions about your
+            California privacy rights, please contact us at the address below.
           </p>
 
-          <h2>10. Changes to This Policy</h2>
+          <h2>13. Changes to This Policy</h2>
           <p>
             We will update this Cookie Policy before activating any new tracking
             technology or third-party service on fenovera.com. For material changes,
-            we will revise the "Last updated" date at the top of this page. We encourage
-            you to review this policy periodically. Continued use of the site after a
-            policy update constitutes acceptance of the revised terms to the extent
-            permitted by applicable law.
+            we will revise the "Last updated" date at the top of this page. Where
+            required by applicable law, we will obtain fresh consent before activating
+            any new optional tracking. We encourage you to review this policy
+            periodically.
           </p>
 
-          <h2>11. Contact Us</h2>
+          <h2>14. Contact Us</h2>
           <p>
             If you have questions about this policy or wish to exercise any privacy
             rights, please contact us:

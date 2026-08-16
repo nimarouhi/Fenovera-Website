@@ -635,46 +635,271 @@
   </main>
 
 <!-- ── Cookie Consent Banner ──────────────────────────────────────────
-     Shown on first visit; dismissed choice persisted in localStorage.
+     Shown on first visit; dismissed once user makes a choice.
+     Consent stored as JSON in localStorage (key: fenoveraCookieConsent).
+     Format: { v:"1", ts:<ms>, cats:{necessary:true,analytics:false,marketing:false}, gpc:<bool> }
+
      To load analytics only after consent:
-       document.addEventListener('fenovera:consent-granted', loadAnalytics);
+       document.addEventListener('fenovera:consent-updated', function(e) {
+         if (e.detail.cats.analytics) loadAnalytics();
+       });
   ────────────────────────────────────────────────────────────────── -->
 <div class="cookie-banner" id="cookie-banner" role="region" aria-labelledby="cookie-banner-title" hidden>
   <div class="cookie-banner__inner">
     <div class="cookie-banner__text">
-      <p class="cookie-banner__title" id="cookie-banner-title">Site notice</p>
+      <p class="cookie-banner__title" id="cookie-banner-title">Your privacy choices</p>
       <p class="cookie-banner__body">
-        This site does not use analytics or advertising trackers.
-        A browser preference is stored solely to remember that you have seen this notice.
+        This site stores only a single browser preference — no analytics or advertising trackers are currently active.
         <a href="../cookies/" class="cookie-banner__link">Cookie Policy</a>.
       </p>
     </div>
     <div class="cookie-banner__actions">
-      <button class="btn btn-primary btn-sm" id="cookie-acknowledge" type="button">
-        Got it
+      <button class="btn btn-outline btn-sm" id="cookie-reject" type="button">
+        Reject Non-Essential
+      </button>
+      <button class="btn btn-outline btn-sm" id="cookie-manage" type="button">
+        Manage Preferences
+      </button>
+      <button class="btn btn-primary btn-sm" id="cookie-accept" type="button">
+        Accept All
       </button>
     </div>
   </div>
 </div>
 
+<!-- ── Cookie Preferences Modal ─────────────────────────────────────
+     Opened by "Manage Preferences" button or "Cookie Preferences" footer link.
+     Focus is trapped while open; Escape key closes.
+  ────────────────────────────────────────────────────────────────── -->
+<div class="cookie-modal" id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title" hidden>
+  <div class="cookie-modal__overlay" id="cookie-modal-overlay"></div>
+  <div class="cookie-modal__panel">
+    <div class="cookie-modal__header">
+      <h2 class="cookie-modal__title" id="cookie-modal-title">Cookie Preferences</h2>
+      <button class="cookie-modal__close" id="cookie-modal-close" type="button" aria-label="Close cookie preferences">&#10005;</button>
+    </div>
+
+    <div class="cookie-modal__body">
+
+      <!-- Strictly Necessary -->
+      <div class="cookie-cat">
+        <div class="cookie-cat__header">
+          <div>
+            <p class="cookie-cat__name">Strictly Necessary</p>
+            <p class="cookie-cat__desc">
+              Required for the site to function. Includes the preference saved when you
+              dismiss this notice (localStorage key: <code>fenoveraCookieConsent</code>).
+              Cannot be disabled.
+            </p>
+          </div>
+          <span class="cookie-cat__always-on" aria-label="Always active">Always on</span>
+        </div>
+      </div>
+
+      <!-- Analytics -->
+      <div class="cookie-cat">
+        <div class="cookie-cat__header">
+          <div>
+            <p class="cookie-cat__name">Analytics</p>
+            <p class="cookie-cat__desc">
+              Not currently in use. If activated in future, this would measure how visitors
+              use the site (pages viewed, session duration, traffic source). Will not be
+              loaded before your consent.
+            </p>
+          </div>
+          <label class="cookie-toggle" for="pref-analytics" aria-label="Analytics cookies toggle">
+            <input type="checkbox" id="pref-analytics" name="analytics">
+            <span class="cookie-toggle__slider" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Advertising / Marketing -->
+      <div class="cookie-cat">
+        <div class="cookie-cat__header">
+          <div>
+            <p class="cookie-cat__name">Advertising &amp; Marketing</p>
+            <p class="cookie-cat__desc">
+              Not currently in use. If activated in future, this would support targeted
+              advertising and remarketing. Will not be loaded before your explicit consent.
+            </p>
+          </div>
+          <label class="cookie-toggle" for="pref-marketing" aria-label="Advertising and marketing cookies toggle">
+            <input type="checkbox" id="pref-marketing" name="marketing">
+            <span class="cookie-toggle__slider" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+
+    </div><!-- /.cookie-modal__body -->
+
+    <div class="cookie-modal__footer">
+      <button class="btn btn-outline btn-sm" id="cookie-modal-reject" type="button">
+        Reject All Non-Essential
+      </button>
+      <button class="btn btn-primary btn-sm" id="cookie-modal-save" type="button">
+        Save Preferences
+      </button>
+    </div>
+  </div><!-- /.cookie-modal__panel -->
+</div><!-- /#cookie-modal -->
+
 <script>
 (function () {
   'use strict';
-  var STORAGE_KEY = 'fenoveraCookieConsent';
-  var banner = document.getElementById('cookie-banner');
-  var btn    = document.getElementById('cookie-acknowledge');
 
-  var existing;
-  try { existing = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+  var STORAGE_KEY   = 'fenoveraCookieConsent';
+  var POLICY_VER    = '1';
+
+  /* ── Helpers ───────────────────────────────────────────────────── */
+  function readConsent() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      /* Support legacy "acknowledged" string from previous banner */
+      if (raw === 'acknowledged') return { v: '0', cats: { necessary: true, analytics: false, marketing: false }, gpc: false };
+      return JSON.parse(raw);
+    } catch (e) { return null; }
+  }
+
+  function writeConsent(cats, gpcFlag) {
+    var obj = {
+      v:    POLICY_VER,
+      ts:   Date.now(),
+      cats: {
+        necessary: true,
+        analytics: cats.analytics || false,
+        marketing: cats.marketing || false
+      },
+      gpc: gpcFlag || false
+    };
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); } catch (e) {}
+    /* Fire event so any future analytics loader can hook in */
+    try {
+      document.dispatchEvent(new CustomEvent('fenovera:consent-updated', { detail: obj }));
+    } catch (e) {}
+    return obj;
+  }
+
+  function isGPC() {
+    try { return navigator.globalPrivacyControl === true; } catch (e) { return false; }
+  }
+
+  /* ── Elements ──────────────────────────────────────────────────── */
+  var banner      = document.getElementById('cookie-banner');
+  var modal       = document.getElementById('cookie-modal');
+  var overlay     = document.getElementById('cookie-modal-overlay');
+  var btnAccept   = document.getElementById('cookie-accept');
+  var btnReject   = document.getElementById('cookie-reject');
+  var btnManage   = document.getElementById('cookie-manage');
+  var btnClose    = document.getElementById('cookie-modal-close');
+  var btnModalReject = document.getElementById('cookie-modal-reject');
+  var btnModalSave   = document.getElementById('cookie-modal-save');
+  var chkAnalytics   = document.getElementById('pref-analytics');
+  var chkMarketing   = document.getElementById('pref-marketing');
+
+  /* ── Banner visibility ─────────────────────────────────────────── */
+  var existing = readConsent();
 
   if (!existing) {
+    /* Auto-honor GPC: store opt-out silently, then show banner as info */
+    if (isGPC()) {
+      writeConsent({ analytics: false, marketing: false }, true);
+    }
     setTimeout(function () { banner.removeAttribute('hidden'); }, 800);
   }
 
-  if (btn) btn.addEventListener('click', function () {
-    try { localStorage.setItem(STORAGE_KEY, 'acknowledged'); } catch (e) {}
-    banner.setAttribute('hidden', '');
-  });
+  /* ── Sync toggle checkboxes to saved state ─────────────────────── */
+  function syncToggles() {
+    var saved = readConsent();
+    if (saved && saved.cats) {
+      chkAnalytics.checked = !!saved.cats.analytics;
+      chkMarketing.checked = !!saved.cats.marketing;
+    } else {
+      chkAnalytics.checked = false;
+      chkMarketing.checked = false;
+    }
+  }
+
+  /* ── Accept all ────────────────────────────────────────────────── */
+  function acceptAll() {
+    writeConsent({ analytics: true, marketing: true }, isGPC());
+    hideBanner();
+  }
+
+  /* ── Reject non-essential ──────────────────────────────────────── */
+  function rejectAll() {
+    writeConsent({ analytics: false, marketing: false }, isGPC());
+    hideBanner();
+  }
+
+  /* ── Save from modal ───────────────────────────────────────────── */
+  function savePrefs() {
+    writeConsent({
+      analytics: chkAnalytics.checked,
+      marketing: chkMarketing.checked
+    }, isGPC());
+    closeModal();
+    hideBanner();
+  }
+
+  /* ── Banner / modal show/hide ──────────────────────────────────── */
+  function hideBanner() { banner.setAttribute('hidden', ''); }
+
+  var _lastFocus;
+  function openModal() {
+    syncToggles();
+    _lastFocus = document.activeElement;
+    modal.removeAttribute('hidden');
+    /* Trap focus inside modal */
+    modal.addEventListener('keydown', trapFocus);
+    document.addEventListener('keydown', onEsc);
+    setTimeout(function () { if (btnClose) btnClose.focus(); }, 50);
+  }
+
+  function closeModal() {
+    modal.setAttribute('hidden', '');
+    modal.removeEventListener('keydown', trapFocus);
+    document.removeEventListener('keydown', onEsc);
+    if (_lastFocus) { try { _lastFocus.focus(); } catch (e) {} }
+  }
+
+  function trapFocus(e) {
+    if (e.key !== 'Tab') return;
+    var focusable = modal.querySelectorAll(
+      'button:not([disabled]), [href], input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+    var first = focusable[0];
+    var last  = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    }
+  }
+
+  function onEsc(e) {
+    if (e.key === 'Escape') closeModal();
+  }
+
+  /* ── Wire buttons ──────────────────────────────────────────────── */
+  if (btnAccept)      btnAccept.addEventListener('click', acceptAll);
+  if (btnReject)      btnReject.addEventListener('click', rejectAll);
+  if (btnManage)      btnManage.addEventListener('click', openModal);
+  if (btnClose)       btnClose.addEventListener('click', closeModal);
+  if (overlay)        overlay.addEventListener('click', closeModal);
+  if (btnModalReject) btnModalReject.addEventListener('click', function () { chkAnalytics.checked = false; chkMarketing.checked = false; savePrefs(); });
+  if (btnModalSave)   btnModalSave.addEventListener('click', savePrefs);
+
+  /* ── "Cookie Preferences" footer link ─────────────────────────── */
+  var prefsLink = document.getElementById('cookie-prefs-link');
+  if (prefsLink) {
+    prefsLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal();
+    });
+  }
+
 }());
 </script>
 
@@ -715,7 +940,6 @@
           <a href="mailto:info@fenovera.com" class="site-footer__link">info@fenovera.com</a>
         </div>
 
-
       </div><!-- end site-footer__links -->
     </div>
 
@@ -727,6 +951,7 @@
       <a href="../privacy/" class="site-footer__legal-link">Privacy Policy</a>
       <a href="../terms/" class="site-footer__legal-link">Terms of Use</a>
       <a href="../cookies/" class="site-footer__legal-link">Cookie Policy</a>
+      <a href="../cookies/" class="site-footer__legal-link" id="cookie-prefs-link">Cookie Preferences</a>
     </nav>
   </div>
 
