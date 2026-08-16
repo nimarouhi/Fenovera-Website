@@ -36,7 +36,7 @@
     .bt-card__material { font-size: var(--text-xs); font-weight: var(--weight-semibold); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--color-ink-secondary); margin: 0 0 var(--space-1) 0; }
     .bt-card__name { font-family: var(--font-heading); font-size: var(--text-body); font-weight: var(--weight-bold); color: var(--color-navy); margin: 0; }
     .bt-card__sub { font-size: var(--text-sm); color: var(--color-ink-secondary); margin-top: var(--space-1); }
-    .bt-card__badges { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-3); }
+    .bt-card__badges { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); margin-top: var(--space-3); }
     .bt-card--contact { background: var(--color-surface); cursor: default; }
     .bt-card--contact:hover { border-color: var(--color-border); box-shadow: none; }
 
@@ -153,7 +153,7 @@
 
           <!-- Column 3: NFRC -->
           <div>
-            <span class="mega-menu__col-label">NFRC</span>
+            <div class="mega-menu__col-label">NFRC</div>
             <div class="mega-menu__group">
               <a href="../../../products/by-cert/nfrc/windows/" class="mega-menu__link">
                 <span class="mega-menu__link-name">NFRC Windows</span>
