@@ -8,7 +8,7 @@
     <nav class="site-header__nav" aria-label="Main navigation">
 
       <div class="nav-item" id="nav-products">
-        <button class="nav-link{{#ACTIVE:products,windows,doors,windows-aluminum,windows-upvc,windows-pvc,doors-aluminum,doors-upvc,doors-pvc}}"
+        <button class="nav-link{{#ACTIVE:products,windows,doors,windows-aluminum,windows-upvc,windows-pvc,doors-aluminum,doors-upvc,doors-pvc,nfrc-windows,nfrc-doors}}"
           aria-haspopup="true" aria-expanded="false"
           aria-controls="mega-menu-products" type="button">
           Products
@@ -82,7 +82,20 @@
             </div>
           </div>
 
-          <div class="mega-menu__footer">
+          <!-- Column 3: NFRC -->
+          <div>
+            <span class="mega-menu__col-label">NFRC</span>
+            <div class="mega-menu__group">
+              <a href="/products/by-cert/nfrc/windows/" class="mega-menu__link"{{#AC:nfrc-windows}}>
+                <span class="mega-menu__link-name">NFRC Windows</span>
+              </a>
+              <a href="/products/by-cert/nfrc/doors/" class="mega-menu__link"{{#AC:nfrc-doors}}>
+                <span class="mega-menu__link-name">NFRC Doors</span>
+              </a>
+            </div>
+          </div>
+
+                    <div class="mega-menu__footer">
             <a href="/products/" class="link-standalone"{{#AC:products}}>All Products</a>
             <a href="/quote/" class="link-standalone">
               Request a Free Quote

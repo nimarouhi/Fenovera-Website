@@ -126,6 +126,67 @@ pages.push({
   });
 });
 
+
+// ── NFRC-Certified Windows page ──────────────────────────────────────────────
+(function() {
+  var NFRC_WIN_AL_SLUGS = ['ldw-x76', 'ldw-s8520', 'wj-91', 'wj-110'];
+  var NFRC_WIN_UPVC_SLUGS = ['prm-82u', 'wj-72'];
+
+  function buildNfrcProducts(slugs, typeSlug, materialSlug) {
+    return slugs.map(function(slug) {
+      var product = productByKey[typeSlug + '/' + materialSlug + '/' + slug];
+      if (!product) return null;
+      // Matching badge: does the same slug exist as a door?
+      var otherType = typeSlug === 'windows' ? 'doors' : 'windows';
+      var otherLabel = typeSlug === 'windows' ? 'Door' : 'Window';
+      var hasMatch = !!productByKey[otherType + '/' + materialSlug + '/' + slug];
+      if (hasMatch) {
+        return Object.assign({}, product, {
+          matchingLabel: 'Matching ' + otherLabel + ' Series Available',
+        });
+      }
+      return product;
+    }).filter(Boolean);
+  }
+
+  pages.push({
+    src:         'src/templates/nfrc-overview.html',
+    out:         'products/by-cert/nfrc/windows/index.html',
+    pageId:      'nfrc-windows',
+    title:       'NFRC-Certified Windows | Fenovera',
+    description: 'Browse all NFRC-certified window series from Fenovera — aluminum and uPVC systems with verified energy performance ratings from the National Fenestration Rating Council.',
+    ogImage:     OG.winAl,
+    ogImageAlt:  'NFRC-certified windows from Fenovera',
+    data: {
+      seoTitle:    'NFRC-Certified Windows | Fenovera',
+      typeLabel:   'Windows',
+      description: 'These window series carry NFRC energy performance ratings from the National Fenestration Rating Council. NFRC ratings cover U-factor, Solar Heat Gain Coefficient (SHGC), Visible Transmittance (VT), and Air Leakage — providing independently verified data for energy code compliance and project specifications.',
+      alProducts:   buildNfrcProducts(NFRC_WIN_AL_SLUGS, 'windows', 'aluminum'),
+      upvcProducts: buildNfrcProducts(NFRC_WIN_UPVC_SLUGS, 'windows', 'upvc'),
+    },
+  });
+
+  var NFRC_DOOR_AL_SLUGS = ['ldw-x76', 'ldw-g88', 'ldw-g152', 'prm-80a', 'prm-125a', 'prm-150a', 'wj-88', 'wj-91', 'wj-170'];
+  var NFRC_DOOR_UPVC_SLUGS = ['wj-195'];
+
+  pages.push({
+    src:         'src/templates/nfrc-overview.html',
+    out:         'products/by-cert/nfrc/doors/index.html',
+    pageId:      'nfrc-doors',
+    title:       'NFRC-Certified Doors | Fenovera',
+    description: 'Browse all NFRC-certified door series from Fenovera — aluminum and uPVC systems with verified energy performance ratings from the National Fenestration Rating Council.',
+    ogImage:     OG.doorAl,
+    ogImageAlt:  'NFRC-certified doors from Fenovera',
+    data: {
+      seoTitle:    'NFRC-Certified Doors | Fenovera',
+      typeLabel:   'Doors',
+      description: 'These door series carry NFRC energy performance ratings from the National Fenestration Rating Council. NFRC ratings cover U-factor, Solar Heat Gain Coefficient (SHGC), Visible Transmittance (VT), and Air Leakage — providing independently verified data for energy code compliance and project specifications.',
+      alProducts:   buildNfrcProducts(NFRC_DOOR_AL_SLUGS, 'doors', 'aluminum'),
+      upvcProducts: buildNfrcProducts(NFRC_DOOR_UPVC_SLUGS, 'doors', 'upvc'),
+    },
+  });
+})();
+
 // ── OG image per type and material ──────────────────────────────────────────
 var TYPE_OG = {
   windows: { al: OG.winAl, upvc: OG.winUpvc, pvc: OG.winPvc, fallback: OG.winAl },

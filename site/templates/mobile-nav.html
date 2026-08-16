@@ -15,7 +15,7 @@
 
       <div>
         <button class="mobile-nav__accordion-btn"
-          aria-expanded="{{#EXPANDED:products,windows,doors,windows-aluminum,windows-upvc,windows-pvc,doors-aluminum,doors-upvc,doors-pvc}}"
+          aria-expanded="{{#EXPANDED:products,windows,doors,windows-aluminum,windows-upvc,windows-pvc,doors-aluminum,doors-upvc,doors-pvc,nfrc-windows,nfrc-doors}}"
           aria-controls="mobile-products-submenu"
           type="button">
           Products
@@ -24,7 +24,7 @@
           </svg>
         </button>
         <div class="mobile-nav__submenu" id="mobile-products-submenu"
-          aria-hidden="{{#HIDDEN:products,windows,doors,windows-aluminum,windows-upvc,windows-pvc,doors-aluminum,doors-upvc,doors-pvc}}">
+          aria-hidden="{{#HIDDEN:products,windows,doors,windows-aluminum,windows-upvc,windows-pvc,doors-aluminum,doors-upvc,doors-pvc,nfrc-windows,nfrc-doors}}">
 
           <div class="mobile-nav__submenu-section">By Material</div>
           <a href="/products/doors/aluminum/" class="mobile-nav__submenu-link"{{#AC:doors-aluminum}}>Aluminum Doors</a>
@@ -47,7 +47,12 @@
           <a href="/products/by-type/#bi-fold" class="mobile-nav__submenu-link">Bi-Fold</a>
           <a href="/products/by-type/#lift-slide" class="mobile-nav__submenu-link">Lift &amp; Slide</a>
 
-          <a href="/products/" class="mobile-nav__submenu-link"{{#AC:products}}>All Products</a>
+
+          <div class="mobile-nav__submenu-section">NFRC</div>
+          <a href="/products/by-cert/nfrc/windows/" class="mobile-nav__submenu-link"{{#AC:nfrc-windows}}>NFRC Windows</a>
+          <a href="/products/by-cert/nfrc/doors/" class="mobile-nav__submenu-link"{{#AC:nfrc-doors}}>NFRC Doors</a>
+
+                    <a href="/products/" class="mobile-nav__submenu-link"{{#AC:products}}>All Products</a>
         </div>
       </div>
 

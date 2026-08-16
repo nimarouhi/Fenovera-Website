@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{DATA:seoTitle}}</title>
+  <meta name="description" content="{{DATA:description}}">
+  <!-- noindex: draft page: remove once approved for launch -->
+  <meta name="robots" content="noindex, nofollow">
+<!-- Design System v1.3.1 -->
+  <link rel="stylesheet" href="/design-system/tokens.css">
+  <link rel="stylesheet" href="/design-system/base.css">
+  <link rel="stylesheet" href="/design-system/components.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- BUILD:header -->
+  <!-- BUILD:mobile-nav -->
+
+  <div class="dev-notice" role="status" aria-live="polite">
+    <strong>Development draft:</strong> content requires verification before public launch.
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── BREADCRUMB ───────────────────────────────────────────────────── -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <div class="container">
+        <ol class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="/products/" itemprop="item"><span itemprop="name">Products</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li aria-hidden="true">&rsaquo;</li>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">NFRC-Certified {{DATA:typeLabel}}</span>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ── PAGE HEADER ───────────────────────────────────────────────────── -->
+    <section class="page-section page-section--flush-top product-hero" aria-labelledby="nfrc-heading">
+      <div class="container">
+        <p class="section-overline">NFRC Certification</p>
+        <h1 class="section-title" id="nfrc-heading">NFRC-Certified {{DATA:typeLabel}}</h1>
+        <p class="section-body">{{DATA:description}}</p>
+      </div>
+    </section>
+
+    <!-- ── ALUMINUM SECTION ─────────────────────────────────────────────── -->
+    <section class="page-section page-section--canvas" aria-labelledby="nfrc-al-heading">
+      <div class="container">
+        <p class="section-overline">Material</p>
+        <h2 class="section-title" id="nfrc-al-heading">Aluminum</h2>
+        <!-- SECTION:nfrc-al-grid -->
+      </div>
+    </section>
+
+    <!-- ── uPVC SECTION ─────────────────────────────────────────────────── -->
+    <section class="page-section" aria-labelledby="nfrc-upvc-heading">
+      <div class="container">
+        <p class="section-overline">Material</p>
+        <h2 class="section-title" id="nfrc-upvc-heading">uPVC</h2>
+        <!-- SECTION:nfrc-upvc-grid -->
+      </div>
+    </section>
+
+    <!-- ── QUOTE CTA BANNER ──────────────────────────────────────────────── -->
+    <section class="quote-banner" aria-labelledby="cta-nfrc-heading">
+      <div class="container">
+        <div class="quote-banner__inner">
+          <div>
+            <p class="quote-banner__eyebrow">Get in touch</p>
+            <h2 class="quote-banner__title" id="cta-nfrc-heading">Request a free quote for NFRC-certified {{DATA:typeLabel}}</h2>
+            <p class="quote-banner__body">Provide your project details and we'll respond with pricing, lead times, and technical specifications.</p>
+          </div>
+          <div>
+            <a href="/quote/" class="btn btn-secondary btn-lg">Request a Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BUILD:footer -->
+
+  <script src="/site/nav.js" defer></script>
+
+</body>
+</html>

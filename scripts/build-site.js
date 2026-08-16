@@ -186,6 +186,11 @@ function renderSection(name, data) {
     case 'products-overview-grid':
       return renderProductsOverviewGrid(data);
 
+
+    case 'nfrc-al-grid':
+      return renderCategoryProductGrid({ products: data.alProducts || [] });
+    case 'nfrc-upvc-grid':
+      return renderCategoryProductGrid({ products: data.upvcProducts || [] });
     default:
       return '<!-- SECTION:' + name + ' — unknown section -->';
   }
