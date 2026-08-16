@@ -65,7 +65,28 @@ var ALUMINUM_FINISHES = {
   },
 };
 
-var WJ_CERTIFICATIONS = [];
+var WJ_CERTIFICATIONS_BASE = [
+  { name: 'ETL',         body: 'Intertek',                                        scope: 'Electrical and product safety testing' },
+  { name: 'ISO',         body: 'International Organization for Standardization',  scope: 'Quality management system' },
+  { name: 'ECM',         body: 'ECM Certification',                               scope: 'Product quality certification' },
+  { name: 'CSA',         body: 'Canadian Standards Association',                  scope: 'Product safety and performance (US/CA)' },
+  { name: 'CE',          body: 'European Commission',                             scope: 'European conformity marking' },
+  { name: 'Energy Star', body: 'US EPA / DOE',                                    scope: 'Energy efficiency certification' },
+  { name: 'ACM',         body: 'ACM Certification',                               scope: 'Product quality certification' },
+  { name: 'NAMI',        body: 'National Accreditation and Management Institute', scope: 'Window and door product certification' },
+];
+
+var WJ_CERTIFICATIONS_NFRC = [
+  { name: 'ETL',         body: 'Intertek',                                        scope: 'Electrical and product safety testing' },
+  { name: 'ISO',         body: 'International Organization for Standardization',  scope: 'Quality management system' },
+  { name: 'ECM',         body: 'ECM Certification',                               scope: 'Product quality certification' },
+  { name: 'CSA',         body: 'Canadian Standards Association',                  scope: 'Product safety and performance (US/CA)' },
+  { name: 'CE',          body: 'European Commission',                             scope: 'European conformity marking' },
+  { name: 'NFRC',        body: 'National Fenestration Rating Council',            scope: 'Energy performance rating' },
+  { name: 'Energy Star', body: 'US EPA / DOE',                                    scope: 'Energy efficiency certification' },
+  { name: 'ACM',         body: 'ACM Certification',                               scope: 'Product quality certification' },
+  { name: 'NAMI',        body: 'National Accreditation and Management Institute', scope: 'Window and door product certification' },
+];
 
 module.exports = [
 
@@ -526,9 +547,10 @@ module.exports = [
       'Casement max 914 × 1829 mm; tilt-turn max 1600 × 2800 mm',
       'U-value 0.188 BTU/hr·ft²·°F (tilt-turn)',
       'Double or triple argon-filled tempered glass',
+      'NFRC energy performance documentation available',
       'Matching WJ-91 casement door in the same profile',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
         { label: 'Frame width',          value: '91 mm',                                         status: 'confirmed' },
@@ -574,7 +596,7 @@ module.exports = [
       'U-value 0.200 BTU/hr·ft²·°F',
       'Double or triple argon-filled tempered glass',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Tilt-Turn', rows: [
         { label: 'Frame width',          value: '80 mm',                                         status: 'confirmed' },
@@ -608,7 +630,7 @@ module.exports = [
       '5+20A+5 mm glass',
       'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Frame width',          value: '110 mm (slim profile)',                         status: 'confirmed' },
@@ -869,8 +891,9 @@ module.exports = [
       'Casement max 813 × 1829 mm; tilt-turn max 914 × 1829 mm',
       'U-value 0.199 BTU/hr·ft²·°F',
       'Double or triple argon-filled tempered glass',
+      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
         { label: 'Frame width',          value: '72 mm',                                         status: 'confirmed' },
@@ -1003,7 +1026,7 @@ module.exports = [
       'Matching WJ-60 uPVC casement door also available',
       'Custom colors and glazing options available on request',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
         { label: 'Series',          value: 'WJ-60',                               status: 'confirmed' },
@@ -1608,8 +1631,9 @@ module.exports = [
       'Max leaf 1041 × 2800 mm, 150 kg per leaf',
       'U-value 0.329 BTU/hr·ft²·°F',
       'Double or triple argon-filled tempered glass',
+      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Folding', rows: [
         { label: 'Frame width',          value: '88 mm',                                         status: 'confirmed' },
@@ -1641,8 +1665,9 @@ module.exports = [
       'Max size 1041 × 2800 mm, 200 kg load capacity',
       'U-value 0.190 BTU/hr·ft²·°F',
       'Double or triple argon-filled tempered glass',
+      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Hinged & French', rows: [
         { label: 'Frame width',          value: '91 mm',                                         status: 'confirmed' },
@@ -1675,7 +1700,7 @@ module.exports = [
       '5+27A+5 mm glass',
       'AAMA, CSA, and NAFS performance testing in progress',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Frame width',          value: '132 mm (slim profile)',                         status: 'confirmed' },
@@ -1704,8 +1729,9 @@ module.exports = [
       'Max size 3300 × 2800 mm, 600 kg load capacity',
       'U-value 0.229 BTU/hr·ft²·°F',
       'Double or triple argon-filled tempered glass',
+      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Frame width',          value: '170 mm',                                        status: 'confirmed' },
@@ -1856,8 +1882,9 @@ module.exports = [
       'U-value 0.223 BTU/hr·ft²·°F',
       'Side pressure locking system',
       'Double or triple argon-filled tempered glass',
+      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Frame width',          value: '195 mm',                                        status: 'confirmed' },
@@ -1928,7 +1955,7 @@ module.exports = [
       'Matching WJ-60 uPVC casement window also available',
       'Custom colors and glazing options available on request',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS_BASE, documents: [],
     specificationGroups: [
       { label: 'Hinged & French', rows: [
         { label: 'Series',          value: 'WJ-60',                               status: 'confirmed' },
