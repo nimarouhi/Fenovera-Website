@@ -513,12 +513,12 @@ module.exports = [
   {
     id: 'windows-aluminum-wj-91', slug: 'wj-91',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-wj-91',
-    publicName: 'WJ-91 Series Aluminum Window', systemType: 'Casement / Tilt-Turn',
+    publicName: 'WJ-91 Series Thermal-Break Aluminum Window', systemType: 'Casement / Tilt-Turn',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
-    seoTitle: 'WJ-91 Series Aluminum Window | Fenovera',
-    description: 'Thermal-break aluminum casement and tilt-turn windows tested to AAMA, CSA, and NAFS standards. Casement max 914 × 1829 mm, tilt-turn max 1600 × 2800 mm.',
-    heroIntro: 'WJ-91 Series thermal-break aluminum window. Available in casement and tilt-turn configurations. Casement spans up to 914 × 1829 mm (90 kg max); tilt-turn up to 1600 × 2800 mm (150 kg max). Argon-filled double or triple glazing achieves a U-value as low as 0.188 BTU/hr·ft²·°F (tilt-turn). Tested to AAMA, CSA, and NAFS with SLS/ULS 1920 Pa / 2880 Pa and 290 Pa water penetration resistance. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/wj-91/">WJ-91 Series casement door</a> uses the same profile. Contact us for specifications, pricing, and availability.',
+    seoTitle: 'WJ-91 Series Thermal-Break Aluminum Window | Fenovera',
+    description: 'Thermal-break aluminum casement and tilt-turn windows tested to AAMA, CSA, and NAFS standards. Casement max 914 × 1829 mm, tilt-turn max 1600 × 2800 mm. NFRC energy performance documentation available.',
+    heroIntro: 'WJ-91 Series thermal-break aluminum window. Available in casement and tilt-turn configurations. Casement spans up to 914 × 1829 mm (90 kg max); tilt-turn up to 1600 × 2800 mm (150 kg max). Argon-filled double or triple glazing achieves a U-value as low as 0.188 BTU/hr·ft²·°F (tilt-turn). Tested to AAMA, CSA, and NAFS with SLS/ULS 1920 Pa / 2880 Pa and 290 Pa water penetration resistance. NFRC energy performance documentation available. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/wj-91/">WJ-91 Series casement door</a> uses the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj91-hero.jpg', alt: 'WJ-91 Series aluminum tilt-turn window open in modern living room with lake view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.5–6' },
     keyFeatures: [
       '91 mm thermal-break frame in casement and tilt-turn configurations',
@@ -528,7 +528,7 @@ module.exports = [
       'Double or triple argon-filled tempered glass',
       'Matching WJ-91 casement door in the same profile',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
         { label: 'Frame width',          value: '91 mm',                                         status: 'confirmed' },
@@ -594,21 +594,21 @@ module.exports = [
   {
     id: 'windows-aluminum-wj-110', slug: 'wj-110',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-wj-110',
-    publicName: 'WJ-110 Slim Frame Series Aluminum Window', systemType: 'Slim Frame Sliding',
+    publicName: 'WJ-110 Slim Frame Series Thermal-Break Aluminum Window', systemType: 'Slim Frame Sliding',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
-    seoTitle: 'WJ-110 Slim Frame Aluminum Sliding Window | Fenovera',
-    description: 'Slim-frame aluminum sliding windows with a 110 mm profile. Max 4000 × 2000 mm. AAMA/CSA/NAFS performance testing in progress. Contact Fenovera for pricing.',
-    heroIntro: 'WJ-110 Slim Frame Series aluminum sliding window. The 110 mm slim-profile frame minimizes sightlines while supporting panels up to 4000 × 2000 mm and 100 kg per panel. 5+20A+5 mm glass as standard. AAMA, CSA, and NAFS performance testing in progress. Contact us for specifications, pricing, and availability.',
+    seoTitle: 'WJ-110 Slim Frame Thermal-Break Aluminum Sliding Window | Fenovera',
+    description: 'Slim-frame thermal-break aluminum sliding windows with a 110 mm profile. Max 4000 × 2000 mm. NFRC energy performance documentation available. Contact Fenovera for pricing.',
+    heroIntro: 'WJ-110 Slim Frame Series thermal-break aluminum sliding window. The 110 mm slim-profile frame minimizes sightlines while supporting panels up to 4000 × 2000 mm and 100 kg per panel. 5+20A+5 mm glass as standard. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj110-hero.jpg', alt: 'WJ-110 Slim Frame Series aluminum sliding window in modern living room', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.17–18' },
     keyFeatures: [
-      '110 mm slim-profile sliding window for maximum glass area',
+      '110 mm slim-profile thermal-break sliding window for maximum glass area',
       'Max size 4000 × 2000 mm',
       '100 kg per panel load capacity',
       '5+20A+5 mm glass',
-      'AAMA, CSA, and NAFS performance testing in progress',
+      'NFRC energy performance documentation available',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Frame width',          value: '110 mm (slim profile)',                         status: 'confirmed' },
@@ -617,7 +617,7 @@ module.exports = [
         { label: 'Max load',             value: '100 kg',                                        status: 'confirmed' },
         { label: 'Glass',                value: '5+20A+5 mm',                                    status: 'confirmed' },
         { label: 'Performance testing',  value: 'AAMA / CSA / NAFS (results pending)',           status: 'confirmed' },
-        { label: 'Thermal break',        value: 'Not specified',                                 status: 'confirmed' },
+        { label: 'Thermal break',        value: 'Yes',                                           status: 'confirmed' },
       ]},
     ],
   },
@@ -861,8 +861,8 @@ module.exports = [
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-72 Series uPVC Window | Fenovera',
-    description: 'uPVC casement, tilt-turn, and fixed windows tested to AAMA, CSA, and NAFS standards. Casement max 813 × 1829 mm, U-value 0.199 BTU/hr·ft²°F. Contact Fenovera.',
-    heroIntro: 'WJ-72 Series uPVC window. Available in casement, tilt-turn, and fixed configurations. Casement spans up to 813 × 1829 mm (60 kg max); tilt-turn up to 914 × 1829 mm (90 kg max). Argon-filled double or triple glazing delivers a U-value of 0.199 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1680 Pa / 2520 Pa and 260 Pa water penetration resistance. Contact us for specifications, pricing, and availability.',
+    description: 'uPVC casement, tilt-turn, and fixed windows tested to AAMA, CSA, and NAFS standards. Casement max 813 × 1829 mm, U-value 0.199 BTU/hr·ft²°F. NFRC energy performance documentation available. Contact Fenovera.',
+    heroIntro: 'WJ-72 Series uPVC window. Available in casement, tilt-turn, and fixed configurations. Casement spans up to 813 × 1829 mm (60 kg max); tilt-turn up to 914 × 1829 mm (90 kg max). Argon-filled double or triple glazing delivers a U-value of 0.199 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1680 Pa / 2520 Pa and 260 Pa water penetration resistance. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-wj72-hero.jpg', alt: 'WJ-72 Series uPVC casement window in modern bedroom with forest view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.21-22' }, keyFeatures: [
       '72 mm uPVC frame in casement, tilt-turn, and fixed configurations',
       'Tested to AAMA, CSA, and NAFS performance standards',
@@ -870,7 +870,7 @@ module.exports = [
       'U-value 0.199 BTU/hr·ft²·°F',
       'Double or triple argon-filled tempered glass',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Casement', rows: [
         { label: 'Frame width',          value: '72 mm',                                         status: 'confirmed' },
@@ -1594,14 +1594,47 @@ module.exports = [
   },
 
   {
-    id: 'doors-aluminum-wj-91', slug: 'wj-91',
-    typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-wj-91',
-    publicName: 'WJ-91 Series Aluminum Door', systemType: 'Hinged & French',
+    id: 'doors-aluminum-wj-88', slug: 'wj-88',
+    typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-wj-88',
+    publicName: 'WJ-88 Series Thermal-Break Aluminum Door', systemType: 'Bi-Fold',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
-    seoTitle: 'WJ-91 Series Aluminum Casement Door | Fenovera',
-    description: 'Thermal-break aluminum casement doors tested to AAMA, CSA, and NAFS. Max 1041 × 2800 mm, 200 kg load, U-value 0.190 BTU/hr·ft²°F. Contact Fenovera for pricing.',
-    heroIntro: 'WJ-91 Series thermal-break aluminum casement door. Handles panels up to 1041 × 2800 mm and 200 kg. Argon-filled double or triple glazing achieves a U-value of 0.190 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1680 Pa / 2520 Pa and 260 Pa water penetration resistance. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/wj-91/">WJ-91 Series window</a> uses the same profile. Contact us for specifications, pricing, and availability.',
+    seoTitle: 'WJ-88 Series Thermal-Break Aluminum Folding Door | Fenovera',
+    description: 'Thermal-break aluminum folding doors tested to AAMA, CSA, and NAFS. Max leaf 1041 × 2800 mm, 150 kg per leaf. NFRC energy performance documentation available.',
+    heroIntro: 'WJ-88 Series thermal-break aluminum bi-folding door. Available in 3 to 8 panel configurations, folding inward or outward. Each leaf spans up to 1041 × 2800 mm and supports 150 kg. Argon-filled double or triple glazing achieves a U-value of 0.329 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1140 Pa / 2160 Pa and 220 Pa water penetration resistance. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    heroImage: { src: '/img/al-wj88-door-hero.jpg', alt: 'WJ-88 Series aluminum bi-fold door open in modern interior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.13–14' }, keyFeatures: [
+      '88 mm thermal-break aluminum folding door',
+      'Tested to AAMA, CSA, and NAFS standards',
+      'Max leaf 1041 × 2800 mm, 150 kg per leaf',
+      'U-value 0.329 BTU/hr·ft²·°F',
+      'Double or triple argon-filled tempered glass',
+    ],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
+    specificationGroups: [
+      { label: 'Folding', rows: [
+        { label: 'Frame width',          value: '88 mm',                                         status: 'confirmed' },
+        { label: 'Min leaf size',        value: '610 × 1829 mm (24″ × 72″)',                     status: 'confirmed' },
+        { label: 'Max leaf size',        value: '1041 × 2800 mm (41″ × 110″)',                   status: 'confirmed' },
+        { label: 'Max load per leaf',    value: '150 kg',                                        status: 'confirmed' },
+        { label: 'Glass',                value: '6+19Ar+6 mm double tempered / 6+12Ar+6+12Ar+6 mm triple tempered', status: 'confirmed' },
+        { label: 'U-value',              value: '0.329 BTU/hr·ft²·°F',                          status: 'confirmed' },
+        { label: 'Performance testing',  value: 'AAMA / CSA / NAFS',                            status: 'confirmed' },
+        { label: 'SLS / ULS',            value: '1140 Pa / 2160 Pa',                            status: 'confirmed' },
+        { label: 'Water penetration',    value: '220 Pa',                                        status: 'confirmed' },
+        { label: 'Thermal break',        value: 'Yes',                                           status: 'confirmed' },
+      ]},
+    ],
+  },
+
+  {
+    id: 'doors-aluminum-wj-91', slug: 'wj-91',
+    typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-wj-91',
+    publicName: 'WJ-91 Series Thermal-Break Aluminum Door', systemType: 'Hinged & French',
+    materialLabel: 'Aluminum', typeLabel: 'Door',
+    offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
+    seoTitle: 'WJ-91 Series Thermal-Break Aluminum Door | Fenovera',
+    description: 'Thermal-break aluminum casement doors tested to AAMA, CSA, and NAFS. Max 1041 × 2800 mm, 200 kg load, U-value 0.190 BTU/hr·ft²°F. NFRC energy performance documentation available.',
+    heroIntro: 'WJ-91 Series thermal-break aluminum casement door. Handles panels up to 1041 × 2800 mm and 200 kg. Argon-filled double or triple glazing achieves a U-value of 0.190 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1680 Pa / 2520 Pa and 260 Pa water penetration resistance. NFRC energy performance documentation available. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/wj-91/">WJ-91 Series window</a> uses the same profile. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj91-door-hero.jpg', alt: 'WJ-91 Series thermal-break aluminum casement door opening to pool and garden', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.9–10' }, keyFeatures: [
       '91 mm thermal-break aluminum casement door',
       'Tested to AAMA, CSA, and NAFS performance standards',
@@ -1609,7 +1642,7 @@ module.exports = [
       'U-value 0.190 BTU/hr·ft²·°F',
       'Double or triple argon-filled tempered glass',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Hinged & French', rows: [
         { label: 'Frame width',          value: '91 mm',                                         status: 'confirmed' },
@@ -1657,47 +1690,14 @@ module.exports = [
   },
 
   {
-    id: 'doors-aluminum-wj-88', slug: 'wj-88',
-    typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-wj-88',
-    publicName: 'WJ-88 Series Aluminum Door', systemType: 'Bi-Fold',
-    materialLabel: 'Aluminum', typeLabel: 'Door',
-    offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
-    seoTitle: 'WJ-88 Series Aluminum Folding Door | Fenovera',
-    description: 'Thermal-break aluminum folding doors tested to AAMA, CSA, and NAFS. Max leaf 1041 × 2800 mm, 150 kg per leaf. Contact Fenovera for pricing.',
-    heroIntro: 'WJ-88 Series thermal-break aluminum bi-folding door. Available in 3 to 8 panel configurations, folding inward or outward. Each leaf spans up to 1041 × 2800 mm and supports 150 kg. Argon-filled double or triple glazing achieves a U-value of 0.329 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1140 Pa / 2160 Pa and 220 Pa water penetration resistance. Contact us for specifications, pricing, and availability.',
-    heroImage: { src: '/img/al-wj88-door-hero.jpg', alt: 'WJ-88 Series aluminum bi-fold door open in modern interior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.13–14' }, keyFeatures: [
-      '88 mm thermal-break aluminum folding door',
-      'Tested to AAMA, CSA, and NAFS standards',
-      'Max leaf 1041 × 2800 mm, 150 kg per leaf',
-      'U-value 0.329 BTU/hr·ft²·°F',
-      'Double or triple argon-filled tempered glass',
-    ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
-    specificationGroups: [
-      { label: 'Folding', rows: [
-        { label: 'Frame width',          value: '88 mm',                                         status: 'confirmed' },
-        { label: 'Min leaf size',        value: '610 × 1829 mm (24″ × 72″)',                     status: 'confirmed' },
-        { label: 'Max leaf size',        value: '1041 × 2800 mm (41″ × 110″)',                   status: 'confirmed' },
-        { label: 'Max load per leaf',    value: '150 kg',                                        status: 'confirmed' },
-        { label: 'Glass',                value: '6+19Ar+6 mm double tempered / 6+12Ar+6+12Ar+6 mm triple tempered', status: 'confirmed' },
-        { label: 'U-value',              value: '0.329 BTU/hr·ft²·°F',                          status: 'confirmed' },
-        { label: 'Performance testing',  value: 'AAMA / CSA / NAFS',                            status: 'confirmed' },
-        { label: 'SLS / ULS',            value: '1140 Pa / 2160 Pa',                            status: 'confirmed' },
-        { label: 'Water penetration',    value: '220 Pa',                                        status: 'confirmed' },
-        { label: 'Thermal break',        value: 'Yes',                                           status: 'confirmed' },
-      ]},
-    ],
-  },
-
-  {
     id: 'doors-aluminum-wj-170', slug: 'wj-170',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-wj-170',
-    publicName: 'WJ-170 Series Aluminum Door', systemType: 'Sliding',
+    publicName: 'WJ-170 Series Thermal-Break Aluminum Door', systemType: 'Sliding',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
-    seoTitle: 'WJ-170 Series Aluminum Sliding Door | Fenovera',
-    description: 'Thermal-break aluminum sliding doors tested to AAMA, CSA, and NAFS. Max 3300 × 2800 mm, 600 kg load, U-value 0.229 BTU/hr·ft²°F. Contact Fenovera.',
-    heroIntro: 'WJ-170 Series thermal-break aluminum sliding door. A large-format system supporting panels up to 3300 × 2800 mm and 600 kg per panel. Argon-filled double or triple glazing achieves a U-value of 0.229 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1920 Pa / 2880 Pa and 290 Pa water penetration resistance. Contact us for specifications, pricing, and availability.',
+    seoTitle: 'WJ-170 Series Thermal-Break Aluminum Sliding Door | Fenovera',
+    description: 'Thermal-break aluminum sliding doors tested to AAMA, CSA, and NAFS. Max 3300 × 2800 mm, 600 kg load, U-value 0.229 BTU/hr·ft²°F. NFRC energy performance documentation available.',
+    heroIntro: 'WJ-170 Series thermal-break aluminum sliding door. A large-format system supporting panels up to 3300 × 2800 mm and 600 kg per panel. Argon-filled double or triple glazing achieves a U-value of 0.229 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1920 Pa / 2880 Pa and 290 Pa water penetration resistance. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-wj170-door-hero.jpg', alt: 'WJ-170 Series aluminum sliding glass door opening to garden patio', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.11–12' }, keyFeatures: [
       '170 mm thermal-break aluminum sliding door',
       'Tested to AAMA, CSA, and NAFS standards',
@@ -1705,7 +1705,7 @@ module.exports = [
       'U-value 0.229 BTU/hr·ft²·°F',
       'Double or triple argon-filled tempered glass',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Frame width',          value: '170 mm',                                        status: 'confirmed' },
@@ -1847,8 +1847,8 @@ module.exports = [
     materialLabel: 'uPVC', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-195 Series uPVC Sliding Door | Fenovera',
-    description: 'uPVC sliding glass doors tested to AAMA, CSA, and NAFS. Max 2032 × 2438 mm, 400 kg load, U-value 0.223 BTU/hr·ft²°F. Contact Fenovera for pricing.',
-    heroIntro: 'WJ-195 Series uPVC sliding door. Handles panels up to 2032 × 2438 mm and 400 kg with side pressure locking. Argon-filled double or triple glazing achieves a U-value of 0.223 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1680 Pa / 2520 Pa and 260 Pa water penetration resistance. Contact us for specifications, pricing, and availability.',
+    description: 'uPVC sliding glass doors tested to AAMA, CSA, and NAFS. Max 2032 × 2438 mm, 400 kg load, U-value 0.223 BTU/hr·ft²°F. NFRC energy performance documentation available. Contact Fenovera for pricing.',
+    heroIntro: 'WJ-195 Series uPVC sliding door. Handles panels up to 2032 × 2438 mm and 400 kg with side pressure locking. Argon-filled double or triple glazing achieves a U-value of 0.223 BTU/hr·ft²·°F. Tested to AAMA, CSA, and NAFS with SLS/ULS 1680 Pa / 2520 Pa and 260 Pa water penetration resistance. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/upvc-wj195-door-hero.jpg', alt: 'WJ-195 Series uPVC sliding glass door with mountain and lake view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Wanjia catalog (Catalog_FromChina.pdf), p.25-26' }, keyFeatures: [
       '195 mm uPVC sliding door',
       'Tested to AAMA, CSA, and NAFS performance standards',
@@ -1857,7 +1857,7 @@ module.exports = [
       'Side pressure locking system',
       'Double or triple argon-filled tempered glass',
     ],
-    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: WJ_CERTIFICATIONS, documents: [],
+    galleryImages: [], finishes: UPVC_FINISHES, hardware: null, certifications: UPVC_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Sliding', rows: [
         { label: 'Frame width',          value: '195 mm',                                        status: 'confirmed' },
