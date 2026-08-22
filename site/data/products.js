@@ -1996,17 +1996,10 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LU-70s Landmark High Performance Tilt-Turn Aluminum Window | Fenovera',
     description: 'The LU-70s Landmark High Performance Tilt-Turn Window delivers NFRC-rated thermal efficiency with a slim 2 3/4" profile depth and HOPPE hardware. ENERGY STAR certified.',
-    heroIntro: 'High-performance tilt-turn aluminum window. The LU-70s Landmark Series combines a slim 2 3/4" frame depth with NFRC-rated energy performance (U 0.29 / SHGC 0.24 in double-pane picture configuration). Available in tilt-and-turn and fixed (picture) configurations with HOPPE German hardware. ENERGY STAR certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: '',
     heroImage: { src: '/img/lu-70s-window-hero.jpg', alt: 'LU-70s Landmark tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.12' },
-    keyFeatures: [
-      'NFRC certified — U 0.29 / SHGC 0.24 (double-pane picture)',
-      'ENERGY STAR certified for enhanced energy savings',
-      'Slim 2 3/4" structure depth for narrow-profile aesthetics',
-      'HOPPE German hardware standard',
-      'Available in tilt-and-turn and fixed (picture) configurations',
-      'Double or triple insulated glass options',
-    ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: 'HOPPE (Germany)', certifications: LU_CERTIFICATIONS_ENERGY_STAR, documents: [],
+    keyFeatures: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS_ENERGY_STAR, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Frame material',               value: 'Aluminum',        status: 'confirmed' },
@@ -2014,19 +2007,6 @@ module.exports = [
         { label: 'Sash visible width (inside)',  value: '3 1/8"',          status: 'confirmed' },
         { label: 'Frame visible width (inside)', value: '1 1/4"',          status: 'confirmed' },
         { label: 'Structure depth',              value: '2 3/4"',          status: 'confirmed' },
-        { label: 'Hardware',                     value: 'HOPPE (Germany)', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Double Pane', rows: [
-        { label: 'Picture window — U-Value', value: '0.29', status: 'confirmed' },
-        { label: 'Picture window — SHGC',    value: '0.24', status: 'confirmed' },
-        { label: 'Tilt & Turn — U-Value',    value: '0.32', status: 'confirmed' },
-        { label: 'Tilt & Turn — SHGC',       value: '0.20', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Triple Pane', rows: [
-        { label: 'Picture window — U-Value', value: '0.18', status: 'confirmed' },
-        { label: 'Picture window — SHGC',    value: '0.17', status: 'confirmed' },
-        { label: 'Tilt & Turn — U-Value',    value: '0.22', status: 'confirmed' },
-        { label: 'Tilt & Turn — SHGC',       value: '0.14', status: 'confirmed' },
       ]},
       { label: 'Size Limits', rows: [
         { label: 'Width',  value: '1\'-5" min — 3\'-11" max',  status: 'confirmed' },
@@ -2043,16 +2023,9 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LU-80s Landmark Narrow Frame Tilt-Turn Aluminum Window | Fenovera',
     description: 'The LU-80s Landmark Narrow Frame Tilt-Turn Window features an ultra-narrow 9/16" frame sightline — 35% slimmer than standard — with NFRC ratings and ENERGY STAR certification.',
-    heroIntro: 'Ultra-narrow frame tilt-turn aluminum window. The LU-80s Landmark Narrow Frame Series achieves a 9/16" frame visible width — 35% slimmer than conventional aluminum windows — while delivering NFRC-rated energy performance (U 0.30 / SHGC 0.25 in double-pane picture configuration). ENERGY STAR certified. Contact us for specifications, pricing, and availability.',
+    heroIntro: '',
     heroImage: { src: '/img/lu-80s-window-hero.jpg', alt: 'LU-80s Landmark Narrow Frame tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.13' },
-    keyFeatures: [
-      'Ultra-narrow 9/16" frame visible width — 35% slimmer than standard',
-      'NFRC certified — U 0.30 / SHGC 0.25 (double-pane picture)',
-      'ENERGY STAR certified for enhanced energy savings',
-      '2 mm aluminum profile for structural integrity',
-      'Available in tilt-and-turn and fixed (picture) configurations',
-      'Double or triple insulated glass options',
-    ],
+    keyFeatures: [],
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS_ENERGY_STAR, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
@@ -2062,18 +2035,6 @@ module.exports = [
         { label: 'Frame visible width (inside)', value: '9/16"',                                  status: 'confirmed' },
         { label: 'Structure depth',              value: '3 1/8"',                                 status: 'confirmed' },
         { label: 'Frame advantage',              value: '35% narrower sightline than standard aluminum windows', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Double Pane', rows: [
-        { label: 'Picture window — U-Value', value: '0.30', status: 'confirmed' },
-        { label: 'Picture window — SHGC',    value: '0.25', status: 'confirmed' },
-        { label: 'Tilt & Turn — U-Value',    value: '0.31', status: 'confirmed' },
-        { label: 'Tilt & Turn — SHGC',       value: '0.22', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Triple Pane', rows: [
-        { label: 'Picture window — U-Value', value: '0.18', status: 'confirmed' },
-        { label: 'Picture window — SHGC',    value: '0.17', status: 'confirmed' },
-        { label: 'Tilt & Turn — U-Value',    value: '0.21', status: 'confirmed' },
-        { label: 'Tilt & Turn — SHGC',       value: '0.16', status: 'confirmed' },
       ]},
       { label: 'Size Limits', rows: [
         { label: 'Width',  value: '1\'-5" min — 3\'-11" max',  status: 'confirmed' },
@@ -2090,17 +2051,10 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LU-95s Landmark Builder\'s Choice Tilt-Turn Aluminum Window | Fenovera',
     description: 'The LU-95s Landmark Builder\'s Choice Tilt-Turn Window offers NFRC-certified energy performance with a flush frame-sash design and tall height range up to 10 feet. HOPPE hardware standard.',
-    heroIntro: 'Builder\'s choice tilt-turn aluminum window. The LU-95s Landmark Series features a flush frame-sash design with 3 3/4" structure depth and NFRC-certified energy performance (U 0.30 / SHGC 0.21 in double-pane picture configuration). Available in heights up to 10 feet. HOPPE German hardware standard. Contact us for specifications, pricing, and availability.',
+    heroIntro: '',
     heroImage: { src: '/img/lu-95s-window-hero.jpg', alt: 'LU-95s Landmark Builder\'s Choice tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.8' },
-    keyFeatures: [
-      'NFRC certified — U 0.30 / SHGC 0.21 (double-pane picture)',
-      'Flush frame-sash design for a clean exterior profile',
-      'Available in heights up to 10 feet (2\'−1" to 10\')',
-      'HOPPE German hardware standard',
-      '1.8 mm aluminum profile with 3 3/4" structure depth',
-      'Double or triple insulated glass options',
-    ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: 'HOPPE (Germany)', certifications: LU_CERTIFICATIONS, documents: [],
+    keyFeatures: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Frame material',               value: 'Aluminum',            status: 'confirmed' },
@@ -2109,19 +2063,6 @@ module.exports = [
         { label: 'Frame visible width (inside)', value: '11/16"',              status: 'confirmed' },
         { label: 'Structure depth',              value: '3 3/4"',              status: 'confirmed' },
         { label: 'Design feature',               value: 'Flush frame-sash design', status: 'confirmed' },
-        { label: 'Hardware',                     value: 'HOPPE (Germany)',     status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Double Pane', rows: [
-        { label: 'Picture window — U-Value', value: '0.30', status: 'confirmed' },
-        { label: 'Picture window — SHGC',    value: '0.21', status: 'confirmed' },
-        { label: 'Tilt & Turn — U-Value',    value: '0.32', status: 'confirmed' },
-        { label: 'Tilt & Turn — SHGC',       value: '0.19', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Triple Pane', rows: [
-        { label: 'Picture window — U-Value', value: '0.19', status: 'confirmed' },
-        { label: 'Picture window — SHGC',    value: '0.19', status: 'confirmed' },
-        { label: 'Tilt & Turn — U-Value',    value: '0.22', status: 'confirmed' },
-        { label: 'Tilt & Turn — SHGC',       value: '0.17', status: 'confirmed' },
       ]},
       { label: 'Size Limits', rows: [
         { label: 'Width',  value: '1\'-5" min — 3\'-11" max', status: 'confirmed' },
@@ -2138,16 +2079,9 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LU-110s Window Wall Aluminum Commercial System | Fenovera',
     description: 'The LU-110s is a commercial-grade pre-assembled window wall and storefront system with NFRC-certified energy performance. Supports single leaves up to 11\'−5" tall. Ideal for high-rise and large commercial openings.',
-    heroIntro: 'Commercial window wall and storefront system. The LU-110s combines pre-assembled window wall panels with a coordinating commercial swinging door in a unified storefront profile. NFRC-certified energy performance (U 0.31 / SHGC 0.25 in double-pane picture configuration). Supports single leaf heights up to 11\'−5". Contact us for specifications, pricing, and availability.',
+    heroIntro: '',
     heroImage: { src: '/img/lu-110s-window-hero.jpg', alt: 'LU-110s Window Wall commercial aluminum system', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.9' },
-    keyFeatures: [
-      'NFRC certified — U 0.31 / SHGC 0.25 (double-pane picture)',
-      'Pre-assembled window wall for streamlined installation',
-      'Single leaf heights up to 11\'−5"',
-      'Integrated commercial swinging door in same storefront profile',
-      '2 mm aluminum profile with 4 3/8" structure depth',
-      'Double or triple insulated glass options',
-    ],
+    keyFeatures: [],
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
@@ -2156,26 +2090,6 @@ module.exports = [
         { label: 'Structure depth',        value: '4 3/8"',                                             status: 'confirmed' },
         { label: 'Max single leaf height', value: '11\'-5"',                                            status: 'confirmed' },
         { label: 'System type',            value: 'Pre-assembled window wall + commercial swinging door', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Double Pane (Window Wall)', rows: [
-        { label: 'Picture — U-Value',  value: '0.31', status: 'confirmed' },
-        { label: 'Picture — SHGC',     value: '0.25', status: 'confirmed' },
-        { label: 'Casement — U-Value', value: '0.41', status: 'confirmed' },
-        { label: 'Casement — SHGC',    value: '0.17', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Triple Pane (Window Wall)', rows: [
-        { label: 'Picture — U-Value',  value: '0.25', status: 'confirmed' },
-        { label: 'Picture — SHGC',     value: '0.23', status: 'confirmed' },
-        { label: 'Casement — U-Value', value: '0.34', status: 'confirmed' },
-        { label: 'Casement — SHGC',    value: '0.16', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Double Pane (Commercial Swing Door)', rows: [
-        { label: 'U-Value', value: '0.38', status: 'confirmed' },
-        { label: 'SHGC',    value: '0.20', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Triple Pane (Commercial Swing Door)', rows: [
-        { label: 'U-Value', value: '0.32', status: 'confirmed' },
-        { label: 'SHGC',    value: '0.19', status: 'confirmed' },
       ]},
     ],
   },
@@ -2190,32 +2104,16 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LU-NG-LS Neo-Glide Heavy Duty Lift Sliding Door | Fenovera',
     description: 'The LU-NG-LS Neo-Glide handles single leaf panels up to 10\'−7" wide × 10\'−9" tall with NFRC-certified energy performance. SIEGENIA hardware. ADA-compliant sill option available.',
-    heroIntro: 'Heavy duty lift-and-slide door for large openings. The LU-NG-LS Neo-Glide handles single leaf panels up to 10\'−7" wide and 10\'−9" tall, with NFRC-rated energy performance (U 0.39 / SHGC 0.21 double pane). SIEGENIA hardware. Three threshold options including an ADA-compliant sill. Contact us for specifications, pricing, and availability.',
+    heroIntro: '',
     heroImage: { src: '/img/lu-ng-ls-door-hero.jpg', alt: 'LU-NG-LS Neo-Glide heavy duty lift sliding door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Neo-Glide Series Catalog, p.14' },
-    keyFeatures: [
-      'NFRC certified — U 0.39 / SHGC 0.21 (double pane)',
-      'Large panel capacity: up to 10\'−7" wide × 10\'−9" tall per leaf',
-      'SIEGENIA hardware (Germany)',
-      'Three threshold options: ADA sill, low threshold, high threshold',
-      '2 mm aluminum profile with 4 5/8" structure depth',
-      'Double or triple insulated glass options',
-    ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: 'SIEGENIA (Germany)', certifications: LU_CERTIFICATIONS, documents: [],
+    keyFeatures: [],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Frame material',    value: 'Aluminum',                                   status: 'confirmed' },
         { label: 'Profile thickness', value: '2 mm',                                       status: 'confirmed' },
         { label: 'Structure depth',   value: '4 5/8"',                                     status: 'confirmed' },
-        { label: 'Hardware',          value: 'SIEGENIA (Germany)',                          status: 'confirmed' },
         { label: 'Threshold options', value: 'ADA sill, Low threshold, High threshold',    status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Double Pane', rows: [
-        { label: 'U-Value', value: '0.39', status: 'confirmed' },
-        { label: 'SHGC',    value: '0.21', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Triple Pane', rows: [
-        { label: 'U-Value', value: '0.34', status: 'confirmed' },
-        { label: 'SHGC',    value: '0.20', status: 'confirmed' },
       ]},
       { label: 'Single Leaf Size Limits', rows: [
         { label: 'Width',  value: '2\'-4" min — 10\'-7" max',  status: 'confirmed' },
@@ -2232,30 +2130,15 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LU-NG-BF Neo-Glide Bi-Folding Aluminum Door | Fenovera',
     description: 'The LU-NG-BF Neo-Glide Bi-Folding Door features a 5" visible width profile with NFRC-certified energy performance. Panels fold completely open for unobstructed indoor-outdoor connection.',
-    heroIntro: 'Bi-folding aluminum door for seamless indoor-outdoor living. The LU-NG-BF Neo-Glide features a 5" visible width sightline with NFRC-rated energy performance (U 0.39 / SHGC 0.21 double pane). Panels fold completely open for unobstructed openings. Contact us for specifications, pricing, and availability.',
+    heroIntro: '',
     heroImage: { src: '/img/lu-ng-bf-door-hero.jpg', alt: 'LU-NG-BF Neo-Glide bi-folding aluminum door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Neo-Glide Series Catalog, p.15' },
-    keyFeatures: [
-      'NFRC certified — U 0.39 / SHGC 0.21 (double pane)',
-      '5" visible width sightline for maximum glass area',
-      'Panels fold completely open for unobstructed indoor-outdoor connection',
-      '2 mm aluminum profile for structural rigidity',
-      'Triple-pane option achieves U 0.30 / SHGC 0.16',
-      'Custom panel configurations available',
-    ],
+    keyFeatures: [],
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Frame material',         value: 'Aluminum', status: 'confirmed' },
         { label: 'Profile thickness',      value: '2 mm',     status: 'confirmed' },
         { label: 'Visible width (inside)', value: '5"',       status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Double Pane', rows: [
-        { label: 'U-Value', value: '0.39', status: 'confirmed' },
-        { label: 'SHGC',    value: '0.21', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Triple Pane', rows: [
-        { label: 'U-Value', value: '0.30', status: 'confirmed' },
-        { label: 'SHGC',    value: '0.16', status: 'confirmed' },
       ]},
       { label: 'Single Panel Size Limits', rows: [
         { label: 'Width',  value: '1\'-5" min — 3\'-3" max',  status: 'confirmed' },
@@ -2274,17 +2157,10 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LU-E80s Urban Grove Aluminum-Wood Clad Tilt-Turn Window | Fenovera',
     description: 'The LU-E80s Urban Grove features a natural wood interior with aluminum exterior cladding. NFRC-certified at U 0.27 / SHGC 0.23 (double-pane picture). HOPPE hardware. Six wood species and ten interior finish options.',
-    heroIntro: 'Aluminum-wood clad tilt-turn window with warm interior aesthetics. The LU-E80s Urban Grove combines a natural wood interior (six species, ten finish options) with weather-resistant aluminum exterior cladding. NFRC-certified (U 0.27 / SHGC 0.23 double-pane picture). HOPPE German hardware standard. Contact us for specifications, pricing, and availability.',
+    heroIntro: '',
     heroImage: { src: '/img/lu-e80s-window-hero.jpg', alt: 'LU-E80s Urban Grove aluminum-wood clad tilt-turn window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Urban Grove Series Catalog, p.16' },
-    keyFeatures: [
-      'NFRC certified — U 0.27 / SHGC 0.23 (double-pane picture)',
-      'Natural wood interior: six species, ten finish options',
-      'Aluminum exterior cladding for weather resistance and durability',
-      'HOPPE German hardware standard',
-      'Optional rolling screen and full divided light grille',
-      'Double or triple insulated glass options',
-    ],
-    galleryImages: [], finishes: LU_FINISHES_WOOD_CLAD, hardware: 'HOPPE (Germany)', certifications: LU_CERTIFICATIONS, documents: [],
+    keyFeatures: [],
+    galleryImages: [], finishes: LU_FINISHES_WOOD_CLAD, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Interior material',            value: 'Natural wood (6 species, 10 finishes)',    status: 'confirmed' },
@@ -2293,20 +2169,7 @@ module.exports = [
         { label: 'Sash visible width (inside)',  value: '2 7/8"',                                   status: 'confirmed' },
         { label: 'Frame visible width (inside)', value: '1 1/8"',                                   status: 'confirmed' },
         { label: 'Structure depth',              value: '4 1/8"',                                   status: 'confirmed' },
-        { label: 'Hardware',                     value: 'HOPPE (Germany)',                           status: 'confirmed' },
         { label: 'Options',                      value: 'Rolling screen, Full divided light grille', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Double Pane', rows: [
-        { label: 'Picture window — U-Value', value: '0.27', status: 'confirmed' },
-        { label: 'Picture window — SHGC',    value: '0.23', status: 'confirmed' },
-        { label: 'Tilt & Turn — U-Value',    value: '0.26', status: 'confirmed' },
-        { label: 'Tilt & Turn — SHGC',       value: '0.19', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Triple Pane', rows: [
-        { label: 'Picture window — U-Value', value: '0.17', status: 'confirmed' },
-        { label: 'Picture window — SHGC',    value: '0.16', status: 'confirmed' },
-        { label: 'Tilt & Turn — U-Value',    value: '0.22', status: 'confirmed' },
-        { label: 'Tilt & Turn — SHGC',       value: '0.18', status: 'confirmed' },
       ]},
       { label: 'Size Limits', rows: [
         { label: 'Width',  value: '2\' min — 3\'-6" max', status: 'confirmed' },
@@ -2323,16 +2186,9 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LU-IU-CC Iconix US Aluminum-Wood Clad Casement Window | Fenovera',
     description: 'The LU-IU-CC Iconix US is an aluminum-wood clad crank-out casement window with NFRC-certified energy performance (U 0.26 / SHGC 0.23 picture). Natural wood interior in six species with AAMA-verified AkzoNobel powder-coated aluminum exterior.',
-    heroIntro: 'Aluminum-wood clad crank-out casement window. The LU-IU-CC Iconix US features natural wood interior (six species) with AAMA-verified AkzoNobel powder-coated aluminum exterior cladding. NFRC-certified (U 0.26 / SHGC 0.23 picture). Full divided light grille option available for traditional aesthetics. Contact us for specifications, pricing, and availability.',
+    heroIntro: '',
     heroImage: { src: '/img/lu-iu-cc-window-hero.jpg', alt: 'LU-IU-CC Iconix US aluminum-wood clad casement window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Iconix US Series Catalog, p.17' },
-    keyFeatures: [
-      'NFRC certified — U 0.26 / SHGC 0.23 (double-pane picture)',
-      'Natural wood interior: six species available',
-      'AAMA-verified AkzoNobel powder-coated aluminum exterior cladding',
-      'Full divided light grille option for traditional aesthetics',
-      '6 7/16" structure depth for a deep-set appearance',
-      'Double or triple insulated glass options',
-    ],
+    keyFeatures: [],
     galleryImages: [], finishes: LU_FINISHES_WOOD_CLAD, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
@@ -2343,18 +2199,6 @@ module.exports = [
         { label: 'Frame visible width (inside)', value: '1 11/16"',                                             status: 'confirmed' },
         { label: 'Structure depth',              value: '6 7/16"',                                              status: 'confirmed' },
         { label: 'Options',                      value: 'Full divided light grille',                            status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Double Pane', rows: [
-        { label: 'Picture window — U-Value', value: '0.26', status: 'confirmed' },
-        { label: 'Picture window — SHGC',    value: '0.23', status: 'confirmed' },
-        { label: 'Casement — U-Value',       value: '0.27', status: 'confirmed' },
-        { label: 'Casement — SHGC',          value: '0.20', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Triple Pane', rows: [
-        { label: 'Picture window — U-Value', value: '0.21', status: 'confirmed' },
-        { label: 'Picture window — SHGC',    value: '0.21', status: 'confirmed' },
-        { label: 'Casement — U-Value',       value: '0.22', status: 'confirmed' },
-        { label: 'Casement — SHGC',          value: '0.19', status: 'confirmed' },
       ]},
       { label: 'Size Limits', rows: [
         { label: 'Width',  value: '1\'-7" min — 4\' max', status: 'confirmed' },
@@ -2373,32 +2217,16 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LU-E80s-LS Urban Grove Aluminum-Wood Clad Lift Sliding Door | Fenovera',
     description: 'The LU-E80s-LS Urban Grove lift sliding door pairs natural wood interior with aluminum exterior cladding. NFRC-certified at U 0.26 / SHGC 0.20 (double pane). SIEGENIA hardware. Single leaf up to 7 feet wide.',
-    heroIntro: 'Aluminum-wood clad lift-and-slide door combining warmth with performance. The LU-E80s-LS Urban Grove features natural wood interior cladding paired with an aluminum exterior for weather resistance. NFRC-certified (U 0.26 / SHGC 0.20 double pane). SIEGENIA hardware. Single leaf up to 7 feet wide. Contact us for specifications, pricing, and availability.',
+    heroIntro: '',
     heroImage: { src: '/img/lu-e80s-ls-door-hero.jpg', alt: 'LU-E80s-LS Urban Grove aluminum-wood clad lift sliding door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Urban Grove Series Catalog, p.18' },
-    keyFeatures: [
-      'NFRC certified — U 0.26 / SHGC 0.20 (double pane)',
-      'Natural wood interior with aluminum exterior cladding',
-      'SIEGENIA hardware (Germany)',
-      'Single leaf up to 7 feet wide × 10 feet tall',
-      '5 7/8" visible width sightline',
-      'Double or triple insulated glass options',
-    ],
-    galleryImages: [], finishes: LU_FINISHES_WOOD_CLAD, hardware: 'SIEGENIA (Germany)', certifications: LU_CERTIFICATIONS, documents: [],
+    keyFeatures: [],
+    galleryImages: [], finishes: LU_FINISHES_WOOD_CLAD, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Interior material',      value: 'Natural wood',       status: 'confirmed' },
         { label: 'Exterior material',      value: 'Aluminum cladding',  status: 'confirmed' },
         { label: 'Profile thickness',      value: '1.5 mm',             status: 'confirmed' },
         { label: 'Visible width (inside)', value: '5 7/8"',             status: 'confirmed' },
-        { label: 'Hardware',               value: 'SIEGENIA (Germany)', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Double Pane', rows: [
-        { label: 'U-Value', value: '0.26', status: 'confirmed' },
-        { label: 'SHGC',    value: '0.20', status: 'confirmed' },
-      ]},
-      { label: 'NFRC Energy Performance — Triple Pane', rows: [
-        { label: 'U-Value', value: '0.17', status: 'confirmed' },
-        { label: 'SHGC',    value: '0.14', status: 'confirmed' },
       ]},
       { label: 'Single Leaf Size Limits', rows: [
         { label: 'Width',  value: '2\'-3" min — 7\' max', status: 'confirmed' },
