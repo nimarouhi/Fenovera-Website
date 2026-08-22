@@ -58,6 +58,9 @@
     <loc>https://fenovera.com/products/windows/upvc/</loc>
   </url>
   <url>
+    <loc>https://fenovera.com/products/windows/wood-clad/</loc>
+  </url>
+  <url>
     <loc>https://fenovera.com/products/windows/pvc/</loc>
   </url>
   <url>
@@ -65,6 +68,9 @@
   </url>
   <url>
     <loc>https://fenovera.com/products/doors/upvc/</loc>
+  </url>
+  <url>
+    <loc>https://fenovera.com/products/doors/wood-clad/</loc>
   </url>
   <url>
     <loc>https://fenovera.com/products/doors/pvc/</loc>
@@ -242,5 +248,32 @@
   </url>
   <url>
     <loc>https://fenovera.com/products/doors/upvc/wj-60/</loc>
+  </url>
+  <url>
+    <loc>https://fenovera.com/products/windows/aluminum/lu-70s/</loc>
+  </url>
+  <url>
+    <loc>https://fenovera.com/products/windows/aluminum/lu-80s/</loc>
+  </url>
+  <url>
+    <loc>https://fenovera.com/products/windows/aluminum/lu-95s/</loc>
+  </url>
+  <url>
+    <loc>https://fenovera.com/products/windows/aluminum/lu-110s/</loc>
+  </url>
+  <url>
+    <loc>https://fenovera.com/products/doors/aluminum/lu-ng-ls/</loc>
+  </url>
+  <url>
+    <loc>https://fenovera.com/products/doors/aluminum/lu-ng-bf/</loc>
+  </url>
+  <url>
+    <loc>https://fenovera.com/products/windows/wood-clad/lu-e80s/</loc>
+  </url>
+  <url>
+    <loc>https://fenovera.com/products/windows/wood-clad/lu-iu-cc/</loc>
+  </url>
+  <url>
+    <loc>https://fenovera.com/products/doors/wood-clad/lu-e80s-ls/</loc>
   </url>
 </urlset>
