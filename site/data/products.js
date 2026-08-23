@@ -1999,7 +1999,7 @@ module.exports = [
     heroIntro: 'High-performance tilt-turn aluminum window. The LU-70s Landmark Series combines a slim 2 3/4" frame depth with NFRC-rated energy performance (U 0.29 / SHGC 0.24 in double-pane picture configuration). Available in tilt-and-turn and fixed (picture) configurations with HOPPE German hardware. ENERGY STAR certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-70s-window-hero.jpg', alt: 'LU-70s Landmark tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.12' },
     keyFeatures: [
-      'NFRC certified - U 0.29 / SHGC 0.24 (double-pane picture)',
+      'NFRC certified',
       'ENERGY STAR certified for enhanced energy savings',
       'Slim 2 3/4" structure depth for narrow-profile aesthetics',
       'HOPPE German hardware standard',
@@ -2034,7 +2034,7 @@ module.exports = [
     heroImage: { src: '/img/lu-80s-window-hero.jpg', alt: 'LU-80s Landmark Narrow Frame tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.13' },
     keyFeatures: [
       'Ultra-narrow 9/16" frame visible width - 35% slimmer than standard',
-      'NFRC certified - U 0.30 / SHGC 0.25 (double-pane picture)',
+      'NFRC certified',
       'ENERGY STAR certified for enhanced energy savings',
       '2 mm aluminum profile for structural integrity',
       'Available in tilt-and-turn and fixed (picture) configurations',
@@ -2068,7 +2068,7 @@ module.exports = [
     heroIntro: 'Builder\'s choice tilt-turn aluminum window. The LU-95s Landmark Series features a flush frame-sash design with 3 3/4" structure depth and NFRC-certified energy performance (U 0.30 / SHGC 0.21 in double-pane picture configuration). Available in heights up to 10 feet. HOPPE German hardware standard. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-95s-window-hero.jpg', alt: 'LU-95s Landmark Builder\'s Choice tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.8' },
     keyFeatures: [
-      'NFRC certified - U 0.30 / SHGC 0.21 (double-pane picture)',
+      'NFRC certified',
       'Flush frame-sash design for a clean exterior profile',
       'Available in heights up to 10 feet (2\'−1" to 10\')',
       'HOPPE German hardware standard',
@@ -2103,7 +2103,7 @@ module.exports = [
     heroIntro: 'Commercial window wall and storefront system. The LU-110s combines pre-assembled window wall panels with a coordinating commercial swinging door in a unified storefront profile. NFRC-certified energy performance (U 0.31 / SHGC 0.25 in double-pane picture configuration). Supports single leaf heights up to 11\'−5". Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-110s-window-hero.jpg', alt: 'LU-110s Window Wall commercial aluminum system', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.9' },
     keyFeatures: [
-      'NFRC certified - U 0.31 / SHGC 0.25 (double-pane picture)',
+      'NFRC certified',
       'Pre-assembled window wall for streamlined installation',
       'Single leaf heights up to 11\'−5"',
       'Integrated commercial swinging door in same storefront profile',
@@ -2135,7 +2135,7 @@ module.exports = [
     heroIntro: 'Heavy duty lift-and-slide door for large openings. The LU-NG-LS Neo-Glide handles single leaf panels up to 10\'−7" wide and 10\'−9" tall, with NFRC-rated energy performance (U 0.39 / SHGC 0.21 double pane). SIEGENIA hardware. Three threshold options including an ADA-compliant sill. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-ng-ls-door-hero.jpg', alt: 'LU-NG-LS Neo-Glide heavy duty lift sliding door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Neo-Glide Series Catalog, p.14' },
     keyFeatures: [
-      'NFRC certified - U 0.39 / SHGC 0.21 (double pane)',
+      'NFRC certified',
       'Large panel capacity: up to 10\'−7" wide × 10\'−9" tall per leaf',
       'SIEGENIA hardware (Germany)',
       'Three threshold options: ADA sill, low threshold, high threshold',
@@ -2168,7 +2168,7 @@ module.exports = [
     heroIntro: 'Bi-folding aluminum door for seamless indoor-outdoor living. The LU-NG-BF Neo-Glide features a 5" visible width sightline with NFRC-rated energy performance (U 0.39 / SHGC 0.21 double pane). Panels fold completely open for unobstructed openings. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-ng-bf-door-hero.jpg', alt: 'LU-NG-BF Neo-Glide bi-folding aluminum door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Neo-Glide Series Catalog, p.15' },
     keyFeatures: [
-      'NFRC certified - U 0.39 / SHGC 0.21 (double pane)',
+      'NFRC certified',
       '5" visible width sightline for maximum glass area',
       'Panels fold completely open for unobstructed indoor-outdoor connection',
       '2 mm aluminum profile for structural rigidity',
@@ -2202,7 +2202,7 @@ module.exports = [
     heroIntro: 'Aluminum-wood clad tilt-turn window with warm interior aesthetics. The LU-E80s Urban Grove combines a natural wood interior (six species, ten finish options) with weather-resistant aluminum exterior cladding. NFRC-certified (U 0.27 / SHGC 0.23 double-pane picture). HOPPE German hardware standard. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-e80s-window-hero.jpg', alt: 'LU-E80s Urban Grove aluminum-wood clad tilt-turn window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Urban Grove Series Catalog, p.16' },
     keyFeatures: [
-      'NFRC certified - U 0.27 / SHGC 0.23 (double-pane picture)',
+      'NFRC certified',
       'Natural wood interior: six species, ten finish options',
       'Aluminum exterior cladding for weather resistance and durability',
       'HOPPE German hardware standard',
@@ -2238,7 +2238,7 @@ module.exports = [
     heroIntro: 'Aluminum-wood clad crank-out casement window. The LU-IU-CC Iconix US features natural wood interior (six species) with AAMA-verified AkzoNobel powder-coated aluminum exterior cladding. NFRC-certified (U 0.26 / SHGC 0.23 picture). Full divided light grille option available for traditional aesthetics. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-iu-cc-window-hero.jpg', alt: 'LU-IU-CC Iconix US aluminum-wood clad casement window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Iconix US Series Catalog, p.17' },
     keyFeatures: [
-      'NFRC certified - U 0.26 / SHGC 0.23 (double-pane picture)',
+      'NFRC certified',
       'Natural wood interior: six species available',
       'AAMA-verified AkzoNobel powder-coated aluminum exterior cladding',
       'Full divided light grille option for traditional aesthetics',
@@ -2276,7 +2276,7 @@ module.exports = [
     heroIntro: 'Aluminum-wood clad lift-and-slide door combining warmth with performance. The LU-E80s-LS Urban Grove features natural wood interior cladding paired with an aluminum exterior for weather resistance. NFRC-certified (U 0.26 / SHGC 0.20 double pane). SIEGENIA hardware. Single leaf up to 7 feet wide. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-e80s-ls-door-hero.jpg', alt: 'LU-E80s-LS Urban Grove aluminum-wood clad lift sliding door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Urban Grove Series Catalog, p.18' },
     keyFeatures: [
-      'NFRC certified - U 0.26 / SHGC 0.20 (double pane)',
+      'NFRC certified',
       'Natural wood interior with aluminum exterior cladding',
       'SIEGENIA hardware (Germany)',
       'Single leaf up to 7 feet wide × 10 feet tall',
