@@ -115,6 +115,7 @@ pages.push({
   { slug: 'hinged-french',title: 'Hinged & French Doors | Fenovera',       desc: 'Browse all Fenovera hinged and French door series in aluminum and uPVC.',      img: OG.doorAl },
   { slug: 'bi-fold',     title: 'Bi-Fold Doors | Fenovera',               desc: 'Browse all Fenovera bi-fold door series in aluminum.',                        img: OG.doorAl },
   { slug: 'lift-slide',  title: 'Lift & Slide Doors | Fenovera',          desc: 'Browse all Fenovera lift and slide door series in aluminum.',                  img: OG.doorAl },
+  { slug: 'fixed-picture', title: 'Fixed (Picture) Windows | Fenovera',   desc: 'Browse all Fenovera fixed picture window series in aluminum and aluminum-wood clad.', img: OG.winAl },
 ].forEach(function(t) {
   pages.push({
     src:         'src/products/by-type/' + t.slug + '/index.html',
