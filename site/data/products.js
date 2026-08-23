@@ -120,7 +120,7 @@ module.exports = [
   {
     id: 'windows-aluminum-ldw-x76', slug: 'ldw-x76',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-ldw-x76',
-    publicName: 'LD-X76 Series Thermal-Break Aluminum Window', systemType: 'Casement / Tilt-Turn / Awning / Fixed',
+    publicName: 'LD-X76 Series Thermal-Break Aluminum Window', systemType: 'Casement / Tilt-Turn / Awning / Fixed (Picture)',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-X76 Thermal-Break Aluminum Windows | Fenovera',
@@ -162,7 +162,7 @@ module.exports = [
   {
     id: 'windows-aluminum-ldw-s8520', slug: 'ldw-s8520',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-ldw-s8520',
-    publicName: 'LD-S8520 Slimline Series Thermal-Break Aluminum Window', systemType: 'Casement / Tilt-Turn / Fixed',
+    publicName: 'LD-S8520 Slimline Series Thermal-Break Aluminum Window', systemType: 'Casement / Tilt-Turn / Fixed (Picture)',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-S8520 Slimline Thermal-Break Aluminum Windows | Fenovera',
@@ -846,7 +846,7 @@ module.exports = [
   {
     id: 'windows-upvc-prm-82', slug: 'prm-82u',
     typeSlug: 'windows', materialSlug: 'upvc', pageId: 'windows-upvc-prm-82',
-    publicName: 'PRM-82 Series uPVC Window', systemType: 'Single Hung / Double Hung / Casement / Sliding / Fixed',
+    publicName: 'PRM-82 Series uPVC Window', systemType: 'Single Hung / Double Hung / Casement / Sliding / Fixed (Picture)',
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-82 Series uPVC Window | Fenovera',
@@ -904,7 +904,7 @@ module.exports = [
   {
     id: 'windows-upvc-wj-72', slug: 'wj-72',
     typeSlug: 'windows', materialSlug: 'upvc', pageId: 'windows-upvc-wj-72',
-    publicName: 'WJ-72 Series uPVC Window', systemType: 'Casement / Tilt-Turn / Fixed',
+    publicName: 'WJ-72 Series uPVC Window', systemType: 'Casement / Tilt-Turn / Fixed (Picture)',
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'verified',
     seoTitle: 'WJ-72 Series uPVC Window | Fenovera',
@@ -996,7 +996,7 @@ module.exports = [
   {
     id: 'windows-upvc-ld-p85', slug: 'ld-p85',
     typeSlug: 'windows', materialSlug: 'upvc', pageId: 'windows-upvc-ld-p85',
-    publicName: 'LD-P85 Series uPVC Window', systemType: 'Casement / Awning / Fixed',
+    publicName: 'LD-P85 Series uPVC Window', systemType: 'Casement / Awning / Fixed (Picture)',
     materialLabel: 'uPVC', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LD-P85 Casement & Fixed uPVC Window | Fenovera',
