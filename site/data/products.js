@@ -2059,11 +2059,11 @@ module.exports = [
   {
     id: 'windows-aluminum-lu-95s', slug: 'lu-95s',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-lu-95s',
-    publicName: 'LU-95s Landmark Builder\'s Choice Tilt-Turn Window', systemType: 'Tilt-Turn / Fixed (Picture)',
+    publicName: 'LU-95s Tilt-Turn Window: Commercial Application', systemType: 'Tilt-Turn / Fixed (Picture)',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-95s Landmark Builder\'s Choice Tilt-Turn Aluminum Window | Fenovera',
-    description: 'The LU-95s Landmark Builder\'s Choice Tilt-Turn Window offers NFRC-certified energy performance with a flush frame-sash design and tall height range up to 10 feet.',
+    seoTitle: 'LU-95s Tilt-Turn Window: Commercial Application | Fenovera',
+    description: 'The LU-95s Tilt-Turn Window offers NFRC-certified energy performance with a flush frame-sash design and tall height range up to 10 feet.',
     heroIntro: 'Builder\'s choice tilt-turn aluminum window. The LU-95s Landmark Series features a flush frame-sash design with 3 3/4" structure depth and NFRC-certified energy performance. Available in heights up to 10 feet. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-95s-window-hero.jpg', alt: 'LU-95s Landmark Builder\'s Choice tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.8' },
     keyFeatures: [
