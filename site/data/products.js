@@ -2093,10 +2093,10 @@ module.exports = [
   {
     id: 'windows-aluminum-lu-110s', slug: 'lu-110s',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-lu-110s',
-    publicName: 'LU-110s Window Wall & Commercial System', systemType: 'Window Wall / Casement / Commercial Swing Door',
+    publicName: 'LU-110s Window Wall: Commercial Application', systemType: 'Window Wall / Casement / Commercial Swing Door',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-110s Window Wall Aluminum Commercial System | Fenovera',
+    seoTitle: 'LU-110s Window Wall: Commercial Application | Fenovera',
     description: 'The LU-110s is a commercial-grade pre-assembled window wall and storefront system with NFRC-certified energy performance. Supports single leaves up to 11\'−5" tall. Ideal for high-rise and large commercial openings.',
     heroIntro: 'Commercial window wall and storefront system. The LU-110s combines pre-assembled window wall panels with a coordinating commercial swinging door in a unified storefront profile. NFRC-certified energy performance. Supports single leaf heights up to 11\'−5". Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-110s-window-hero.jpg', alt: 'LU-110s Window Wall commercial aluminum system', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.9' },
