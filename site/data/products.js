@@ -97,6 +97,10 @@ var LU_CERTIFICATIONS_ENERGY_STAR = [
   { name: 'Energy Star', body: 'US EPA / DOE',                        scope: 'Energy efficiency certification' },
 ];
 
+var LU_CERTIFICATIONS_FBC = [
+  { name: 'NFRC',      body: 'National Fenestration Rating Council',                          scope: 'Energy performance rating (U-Value, SHGC, VT)' },
+  { name: 'FBC / DBPR', body: 'Florida Department of Business & Professional Regulation',     scope: 'Florida Building Code hurricane-proof window certification (TAS 201/202/203)' },
+];
 var LU_FINISHES_WOOD_CLAD = {
   glass: {
     types: ['Tempered glass', 'Insulated glass (double or triple)', 'Low-E glass', 'Laminated glass'],
@@ -2024,10 +2028,10 @@ module.exports = [
   {
     id: 'windows-aluminum-lu-80s', slug: 'lu-80s',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-lu-80s',
-    publicName: 'LU-80s Landmark Narrow Frame Tilt-Turn Window', systemType: 'Tilt-Turn / Fixed (Picture)',
+    publicName: 'LU-80 Slim Frame Tilt-Turn Window', systemType: 'Tilt-Turn / Fixed (Picture)',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-80s Landmark Narrow Frame Tilt-Turn Aluminum Window | Fenovera',
+    seoTitle: 'LU-80 Slim Frame Tilt-Turn Aluminum Window | Fenovera',
     description: 'The LU-80s Landmark Narrow Frame Tilt-Turn Window features an ultra-narrow 9/16" frame sightline - 35% slimmer than standard - with NFRC ratings and ENERGY STAR certification.',
     heroIntro: 'Ultra-narrow frame tilt-turn aluminum window. The LU-80s Landmark Narrow Frame Series achieves a 9/16" frame visible width - 35% slimmer than conventional aluminum windows - while delivering NFRC-rated energy performance. ENERGY STAR certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-80s-window-hero.jpg', alt: 'LU-80s Landmark Narrow Frame tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.13' },
@@ -2102,13 +2106,16 @@ module.exports = [
     heroImage: { src: '/img/lu-110s-window-hero.jpg', alt: 'LU-110s Window Wall commercial aluminum system', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.9' },
     keyFeatures: [
       'NFRC certified',
+      'Florida FBC certified — hurricane-proof, large missile impact rated (TAS 201/202/203)',
       'Pre-assembled window wall for streamlined installation',
       'Single leaf heights up to 11\'−5"',
       'Integrated commercial swinging door in same storefront profile',
       '2 mm aluminum profile with 4 3/8" structure depth',
       'Double or triple insulated glass options',
     ],
-    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
+    matchingLabel: 'Matching: LU-110s Hinged Door',
+    crossLink: { text: 'This series also includes a matching commercial swinging door.', href: '/products/doors/aluminum/lu-110s-door/', label: 'View LU-110s Hinged \u0026 French Door' },
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS_FBC, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
         { label: 'Frame material',         value: 'Aluminum',                                           status: 'confirmed' },
@@ -2125,10 +2132,10 @@ module.exports = [
   {
     id: 'doors-aluminum-lu-ng-ls', slug: 'lu-ng-ls',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-lu-ng-ls',
-    publicName: 'LU-NG-LS Neo-Glide Heavy Duty Lift Sliding Door', systemType: 'Lift-and-Slide Door',
+    publicName: 'LU-NG-LS Heavy Duty Lift Sliding Door', systemType: 'Lift-and-Slide Door',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-NG-LS Neo-Glide Heavy Duty Lift Sliding Door | Fenovera',
+    seoTitle: 'LU-NG-LS Heavy Duty Lift Sliding Door | Fenovera',
     description: 'The LU-NG-LS Neo-Glide handles single leaf panels up to 10\'−7" wide × 10\'−9" tall with NFRC-certified energy performance. ADA-compliant sill option available.',
     heroIntro: 'Heavy duty lift-and-slide door for large openings. The LU-NG-LS Neo-Glide handles single leaf panels up to 10\'−7" wide and 10\'−9" tall, with NFRC-rated energy performance. Three threshold options including an ADA-compliant sill. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-ng-ls-door-hero.jpg', alt: 'LU-NG-LS Neo-Glide heavy duty lift sliding door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Neo-Glide Series Catalog, p.14' },
@@ -2157,10 +2164,10 @@ module.exports = [
   {
     id: 'doors-aluminum-lu-ng-bf', slug: 'lu-ng-bf',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-lu-ng-bf',
-    publicName: 'LU-NG-BF Neo-Glide Bi-Folding Door', systemType: 'Bi-Folding Door',
+    publicName: 'LU-90s Bi-Folding Door', systemType: 'Bi-Folding Door',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-NG-BF Neo-Glide Bi-Folding Aluminum Door | Fenovera',
+    seoTitle: 'LU-90s Bi-Folding Aluminum Door | Fenovera',
     description: 'The LU-NG-BF Neo-Glide Bi-Folding Door features a 5" visible width profile with NFRC-certified energy performance. Panels fold completely open for unobstructed indoor-outdoor connection.',
     heroIntro: 'Bi-folding aluminum door for seamless indoor-outdoor living. The LU-NG-BF Neo-Glide features a 5" visible width sightline with NFRC-rated energy performance. Panels fold completely open for unobstructed openings. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-ng-bf-door-hero.jpg', alt: 'LU-NG-BF Neo-Glide bi-folding aluminum door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Neo-Glide Series Catalog, p.15' },
@@ -2186,6 +2193,42 @@ module.exports = [
     ],
   },
 
+  {
+    id: 'doors-aluminum-lu-110s-door', slug: 'lu-110s-door',
+    typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-lu-110s-door',
+    publicName: 'LU-110s Hinged \u0026 French Door: Commercial Applications', systemType: 'Commercial Swing Door / French Door',
+    materialLabel: 'Aluminum', typeLabel: 'Door',
+    offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
+    seoTitle: 'LU-110s Commercial Hinged \u0026 French Door | Fenovera',
+    description: 'The LU-110s Commercial Swinging Door is a storefront-grade aluminum door system, part of the Window Wall -110s series. NFRC-certified. Double-pane U 0.38 / SHGC 0.20; triple-pane U 0.32 / SHGC 0.19.',
+    heroIntro: 'Commercial-grade aluminum swinging door in the Window Wall -110s series. The LU-110s integrates seamlessly with the LU-110s window wall system in a unified storefront profile. NFRC-certified energy performance. U.S.-standard lock and handle. Contact us for specifications, pricing, and availability.',
+    heroImage: { src: '/img/lu-110s-door-hero.jpg', alt: 'LU-110s Commercial Swinging Door aluminum storefront system', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Catalog, p.10' },
+    matchingLabel: 'Matching: LU-110s Window Wall',
+    crossLink: { text: 'Part of the LU-110s Window Wall series — available with a matching commercial window wall.', href: '/products/windows/aluminum/lu-110s/', label: 'View LU-110s Window Wall' },
+    keyFeatures: [
+      'NFRC certified',
+      'Matches LU-110s Window Wall system in unified storefront profile',
+      'Double-pane energy rating: U 0.38 / SHGC 0.20',
+      'Triple-pane energy rating: U 0.32 / SHGC 0.19',
+      'U.S.-standard lock and handle',
+      'Standard double door and French door combinations available',
+    ],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
+    specificationGroups: [
+      { label: 'Frame \u0026 System', rows: [
+        { label: 'Frame material', value: 'Aluminum',                               status: 'confirmed' },
+        { label: 'System type',    value: 'Commercial swinging door / French door', status: 'confirmed' },
+        { label: 'Hardware',       value: 'U.S.-standard lock and handle',          status: 'confirmed' },
+      ]},
+      { label: 'Energy Performance', rows: [
+        { label: 'Double-pane U-Value', value: '0.38', status: 'confirmed' },
+        { label: 'Double-pane SHGC',   value: '0.20', status: 'confirmed' },
+        { label: 'Triple-pane U-Value', value: '0.32', status: 'confirmed' },
+        { label: 'Triple-pane SHGC',   value: '0.19', status: 'confirmed' },
+      ]},
+    ],
+  },
+
   /* ── WINDOWS / LUVINDOW WOOD-CLAD ───────────────────────────────────────── */
 
   {
@@ -2205,6 +2248,8 @@ module.exports = [
       'Optional rolling screen and full divided light grille',
       'Double or triple insulated glass options',
     ],
+    matchingLabel: 'Matching: LU-E80s Lift Sliding Door',
+    crossLink: { text: 'This series also includes a matching lift-and-slide door.', href: '/products/doors/wood-clad/lu-e80s-ls/', label: 'View LU-E80s Lift Sliding Door' },
     galleryImages: [], finishes: LU_FINISHES_WOOD_CLAD, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
@@ -2226,10 +2271,10 @@ module.exports = [
   {
     id: 'windows-wood-clad-lu-iu-cc', slug: 'lu-iu-cc',
     typeSlug: 'windows', materialSlug: 'wood-clad', pageId: 'windows-wood-clad-lu-iu-cc',
-    publicName: 'LU-IU-CC Iconix US Crank-Out Casement Window', systemType: 'Casement / Fixed (Picture)',
+    publicName: 'LU-IU-CO Iconix US Window', systemType: 'Casement / Fixed (Picture)',
     materialLabel: 'Aluminum-Wood Clad', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-IU-CC Iconix US Aluminum-Wood Clad Casement Window | Fenovera',
+    seoTitle: 'LU-IU-CO Iconix US Aluminum-Wood Clad Window | Fenovera',
     description: 'The LU-IU-CC Iconix US is an aluminum-wood clad crank-out casement window with NFRC-certified energy performance. Natural wood interior in six species with AAMA-verified AkzoNobel powder-coated aluminum exterior.',
     heroIntro: 'Aluminum-wood clad crank-out casement window. The LU-IU-CC Iconix US features natural wood interior (six species) with AAMA-verified AkzoNobel powder-coated aluminum exterior cladding. NFRC-certified. Full divided light grille option available for traditional aesthetics. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-iu-cc-window-hero.jpg', alt: 'LU-IU-CC Iconix US aluminum-wood clad casement window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Iconix US Series Catalog, p.17' },
@@ -2264,10 +2309,10 @@ module.exports = [
   {
     id: 'doors-wood-clad-lu-e80s-ls', slug: 'lu-e80s-ls',
     typeSlug: 'doors', materialSlug: 'wood-clad', pageId: 'doors-wood-clad-lu-e80s-ls',
-    publicName: 'LU-E80s-LS Urban Grove Heavy Duty Lift Sliding Door', systemType: 'Lift-and-Slide Door',
+    publicName: 'LU-E80s Heavy Duty Lift Sliding Door', systemType: 'Lift-and-Slide Door',
     materialLabel: 'Aluminum-Wood Clad', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-E80s-LS Urban Grove Aluminum-Wood Clad Lift Sliding Door | Fenovera',
+    seoTitle: 'LU-E80s Heavy Duty Lift Sliding Door | Fenovera',
     description: 'The LU-E80s-LS Urban Grove lift sliding door pairs natural wood interior with aluminum exterior cladding. NFRC-certified. Single leaf up to 7 feet wide.',
     heroIntro: 'Aluminum-wood clad lift-and-slide door combining warmth with performance. The LU-E80s-LS Urban Grove features natural wood interior cladding paired with an aluminum exterior for weather resistance. NFRC-certified. Single leaf up to 7 feet wide. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-e80s-ls-door-hero.jpg', alt: 'LU-E80s-LS Urban Grove aluminum-wood clad lift sliding door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Urban Grove Series Catalog, p.18' },
@@ -2278,6 +2323,8 @@ module.exports = [
       '5 7/8" visible width sightline',
       'Double or triple insulated glass options',
     ],
+    matchingLabel: 'Matching: LU-E80s Tilt-Turn Window',
+    crossLink: { text: 'Part of the Urban Grove series — available with a matching tilt-turn window.', href: '/products/windows/wood-clad/lu-e80s/', label: 'View LU-E80s Tilt-Turn Window' },
     galleryImages: [], finishes: LU_FINISHES_WOOD_CLAD, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [

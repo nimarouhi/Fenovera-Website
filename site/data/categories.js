@@ -110,7 +110,7 @@ module.exports = [
           'prm-70a', 'prm-75a', 'prm-80a', 'prm-81a', 'prm-108a',
           'prm-121a', 'prm-125a', 'prm-132a', 'prm-150a', 'prm-202a',
           'wj-88', 'wj-91', 'wj-132', 'wj-170',
-          'lu-ng-ls', 'lu-ng-bf',
+          'lu-ng-ls', 'lu-ng-bf', 'lu-110s-door',
         ],
       },
       {
