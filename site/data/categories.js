@@ -69,7 +69,7 @@ module.exports = [
         displayOrder:     3,
         publicationStatus:'draft',
         seoTitle:         'Aluminum-Wood Clad Windows in the Bay Area | Fenovera',
-        description:      'Aluminum-wood clad window series for the Bay Area. Natural wood interior paired with aluminum exterior cladding — tilt-turn and casement configurations with NFRC-certified energy performance.',
+        description:      'Aluminum-wood clad window series for the Bay Area. Natural wood interior paired with aluminum exterior cladding. Tilt-turn and casement configurations with NFRC-certified energy performance.',
         productSlugs:     ['lu-e80s', 'lu-iu-cc'],
       },
       {
@@ -132,7 +132,7 @@ module.exports = [
         displayOrder:     3,
         publicationStatus:'draft',
         seoTitle:         'Aluminum-Wood Clad Doors in the Bay Area | Fenovera',
-        description:      'Aluminum-wood clad door series for the Bay Area. Natural wood interior paired with aluminum exterior cladding — lift-and-slide configuration with NFRC-certified energy performance.',
+        description:      'Aluminum-wood clad door series for the Bay Area. Natural wood interior paired with aluminum exterior cladding. Lift-and-slide configuration with NFRC-certified energy performance.',
         productSlugs:     ['lu-e80s-ls'],
       },
       {
