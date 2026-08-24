@@ -2028,10 +2028,10 @@ module.exports = [
   {
     id: 'windows-aluminum-lu-80s', slug: 'lu-80s',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-lu-80s',
-    publicName: 'LU-80 Slim Frame Tilt-Turn Window', systemType: 'Tilt-Turn / Fixed (Picture)',
+    publicName: 'LU-80s Slim Frame Tilt-Turn Window', systemType: 'Tilt-Turn / Fixed (Picture)',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-80 Slim Frame Tilt-Turn Aluminum Window | Fenovera',
+    seoTitle: 'LU-80s Slim Frame Tilt-Turn Aluminum Window | Fenovera',
     description: 'The LU-80s Landmark Narrow Frame Tilt-Turn Window features an ultra-narrow 9/16" frame sightline - 35% slimmer than standard - with NFRC ratings and ENERGY STAR certification.',
     heroIntro: 'Ultra-narrow frame tilt-turn aluminum window. The LU-80s Landmark Narrow Frame Series achieves a 9/16" frame visible width - 35% slimmer than conventional aluminum windows - while delivering NFRC-rated energy performance. ENERGY STAR certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-80s-window-hero.jpg', alt: 'LU-80s Landmark Narrow Frame tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.13' },
