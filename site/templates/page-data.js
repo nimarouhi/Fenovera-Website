@@ -131,7 +131,7 @@ pages.push({
 
 // ── NFRC-Certified Windows page ──────────────────────────────────────────────
 (function() {
-  var NFRC_WIN_AL_SLUGS = ['ldw-x76', 'ldw-s8520', 'prm-80a', 'wj-91', 'wj-110'];
+  var NFRC_WIN_AL_SLUGS = ['ldw-x76', 'ldw-s8520', 'prm-80a', 'wj-91', 'wj-110', 'lu-70s', 'lu-80s', 'lu-95s', 'lu-110s'];
   var NFRC_WIN_UPVC_SLUGS = ['prm-82u', 'wj-72'];
 
   function buildNfrcProducts(slugs, typeSlug, materialSlug) {
@@ -168,7 +168,7 @@ pages.push({
     },
   });
 
-  var NFRC_DOOR_AL_SLUGS = ['ldw-x76', 'ldw-g88', 'ldw-g152', 'prm-80a', 'prm-125a', 'prm-150a', 'wj-88', 'wj-91', 'wj-170'];
+  var NFRC_DOOR_AL_SLUGS = ['ldw-x76', 'ldw-g88', 'ldw-g152', 'prm-80a', 'prm-125a', 'prm-150a', 'wj-88', 'wj-91', 'wj-170', 'lu-ng-ls', 'lu-ng-bf', 'lu-110s-door'];
   var NFRC_DOOR_UPVC_SLUGS = ['wj-195'];
 
   pages.push({

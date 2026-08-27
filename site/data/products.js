@@ -2097,7 +2097,7 @@ module.exports = [
   {
     id: 'windows-aluminum-lu-110s', slug: 'lu-110s',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-lu-110s',
-    publicName: 'LU-110s Thermal-Break Window Wall: Commercial Application', systemType: 'Window Wall / Casement / Commercial Swing Door',
+    publicName: 'LU-110s Thermal-Break Window Wall: Commercial Application', systemType: 'Window Wall / Casement',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'LU-110s Thermal-Break Window Wall: Commercial Application | Fenovera',
