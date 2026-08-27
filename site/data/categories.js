@@ -105,7 +105,7 @@ module.exports = [
         seoTitle:         'Aluminum Doors in the Bay Area | Fenovera',
         description:      'Aluminum door series for the Bay Area. Casement, French, sliding, bi-fold, slim frame, and lift-and-slide configurations with custom sizing.',
         productSlugs: [
-          'ldw-x76', 'ldw-g152', 'ldw-g88',
+          'ldw-x76', 'ldw-g88', 'ldw-g152',
           'prm-16a', 'prm-50a', 'prm-55a', 'prm-65a',
           'prm-70a', 'prm-75a', 'prm-80a', 'prm-81a', 'prm-108a',
           'prm-121a', 'prm-125a', 'prm-132a', 'prm-150a', 'prm-202a',

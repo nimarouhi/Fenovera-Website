@@ -131,7 +131,7 @@ pages.push({
 
 // ── NFRC-Certified Windows page ──────────────────────────────────────────────
 (function() {
-  var NFRC_WIN_AL_SLUGS = ['ldw-x76', 'ldw-s8520', 'wj-91', 'wj-110'];
+  var NFRC_WIN_AL_SLUGS = ['ldw-x76', 'ldw-s8520', 'prm-80a', 'wj-91', 'wj-110'];
   var NFRC_WIN_UPVC_SLUGS = ['prm-82u', 'wj-72'];
 
   function buildNfrcProducts(slugs, typeSlug, materialSlug) {

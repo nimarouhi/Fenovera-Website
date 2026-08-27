@@ -1995,10 +1995,10 @@ module.exports = [
   {
     id: 'windows-aluminum-lu-70s', slug: 'lu-70s',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-lu-70s',
-    publicName: 'LU-70s Landmark High Performance Tilt-Turn Window', systemType: 'Tilt-Turn / Fixed (Picture)',
+    publicName: 'LU-70s Landmark High Performance Thermal-Break Tilt-Turn Window', systemType: 'Tilt-Turn / Fixed (Picture)',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-70s Landmark High Performance Tilt-Turn Aluminum Window | Fenovera',
+    seoTitle: 'LU-70s Landmark High Performance Thermal-Break Tilt-Turn Aluminum Window | Fenovera',
     description: 'The LU-70s Landmark High Performance Tilt-Turn Window delivers NFRC-rated thermal efficiency with a slim 2 3/4" profile depth. ENERGY STAR certified.',
     heroIntro: 'High-performance tilt-turn aluminum window. The LU-70s Landmark Series combines a slim 2 3/4" frame depth with NFRC-rated energy performance. Available in tilt-and-turn and fixed (picture) configurations. ENERGY STAR certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-70s-window-hero.jpg', alt: 'LU-70s Landmark tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.12' },
@@ -2012,7 +2012,7 @@ module.exports = [
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS_ENERGY_STAR, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
-        { label: 'Frame material',               value: 'Aluminum',        status: 'confirmed' },
+        { label: 'Frame material',               value: 'Thermal-break aluminum',        status: 'confirmed' },
         { label: 'Profile thickness',            value: '1.5 mm',          status: 'confirmed' },
         { label: 'Sash visible width (inside)',  value: '3 1/8"',          status: 'confirmed' },
         { label: 'Frame visible width (inside)', value: '1 1/4"',          status: 'confirmed' },
@@ -2028,10 +2028,10 @@ module.exports = [
   {
     id: 'windows-aluminum-lu-80s', slug: 'lu-80s',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-lu-80s',
-    publicName: 'LU-80s Slim Frame Tilt-Turn Window', systemType: 'Tilt-Turn / Fixed (Picture)',
+    publicName: 'LU-80s Slim Frame Thermal-Break Tilt-Turn Window', systemType: 'Tilt-Turn / Fixed (Picture)',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-80s Slim Frame Tilt-Turn Aluminum Window | Fenovera',
+    seoTitle: 'LU-80s Slim Frame Thermal-Break Tilt-Turn Aluminum Window | Fenovera',
     description: 'The LU-80s Landmark Narrow Frame Tilt-Turn Window features an ultra-narrow 9/16" frame sightline (35% slimmer than standard) with NFRC ratings and ENERGY STAR certification.',
     heroIntro: 'Ultra-narrow frame tilt-turn aluminum window. The LU-80s Landmark Narrow Frame Series achieves a 9/16" frame visible width, 35% slimmer than conventional aluminum windows, while delivering NFRC-rated energy performance. ENERGY STAR certified. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-80s-window-hero.jpg', alt: 'LU-80s Landmark Narrow Frame tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.13' },
@@ -2046,7 +2046,7 @@ module.exports = [
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS_ENERGY_STAR, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
-        { label: 'Frame material',               value: 'Aluminum',                               status: 'confirmed' },
+        { label: 'Frame material',               value: 'Thermal-break aluminum',                               status: 'confirmed' },
         { label: 'Profile thickness',            value: '2 mm',                                   status: 'confirmed' },
         { label: 'Sash visible width (inside)',  value: '2 3/8"',                                 status: 'confirmed' },
         { label: 'Frame visible width (inside)', value: '9/16"',                                  status: 'confirmed' },
@@ -2063,10 +2063,10 @@ module.exports = [
   {
     id: 'windows-aluminum-lu-95s', slug: 'lu-95s',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-lu-95s',
-    publicName: 'LU-95s Tilt-Turn Window: Commercial Application', systemType: 'Tilt-Turn / Fixed (Picture)',
+    publicName: 'LU-95s Thermal-Break Tilt-Turn Window: Commercial Application', systemType: 'Tilt-Turn / Fixed (Picture)',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-95s Tilt-Turn Window: Commercial Application | Fenovera',
+    seoTitle: 'LU-95s Thermal-Break Tilt-Turn Window: Commercial Application | Fenovera',
     description: 'The LU-95s Tilt-Turn Window offers NFRC-certified energy performance with a flush frame-sash design and tall height range up to 10 feet.',
     heroIntro: 'Builder\'s choice tilt-turn aluminum window. The LU-95s Landmark Series features a flush frame-sash design with 3 3/4" structure depth and NFRC-certified energy performance. Available in heights up to 10 feet. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-95s-window-hero.jpg', alt: 'LU-95s Landmark Builder\'s Choice tilt-turn aluminum window', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.8' },
@@ -2080,7 +2080,7 @@ module.exports = [
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
-        { label: 'Frame material',               value: 'Aluminum',            status: 'confirmed' },
+        { label: 'Frame material',               value: 'Thermal-break aluminum',            status: 'confirmed' },
         { label: 'Profile thickness',            value: '1.8 mm',              status: 'confirmed' },
         { label: 'Sash visible width (inside)',  value: '2 7/8"',              status: 'confirmed' },
         { label: 'Frame visible width (inside)', value: '11/16"',              status: 'confirmed' },
@@ -2097,10 +2097,10 @@ module.exports = [
   {
     id: 'windows-aluminum-lu-110s', slug: 'lu-110s',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-lu-110s',
-    publicName: 'LU-110s Window Wall: Commercial Application', systemType: 'Window Wall / Casement / Commercial Swing Door',
+    publicName: 'LU-110s Thermal-Break Window Wall: Commercial Application', systemType: 'Window Wall / Casement / Commercial Swing Door',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-110s Window Wall: Commercial Application | Fenovera',
+    seoTitle: 'LU-110s Thermal-Break Window Wall: Commercial Application | Fenovera',
     description: 'The LU-110s is a commercial-grade pre-assembled window wall and storefront system with NFRC-certified energy performance. Supports single leaves up to 11\'-5" tall. Ideal for high-rise and large commercial openings.',
     heroIntro: 'Commercial window wall and storefront system. The LU-110s combines pre-assembled window wall panels with a coordinating commercial swinging door in a unified storefront profile. NFRC-certified energy performance. Supports single leaf heights up to 11\'-5". Explore the matching <a href="/products/doors/aluminum/lu-110s-door/">LU-110s Commercial Swinging Door</a>. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-110s-window-hero.jpg', alt: 'LU-110s Window Wall commercial aluminum system', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Landmark Series Catalog, p.9' },
@@ -2118,7 +2118,7 @@ module.exports = [
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS_FBC, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
-        { label: 'Frame material',         value: 'Aluminum',                                           status: 'confirmed' },
+        { label: 'Frame material',         value: 'Thermal-break aluminum',                                           status: 'confirmed' },
         { label: 'Profile thickness',      value: '2 mm',                                               status: 'confirmed' },
         { label: 'Structure depth',        value: '4 3/8"',                                             status: 'confirmed' },
         { label: 'Max single leaf height', value: '11\'-5"',                                            status: 'confirmed' },
@@ -2132,10 +2132,10 @@ module.exports = [
   {
     id: 'doors-aluminum-lu-ng-ls', slug: 'lu-ng-ls',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-lu-ng-ls',
-    publicName: 'LU-NG-LS Heavy Duty Lift Sliding Door', systemType: 'Lift-and-Slide Door',
+    publicName: 'LU-NG-LS Heavy Duty Thermal-Break Lift Sliding Door', systemType: 'Lift-and-Slide Door',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-NG-LS Heavy Duty Lift Sliding Door | Fenovera',
+    seoTitle: 'LU-NG-LS Heavy Duty Thermal-Break Lift Sliding Door | Fenovera',
     description: 'The LU-NG-LS Neo-Glide handles single leaf panels up to 10\'-7" wide × 10\'-9" tall with NFRC-certified energy performance. ADA-compliant sill option available.',
     heroIntro: 'Heavy duty lift-and-slide door for large openings. The LU-NG-LS Neo-Glide handles single leaf panels up to 10\'-7" wide and 10\'-9" tall, with NFRC-rated energy performance. Three threshold options including an ADA-compliant sill. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-ng-ls-door-hero.jpg', alt: 'LU-NG-LS Neo-Glide heavy duty lift sliding door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Neo-Glide Series Catalog, p.14' },
@@ -2149,7 +2149,7 @@ module.exports = [
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
-        { label: 'Frame material',    value: 'Aluminum',                                   status: 'confirmed' },
+        { label: 'Frame material',    value: 'Thermal-break aluminum',                                   status: 'confirmed' },
         { label: 'Profile thickness', value: '2 mm',                                       status: 'confirmed' },
         { label: 'Structure depth',   value: '4 5/8"',                                     status: 'confirmed' },
         { label: 'Threshold options', value: 'ADA sill, Low threshold, High threshold',    status: 'confirmed' },
@@ -2164,10 +2164,10 @@ module.exports = [
   {
     id: 'doors-aluminum-lu-ng-bf', slug: 'lu-ng-bf',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-lu-ng-bf',
-    publicName: 'LU-90s Bi-Folding Door', systemType: 'Bi-Folding Door',
+    publicName: 'LU-90s Thermal-Break Bi-Folding Door', systemType: 'Bi-Folding Door',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-90s Bi-Folding Aluminum Door | Fenovera',
+    seoTitle: 'LU-90s Thermal-Break Bi-Folding Aluminum Door | Fenovera',
     description: 'The LU-90s Bi-Folding Door features a 5" visible width profile with NFRC-certified energy performance. Panels fold completely open for unobstructed indoor-outdoor connection.',
     heroIntro: 'Bi-folding aluminum door for seamless indoor-outdoor living. The LU-90s Bi-Folding Door features a 5" visible width sightline with NFRC-rated energy performance. Panels fold completely open for unobstructed openings. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-ng-bf-door-hero.jpg', alt: 'LU-NG-BF Neo-Glide bi-folding aluminum door', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Neo-Glide Series Catalog, p.15' },
@@ -2182,7 +2182,7 @@ module.exports = [
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame & System', rows: [
-        { label: 'Frame material',         value: 'Aluminum', status: 'confirmed' },
+        { label: 'Frame material',         value: 'Thermal-break aluminum', status: 'confirmed' },
         { label: 'Profile thickness',      value: '2 mm',     status: 'confirmed' },
         { label: 'Visible width (inside)', value: '5"',       status: 'confirmed' },
       ]},
@@ -2196,10 +2196,10 @@ module.exports = [
   {
     id: 'doors-aluminum-lu-110s-door', slug: 'lu-110s-door',
     typeSlug: 'doors', materialSlug: 'aluminum', pageId: 'doors-aluminum-lu-110s-door',
-    publicName: 'LU-110s Hinged \u0026 French Door: Commercial Applications', systemType: 'Commercial Swing Door / French Door',
+    publicName: 'LU-110s Thermal-Break Hinged \u0026 French Door: Commercial Applications', systemType: 'Commercial Swing Door / French Door',
     materialLabel: 'Aluminum', typeLabel: 'Door',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
-    seoTitle: 'LU-110s Commercial Hinged \u0026 French Door | Fenovera',
+    seoTitle: 'LU-110s Thermal-Break Commercial Hinged \u0026 French Door | Fenovera',
     description: 'The LU-110s Commercial Swinging Door is a storefront-grade aluminum door system, part of the Window Wall -110s series. NFRC-certified. Double-pane U 0.38 / SHGC 0.20; triple-pane U 0.32 / SHGC 0.19.',
     heroIntro: 'Commercial-grade aluminum swinging door in the Window Wall -110s series. The LU-110s integrates seamlessly with the LU-110s window wall system in a unified storefront profile. NFRC-certified energy performance. U.S.-standard lock and handle. Explore the matching <a href="/products/windows/aluminum/lu-110s/">LU-110s Window Wall</a>. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/lu-110s-door-hero.jpg', alt: 'LU-110s Commercial Swinging Door aluminum storefront system', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Luvindow Catalog, p.10' },
@@ -2216,7 +2216,7 @@ module.exports = [
     galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: LU_CERTIFICATIONS, documents: [],
     specificationGroups: [
       { label: 'Frame \u0026 System', rows: [
-        { label: 'Frame material', value: 'Aluminum',                               status: 'confirmed' },
+        { label: 'Frame material', value: 'Thermal-break aluminum',                               status: 'confirmed' },
         { label: 'System type',    value: 'Commercial swinging door / French door', status: 'confirmed' },
         { label: 'Hardware',       value: 'U.S.-standard lock and handle',          status: 'confirmed' },
       ]},
