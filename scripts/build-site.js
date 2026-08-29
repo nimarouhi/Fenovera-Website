@@ -532,7 +532,7 @@ function renderCategoryProductGrid(data) {
     html += '    <div class="product-series-card__body">\n';
     // Supplier name (product-series-card__mfr) intentionally suppressed — not for public display.
     html += '      <div class="product-series-card__name">' + escapeHtml(product.publicName) + '</div>\n';
-    if (/^lu-/.test(product.slug) || /^ldw/.test(product.slug) || product.slug === 'prm-80a' || product.slug === 'prm-82u' || product.slug === 'prm-83a' || product.slug === 'prm-150a' || product.slug === 'prm-125a' || product.slug === 'wj-72' || product.slug === 'wj-195' || product.slug === 'wj-88' || product.slug === 'wj-91' || product.slug === 'wj-110' || product.slug === 'wj-170') {
+    if (/^lu-/.test(product.slug) || /^ldw/.test(product.slug) || product.slug === 'prm-80a' || product.slug === 'prm-82u' || product.slug === 'prm-140a' || product.slug === 'prm-150a' || product.slug === 'prm-125a' || product.slug === 'wj-72' || product.slug === 'wj-195' || product.slug === 'wj-88' || product.slug === 'wj-91' || product.slug === 'wj-110' || product.slug === 'wj-170') {
       html += '      <span class="badge badge-success product-series-card__cert-badge">NFRC</span>\n';
     }
     if (product.matchingLabel) {

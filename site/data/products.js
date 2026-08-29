@@ -381,8 +381,8 @@ module.exports = [
   },
 
   {
-    id: 'windows-aluminum-prm-83a', slug: 'prm-83a',
-    typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-prm-83a',
+    id: 'windows-aluminum-prm-140a', slug: 'prm-140a',
+    typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-prm-140a',
     publicName: 'PRM-140 Series Aluminum Window', systemType: 'Hung',
     materialLabel: 'Aluminum', typeLabel: 'Window',
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
