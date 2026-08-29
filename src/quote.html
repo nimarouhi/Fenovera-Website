@@ -433,8 +433,49 @@
                     <span class="form-option__label">PVC Doors</span>
                   </label>
                   <label class="form-option">
+                    <input type="checkbox" name="products" value="aluminum-wood-clad-windows">
+                    <span class="form-option__label">Aluminum-Wood Clad Windows</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="products" value="aluminum-wood-clad-doors">
+                    <span class="form-option__label">Aluminum-Wood Clad Doors</span>
+                  </label>
+                  <label class="form-option">
                     <input type="checkbox" name="products" value="not-sure">
                     <span class="form-option__label">Not sure yet</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Glass type -->
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">
+                  Glass Type<span class="form-label__optional">(optional · select all that apply)</span>
+                </legend>
+                <div class="form-options-grid">
+                  <label class="form-option">
+                    <input type="checkbox" name="glass-type" value="tempered">
+                    <span class="form-option__label">Tempered</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="glass-type" value="non-tempered">
+                    <span class="form-option__label">Non-Tempered</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="glass-type" value="lowe">
+                    <span class="form-option__label">Low-E</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="glass-type" value="single-pane">
+                    <span class="form-option__label">Single Pane</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="glass-type" value="dual-pane">
+                    <span class="form-option__label">Dual Pane</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="checkbox" name="glass-type" value="triple-pane">
+                    <span class="form-option__label">Triple Pane</span>
                   </label>
                 </div>
               </fieldset>
@@ -460,6 +501,28 @@
                     <span class="form-option__label">Not sure</span>
                   </label>
                 </div>
+              </fieldset>
+
+              <!-- NFRC rating -->
+              <fieldset class="form-fieldset">
+                <legend class="form-legend">
+                  NFRC Rating Required<span class="form-label__optional">(optional)</span>
+                </legend>
+                <div class="form-radio-group" role="group">
+                  <label class="form-option">
+                    <input type="radio" name="nfrc-required" value="yes">
+                    <span class="form-option__label">Yes</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="radio" name="nfrc-required" value="no">
+                    <span class="form-option__label">No</span>
+                  </label>
+                  <label class="form-option">
+                    <input type="radio" name="nfrc-required" value="not-sure">
+                    <span class="form-option__label">Not sure</span>
+                  </label>
+                </div>
+                <p class="form-hint" style="margin-top:var(--space-2);font-size:var(--text-sm);color:var(--color-ink-secondary);">If yes, please add the required performance values in the Project Details field below.</p>
               </fieldset>
 
               <!-- Quantity + delivery row -->
