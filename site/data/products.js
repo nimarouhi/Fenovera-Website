@@ -528,6 +528,36 @@ module.exports = [
   },
 
   {
+    id: 'windows-aluminum-prm-150a', slug: 'prm-150a',
+    typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-prm-150a',
+    publicName: 'PRM-150 Series Aluminum Window', systemType: 'Sliding',
+    materialLabel: 'Aluminum', typeLabel: 'Window',
+    offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
+    seoTitle: 'PRM-150 Series NFRC Aluminum Sliding Window | Fenovera',
+    description: 'Aluminum sliding windows with NFRC energy performance documentation. Matching PRM-150 sliding door available in the same profile. Contact Fenovera for specifications and pricing.',
+    heroIntro: 'Aluminum sliding window meeting American Standard NFRC energy performance requirements. The <a style="color:#1a73b8;text-decoration:underline" href="/products/doors/aluminum/prm-150a/">PRM-150 Series sliding door</a> is available in the same profile. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    heroImage: { src: '/img/al-prm150a-window-hero.jpg', alt: 'PRM-150 Series aluminum sliding window with outdoor view in modern interior', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Fenovera PRM Series Aluminum Windows and Doors Catalog, p.7 (110 Series sliding window image)' },
+    keyFeatures: [
+      'NFRC energy performance documentation available',
+      'Thermal insulation U-value 1.7 W/m²·K',
+      'Wind pressure resistance to +3,600 Pa',
+      'Sound insulation Rw up to 37 dB',
+      'Watertight performance to +720 Pa',
+      'Matching PRM-150 sliding door available in the same profile',
+    ],
+    galleryImages: [], finishes: ALUMINUM_FINISHES, hardware: null, certifications: ALUMINUM_CERTIFICATIONS_NFRC, documents: [],
+    specificationGroups: [
+      { label: 'Sliding (NFRC)', rows: [
+        { label: 'Profile thickness',            value: '2.0 mm',                 status: 'confirmed' },
+        { label: 'Thermal insulation (U-value)', value: '1.7 W/m²·K',            status: 'confirmed' },
+        { label: 'Wind pressure resistance',     value: '+3,600 Pa',              status: 'confirmed' },
+        { label: 'Sound insulation',             value: 'Rw up to 37 dB',         status: 'confirmed' },
+        { label: 'Watertight performance',       value: '+720 Pa',                status: 'confirmed' },
+      ]},
+    ],
+  },
+
+  {
     id: 'windows-aluminum-prm-80a', slug: 'prm-80a',
     typeSlug: 'windows', materialSlug: 'aluminum', pageId: 'windows-aluminum-prm-80a',
     publicName: 'PRM-80 Series Aluminum Window', systemType: 'Casement',
@@ -1547,7 +1577,7 @@ module.exports = [
     offeringStatus: 'current', publicationStatus: 'draft', verificationStatus: 'partial',
     seoTitle: 'PRM-150 Series NFRC Aluminum Sliding Door | Fenovera',
     description: 'Aluminum sliding doors with NFRC energy performance documentation for projects requiring verified thermal ratings. Contact Fenovera for pricing.',
-    heroIntro: 'Aluminum sliding door meeting American Standard NFRC energy performance requirements. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
+    heroIntro: 'Aluminum sliding door meeting American Standard NFRC energy performance requirements. The <a style="color:#1a73b8;text-decoration:underline" href="/products/windows/aluminum/prm-150a/">PRM-150 Series sliding window</a> is available in the same profile. NFRC energy performance documentation available. Contact us for specifications, pricing, and availability.',
     heroImage: { src: '/img/al-prm150a-door-hero.jpg', alt: 'PRM-150 Series aluminum sliding door on modern home exterior with pool and garden view', role: 'hero', rightsVerified: false, productProvenanceVerified: true, sourceDocument: 'Prima aluminum catalog (Aluminum Windows and doors catalog from PRIMA.pdf), p.17/18' },
     keyFeatures: [
       'NFRC energy performance documentation available',
