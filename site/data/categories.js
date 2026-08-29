@@ -40,8 +40,8 @@ module.exports = [
         description:      'Aluminum window series for the Bay Area. Casement, tilt-turn, awning, sliding, hung, and louver configurations with thermal-break options and custom sizing.',
         productSlugs: [
           'ldw-x76', 'ldw-s8520',
-          'prm-50a', 'prm-55a', 'prm-65a', 'prm-73a', 'prm-80a', 'prm-81a', 'prm-140a',
-          'prm-100a', 'prm-108a', 'prm-110a', 'prm-150a',
+          'prm-50a', 'prm-55a', 'prm-65a', 'prm-73a', 'prm-80a', 'prm-81a',
+          'prm-100a', 'prm-108a', 'prm-110a', 'prm-140a', 'prm-150a',
           'wj-80', 'wj-91', 'wj-110',
           'lu-70s', 'lu-80s', 'lu-95s', 'lu-110s',
         ],
