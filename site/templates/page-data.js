@@ -66,7 +66,7 @@ pages.push({
   out:         'index.html',
   pageId:      'home',
   title:       'Custom Windows & Doors in the Bay Area | Fenovera',
-  description: 'Fenovera supplies aluminum, uPVC, and PVC window and door systems for residential and commercial projects in the Bay Area. Contact us for specifications and pricing.',
+  description: 'Factory-Direct Windows & Doors in the Bay Area.',
   ogImage:     OG.home,
   ogImageAlt:  'Fenovera — Custom Windows and Doors in the Bay Area',
 });
