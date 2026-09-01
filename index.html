@@ -522,6 +522,30 @@
     body.page-home .home-compare__note .link-standalone       { color: var(--color-navy); }
     body.page-home .home-compare__note .link-standalone:hover { color: var(--color-bronze-interactive); }
     body.page-home .home-compare__note .link-standalone:focus-visible { outline-color: var(--color-bronze-interactive); }
+
+    /* ── Mobile-only homepage hero fixes ────────────────────────────────────────
+       These MUST appear after the body.page-home block above to win the cascade.
+       ──────────────────────────────────────────────────────────────────────── */
+    @media (max-width: 767px) {
+      /* Smaller hero height so the background image isn't over-cropped */
+      body.page-home .home-hero {
+        min-height: 88vh;
+        padding-top: 96px;
+        background-image:
+          linear-gradient(rgba(11,29,46,0.60), rgba(11,29,46,0.70)),
+          url('img/home/fenovera-home-background.webp');
+        background-position: center center;
+      }
+      /* Reduce hero title from 72px (text-7xl) to 36px (text-4xl) on mobile */
+      body.page-home .home-hero__title {
+        font-size: var(--text-4xl);
+        line-height: 1.1;
+      }
+      body.page-home .home-hero__lead {
+        font-size: var(--text-sm);
+        letter-spacing: 0.04em;
+      }
+    }
   </style>
 
   <!-- ── SEO: canonical + Open Graph + Twitter Card + favicon ───── -->
