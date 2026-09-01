@@ -56,7 +56,7 @@ var RELEASE         = process.argv.indexOf('--release') !== -1;
 // Canonical site base URL — update to the real domain before launch.
 var SITE_BASE_URL   = 'https://fenovera.com';
 // Default OG social-sharing image for pages without a specific image.
-var OG_DEFAULT_IMAGE     = SITE_BASE_URL + '/img/home/fenovera-home-background.webp';
+var OG_DEFAULT_IMAGE     = SITE_BASE_URL + '/img/home/fenovera-og.jpg';
 var OG_DEFAULT_IMAGE_ALT = 'Fenovera — Aluminum, uPVC, and PVC Windows and Doors in the Bay Area';
 
 // ── Load page registry ──────────────────────────────────────────────────────

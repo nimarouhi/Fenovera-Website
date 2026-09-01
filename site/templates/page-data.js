@@ -44,17 +44,17 @@ function getRelated(product, limit) {
 // ── OG image catalogue for non-product pages ─────────────────────────────────
 // These are absolute root-relative paths resolved to absolute URLs by buildSeoBlock().
 var OG = {
-  home:         '/img/home/fenovera-home-background.webp',
+  home:         '/img/home/fenovera-og.jpg',
   winAl:        '/img/al-x76-window-hero.jpg',
   winUpvc:      '/img/upvc-cas-hero.jpg',
   winPvc:       '/img/pvc-wj60-window-hero.jpg',
   doorAl:       '/img/al-lift-slide-door-hero.jpg',
   doorUpvc:     '/img/upvc-sdoor-hero.jpg',
   doorPvc:      '/img/pvc-wj60-door-hero.jpg',
-  about:        '/img/home/fenovera-home-background.webp',
-  contact:      '/img/home/fenovera-home-background.webp',
-  quote:        '/img/home/fenovera-home-background.webp',
-  bayArea:      '/img/home/fenovera-home-background.webp',
+  about:        '/img/home/fenovera-og.jpg',
+  contact:      '/img/home/fenovera-og.jpg',
+  quote:        '/img/home/fenovera-og.jpg',
+  bayArea:      '/img/home/fenovera-og.jpg',
 };
 
 // ── Build pages array ────────────────────────────────────────────────────────
