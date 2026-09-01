@@ -66,7 +66,8 @@ pages.push({
   out:         'index.html',
   pageId:      'home',
   title:       'Custom Windows & Doors in the Bay Area | Fenovera',
-  description: 'Factory-Direct Windows & Doors in the Bay Area.',
+  ogTitle:     'Factory-Direct Windows & Doors in the Bay Area',
+  description: 'Precision-Engineered Windows & Doors in the Bay Area.',
   ogImage:     OG.home,
   ogImageAlt:  'Fenovera — Custom Windows and Doors in the Bay Area',
 });

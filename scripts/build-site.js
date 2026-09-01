@@ -663,6 +663,7 @@ function resolveOgImageAlt(page) {
 function buildSeoBlock(page) {
   var canonical = canonicalUrl(page.out);
   var title     = escapeHtml(page.title || '');
+  var ogTitle   = escapeHtml(page.ogTitle || page.title || '');
   var desc      = escapeHtml(page.description || '');
   var ogImg     = escapeHtml(resolveOgImage(page));
   var ogImgAlt  = escapeHtml(resolveOgImageAlt(page));
@@ -673,13 +674,13 @@ function buildSeoBlock(page) {
     '  <link rel="icon" href="/favicon.svg" type="image/svg+xml">',
     '  <meta property="og:type" content="website">',
     '  <meta property="og:site_name" content="Fenovera">',
-    '  <meta property="og:title" content="' + title + '">',
+    '  <meta property="og:title" content="' + ogTitle + '">',
     '  <meta property="og:description" content="' + desc + '">',
     '  <meta property="og:url" content="' + canonical + '">',
     '  <meta property="og:image" content="' + ogImg + '">',
     '  <meta property="og:image:alt" content="' + ogImgAlt + '">',
     '  <meta name="twitter:card" content="summary_large_image">',
-    '  <meta name="twitter:title" content="' + title + '">',
+    '  <meta name="twitter:title" content="' + ogTitle + '">',
     '  <meta name="twitter:description" content="' + desc + '">',
     '  <meta name="twitter:image" content="' + ogImg + '">',
     '  <meta name="twitter:image:alt" content="' + ogImgAlt + '">',
